@@ -767,24 +767,17 @@
     "cooking_time": "30 menit",
     "servings": "1 mangkuk",
     "image_url": "https://img-global.cpcdn.com/recipes/ee38c27d96116e89/680x482cq70/orek-tempe-ala-angkringan-jogja-foto-resep-utama.webp",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe"},
-        {"ingredient": "3 buah tahu putih"}
-      ],
-      "bumbu halus": [
+        {"ingredient": "3 buah tahu putih"},
         {"ingredient": "3 siung bawang putih"},
         {"ingredient": "5 siung bawang merah"},
         {"ingredient": "1 butir kemiri"},
-        {"ingredient": "1 sdm ketumbar bubuk"}
-      ],
-      "bumbu cemplung": [
+        {"ingredient": "1 sdm ketumbar bubuk"},
         {"ingredient": "2 lembar daun salam"},
         {"ingredient": "1 batang sereh"},
         {"ingredient": "2 ruas lengkuas"},
-        {"ingredient": "5 buah cabe merah keriting"}
-      ],
-      "bumbu lain": [
+        {"ingredient": "5 buah cabe merah keriting"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt kaldu bubuk"},
         {"ingredient": "2 sdm gula jawa"},
@@ -792,8 +785,7 @@
         {"ingredient": "2 sdm kecap manis"},
         {"ingredient": "1 sdt kecap asin"},
         {"ingredient": "air"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -816,32 +808,24 @@
     "cooking_time": "30 menit",
     "servings": "1 mangkuk",
     "image_url": "https://img-global.cpcdn.com/recipes/77488fe44f2623ca/680x482cq70/orek-tempe-angkringan-khas-jogja-foto-resep-utama.webp",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "350 gram tempe"},
         {"ingredient": "3 buah cabe keriting merah"},
         {"ingredient": "3 sdm minyak goreng"},
-        {"ingredient": "150 ml air"}
-      ],
-      "bahan aromatik": [
+        {"ingredient": "150 ml air"},
         {"ingredient": "2 lembar daun salam"},
         {"ingredient": "2 lembar daun jeruk"},
         {"ingredient": "1 batang sereh"},
-        {"ingredient": "2 cm lengkuas"}
-      ],
-      "bumbu halus": [
+        {"ingredient": "2 cm lengkuas"},
         {"ingredient": "6 siung bawang merah"},
         {"ingredient": "3 siung bawang putih"},
         {"ingredient": "3 butir kemiri"},
-        {"ingredient": "1 sdt ketumbar"}
-      ],
-      "bumbu perasa": [
+        {"ingredient": "1 sdt ketumbar"},
         {"ingredient": "30 gram gula jawa"},
         {"ingredient": "6 sdm kecap manis"},
         {"ingredient": "1 sdt saus tiram"},
         {"ingredient": "1 sdt garam"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -854,15 +838,13 @@
     ]
   },
   
- 
- 
+
   {
     "recipe_name": "Tempe Mendoan Ala Angkringan Jogja",
     "cooking_time": "20 menit",
     "servings": "10-12 buah",
     "image_url": "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/214/2024/02/20/IMG-20240220-WA0011-1923175341.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe"},
         {"ingredient": "200 gr tepung terigu"},
         {"ingredient": "air secukupnya"},
@@ -871,8 +853,7 @@
         {"ingredient": "1/2 sendok teh merica bubuk"},
         {"ingredient": "garam sesuai selera"},
         {"ingredient": "kaldu bubuk"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -900,15 +881,12 @@
     "cooking_time": "1 jam",
     "servings": "4 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/a8538bf988845ea5/680x482cq70/tempe-bacem-rumahan-ala-angkringan-foto-resep-utama.webp",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1-2 papan tempe"},
         {"ingredient": "secukupnya garam"},
         {"ingredient": "secukupnya lada"},
         {"ingredient": "secukupnya totole"},
-        {"ingredient": "secukupnya minyak goreng"}
-      ],
-      "bumbu": [
+        {"ingredient": "secukupnya minyak goreng"},
         {"ingredient": "5 siung bawang merah"},
         {"ingredient": "3 siung bawang putih"},
         {"ingredient": "4 buah kemiri"},
@@ -916,15 +894,12 @@
         {"ingredient": "5 buah cabai setan"},
         {"ingredient": "2 batang sereh"},
         {"ingredient": "2 ruas lengkuas"},
-        {"ingredient": "2 lembar daun salam"}
-      ],
-      "bumbu lain": [
+        {"ingredient": "2 lembar daun salam"},
         {"ingredient": "secukupnya kecap"},
         {"ingredient": "secukupnya gula merah"},
         {"ingredient": "secukupnya asam jawa"},
         {"ingredient": "air"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -968,34 +943,26 @@
     "cooking_time": "45 menit",
     "servings": "30 pcs",
     "image_url": "https://img-global.cpcdn.com/recipes/49093dc5be9000e9/680x482cq70/bacem-ati-ayam-tempe-tahu-ala-angkringan-foto-resep-utama.webp",
-    "ingredients": {
-      "main": [
+    "ingredients": [
       {"ingredient": "6 pcs Ati Ayam dan jantungnya"},
       {"ingredient": "1 papan tempe besar (potong 12 pcs)"},
       {"ingredient": "10 pcs tahu coklat"},
       {"ingredient": "secukupnya air"},
-      {"ingredient": "secukupnya minyak goreng"}
-    ],
-    "bumbu halus": [
+      {"ingredient": "secukupnya minyak goreng"},
       {"ingredient": "10 siung bawang merah"},
       {"ingredient": "6 siung bawang putih"},
       {"ingredient": "3 butir kemiri"},
-      {"ingredient": "1 sdm ketumbar"}
-    ],
-    "bumbu aromatik": [
+      {"ingredient": "1 sdm ketumbar"},
       {"ingredient": "3 lembar daun salam"},
       {"ingredient": "4 lembar daun jeruk"},
       {"ingredient": "2 ruas lengkuas (geprek)"},
-      {"ingredient": "2 batang serai"}
-    ],
-    "seasoning": [
+      {"ingredient": "2 batang serai"},
       {"ingredient": "1 sdm garam"},
       {"ingredient": "1 sdm kaldu jamur"},
       {"ingredient": "1 sdt sasa (boleh di-skip)"},
       {"ingredient": "1 bulat gula merah"},
       {"ingredient": "5 sdm kecap manis"}
-    ]
-    },
+    ],
     "instructions": [
         {
         "step": 1,
@@ -1039,18 +1006,15 @@
     "cooking_time": "1 jam",
     "servings": "1 piring",
     "image_url": "https://img-global.cpcdn.com/recipes/276110db9c3bef9d/680x482cq70/oseng-tempe-ala-angkringan-foto-resep-utama.webp",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "2 papan tempe (400 gr), potong dadu kecil"},
-        {"ingredient": "1-2 sdm kecap manis"},
+        {"ingredient": "1-2 sdm kecap manis"},  
         {"ingredient": "1 sdm gula merah sisir"},
         {"ingredient": "1/2-1 sdt garam (sesuai selera)"},
         {"ingredient": "1/2 sdt gula pasir"},
         {"ingredient": "1/2 sdt kaldu jamur non MSG"},
         {"ingredient": "100 ml air"},
-        {"ingredient": "Secukupnya minyak goreng"}
-      ],
-      "bumbu": [
+        {"ingredient": "Secukupnya minyak goreng"},
         {"ingredient": "5 siung bawang merah, iris tipis"},
         {"ingredient": "3 siung bawang putih, iris tipis"},
         {"ingredient": "7 buah cabai hijau, iris serong"},
@@ -1058,8 +1022,7 @@
         {"ingredient": "2 lembar daun salam"},
         {"ingredient": "1 ruas jari lengkuas, geprek"},
         {"ingredient": "3 lembar daun jeruk, sobek-sobek"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -1090,8 +1053,7 @@
     "cooking_time": "30 menit",
     "servings": "4 orang",
     "image_url": "https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/06/Resep-Tempe-balado.jpg?fit=1548%2C1548&ssl=1",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "2 papan tempe (400 gr), potong dadu"},
         {"ingredient": "5 siung bawang merah, iris tipis"},
         {"ingredient": "3 siung bawang putih, iris tipis"},
@@ -1103,8 +1065,7 @@
         {"ingredient": "1 sdt kaldu bubuk"},
         {"ingredient": "100 ml air"},
         {"ingredient": "Secukupnya minyak goreng"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -1131,8 +1092,7 @@
     "cooking_time": "20 menit",
     "servings": "12 potong",
     "image_url": "https://www.dapurkobe.co.id/wp-content/uploads/tempe-goreng-kriuk-ala-tepung-kobe.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, iris tipis"},
         {"ingredient": "200 gr tepung terigu"},
         {"ingredient": "2 sdm tepung beras"},
@@ -1142,8 +1102,7 @@
         {"ingredient": "1/2 sdt merica bubuk"},
         {"ingredient": "Air secukupnya"},
         {"ingredient": "Minyak goreng secukupnya"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -1169,8 +1128,7 @@
     "cooking_time": "25 menit",
     "servings": "3 orang",
     "image_url": "https://assets.unileversolutions.com/recipes-v2/242808.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu kecil"},
         {"ingredient": "5 siung bawang merah, iris tipis"},
         {"ingredient": "3 siung bawang putih, iris tipis"},
@@ -1181,8 +1139,7 @@
         {"ingredient": "1 ruas lengkuas, geprek"},
         {"ingredient": "100 ml air"},
         {"ingredient": "Minyak secukupnya"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1208,16 +1165,14 @@
     "cooking_time": "20 menit",
     "servings": "2 orang",
     "image_url": "https://lh6.googleusercontent.com/proxy/trWPI2sP1XExfGTMm2b_9ff2t5vercVpS8q1hBgI-_Jjdt5Aw36sOfM9oWRHLkpgqVzOTnRmlRlrHhXJMsa8x5wnbDviDI5gXOYTgGyYyklphOYszsf0si2Yn2ni1ChZ05EXOkk",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong persegi dan goreng"},
         {"ingredient": "5 siung bawang merah"},
         {"ingredient": "2 siung bawang putih"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1/2 sdt gula pasir"},
         {"ingredient": "2 sdm minyak panas"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1237,15 +1192,12 @@
       }
     ]
   },
-  
-
   {
     "recipe_name": "Tempe Goreng Sambal Kecap",
     "cooking_time": "15 menit",
     "servings": "4 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/8cd2ce8e2fd52a3d/680x482cq70/tempe-goreng-sambal-kecap-foto-resep-utama.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong tipis"},
         {"ingredient": "3 sdm kecap manis"},
         {"ingredient": "2 siung bawang merah, iris tipis"},
@@ -1253,8 +1205,7 @@
         {"ingredient": "2 buah cabe rawit, iris"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdm minyak goreng"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1270,22 +1221,19 @@
       }
     ]
   },
-  
   {
     "recipe_name": "Tempe Geprek",
     "cooking_time": "20 menit",
     "servings": "4 orang",
     "image_url": "https://i.ytimg.com/vi/23oOFLjncl0/maxresdefault.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong tebal"},
         {"ingredient": "5 siung bawang putih, haluskan"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt ketumbar bubuk"},
         {"ingredient": "Secukupnya air"},
         {"ingredient": "Secukupnya minyak goreng"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1307,8 +1255,7 @@
     "cooking_time": "45 menit",
     "servings": "4 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/04b100f878c7dc02/680x482cq70/tempe-goreng-bacem-foto-resep-utama.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "2 papan tempe, potong kotak"},
         {"ingredient": "100 ml air kelapa"},
         {"ingredient": "3 sdm kecap manis"},
@@ -1318,8 +1265,7 @@
         {"ingredient": "2 siung bawang putih, iris"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt gula merah"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1341,8 +1287,7 @@
     "cooking_time": "25 menit",
     "servings": "4 orang",
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMThq-4NU6Oa4-zlBOskKQ3EqnH5WBy3ZxDA&s",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu"},
         {"ingredient": "5 buah cabe rawit, iris tipis"},
         {"ingredient": "3 siung bawang merah, iris tipis"},
@@ -1351,8 +1296,7 @@
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdm gula merah"},
         {"ingredient": "Minyak goreng secukupnya"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1378,8 +1322,7 @@
     "cooking_time": "30 menit",
     "servings": "4 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/f8af00c169fa3e4d/680x482cq70/tempe-goreng-serundeng-kelapa-foto-resep-utama.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong tipis"},
         {"ingredient": "200 gr kelapa parut"},
         {"ingredient": "5 siung bawang putih, haluskan"},
@@ -1388,8 +1331,7 @@
         {"ingredient": "1 sdt gula merah"},
         {"ingredient": "Secukupnya air"},
         {"ingredient": "Secukupnya minyak goreng"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1411,8 +1353,7 @@
     "cooking_time": "20 menit",
     "servings": "4 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/b81e22d74ddaaa07/680x482cq70/tumis-teri-tempe-cabai-resep-mama-foto-resep-utama.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu kecil"},
         {"ingredient": "100 gr ikan teri, goreng"},
         {"ingredient": "5 siung bawang merah, iris tipis"},
@@ -1421,8 +1362,7 @@
         {"ingredient": "2 sdm kecap manis"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt gula merah"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1448,16 +1388,14 @@
     "cooking_time": "15 menit",
     "servings": "2 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/84293c345b60af02/680x482cq70/tempe-rebus-favorit-ibue-foto-resep-utama.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu besar"},
         {"ingredient": "500 ml air"},
         {"ingredient": "2 lembar daun salam"},
         {"ingredient": "1 ruas lengkuas, geprek"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt gula merah"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1479,8 +1417,7 @@
     "cooking_time": "30 menit",
     "servings": "4 orang",
     "image_url": "https://lh3.googleusercontent.com/proxy/SExQXbVuzn9Xe9aWpx-A6Lhw5QKhVx5ksRHlwAo-U5TsuxnlFzOfL-kBYuKQLiP8vyRXSpi42aUbkvVSlZpTxMyQfX3Qryhe85SloZ9Sm_S5M6v27Srrgla40ws_pQ",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu kecil"},
         {"ingredient": "100 gr kacang panjang, potong kecil"},
         {"ingredient": "100 gr wortel, potong dadu"},
@@ -1490,8 +1427,7 @@
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt gula merah"},
         {"ingredient": "100 ml air"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1517,8 +1453,7 @@
     "cooking_time": "25 menit",
     "servings": "3 orang",
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxBpzRaqIppZEcheSq7F89mzGPjbpmnQfU9g&s",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu"},
         {"ingredient": "100 gr kacang panjang, potong kecil"},
         {"ingredient": "3 siung bawang merah, iris tipis"},
@@ -1528,8 +1463,7 @@
         {"ingredient": "1 sdt gula pasir"},
         {"ingredient": "100 ml air"},
         {"ingredient": "Minyak goreng secukupnya"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1555,8 +1489,7 @@
     "cooking_time": "30 menit",
     "servings": "4 orang",
     "image_url": "data:image/jpeg;base64,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",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong tipis"},
         {"ingredient": "10 siung bawang merah, iris tipis"},
         {"ingredient": "5 siung bawang putih, iris tipis"},
@@ -1564,8 +1497,7 @@
         {"ingredient": "3 buah cabai rawit, iris tipis"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdm minyak kelapa"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1592,24 +1524,17 @@
     "cooking_time": "30 menit",
     "servings": "1 mangkuk",
     "image_url": "https://img-global.cpcdn.com/recipes/ee38c27d96116e89/680x482cq70/orek-tempe-ala-angkringan-jogja-foto-resep-utama.webp",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe"},
-        {"ingredient": "3 buah tahu putih"}
-      ],
-      "bumbu halus": [
+        {"ingredient": "3 buah tahu putih"},
         {"ingredient": "3 siung bawang putih"},
         {"ingredient": "5 siung bawang merah"},
         {"ingredient": "1 butir kemiri"},
-        {"ingredient": "1 sdm ketumbar bubuk"}
-      ],
-      "bumbu cemplung": [
+        {"ingredient": "1 sdm ketumbar bubuk"},
         {"ingredient": "2 lembar daun salam"},
         {"ingredient": "1 batang sereh"},
         {"ingredient": "2 ruas lengkuas"},
-        {"ingredient": "5 buah cabe merah keriting"}
-      ],
-      "bumbu lain": [
+        {"ingredient": "5 buah cabe merah keriting"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt kaldu bubuk"},
         {"ingredient": "2 sdm gula jawa"},
@@ -1617,8 +1542,7 @@
         {"ingredient": "2 sdm kecap manis"},
         {"ingredient": "1 sdt kecap asin"},
         {"ingredient": "air"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1634,39 +1558,29 @@
       }
     ]
   },
-  
-
   {
     "recipe_name": "Orek Tempe Basah Ala Angkringan Jogja",
     "cooking_time": "30 menit",
     "servings": "1 mangkuk",
     "image_url": "https://img-global.cpcdn.com/recipes/77488fe44f2623ca/680x482cq70/orek-tempe-angkringan-khas-jogja-foto-resep-utama.webp",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "350 gram tempe"},
         {"ingredient": "3 buah cabe keriting merah"},
         {"ingredient": "3 sdm minyak goreng"},
-        {"ingredient": "150 ml air"}
-      ],
-      "bahan aromatik": [
+        {"ingredient": "150 ml air"},
         {"ingredient": "2 lembar daun salam"},
         {"ingredient": "2 lembar daun jeruk"},
         {"ingredient": "1 batang sereh"},
-        {"ingredient": "2 cm lengkuas"}
-      ],
-      "bumbu halus": [
+        {"ingredient": "2 cm lengkuas"},
         {"ingredient": "6 siung bawang merah"},
         {"ingredient": "3 siung bawang putih"},
         {"ingredient": "3 butir kemiri"},
-        {"ingredient": "1 sdt ketumbar"}
-      ],
-      "bumbu perasa": [
+        {"ingredient": "1 sdt ketumbar"},
         {"ingredient": "30 gram gula jawa"},
         {"ingredient": "6 sdm kecap manis"},
         {"ingredient": "1 sdt saus tiram"},
         {"ingredient": "1 sdt garam"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1686,8 +1600,7 @@
     "cooking_time": "20 menit",
     "servings": "10-12 buah",
     "image_url": "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/214/2024/02/20/IMG-20240220-WA0011-1923175341.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe"},
         {"ingredient": "200 gr tepung terigu"},
         {"ingredient": "air secukupnya"},
@@ -1696,8 +1609,7 @@
         {"ingredient": "1/2 sendok teh merica bubuk"},
         {"ingredient": "garam sesuai selera"},
         {"ingredient": "kaldu bubuk"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1725,15 +1637,12 @@
     "cooking_time": "1 jam",
     "servings": "4 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/a8538bf988845ea5/680x482cq70/tempe-bacem-rumahan-ala-angkringan-foto-resep-utama.webp",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1-2 papan tempe"},
         {"ingredient": "secukupnya garam"},
         {"ingredient": "secukupnya lada"},
         {"ingredient": "secukupnya totole"},
-        {"ingredient": "secukupnya minyak goreng"}
-      ],
-      "bumbu": [
+        {"ingredient": "secukupnya minyak goreng"},
         {"ingredient": "5 siung bawang merah"},
         {"ingredient": "3 siung bawang putih"},
         {"ingredient": "4 buah kemiri"},
@@ -1741,15 +1650,12 @@
         {"ingredient": "5 buah cabai setan"},
         {"ingredient": "2 batang sereh"},
         {"ingredient": "2 ruas lengkuas"},
-        {"ingredient": "2 lembar daun salam"}
-      ],
-      "bumbu lain": [
+        {"ingredient": "2 lembar daun salam"},
         {"ingredient": "secukupnya kecap"},
         {"ingredient": "secukupnya gula merah"},
         {"ingredient": "secukupnya asam jawa"},
         {"ingredient": "air"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1793,34 +1699,26 @@
     "cooking_time": "45 menit",
     "servings": "30 pcs",
     "image_url": "https://img-global.cpcdn.com/recipes/49093dc5be9000e9/680x482cq70/bacem-ati-ayam-tempe-tahu-ala-angkringan-foto-resep-utama.webp",
-    "ingredients": {
-      "main": [
+    "ingredients": [
       {"ingredient": "6 pcs Ati Ayam dan jantungnya"},
       {"ingredient": "1 papan tempe besar (potong 12 pcs)"},
       {"ingredient": "10 pcs tahu coklat"},
       {"ingredient": "secukupnya air"},
-      {"ingredient": "secukupnya minyak goreng"}
-    ],
-    "bumbu halus": [
+      {"ingredient": "secukupnya minyak goreng"},
       {"ingredient": "10 siung bawang merah"},
       {"ingredient": "6 siung bawang putih"},
       {"ingredient": "3 butir kemiri"},
-      {"ingredient": "1 sdm ketumbar"}
-    ],
-    "bumbu aromatik": [
+      {"ingredient": "1 sdm ketumbar"},
       {"ingredient": "3 lembar daun salam"},
       {"ingredient": "4 lembar daun jeruk"},
       {"ingredient": "2 ruas lengkuas (geprek)"},
-      {"ingredient": "2 batang serai"}
-    ],
-    "seasoning": [
+      {"ingredient": "2 batang serai"},
       {"ingredient": "1 sdm garam"},
       {"ingredient": "1 sdm kaldu jamur"},
       {"ingredient": "1 sdt sasa (boleh di-skip)"},
       {"ingredient": "1 bulat gula merah"},
       {"ingredient": "5 sdm kecap manis"}
-    ]
-    },
+    ],
     "instructions": [
         {
         "step": 1,
@@ -1864,8 +1762,7 @@
     "cooking_time": "1 jam",
     "servings": "1 piring",
     "image_url": "https://img-global.cpcdn.com/recipes/276110db9c3bef9d/680x482cq70/oseng-tempe-ala-angkringan-foto-resep-utama.webp",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "2 papan tempe (400 gr), potong dadu kecil"},
         {"ingredient": "1-2 sdm kecap manis"},
         {"ingredient": "1 sdm gula merah sisir"},
@@ -1873,9 +1770,7 @@
         {"ingredient": "1/2 sdt gula pasir"},
         {"ingredient": "1/2 sdt kaldu jamur non MSG"},
         {"ingredient": "100 ml air"},
-        {"ingredient": "Secukupnya minyak goreng"}
-      ],
-      "bumbu": [
+        {"ingredient": "Secukupnya minyak goreng"},
         {"ingredient": "5 siung bawang merah, iris tipis"},
         {"ingredient": "3 siung bawang putih, iris tipis"},
         {"ingredient": "7 buah cabai hijau, iris serong"},
@@ -1883,8 +1778,7 @@
         {"ingredient": "2 lembar daun salam"},
         {"ingredient": "1 ruas jari lengkuas, geprek"},
         {"ingredient": "3 lembar daun jeruk, sobek-sobek"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1915,8 +1809,7 @@
     "cooking_time": "30 menit",
     "servings": "4 orang",
     "image_url": "https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/06/Resep-Tempe-balado.jpg?fit=1548%2C1548&ssl=1",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "2 papan tempe (400 gr), potong dadu"},
         {"ingredient": "5 siung bawang merah, iris tipis"},
         {"ingredient": "3 siung bawang putih, iris tipis"},
@@ -1928,8 +1821,7 @@
         {"ingredient": "1 sdt kaldu bubuk"},
         {"ingredient": "100 ml air"},
         {"ingredient": "Secukupnya minyak goreng"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1949,15 +1841,12 @@
       }
     ]
   },
-  
-
   {
     "recipe_name": "Tempe Goreng Tepung",
     "cooking_time": "20 menit",
     "servings": "12 potong",
     "image_url": "https://www.dapurkobe.co.id/wp-content/uploads/tempe-goreng-kriuk-ala-tepung-kobe.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, iris tipis"},
         {"ingredient": "200 gr tepung terigu"},
         {"ingredient": "2 sdm tepung beras"},
@@ -1967,8 +1856,7 @@
         {"ingredient": "1/2 sdt merica bubuk"},
         {"ingredient": "Air secukupnya"},
         {"ingredient": "Minyak goreng secukupnya"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -1988,129 +1876,116 @@
       }
     ]
   },
-
-  {
-    "recipe_name": "Tempe Tumis Kecap",
-    "cooking_time": "25 menit",
-    "servings": "3 orang",
-    "image_url": "https://assets.unileversolutions.com/recipes-v2/242808.jpg",
-    "ingredients": {
-      "main": [
-        {"ingredient": "1 papan tempe, potong dadu kecil"},
-        {"ingredient": "5 siung bawang merah, iris tipis"},
-        {"ingredient": "3 siung bawang putih, iris tipis"},
-        {"ingredient": "3 sdm kecap manis"},
-        {"ingredient": "1 sdt garam"},
-        {"ingredient": "1 sdm gula merah"},
-        {"ingredient": "2 lembar daun salam"},
-        {"ingredient": "1 ruas lengkuas, geprek"},
-        {"ingredient": "100 ml air"},
-        {"ingredient": "Minyak secukupnya"}
-      ]
+{
+  "recipe_name": "Tempe Tumis Kecap",
+  "cooking_time": "25 menit",
+  "servings": "3 orang",
+  "image_url": "https://assets.unileversolutions.com/recipes-v2/242808.jpg",
+  "ingredients": [
+    {"ingredient": "1 papan tempe, potong dadu kecil"},
+    {"ingredient": "5 siung bawang merah, iris tipis"},
+    {"ingredient": "3 siung bawang putih, iris tipis"},
+    {"ingredient": "3 sdm kecap manis"},
+    {"ingredient": "1 sdt garam"},
+    {"ingredient": "1 sdm gula merah"},
+    {"ingredient": "2 lembar daun salam"},
+    {"ingredient": "1 ruas lengkuas, geprek"},
+    {"ingredient": "100 ml air"},
+    {"ingredient": "Minyak secukupnya"}
+  ],
+  "instructions": [
+    {
+      "step": 1,
+      "description": "Tumis bawang merah, bawang putih, daun salam, dan lengkuas hingga harum."
     },
-    "instructions": [
-      {
-        "step": 1,
-        "description": "Tumis bawang merah, bawang putih, daun salam, dan lengkuas hingga harum."
-      },
-      {
-        "step": 2,
-        "description": "Masukkan tempe dan aduk hingga kecoklatan."
-      },
-      {
-        "step": 3,
-        "description": "Tambahkan kecap manis, garam, gula merah, dan air. Aduk rata."
-      },
-      {
-        "step": 4,
-        "description": "Masak hingga bumbu meresap dan air menyusut. Sajikan."
-      }
-    ]
-  },
-  
-  {
-    "recipe_name": "Tempe Penyet",
-    "cooking_time": "20 menit",
-    "servings": "2 orang",
-    "image_url": "https://lh6.googleusercontent.com/proxy/trWPI2sP1XExfGTMm2b_9ff2t5vercVpS8q1hBgI-_Jjdt5Aw36sOfM9oWRHLkpgqVzOTnRmlRlrHhXJMsa8x5wnbDviDI5gXOYTgGyYyklphOYszsf0si2Yn2ni1ChZ05EXOkk",
-    "ingredients": {
-      "main": [
-        {"ingredient": "1 papan tempe, potong persegi dan goreng"},
-        {"ingredient": "5 siung bawang merah"},
-        {"ingredient": "2 siung bawang putih"},
-        {"ingredient": "1 sdt garam"},
-        {"ingredient": "1/2 sdt gula pasir"},
-        {"ingredient": "2 sdm minyak panas"}
-      ]
+    {
+      "step": 2,
+      "description": "Masukkan tempe dan aduk hingga kecoklatan."
     },
-    "instructions": [
-      {
-        "step": 1,
-        "description": "Goreng tempe hingga matang, tiriskan."
-      },
-      {
-        "step": 2,
-        "description": "Ulek bawang merah dan bawang putih hingga halus. Tambahkan garam dan gula."
-      },
-      {
-        "step": 3,
-        "description": "Siram bumbu halus dengan minyak panas, aduk rata."
-      },
-      {
-        "step": 4,
-        "description": "Penyet tempe goreng di atas bumbu yang sudah diulek. Sajikan."
-      }
-    ]
-  },
-  
-
-  {
-    "recipe_name": "Tempe Goreng Sambal Kecap",
-    "cooking_time": "15 menit",
-    "servings": "4 orang",
-    "image_url": "https://img-global.cpcdn.com/recipes/8cd2ce8e2fd52a3d/680x482cq70/tempe-goreng-sambal-kecap-foto-resep-utama.jpg",
-    "ingredients": {
-      "main": [
-        {"ingredient": "1 papan tempe, potong tipis"},
-        {"ingredient": "3 sdm kecap manis"},
-        {"ingredient": "2 siung bawang merah, iris tipis"},
-        {"ingredient": "1 siung bawang putih, iris tipis"},
-        {"ingredient": "2 buah cabe rawit, iris"},
-        {"ingredient": "1 sdt garam"},
-        {"ingredient": "1 sdm minyak goreng"}
-      ]
+    {
+      "step": 3,
+      "description": "Tambahkan kecap manis, garam, gula merah, dan air. Aduk rata."
     },
-    "instructions": [
-      {
-        "step": 1,
-        "description": "Goreng tempe hingga kecoklatan, tiriskan."
-      },
-      {
-        "step": 2,
-        "description": "Campurkan kecap manis, bawang merah, bawang putih, cabe rawit, garam, dan minyak goreng. Aduk rata."
-      },
-      {
-        "step": 3,
-        "description": "Penyet tempe di atas sambal kecap, aduk rata dan sajikan."
-      }
-    ]
-  },
-  
+    {
+      "step": 4,
+      "description": "Masak hingga bumbu meresap dan air menyusut. Sajikan."
+    }
+  ]
+},
+{
+  "recipe_name": "Tempe Penyet",
+  "cooking_time": "20 menit",
+  "servings": "2 orang",
+  "image_url": "https://lh6.googleusercontent.com/proxy/trWPI2sP1XExfGTMm2b_9ff2t5vercVpS8q1hBgI-_Jjdt5Aw36sOfM9oWRHLkpgqVzOTnRmlRlrHhXJMsa8x5wnbDviDI5gXOYTgGyYyklphOYszsf0si2Yn2ni1ChZ05EXOkk",
+  "ingredients": [
+    {"ingredient": "1 papan tempe, potong persegi dan goreng"},
+    {"ingredient": "5 siung bawang merah"},
+    {"ingredient": "2 siung bawang putih"},
+    {"ingredient": "1 sdt garam"},
+    {"ingredient": "1/2 sdt gula pasir"},
+    {"ingredient": "2 sdm minyak panas"}
+  ],
+  "instructions": [
+    {
+      "step": 1,
+      "description": "Goreng tempe hingga matang, tiriskan."
+    },
+    {
+      "step": 2,
+      "description": "Ulek bawang merah dan bawang putih hingga halus. Tambahkan garam dan gula."
+    },
+    {
+      "step": 3,
+      "description": "Siram bumbu halus dengan minyak panas, aduk rata."
+    },
+    {
+      "step": 4,
+      "description": "Penyet tempe goreng di atas bumbu yang sudah diulek. Sajikan."
+    }
+  ]
+},
+{
+  "recipe_name": "Tempe Goreng Sambal Kecap",
+  "cooking_time": "15 menit",
+  "servings": "4 orang",
+  "image_url": "https://img-global.cpcdn.com/recipes/8cd2ce8e2fd52a3d/680x482cq70/tempe-goreng-sambal-kecap-foto-resep-utama.jpg",
+  "ingredients": [
+    {"ingredient": "1 papan tempe, potong tipis"},
+    {"ingredient": "3 sdm kecap manis"},
+    {"ingredient": "2 siung bawang merah, iris tipis"},
+    {"ingredient": "1 siung bawang putih, iris tipis"},
+    {"ingredient": "2 buah cabe rawit, iris"},
+    {"ingredient": "1 sdt garam"},
+    {"ingredient": "1 sdm minyak goreng"}
+  ],
+  "instructions": [
+    {
+      "step": 1,
+      "description": "Goreng tempe hingga kecoklatan, tiriskan."
+    },
+    {
+      "step": 2,
+      "description": "Campurkan kecap manis, bawang merah, bawang putih, cabe rawit, garam, dan minyak goreng. Aduk rata."
+    },
+    {
+      "step": 3,
+      "description": "Penyet tempe di atas sambal kecap, aduk rata dan sajikan."
+    }
+  ]
+},
   {
     "recipe_name": "Tempe Geprek",
     "cooking_time": "20 menit",
     "servings": "4 orang",
     "image_url": "https://i.ytimg.com/vi/23oOFLjncl0/maxresdefault.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong tebal"},
         {"ingredient": "5 siung bawang putih, haluskan"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt ketumbar bubuk"},
         {"ingredient": "Secukupnya air"},
         {"ingredient": "Secukupnya minyak goreng"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -2126,14 +2001,12 @@
       }
     ]
   },
-  
   {
     "recipe_name": "Tempe Bacem Goreng",
     "cooking_time": "45 menit",
     "servings": "4 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/04b100f878c7dc02/680x482cq70/tempe-goreng-bacem-foto-resep-utama.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients":[
         {"ingredient": "2 papan tempe, potong kotak"},
         {"ingredient": "100 ml air kelapa"},
         {"ingredient": "3 sdm kecap manis"},
@@ -2143,8 +2016,7 @@
         {"ingredient": "2 siung bawang putih, iris"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt gula merah"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -2166,8 +2038,7 @@
     "cooking_time": "25 menit",
     "servings": "4 orang",
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMThq-4NU6Oa4-zlBOskKQ3EqnH5WBy3ZxDA&s",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu"},
         {"ingredient": "5 buah cabe rawit, iris tipis"},
         {"ingredient": "3 siung bawang merah, iris tipis"},
@@ -2176,8 +2047,7 @@
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdm gula merah"},
         {"ingredient": "Minyak goreng secukupnya"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -2197,14 +2067,12 @@
       }
     ]
   },
-  
   {
     "recipe_name": "Tempe Goreng Serundeng",
     "cooking_time": "30 menit",
     "servings": "4 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/f8af00c169fa3e4d/680x482cq70/tempe-goreng-serundeng-kelapa-foto-resep-utama.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong tipis"},
         {"ingredient": "200 gr kelapa parut"},
         {"ingredient": "5 siung bawang putih, haluskan"},
@@ -2213,8 +2081,7 @@
         {"ingredient": "1 sdt gula merah"},
         {"ingredient": "Secukupnya air"},
         {"ingredient": "Secukupnya minyak goreng"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -2230,14 +2097,12 @@
       }
     ]
   },
-  
   {
     "recipe_name": "Tempe Tumis Teri",
     "cooking_time": "20 menit",
     "servings": "4 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/b81e22d74ddaaa07/680x482cq70/tumis-teri-tempe-cabai-resep-mama-foto-resep-utama.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu kecil"},
         {"ingredient": "100 gr ikan teri, goreng"},
         {"ingredient": "5 siung bawang merah, iris tipis"},
@@ -2246,8 +2111,7 @@
         {"ingredient": "2 sdm kecap manis"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt gula merah"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -2267,22 +2131,19 @@
       }
     ]
   },
-  
   {
     "recipe_name": "Tempe Rebus",
     "cooking_time": "15 menit",
     "servings": "2 orang",
     "image_url": "https://img-global.cpcdn.com/recipes/84293c345b60af02/680x482cq70/tempe-rebus-favorit-ibue-foto-resep-utama.jpg",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu besar"},
         {"ingredient": "500 ml air"},
         {"ingredient": "2 lembar daun salam"},
         {"ingredient": "1 ruas lengkuas, geprek"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt gula merah"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -2298,14 +2159,12 @@
       }
     ]
   },
-  
   {
     "recipe_name": "Tempe Tumis Sayur",
     "cooking_time": "30 menit",
     "servings": "4 orang",
     "image_url": "https://lh3.googleusercontent.com/proxy/SExQXbVuzn9Xe9aWpx-A6Lhw5QKhVx5ksRHlwAo-U5TsuxnlFzOfL-kBYuKQLiP8vyRXSpi42aUbkvVSlZpTxMyQfX3Qryhe85SloZ9Sm_S5M6v27Srrgla40ws_pQ",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu kecil"},
         {"ingredient": "100 gr kacang panjang, potong kecil"},
         {"ingredient": "100 gr wortel, potong dadu"},
@@ -2315,8 +2174,7 @@
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdt gula merah"},
         {"ingredient": "100 ml air"}
-      ]
-    },
+    ],
     "instructions": [
       {
         "step": 1,
@@ -2336,14 +2194,12 @@
       }
     ]
   },
-  
   {
     "recipe_name": "Tempe Tumis Kacang Panjang",
     "cooking_time": "25 menit",
     "servings": "3 orang",
     "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxBpzRaqIppZEcheSq7F89mzGPjbpmnQfU9g&s",
-    "ingredients": {
-      "main": [
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong dadu"},
         {"ingredient": "100 gr kacang panjang, potong kecil"},
         {"ingredient": "3 siung bawang merah, iris tipis"},
@@ -2353,8 +2209,7 @@
         {"ingredient": "1 sdt gula pasir"},
         {"ingredient": "100 ml air"},
         {"ingredient": "Minyak goreng secukupnya"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -2374,14 +2229,12 @@
       }
     ]
   },
-  
   {
     "recipe_name": "Tempe Goreng Sambal Matah",
     "cooking_time": "30 menit",
     "servings": "4 orang",
-    "image_url": "data:image/jpeg;base64,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",
-    "ingredients": {
-      "main": [
+    "image_url": "https://img-global.cpcdn.com/recipes/8845229fd2ec2773/680x482cq70/tempe-goreng-sambal-matah-foto-resep-utama.webp",
+    "ingredients": [
         {"ingredient": "1 papan tempe, potong tipis"},
         {"ingredient": "10 siung bawang merah, iris tipis"},
         {"ingredient": "5 siung bawang putih, iris tipis"},
@@ -2389,8 +2242,7 @@
         {"ingredient": "3 buah cabai rawit, iris tipis"},
         {"ingredient": "1 sdt garam"},
         {"ingredient": "1 sdm minyak kelapa"}
-      ]
-    },
+      ],
     "instructions": [
       {
         "step": 1,
@@ -2410,7 +2262,6 @@
       }
     ]
   },
-  
   {
     "recipe_name": "Sate Kere Angkringan Jogja",
     "cooking_time": null,
@@ -2494,7 +2345,6 @@
       }
     ]
 },
-
 {
     "recipe_name": "Sate Usus ala Angkringan Jogja",
     "cooking_time": null,
@@ -2547,7 +2397,6 @@
       }
     ]
 },
-
 {
     "recipe_name": "Sate Kulit Ayam Bumbu Bacem (ala ala angkringan)",
     "cooking_time": "±1 jam",
@@ -2644,7 +2493,6 @@
       }
     ]
 },
-
 {
     "recipe_name": "SATE TELUR PUYUH ala Angkringan Jogja (Versi Bumbu Iris)",
     "cooking_time": "1 jam",
@@ -2680,7 +2528,6 @@
       }
     ]
 },
-
 {
     "recipe_name": "75 Sate Usus Ayam ala Angkringan Jogja",
     "cooking_time": null,
@@ -2729,7 +2576,6 @@
       }
     ]
 },
-
 {
     "recipe_name": "66 Sate Ati Ampela ala Angkringan Jogja",
     "cooking_time": null,
@@ -2778,7 +2624,6 @@
       }
     ]
 },
-
 {
     "recipe_name": "Telur Puyuh Bacem ala Angkringan",
     "cooking_time": null,
@@ -2817,7 +2662,6 @@
       }
     ]
 },
-
 {
     "recipe_name": "Sate Telur Puyuh Bacem ala Angkringan",
     "cooking_time": null,
@@ -2872,7 +2716,6 @@
       }
     ]
 },
-
 {
     "recipe_name": "Sate Telur Puyuh Bacem ala Angkringan",
     "cooking_time": null,
@@ -2910,7 +2753,6 @@
         }
     ]
 },
-
 {
     "recipe_name": "Sate Telur Puyuh dan Sate Usus Ala Angkringan Jogja",
     "cooking_time": null,
@@ -2960,7 +2802,6 @@
         }
     ]
 },
-
 {
     "recipe_name": "Sate Kerang Angkringan Jogja",
     "cooking_time": null,
@@ -2999,7 +2840,6 @@
         }
     ]
 },
-
 {
     "recipe_name": "Sate Telur Puyuh ala Angkringan Jogja",
     "cooking_time": "20 menit",
@@ -3051,7 +2891,6 @@
         }
     ]
 },
-
 {
     "recipe_name": "Bacem Telur Puyuh ala Angkringan",
     "cooking_time": null,
@@ -3123,7 +2962,6 @@
         }
     ]
 },
-
 {
   "recipe_name": "Sate Puyuh ala Angkringan Jogja",
   "cooking_time": null,
@@ -3171,7 +3009,6 @@
       }
   ]
 },
-
 {
   "recipe_name": "Sate Telur Puyuh Enak ala Angkringan Jogja - FLo",
   "cooking_time": null,
@@ -3220,7 +3057,6 @@
       }
   ]
 },
-
 {
   "recipe_name": "Sate Telur Puyuh ala Angkringan Jogja",
   "cooking_time": "15 menit",
@@ -3265,7 +3101,6 @@
       }
   ]
 },
-
 {
   "recipe_name": "Sate Bacem Telur Puyuh + Paru",
   "cooking_time": null,
@@ -3311,7 +3146,6 @@
       }
   ]
 },
-
 {
   "recipe_name": "Bacem (Tempe, Tahu, Telur Puyuh, Hati Ampela Ayam)",
   "cooking_time": null,
@@ -3358,22 +3192,19 @@
       }
   ]
 },
-
 {
   "recipe_name": "Krengsengan Daging Sapi",
   "cooking_time": null,
   "servings": null,
   "image_url": "https://img-global.cpcdn.com/recipes/e5f3747c28614b45/1360x964cq70/816-krengsengan-daging-sapi-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "200 gr Daging Sapi berlemak (buang lemaknya)"},
       {"ingredient": "1 bks Bumbu Krengsengan"},
       {"ingredient": "2 lembar Daun Salam"},
       {"ingredient": "1 sdm Kecap Manis"},
       {"ingredient": "2 buah Cabai Rawit utuh"},
       {"ingredient" : "1 buah Tomat"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -3443,15 +3274,13 @@
     "description": "Sajikan dengan nasi hangat."
   }
 ]
-}
-,
+},
   {
       "recipe_name": "Krengsengan Bekicot",
       "cooking_time": "50 menit",
       "servings": "8 porsi",
       "image_url": "https://img-global.cpcdn.com/recipes/48d11ed713d519c3/1360x964cq70/krengsengan-bekicot-foto-resep-utama.webp",
-      "ingredients": {
-        "main": [
+      "ingredients": [
           {"ingredient": "1 kg Bekicot kupas"},
           {"ingredient": "10 siung bawang merah"},
           {"ingredient": "7 siung bawang putih"},
@@ -3465,8 +3294,7 @@
           {"ingredient": "Secukupnya garam dan gula"},
           {"ingredient": "Secukupnya minyak goreng untuk menumis"},
           {"ingredient": "500 ml air"}
-        ]
-      },
+        ],
       "instructions": [
         {
           "step": 1,
@@ -3485,15 +3313,13 @@
           "description" : "Setelah mengesat,aduk kembali dan matikan kompornya. Bekicot siap di nikmati bersama dg nasi hangat"
         }
       ]
-    }
-    ,
+    },
     {
       "recipe_name": "Krengsengan Rempelo Hati Kacang Polong",
       "cooking_time": "30 menit",
       "servings": "4-5 orang",
       "image_url": "https://img-global.cpcdn.com/recipes/93a449c5d7964cf2/1360x964cq70/471-krengsengan-rempelo-hati-kacang-polong-foto-resep-utama.webp",
-      "ingredients": {
-        "main": [
+      "ingredients": [
           {"ingredient": "8 pasang rempelo hati ayam"},
           {"ingredient": "1 cup kacang polong frozen, rebus terlebih dahulu"},
           {"ingredient": "1 ruas jahe untuk rebusan"},
@@ -3509,8 +3335,7 @@
           {"ingredient": "4 siung bawang putih"},
           {"ingredient": "3 butir kemiri"},
           {"ingredient": "1 sdt merica bubuk"}
-        ]
-      },
+        ],
       "instructions": [
         {
           "step": 1,
@@ -3537,15 +3362,13 @@
           "description": "Sajikan krengsengan rempelo hati kacang polong sebagai lauk pendamping nasi hangat."
         }
       ]
-    }
-,
+    },
 {
   "recipe_name": "Krengsengan Daging Kambing",
   "cooking_time": null,
   "servings": null,
   "image_url": "https://img-global.cpcdn.com/recipes/1995f59e10979bef/1360x964cq70/krengseng-kambing-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "1/4 kg daging kambing"},
       {"ingredient": "1 bumbu krengseng instan"},
       {"ingredient": "Bawang pre atau daun bawang besar, iris"},
@@ -3556,8 +3379,7 @@
       {"ingredient": "Penyedap rasa sapi secukupnya"},
       {"ingredient": "Laos"},
       {"ingredient": "Daun salam secukupnya"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -3576,15 +3398,13 @@
       "description": "Sajikan krengsengan daging kambing hangat."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Ampela Ati Ayam",
   "cooking_time": "30 menit",
   "servings": "4 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/392796a5a3c64faa/1360x964cq70/801-krengsengan-ampela-ati-ayam-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "1/4 kg rempela ati"},
       {"ingredient": "1 buah cabe merah, iris"},
       {"ingredient": "1 buah tomat, potong"},
@@ -3601,8 +3421,7 @@
       {"ingredient": "5 buah cabe rawit"},
       {"ingredient": "5 sdm minyak sayur"},
       {"ingredient": "Kecap manis secukupnya (opsional)"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -3633,15 +3452,13 @@
       "description": "Sajikan krengsengan ampela ati hangat."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Daging Sapi dan Bakso",
   "cooking_time": null,
   "servings": null,
   "image_url": "https://img-global.cpcdn.com/recipes/26a65af2670f79e4/1360x964cq70/krengseng-daging-sapi-dan-bakso-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "250 gram daging sapi yang sudah direbus hingga empuk"},
       {"ingredient": "5 buah bakso ukuran sedang, potong sesuai selera"},
       {"ingredient": "9 buah cabai rawit"},
@@ -3653,8 +3470,7 @@
       {"ingredient": "Secukupnya penyedap rasa"},
       {"ingredient": "Secukupnya air"},
       {"ingredient": "Secukupnya minyak untuk menumis"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -3673,15 +3489,13 @@
       "description": "Masukkan bakso, tambahkan gula pasir, kecap, dan penyedap rasa. Aduk kembali dan cek rasa. Jika sudah pas, tunggu hingga mendidih, lalu angkat. Krengsengan siap dinikmati."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Iga dan Tetelan Sapi",
   "cooking_time": "30 menit",
   "servings": "3 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/7eb5f978448fcc7a/1360x964cq70/krengsengan-iga-dan-tetelan-sapi-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "1 kg iga dan tetelan sapi (rebus dahulu biar empuk)"},
       {"ingredient": "Secukupnya kecap"},
       {"ingredient": "8 siung bawang merah"},
@@ -3696,8 +3510,7 @@
       {"ingredient": "Secukupnya gula merah jawa"},
       {"ingredient": "1/2 sdt garam"},
       {"ingredient": "1/2 sdt kaldu bubuk"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -3724,15 +3537,13 @@
       "description": "Setelah matang, angkat dan sajikan. Jangan lupa taburi dengan bawang merah goreng. Krengsengan iga dan tetelan sapi siap dihidangkan dengan nasi hangat."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Tulang Ayam Sawi Putih",
   "cooking_time": "45 menit",
   "servings": "4-5 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/b9a3d565f804d911/1360x964cq70/krengsengan-tulang-ayam-sawi-putih-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "750 gr tulangan ayam (kerongkongan)"},
       {"ingredient": "500 ml air untuk merebus tulangan ayam"},
       {"ingredient": "1 bonggol sawi putih ukuran kecil"},
@@ -3746,8 +3557,7 @@
       {"ingredient": "1/2 sdm kecap rajarasa (atau kecap asin)"},
       {"ingredient": "Minyak untuk menumis"},
       {"ingredient": "Bumbu Halus: 4 buah cabe merah keriting, 5 butir bawang merah, 5 butir bawang putih, 3 butir kemiri sangrai"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -3774,15 +3584,13 @@
       "description": "Krengsengan sawi putih sudah siap disajikan."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Kresengan Hati Sapi",
   "cooking_time": "30 menit",
   "servings": "4 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/9f8ce1bd0cdf1ab8/1360x964cq70/385-kresengan-hati-sapi-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "500 gram hati sapi"},
       {"ingredient": "Secukupnya kecap manis"},
       {"ingredient": "Secukupnya garam"},
@@ -3798,8 +3606,7 @@
       {"ingredient": "5 lembar daun jeruk"},
       {"ingredient": "1 ruas lengkuas, geprek"},
       {"ingredient": "3 lembar daun salam"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -3818,15 +3625,13 @@
       "description": "Masak hati sampai empuk dan air menyusut. Kresengan hati sapi siap dihidangkan."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Jeroan Kambing",
   "cooking_time": "1 jam",
   "servings": "4 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/873677932b43d7fb/1360x964cq70/krengsengan-jeroan-kambing-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "500 kilogram jeroan kambing"},
       {"ingredient": "Air putih untuk merebus"},
       {"ingredient": "6 siung bawang merah, iris tipis"},
@@ -3839,8 +3644,7 @@
       {"ingredient": "1/4 sdt micin (ajinomoto)"},
       {"ingredient": "2 sdm kecap manis"},
       {"ingredient": "2 sdm minyak sayur untuk menumis"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -3859,15 +3663,13 @@
       "description": "Kemudian angkat. Krengsengan jeroan kambing siap disajikan dengan nasi hangat."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Daging Campur",
   "cooking_time": "35 menit",
   "servings": "6 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/25df70e45089f3cc/1360x964cq70/krengsengan-daging-campur-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "600 gram daging (daging, urat, babat) yang sudah direbus dengan rempah-rempah"},
       {"ingredient": "8 siung bawang merah"},
       {"ingredient": "6 siung bawang putih"},
@@ -3883,8 +3685,7 @@
       {"ingredient": "secukupnya kaldu jamur"},
       {"ingredient": "1/2 bungkus lada bubuk"},
       {"ingredient": "Air"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -3907,15 +3708,13 @@
       "description": "Beri sedikit air, lalu masukkan garam, kaldu jamur, dan lada bubuk. Aduk-aduk, kemudian tambahkan kecap manis dan kecap asin. Koreksi rasa. Jika sudah pas, aduk dan diamkan sampai air menyusut. Krengsengan daging siap disajikan (boleh ditambah potongan cabe atau cabe utuh)."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Mercon Daging",
   "cooking_time": "1 jam",
   "servings": "5 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/80a29aad421dc066/1360x964cq70/kreasidagingkurban-krengsengan-mercon-daging-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "500 g daging sapi"},
       {"ingredient": "Bumbu yang dihaluskan: 9 siung bawang merah"},
       {"ingredient": "5 siung bawang putih"},
@@ -3933,8 +3732,7 @@
       {"ingredient": "Secukupnya air"},
       {"ingredient": "Bumbu presto: 2 siung bawang putih digeprek, 1200 ml air, 1/2 sdt garam halus, 1 sdt merica bubuk"},
       {"ingredient": "Bahan irisan: 1 biji cabe merah iris serong, beberapa biji cabe rawit sesuai selera, bawang goreng untuk taburan"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -3965,15 +3763,13 @@
       "description": "Sajikan dengan nasi hangat dan kerupuk. Selamat menikmati!"
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Hati Sapi Kentang",
   "cooking_time": "1 jam",
   "servings": "6-10 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/09eec1c9c48572ce/1360x964cq70/krengsengan-hati-sapi-kentang-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "500 gr hati sapi"},
       {"ingredient": "250 gram kentang"},
       {"ingredient": "1 siung bombay, ukuran sedang, iris"},
@@ -3990,8 +3786,7 @@
       {"ingredient": "Secukupnya air"},
       {"ingredient": "Bumbu halus: 5 siung bawang merah, 3 siung bawang putih, 3 buah cabe merah, 2 buah kemiri, 1/2 sdt lada bubuk, 1 sdt garam"},
       {"ingredient": "Bahan untuk merebus hati: Secukupnya air, 1 lembar daun salam, 1 batang serai, 2 lembar daun jeruk, 1 sdm garam"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4018,15 +3813,13 @@
       "description": "Alhamdulillah, siap disajikan! ❤️"
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Daging, Jeroan dan Kulit Kambing",
   "cooking_time": "1 jam",
   "servings": "4-5 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/1ee4a479cd43c13f/1360x964cq70/krengsengan-daging-jeroan-dan-kulit-kambing-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "1 kg daging/jeroan/kulit kambing/tulang iga"},
       {"ingredient": "6 siung bawang merah"},
       {"ingredient": "2 siung bawang putih"},
@@ -4039,8 +3832,7 @@
       {"ingredient": "2 sdm kecap manis"},
       {"ingredient": "Secukupnya garam"},
       {"ingredient": "Secukupnya penyedap"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4059,16 +3851,13 @@
       "description": "Tambahkan kecap manis dan penyedap. Koreksi rasa dan tunggu sampai matang. Krengsengan siap disajikan."
     }
   ]
-}
-,
-
+},
 {
   "recipe_name": "Krengseng Daging Kentang",
   "cooking_time": "1 jam",
   "servings": "2 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/3fe873ae5944f185/1360x964cq70/krengseng-daging-kentang-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "200 gr daging sapi, potong kotak"},
       {"ingredient": "3 buah kentang, potong kotak, goreng sampai matang"},
       {"ingredient": "20 biji cabe rawit merah & hijau"},
@@ -4089,8 +3878,7 @@
       {"ingredient": "6 siung bawang putih"},
       {"ingredient": "3 butir kemiri"},
       {"ingredient": "1 ruas jahe"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4113,15 +3901,13 @@
       "description": "Krengseng daging kentang siap disajikan."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Sapi Pedas",
   "cooking_time": "25 menit",
   "servings": "5 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/493b2ef5cfa970cb/1360x964cq70/krengsengan-sapi-pedas-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "224 gr daging sapi (sudah direbus)"},
       {"ingredient": "2 lembar daun jeruk"},
       {"ingredient": "1 batang sereh"},
@@ -4137,8 +3923,7 @@
       {"ingredient": "5 buah cabe keriting merah"},
       {"ingredient": "1/2 ruas jahe"},
       {"ingredient": "1 butir kemiri + air secukupnya"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4165,15 +3950,13 @@
       "description": "Nikmati hidangan ini dengan nasi hangat."
     }
   ]
-}
-, 
+}, 
 {
   "recipe_name": "Krengsengan Daging dan Tahu",
   "cooking_time": "1 jam",
   "servings": "5 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/c5aafffbc7e51394/1360x964cq70/krengsengan-daging-dan-tahu-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "Daging sapi, dipotong-potong"},
       {"ingredient": "Tahu"},
       {"ingredient": "Minyak goreng"},
@@ -4187,8 +3970,7 @@
       {"ingredient": "secukupnya lada bubuk"},
       {"ingredient": "secukupnya kaldu jamur"},
       {"ingredient": "secukupnya kecap manis"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4215,15 +3997,13 @@
       "description": "Jika daging sudah empuk dan rasanya sudah mantap, sajikan dengan penuh cinta untuk semua kesayangan."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Iga Sapi",
   "cooking_time": "60 menit",
   "servings": "4 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/155cbc1fd0a0fa29/1360x964cq70/krengsengan-iga-sapi-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "300 gr daging iga sapi"},
       {"ingredient": "2 ruas jari lengkuas, geprek"},
       {"ingredient": "2 lembar daun jeruk"},
@@ -4245,8 +4025,7 @@
       {"ingredient": "10 buah cabe merah keriting"},
       {"ingredient": "3 butir kemiri sangrai"},
       {"ingredient": "2 ruas jari jahe"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4257,15 +4036,13 @@
       "description": "Masukkan daging iga, aduk rata. Tuang air dan didihkan."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Ceker",
   "cooking_time": "1 jam",
   "servings": "4 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/5c6ef275236bfac2/1360x964cq70/krengseng-ceker-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "250 gr ceker yang sudah direbus"},
       {"ingredient": "5 butir bawang putih"},
       {"ingredient": "5 butir bawang merah"},
@@ -4279,8 +4056,7 @@
       {"ingredient": "gula"},
       {"ingredient": "penyedap"},
       {"ingredient": "kaldu dari tulang ayam"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4303,15 +4079,13 @@
       "description": "Lakukan tes rasa. Matikan kompor jika sudah matang dan rasa sudah sesuai selera."
     }
   ]
-}
-,
+},
 {
   "recipe_name": "Krengsengan Kepala Kambing",
   "cooking_time": "45 menit",
   "servings": "8 orang",
   "image_url": "https://img-global.cpcdn.com/recipes/eb05ea3a23d36ba8/1360x964cq70/481-krengsengan-kepala-kambing-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "1 buah kepala kambing"},
       {"ingredient": "5 sdm kecap manis"},
       {"ingredient": "2 batang bawang pre"},
@@ -4325,8 +4099,7 @@
       {"ingredient": "4 lembar daun jeruk"},
       {"ingredient": "1 sdt garam"},
       {"ingredient": "1 sdt gula pasir"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4346,23 +4119,18 @@
     }
   ]
 },
-
 {
   "recipe_name": "Nasi Kucing Bandeng Angkringan",
   "cooking_time": "60 minutes",
   "servings": "6 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/65c6771805047b63/1360x964cq70/nasi-kucing-bandeng-angkringan-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "2 ekor bandeng presto goreng"},
       {"ingredient": "6 centong nasi putih"},
       {"ingredient": "12 lembar daun pisang, untuk membungkus dan lembaran lampin (alas di dalam bungkusan)"},
-      {"ingredient": "12 lembar tusuk gigi untuk merapikan bungkusan"}
-    ],
-    "pelengkap" : [
+      {"ingredient": "12 lembar tusuk gigi untuk merapikan bungkusan"},
       {"ingredient": "Sate kikil angkringan"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4382,18 +4150,15 @@
     }
   ]
 },
-
 {
   "recipe_name": "Sego Kucing",
   "cooking_time": "30 minutes",
   "servings": "1 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/e09ffde21c9ea9b0/1360x964cq70/sego-kucing-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "1 Centong Nasi Putih Hangat"},
       {"ingredient": "2 sdm Kering Tempe"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4409,14 +4174,12 @@
     }
   ]
 },
-
 {
   "recipe_name": "Sego Kucing Sambel Teri dan Orek Tempe Khas Angkringan",
   "cooking_time": "90 minutes",
   "servings": "5 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/2572b2b6414a4de2/1360x964cq70/sego-kucing-sambel-teri-dan-orek-tempe-khas-angkringan-foto-resep-utama.webp",
-  "ingredients": {
-    "sambal teri": [
+  "ingredients": [
       {"ingredient": "Sebungkus ikan teri asin, direndam, lalu bilas untuk mengurangi kadar asin"},
       {"ingredient": "10 cabai merah keriting"},
       {"ingredient": "15 cabai rawit merah"},
@@ -4424,9 +4187,7 @@
       {"ingredient": "7 bawang putih"},
       {"ingredient": "1 tomat"},
       {"ingredient": "Secukupnya garam, gula pasir, kaldu bubuk/MSG"},
-      {"ingredient": "Secukupnya minyak goreng"}
-    ],
-    "orek tempe" : [
+      {"ingredient": "Secukupnya minyak goreng"},
       {"ingredient": "1/2 papan tempe, iris persegi panjang dan tipis"},
       {"ingredient": "5 bawang merah, iris-iris"},
       {"ingredient": "4 bawang putih, iris-iris"},
@@ -4435,13 +4196,10 @@
       {"ingredient": "1 ruas lengkuas, geprek"},
       {"ingredient": "3 lembar daun salam"},
       {"ingredient": "1/2 bulatan gula jawa, iris"},
-      {"ingredient": "Secukupnya minyak, kecap manis, garam, kaldu bubuk/MSG, dan air"}
-    ],
-    "pelengkap" : [
+      {"ingredient": "Secukupnya minyak, kecap manis, garam, kaldu bubuk/MSG, dan air"},
       {"ingredient": "Aneka lalapan"},
       {"ingredient": "Sate usus dan sate kulit ayam"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4485,35 +4243,28 @@
     }
   ]
 },
-
 {
   "recipe_name": "Nasi Kucing Uduk Beras Basmati Bungkus Daun Pisang",
   "cooking_time": "30 minutes",
   "servings": "10 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/fe10060d69615484/1360x964cq70/nasi-kucing-uduk-beras-basmati-bungkus-daun-pisang-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "500 gr beras basmati"},
       {"ingredient": "700 ml air (sesuaikan dengan panci rice cooker)"},
       {"ingredient": "100 gr fiber creme (me : Ellenka) seduh dengan 200 ml air"},
-      {"ingredient": "Secukupnya garam"}
-    ],
-    "bumbu utuh" : [
+      {"ingredient": "Secukupnya garam"},
       {"ingredient": "3 cm jahe"},
       {"ingredient": "3 cm lengkuas"},
       {"ingredient": "3 lembar daun jeruk (kalau kecil 5 lb)"},
       {"ingredient": "3 lembar daun salam"},
       {"ingredient": "2 lembar daun pandan wangi potong-potong"},
-      {"ingredient": "2 batang sereh geprek"}
-    ],
-    "pelengkap" : [
+      {"ingredient": "2 batang sereh geprek"},
       {"ingredient": "Emping melinjo/ kerupuk"},
       {"ingredient": "Sambal goreng"},
       {"ingredient": "Bawang goreng"},
       {"ingredient": "Ketimun"},
       {"ingredient": "Telur dadar rawis (telur dadar dipotong tipis-tipis)"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4537,14 +4288,12 @@
     }
   ]
 },
-
 {
   "recipe_name": "Sego Kucing Sederhana",
   "cooking_time": "45 minutes",
   "servings": "14 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/52511627015a80ca/1360x964cq70/sego-kucing-sederhana-foto-resep-utama.webp",
-  "ingredients": {
-    "telur pindang": [
+  "ingredients": [
       {"ingredient": "14 butir telur rebus kupas"},
       {"ingredient": "3 butir besar bawang merah dan kulitnya, geprek"},
       {"ingredient": "3 siung bawang putih dan kulitnya, geprek"},
@@ -4554,9 +4303,7 @@
       {"ingredient": "2 sdm gula merah aren sisir"},
       {"ingredient": "3 sdm kecap manis"},
       {"ingredient": "1 sdm garam"},
-      {"ingredient": "Secukupnya air hingga telur terendam"}
-    ],
-    "oseng tempe kacang panjang" : [
+      {"ingredient": "Secukupnya air hingga telur terendam"},
       {"ingredient": "1 papan besar tempe, potong-potong lalu goreng sebentar"},
       {"ingredient": "300 gr kacang panjang, potong sesuai selera"},
       {"ingredient": "5 sdm kecap manis"},
@@ -4567,15 +4314,12 @@
       {"ingredient": "2 lembar daun salam"},
       {"ingredient": "1 batang serai, potong 4 lalu geprek"},
       {"ingredient": "50 ml air"},
-      {"ingredient": "50 ml minyak goreng untuk menumis"}
-    ],
-    "bumbu iris" : [
+      {"ingredient": "50 ml minyak goreng untuk menumis"},
       {"ingredient": "8 butir bawang merah"},
       {"ingredient": "5 siung bawang putih"},
       {"ingredient": "100 gr cabai ijo keriting"},
       {"ingredient": "50 gr cabai merah keriting"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4595,30 +4339,25 @@
     }
   ]
 },
-
 {
   "recipe_name": "Sego Kucing ala Angkringan (Nasi Sambal Teri Terong)",
   "cooking_time": "30 minutes",
   "servings": "5 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/ecbb7daa9b9b9839/1360x964cq70/sego-kucing-ala-angkringan-nasi-sambal-teri-terong-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "2 bh Terong Ungu"},
       {"ingredient": "100 gr Teri Jengki"},
       {"ingredient": "Sejumput Garam"},
       {"ingredient": "Secukupnya Nasi putih"},
       {"ingredient": "Secukupnya Daun pisang untuk membungkus"},
-      {"ingredient": "Secukupnya minyak goreng untuk menumis"}
-    ],
-    "bumbu halus" : [
+      {"ingredient": "Secukupnya minyak goreng untuk menumis"},
       {"ingredient": "8 buah Cabai Merah"},
       {"ingredient": "5 buah Cabai Rawit merah"},
       {"ingredient": "1/2 sdt Terasi"},
       {"ingredient": "5 siung Bawang Merah"},
       {"ingredient": "3 siung Bawang Putih (me : bawang putih bubuk)"},
       {"ingredient": "1 buah Tomat merah"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4658,14 +4397,12 @@
     }
   ]
 },
-
 {
   "recipe_name": "Nasi kucing || bekal sekolah Naraya",
   "cooking_time": null,
   "servings": "1 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/df32860493b60593/1360x964cq70/nasi-kucing-bekal-sekolah-naraya-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "Nasi putih"},
       {"ingredient": "Kunyit"},
       {"ingredient": "Kaldu jamur"},
@@ -4678,8 +4415,7 @@
       {"ingredient": "Oreo mini"},
       {"ingredient": "Yupi heart"},
       {"ingredient": "Chiki ball"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4699,14 +4435,12 @@
     }
   ]
 },
-
 {
   "recipe_name": "Cumi Asin Cabe Ijo (versi sego kucing)",
   "cooking_time": "60 minutes",
   "servings": "5-6 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/384ab200d71ec9a6/1360x964cq70/cumi-asin-cabe-ijo-versi-sego-kucing-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "250 gr cumi asin"},
       {"ingredient": "2 papan petai"},
       {"ingredient": "2 sdm saos tiram"},
@@ -4716,9 +4450,7 @@
       {"ingredient": "1 ruas lengkuas geprek"},
       {"ingredient": "2 daun salam"},
       {"ingredient": "3 lbr daun jeruk"},
-      {"ingredient": "Daun pisang untuk membungkus"}
-    ],
-    "bumbu iris" : [
+      {"ingredient": "Daun pisang untuk membungkus"},
       {"ingredient": "6 butir bawang merah"},
       {"ingredient": "4 siung bawang putih"},
       {"ingredient": "5 tomat ijo"},
@@ -4726,8 +4458,7 @@
       {"ingredient": "7 cabe rawit (selera)"},
       {"ingredient": "1/2 bawang bombay (me : skip)"},
       {"ingredient": "Minyak untuk menumis"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4747,28 +4478,23 @@
     }
   ]
 },
-
 {
   "recipe_name": "Mie goreng nasi kucing ala angkringan",
   "cooking_time": "20 minutes",
   "servings": "2 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/8aafaa32d4ca6a95/1360x964cq70/mie-goreng-nasi-kucing-ala-angkringan-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "1 bungkus Mie instan"},
       {"ingredient": "2 keping Mie biasa"},
       {"ingredient": "300 ml Air"},
       {"ingredient": "Segenggam bayam (pengganti sawi)"},
-      {"ingredient": "2 sdm Kecap manis"}
-    ],
-    "bumbu halus" : [
+      {"ingredient": "2 sdm Kecap manis"},
       {"ingredient": "3 cabe rawit"},
       {"ingredient": "5 bawang merah"},
       {"ingredient": "2 bawang putih"},
       {"ingredient": "1/2 sdt Ladaku"},
       {"ingredient": "1/2 sdt Garam"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4792,14 +4518,12 @@
     }
   ]
 },
-
 {
   "recipe_name": "Nasi Kucing Suir Tongkol Ala Ambu",
   "cooking_time": "20 minutes",
   "servings": "banyak porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/28ccb98493986ed7/1360x964cq70/nasi-kucing-suir-tongkol-ala-ambu-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "Ikan tongkol asin satu bungkus"},
       {"ingredient": "Tempe potong kecil dan goreng"},
       {"ingredient": "secukupnya Daun pisang"},
@@ -4810,8 +4534,7 @@
       {"ingredient": "2 batang serai"},
       {"ingredient": "2 batang daun bawang"},
       {"ingredient": "secukupnya Gula pasir, garam dan merica"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4835,18 +4558,14 @@
     }
   ]
 },
-
 {
   "recipe_name": "Sego Kucing",
   "cooking_time": null,
   "servings": null,
   "image_url": "https://img-global.cpcdn.com/recipes/1f00ed349c77fe21/1360x964cq70/sego-kucing-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "Nasi"},
-      {"ingredient": "Ikan Tongkol/Wader"}
-    ],
-    "sambal tomat terasi" : [
+      {"ingredient": "Ikan Tongkol/Wader"},
       {"ingredient": "3 buah tomat"},
       {"ingredient": "3 siung bawang merah"},
       {"ingredient": "2 siung bawang putih"},
@@ -4854,8 +4573,7 @@
       {"ingredient": "5 buah cabai rawit"},
       {"ingredient": "sesuai selera Garam"},
       {"ingredient": "sesuai selera Gula"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4879,18 +4597,14 @@
     }
   ]
 },
-
 {
   "recipe_name": "Nasi Kucing Ala Angkringan",
   "cooking_time": null,
   "servings": null,
   "image_url": "https://img-global.cpcdn.com/recipes/8ff9bf45fca0585c/1360x964cq70/nasi-kucing-ala-angkringan-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "Nasi putih hangat"},
-      {"ingredient": "Daun pisang"}
-    ],
-    "sambal teri" : [
+      {"ingredient": "Daun pisang"},
       {"ingredient": "100 gr teri nasi/medan"},
       {"ingredient": "2 buah cabe merah"},
       {"ingredient": "3 buah cabe rawit merah (sesuaikan selera)"},
@@ -4900,14 +4614,11 @@
       {"ingredient": "1 keping gula merah (uk kecil)"},
       {"ingredient": "Garam"},
       {"ingredient": "MSG (boleh skip) atau diganti Kaldu Bubuk"},
-      {"ingredient": "1/2 sachet terasi kecil"}
-    ],
-    "pelengkap" : [
+      {"ingredient": "1/2 sachet terasi kecil"},
       {"ingredient": "Teh Ginastel"},
       {"ingredient": "Sate Telur Puyuh"},
       {"ingredient": "Tempe Mendoan Bakar"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4923,17 +4634,13 @@
     }
   ]
 },
-
 {
   "recipe_name": "Sego Kucing ala Angkringan Yogya",
   "cooking_time": null,
   "servings": null,
   "image_url": "https://img-global.cpcdn.com/recipes/ab379b16db8e444b/1360x964cq70/364-sego-kucing-ala-angkringan-yogya-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
-      {"ingredient": "secukupnya Nasi putih hangat"}
-    ],
-    "orek tempe basah" : [
+  "ingredients": [
+      {"ingredient": "secukupnya Nasi putih hangat"},
       {"ingredient": "1 papan tempe, potong dadu"},
       {"ingredient": "3 buah cabai hijau, iris"},
       {"ingredient": "2 buah cabe merah, iris"},
@@ -4941,17 +4648,13 @@
       {"ingredient": "2 lembar daun salam"},
       {"ingredient": "1 ruas lengkuas geprek"},
       {"ingredient": "Secukupnya gula, garam dan kaldu bubuk"},
-      {"ingredient": "Secukupnya air"}
-    ],
-    "bumbu halus" : [
+      {"ingredient": "Secukupnya air"},
       {"ingredient": "5 siung bawang merah"},
       {"ingredient": "2 siung bawang putih"},
       {"ingredient": "1/2 buah tomat"},
       {"ingredient": "3 buah cabe keriting merah"},
       {"ingredient": "2 butir kemiri"},
-      {"ingredient": "1/2 sdt ketumbar"}
-    ],
-    "sambel teri" : [
+      {"ingredient": "1/2 sdt ketumbar"},
       {"ingredient": "1 genggam teri tawar, cuci lalu goreng"},
       {"ingredient": "3 buah bawang merah"},
       {"ingredient": "1 siung bawang putih"},
@@ -4961,8 +4664,7 @@
       {"ingredient": "1/2 sdt garam"},
       {"ingredient": "1/4 sdt gula pasir"},
       {"ingredient": "2 sdm minyak goreng"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -4982,19 +4684,15 @@
     }
   ]
 },
-
 {
   "recipe_name": "Sego Kucing ala Rumahan",
   "cooking_time": null,
   "servings": "20 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/0e2732a1dbc0bfed/1360x964cq70/sego-kucing-ala-rumahan-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "20 porsi nasi putih"},
       {"ingredient": "20 buah telur rebus, kupas kulitnya"},
-      {"ingredient": "Secukupnya minyak goreng"}
-    ],
-    "kering tempe teri" : [
+      {"ingredient": "Secukupnya minyak goreng"},
       {"ingredient": "3 papan sedang tempe, potong dadu kecil lalu goreng kering"},
       {"ingredient": "100 gr teri jengki asin belah, cuci bersih lalu goreng kering"},
       {"ingredient": "50 gr cabe ijo keriting, iris serong tipis lalu goreng sebentar"},
@@ -5005,16 +4703,12 @@
       {"ingredient": "1/2 sdt garam"},
       {"ingredient": "2 sdt gula pasir"},
       {"ingredient": "3 sdm kecap manis"},
-      {"ingredient": "5 sdm air"}
-    ],
-    "bumbu halus kering tempe teri" : [
+      {"ingredient": "5 sdm air"},
       {"ingredient": "50 gr cabe merah tanjung (cabe besar)"},
       {"ingredient": "8 butir bawang merah"},
       {"ingredient": "6 siung bawang putih"},
       {"ingredient": "1 sdt ketumbar bubuk"},
-      {"ingredient": "4 butir kemiri"}
-    ],
-    "oseng kacang panjang" : [
+      {"ingredient": "4 butir kemiri"},
       {"ingredient": "600 gr kacang panjang, cuci bersih lalu potong 2cm dan goreng"},
       {"ingredient": "100 gr cabe ijo keriting, iris serong tipis lalu goreng sebentar"},
       {"ingredient": "6 butir bawang merah, iris tipis"},
@@ -5022,9 +4716,7 @@
       {"ingredient": "1 bungkus masako ayam (9gr)"},
       {"ingredient": "1/2 sdt garam"},
       {"ingredient": "2 sdt gula pasir (secukupnya)"},
-      {"ingredient": "2 sdm margarin"}
-    ],
-    "sambal terasi (ala Sambal Bajak)" : [
+      {"ingredient": "2 sdm margarin"},
       {"ingredient": "350 gr cabe merah keriting"},
       {"ingredient": "15 butir bawang merah"},
       {"ingredient": "8 siung bawang putih"},
@@ -5033,8 +4725,7 @@
       {"ingredient": "1 bungkus masako ayam (9gr)"},
       {"ingredient": "1 sdt garam"},
       {"ingredient": "1.5 sdm - 2 sdm gula pasir"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -5070,19 +4761,15 @@
     }
   ]
 },
-
 {
   "recipe_name": "Sego Kucing Sambel Teri",
   "cooking_time": null,
   "servings": "5 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/0f9ca5a53a468f57/1360x964cq70/nasi-kucing-sambel-teri-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "10 centong nasi putih hangat"},
       {"ingredient": "50 gr teri kering (me: teri medan dan teri biasa)"},
-      {"ingredient": "Secukupnya minyak goreng untuk menggoreng"}
-    ],
-    "sambal" : [
+      {"ingredient": "Secukupnya minyak goreng untuk menggoreng"},
       {"ingredient": "10 buah cabai rawit"},
       {"ingredient": "1 buah cabai merah besar"},
       {"ingredient": "1 buah cabai merah keriting"},
@@ -5093,8 +4780,7 @@
       {"ingredient": "1/2 sdm gula merah"},
       {"ingredient": "1/4 sdm gula pasir"},
       {"ingredient": "1/2-1 sdt garam"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -5114,17 +4800,13 @@
     }
   ]
 },
-
 {
   "recipe_name": "Nasi Kucing Sambel Teri (ala Angkringan)",
   "cooking_time": "20 minutes",
   "servings": "15 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/c4155bcf7c5e74be/1360x964cq70/266-nasi-kucing-sambel-teri-ala-angkringan-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
-      {"ingredient": "Nasi putih"}
-    ],
-    "lauk" : [
+  "ingredients": [
+      {"ingredient": "Nasi putih"},
       {"ingredient": "1 genggam ikan teri"},
       {"ingredient": "7 bh cabai keriting merah"},
       {"ingredient": "5 bh cabai rawit merah"},
@@ -5134,8 +4816,7 @@
       {"ingredient": "1/4 sdt garam"},
       {"ingredient": "1/2 penyedap rasa"},
       {"ingredient": "Secuil gula jawa"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -5159,36 +4840,26 @@
     }
   ]
 },
-
-
 {
   "recipe_name": "Nasi Kucing",
   "cooking_time": null,
   "servings": null,
   "image_url": "https://img-global.cpcdn.com/recipes/45aedce8dd8b4773/1360x964cq70/nasi-kucing-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "1 cup beras, masak seperti biasa"},
       {"ingredient": "1 bungkus mie burung dara"},
-      {"ingredient": "1/2 potong kol, iris halus"}
-    ],
-    "bumbu halus mie" : [
+      {"ingredient": "1/2 potong kol, iris halus"},
       {"ingredient": "8 siung bawang putih"},
       {"ingredient": "1 butir bawang bombay"},
       {"ingredient": "2 butir bawang merah"},
       {"ingredient": "1/2 sdm merica"},
       {"ingredient": "Secukupnya garam dan kaldu bubuk"},
-      {"ingredient": "Secukupnya kecap manis"}
-    ],
-    "pelengkap": [
+      {"ingredient": "Secukupnya kecap manis"},
       {"ingredient": "Bakwan Sayur"},
-      {"ingredient": "Sambal Tomat"}
-    ],
-    "bahan telur dadar": [
+      {"ingredient": "Sambal Tomat"},
       {"ingredient": "3 butir telur"},
       {"ingredient": "Secukupnya kaldu bubuk"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -5208,34 +4879,27 @@
     }
   ]
 },
-
 {
   "recipe_name": "NASI KUCING ala QU",
   "cooking_time": null,
   "servings": null,
   "image_url": "https://img-global.cpcdn.com/recipes/21ee7f4e3a3c2224/1360x964cq70/nasi-kucing-ala-qu-foto-resep-utama.webp",
-  "ingredients": {
-    "nasi jeruk": [
+  "ingredients": [
       {"ingredient": "3 mangkok nasi"},
       {"ingredient": "3 siung bw putih iris tipis"},
       {"ingredient": "3 lbr daun jeruk potong tipis"},
-      {"ingredient": "Secukupnya garam, kaldu bubuk"}
-    ],
-    "orek tempe" : [
+      {"ingredient": "Secukupnya garam, kaldu bubuk"},
       {"ingredient": "1 papan tempe iris korek api goreng kering"},
       {"ingredient": "3 bh bw merah iris tipis"},
       {"ingredient": "2 siung bw putih iris tipis"},
       {"ingredient": "5 bh cabe keriting boleh lebih sesuai selera iris tipis"},
       {"ingredient": "Secukupnya garam, gula, penyedap"},
-      {"ingredient": "1 sdt kecap"}
-    ],
-    "pelengkap" : [
+      {"ingredient": "1 sdt kecap"},
       {"ingredient": "1 bh telur dadar tipis dan iris2"},
       {"ingredient": "Secukupnya ikan bilis goreng garing"},
       {"ingredient": "Secukupnya bw goreng utk taburan"},
       {"ingredient": "Daun pisang utk membungkus"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -5259,14 +4923,12 @@
     }
   ]
 },
-
 {
   "recipe_name": "Sego Kucing ala Angkringan Yogyakarta",
   "cooking_time": null,
   "servings": null,
   "image_url": "https://img-global.cpcdn.com/recipes/a79832b97552951f/1360x964cq70/sego-kucing-ala-angkringan-yogyakarta-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "10 centong nasi putih"},
       {"ingredient": "1/2 papan tempe"},
       {"ingredient": "Segenggam teri"},
@@ -5276,21 +4938,16 @@
       {"ingredient": "Secukupnya minyak goreng"},
       {"ingredient": "2 sdm kecap manis"},
       {"ingredient": "200 ml air"},
-      {"ingredient": "Secukupnya gula, garam dan kaldu bubuk"}
-    ],
-    "bumbu halus" : [
+      {"ingredient": "Secukupnya gula, garam dan kaldu bubuk"},
       {"ingredient": "5 siung bawang merah"},
       {"ingredient": "3 siung bawang putih"},
       {"ingredient": "3 butir kemiri"},
       {"ingredient": "1/2 sdt ketumbar bubuk"},
       {"ingredient": "2 cabe merah besar"},
-      {"ingredient": "4 cabe rawit"}
-    ],
-    "pelengkap" : [
+      {"ingredient": "4 cabe rawit"},
       {"ingredient": "Sate Usus"},
       {"ingredient": "Sate Telur Puyuh"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -5322,21 +4979,18 @@
     }
   ]
 },
-
 {
   "recipe_name": "Sego Kucing ala angkringan",
   "cooking_time": null,
   "servings": null,
   "image_url": "https://img-global.cpcdn.com/recipes/40c3d1bc28f832ee/1360x964cq70/sego-kucing-ala-angkringan-foto-resep-utama.webp",
-  "ingredients": {
-    "main": [
+  "ingredients": [
       {"ingredient": "secukupnya siapkan nasi putih"},
       {"ingredient": "daun pisang yg sudah dilap bersih"},
       {"ingredient": "secukupnya kertas minyak"},
       {"ingredient": "secukupnya sambal teri"},
       {"ingredient": "Sate usus"}
-    ]
-  },
+    ],
   "instructions": [
     {
       "step": 1,
@@ -5344,6 +4998,4 @@
     }
   ]
 }
-
-
 ]
