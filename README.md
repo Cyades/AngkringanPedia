@@ -120,7 +120,9 @@ Berikut aksi yang dapat dilakukan masing-masing _role_:
 
 ## 📝 Dataset
 
-AngkringanPedia mengambil dataset dari [Menu Angkringan Jogja](https://cookpad.com/id/cari/menu%20angkringan%20jogja) 
+AngkringanPedia mengambil dataset dari [Menu Angkringan Jogja](https://cookpad.com/id/cari/menu%20angkringan%20jogja)
+
+Berikut merupakan dataset yang sudah di convert menjadi .json --> [Dataset](dataset.json) 
 
 
 ## 🎭 Jenis Pengguna (_Role_)
