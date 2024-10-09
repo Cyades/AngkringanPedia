@@ -3,8 +3,10 @@
 ## 🔗 Tautan Deployment
 
 *[AngkringanPedia](http://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id/)* <--- Click Here!!
+*[AngkringanPedia](http://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id/)* <--- Click Here!!
 
 ## 🤔 Apa itu AngkringanPedia?
+Yuk, pecinta angkringan! Bosan bingung mau makan apa? AngkringanPedia solusinya! Dengan AngkringanPedia, kamu bisa puas menjelajah ribuan menu angkringan favoritmu, dari nasi kucing yang bikin nagih sampai gorengan yang renyah. Mau cari sate favorit? Tinggal klik! Bikin ulasan dan rating, bagi rekomendasi sama teman-teman, dan jadi bagian dari komunitas pecinta angkringan terbesar! Yuk, cobain sekarang dan rasakan sensasi kuliner angkringan yang makin seru!
 
 Yuk, pecinta angkringan! Bosan bingung mau makan apa? AngkringanPedia solusinya! Dengan AngkringanPedia, kamu bisa puas menjelajah ribuan menu angkringan favoritmu, dari nasi kucing yang bikin nagih sampai gorengan yang renyah. Mau cari sate favorit? Tinggal klik! Bikin ulasan dan rating, bagi rekomendasi sama teman-teman, dan jadi bagian dari komunitas pecinta angkringan terbesar! Yuk, cobain sekarang dan rasakan sensasi kuliner angkringan yang makin seru!
 
