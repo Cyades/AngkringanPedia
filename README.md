@@ -107,14 +107,14 @@ Modul Favorit memungkinkan pengguna untuk menandai restoran atau makanan yang me
 Fungsi Modul:
 - Menandai Favorit: Pengguna dapat menandai makanan atau restoran sebagai favorit.
 - Daftar Favorit: Pengguna dapat melihat daftar favorit yang menampilkan gambar, nama, dan informasi dasar.
-- Mengelola Favorit: Pengguna dapat menambah atau menghapus favorit kapan saja, dan perubahan ini akan disimpan di basis data.
+- Mengelola Favorit Pengguna: Admin dapat melihat daftar favorit pengguna dan menghapus favorit yang dianggap tidak relevan atau tidak sesuai dengan kebijakan platform.
 - Akses ke Detail: Dari daftar favorit, pengguna bisa langsung mengakses halaman detail untuk memberikan ulasan atau melihat informasi lebih lanjut.
 
 Berikut aksi yang dapat dilakukan masing-masing _role_:
 | User | Guest | Admin |
 | ---- | ----- | ----- |
-| Menambah/menghapus favorit | - | - |
-| Melihat daftar favorit | - | - |
+| Menambah/menghapus favorit | - | Mengelola favorit pengguna |
+| Melihat daftar favorit | - | Melihat dan menghapus favorit pengguna |
 | Mengakses halaman detail dari favorit | - | - |
 
 
