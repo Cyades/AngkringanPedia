@@ -397,9 +397,7 @@
     {"ingredient": "Sedikit bawang putih (optional)"},
     {"ingredient": "Seujung sendok terasi"},
     {"ingredient": "Secukupnya garam"},
-    {
-      "ingredient": "Buah untuk lotis (optional): timun, apel, pir"
-    }
+    {"ingredient": "Buah untuk lotis (optional): timun, apel, pir"}
   ],
   "instructions": [
     {
@@ -601,9 +599,7 @@
     {"ingredient": "1 papan petai"},
     {"ingredient": "100 g kapri, siangi"},
     {"ingredient": "secukupnya Garam"},
-    {"ingredient": "2 sdt gula jawa"}
-  ],
-  "spices": [
+    {"ingredient": "2 sdt gula jawa"},
     {"ingredient": "3 siung Bawang putih"},
     {"ingredient": "8 buah bawang merah"},
     {"ingredient": "8 buah cabai merah"},
