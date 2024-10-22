@@ -8,7 +8,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         # Buka file dataset.json
         with open('dataset.json', 'r', encoding='utf-8') as f:
-            data = json.load(f)
+            data = json.load(f)["dataset"]
         
         for recipe_data in data:
             # Validasi cooking_time agar tidak None atau kosong
