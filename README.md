@@ -66,6 +66,7 @@ Berikut aksi yang dapat dilakukan masing-masing _role_:
 Modul Homepage menyediakan fungsi pencarian dan filter untuk membantu pengguna menemukan makanan sesuai preferensi.
 
 Fungsi Modul:
+- Membuat Navigation Bar, Footer dan Homepage
 - Daftar Makanan: Menampilkan daftar restoran dan menu makanan yang tersedia di platform.
 - Pencarian: Pengguna dapat menggunakan fitur pencarian untuk menemukan makanan tertentu.
 - Filter: Menyediakan filter berdasarkan kategori, rating, bahan baku, dan harga untuk mempermudah pencarian.
