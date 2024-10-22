@@ -38,4 +38,4 @@ def search_recipes(request):
         'query': query,
         'recipes': recipes,
     }
-    return render(request, 'main/search_results.html', context)
+    return render(request, '/search_results.html', context)
