@@ -1,32 +1,32 @@
 {% load static %}
-<nav class="bg-[rgb(255,208,155)] shadow-lg fixed top-0 left-0 z-40 w-screen">
+<nav class="bg-[#556B2F] shadow-lg fixed top-0 left-0 z-40 w-screen">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo Section -->
       <div class="flex items-center space-x-2">
         <a href="{% url 'main:show_main' %}" class="flex items-center">
           <img src="{% static 'image/logo1.png' %}" alt="Angkringan Pedia Logo" class="h-10 w-10">
-          <h1 class="text-2xl font-bold text-[rgb(255,176,176)] ml-3">Angkringan Pedia</h1>
+          <h1 class="text-2xl font-bold text-[#F0FFF0] ml-3">Angkringan Pedia</h1>
         </a>
       </div>
 
       <!-- Search Bar -->
       <div class="hidden md:flex flex-grow justify-center space-x-2">
-        <input type="text" placeholder="Search Recipe..." class="bg-[rgb(255,236,200)] text-[rgb(255,176,176)] px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgb(255,176,176)] resize-x" style="flex-grow: 1; min-width: 300px; max-width: 700px;">
-        <button class="bg-gradient-to-r from-[rgb(255,176,176)] to-[rgb(255,208,155)] text-white px-4 py-2 rounded-lg font-bold hover:from-[rgb(255,176,176)] hover:to-[rgb(255,236,200)] transition-all duration-300 shadow-lg">
+        <input type="text" placeholder="Search Recipe..." class="bg-[#F0FFF0] text-[#2F4F4F] px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8FBC8F] resize-x" style="flex-grow: 1; min-width: 300px; max-width: 700px;">
+        <button class="bg-gradient-to-r from-[#8FBC8F] to-[#556B2F] text-white px-4 py-2 rounded-lg font-bold hover:from-[#8FBC8F] hover:to-[#6B8E23] transition-all duration-300 shadow-lg">
           Search
         </button>
       </div>
 
       <!-- Menu Links -->
       <div class="hidden md:flex items-center">
-        <ul class="flex space-x-5 text-[rgb(255,236,200)]">
-          <li><a href="#" class="hover:text-[rgb(255,176,176)] transition">Favourite</a></li>
-          <li><a href="#" class="hover:text-[rgb(255,176,176)] transition">Profile</a></li>
+        <ul class="flex space-x-5 text-[#F0FFF0]">
+          <li><a href="#" class="hover:text-[#8FBC8F] transition">Favourite</a></li>
+          <li><a href="#" class="hover:text-[#8FBC8F] transition">Profile</a></li>
         </ul>
 
         {% if user.is_authenticated %}
-          <a href="{% url 'main:logout' %}" class="ml-4 bg-[rgb(255,176,176)] hover:bg-[rgb(255,208,155)] text-white font-bold py-2 px-4 rounded transition duration-300">
+          <a href="{% url 'main:logout' %}" class="ml-4 bg-[#8FBC8F] hover:bg-[#556B2F] text-white font-bold py-2 px-4 rounded transition duration-300">
             Logout
           </a>
         {% endif %}
@@ -35,7 +35,7 @@
       <!-- Mobile Menu Button -->
       <div class="md:hidden flex items-center">
         <button class="mobile-menu-button">
-          <svg class="w-6 h-6 text-[rgb(255,176,176)]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+          <svg class="w-6 h-6 text-[#8FBC8F]" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
@@ -44,15 +44,15 @@
   </div>
 
   <!-- Mobile menu -->
-  <div class="mobile-menu hidden md:hidden px-4 w-full bg-[rgb(255,236,200)]">
+  <div class="mobile-menu hidden md:hidden px-4 w-full bg-[#F0FFF0]">
     <div class="pt-2 pb-3 space-y-1 mx-auto">
-      <ul class="text-[rgb(255,176,176)]">
-        <li><a href="#" class="block hover:text-[rgb(255,208,155)] transition">Favourite</a></li>
-        <li><a href="#" class="block hover:text-[rgb(255,208,155)] transition">Profile</a></li>
+      <ul class="text-[#2F4F4F]">
+        <li><a href="#" class="block hover:text-[#556B2F] transition">Favourite</a></li>
+        <li><a href="#" class="block hover:text-[#556B2F] transition">Profile</a></li>
       </ul>
 
       {% if user.is_authenticated %}
-        <a href="{% url 'main:logout' %}" class="block text-center bg-[rgb(255,176,176)] hover:bg-[rgb(255,208,155)] text-white font-bold py-2 px-4 rounded transition duration-300">
+        <a href="{% url 'main:logout' %}" class="block text-center bg-[#8FBC8F] hover:bg-[#556B2F] text-white font-bold py-2 px-4 rounded transition duration-300">
           Logout
         </a>
       {% endif %}
