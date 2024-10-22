@@ -4,10 +4,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% block meta %} {% endblock meta %}
+    <title>{% block title %}Angkringan Pedia{% endblock title %}</title>
+
+    <!-- Link Tailwind CSS from a static file or a CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    {% block meta %}
+    <meta charset="UTF-8" />
+    <link rel="icon" href="{% static 'image/logo1.png' %}" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% endblock meta %}
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{% static 'css/global.css' %}"/>
   </head>
 
-  <body>
-    {% block content %} {% endblock content %}
+  <body class="bg-[rgb(255,247,209)] text-[rgb(255,176,176)] min-h-screen flex flex-col">
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      {% block content %} {% endblock content %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[rgb(255,208,155)] py-6 text-center text-[rgb(255,236,200)] mt-auto">
+      <div class="container mx-auto flex flex-col items-center">
+        <p class="text-sm text-[rgb(255,247,209)]">&copy; 2024 Angkringan Pedia. All rights reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
