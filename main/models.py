@@ -12,13 +12,13 @@ class Recipe(models.Model):
     servings = models.CharField(max_length=50)
     image_url = models.URLField(max_length=500)
     ingredients = models.ManyToManyField(Ingredient, related_name="recipes")
-    instructions = models.TextField()
+    instructions = models.TextField()  # Simpan instruksi dalam bentuk teks, bukan relasi
 
     def __str__(self):
         return self.recipe_name
 
 class Instruction(models.Model):
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="instructions")
+    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="recipe_instructions")  # Gunakan related_name yang berbeda
     step_number = models.IntegerField()
     description = models.TextField()
 
