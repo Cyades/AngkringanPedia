@@ -11,11 +11,28 @@
       </div>
 
       <!-- Search Bar -->
-      <div class="hidden md:flex flex-grow justify-center space-x-2">
-        <input type="text" placeholder="Search Recipe..." class="bg-[#F0FFF0] text-[#2F4F4F] px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8FBC8F] resize-x" style="flex-grow: 1; min-width: 300px; max-width: 700px;">
-        <button class="bg-gradient-to-r from-[#8FBC8F] to-[#556B2F] text-white px-4 py-2 rounded-lg font-bold hover:from-[#8FBC8F] hover:to-[#6B8E23] transition-all duration-300 shadow-lg">
-          Search
-        </button>
+      <div class="hidden md:flex flex-grow justify-center relative">
+        <form id="search-form" action="{% url 'main:search_recipes' %}" method="get" class="flex space-x-2">
+          <input type="text" name="query" id="search-input" placeholder="Search Recipe..." class="bg-[#F0FFF0] text-[#2F4F4F] px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8FBC8F]" style="flex-grow: 1; min-width: 300px; max-width: 700px;">
+
+          <!-- Filter Button -->
+          <button type="button" id="filter-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg">
+            Filter: None
+          </button>
+
+          <!-- Dropdown for Filter -->
+          <div id="filter-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden z-10">
+            <div class="py-2">
+              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-none">None</button>
+              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-ingredient">Ingredient</button>
+              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-name">Name</button>
+            </div>
+          </div>
+
+          <button type="submit" class="bg-gradient-to-r from-[#8FBC8F] to-[#556B2F] text-white px-4 py-2 rounded-lg font-bold hover:from-[#8FBC8F] hover:to-[#6B8E23] transition-all duration-300 shadow-lg">
+            Search
+          </button>
+        </form>
       </div>
 
       <!-- Menu Links -->
@@ -24,12 +41,6 @@
           <li><a href="#" class="hover:text-[#8FBC8F] transition">Favourite</a></li>
           <li><a href="#" class="hover:text-[#8FBC8F] transition">Profile</a></li>
         </ul>
-
-        {% if user.is_authenticated %}
-          <a href="{% url 'main:logout' %}" class="ml-4 bg-[#8FBC8F] hover:bg-[#556B2F] text-white font-bold py-2 px-4 rounded transition duration-300">
-            Logout
-          </a>
-        {% endif %}
       </div>
 
       <!-- Mobile Menu Button -->
@@ -50,12 +61,6 @@
         <li><a href="#" class="block hover:text-[#556B2F] transition">Favourite</a></li>
         <li><a href="#" class="block hover:text-[#556B2F] transition">Profile</a></li>
       </ul>
-
-      {% if user.is_authenticated %}
-        <a href="{% url 'main:logout' %}" class="block text-center bg-[#8FBC8F] hover:bg-[#556B2F] text-white font-bold py-2 px-4 rounded transition duration-300">
-          Logout
-        </a>
-      {% endif %}
     </div>
   </div>
 
@@ -66,13 +71,56 @@
     btn.addEventListener("click", () => {
       menu.classList.toggle("hidden");
     });
+
+    // Filter button functionality
+    const filterButton = document.getElementById('filter-button');
+    const filterDropdown = document.getElementById('filter-dropdown');
+    const searchForm = document.getElementById('search-form');
+    const searchInput = document.getElementById('search-input');
+    let currentFilter = 'none'; // Default filter
+
+    filterButton.addEventListener('click', (event) => {
+      event.stopPropagation(); 
+      filterDropdown.classList.toggle('hidden');
+    });
+
+    document.getElementById('filter-none').addEventListener('click', () => {
+      currentFilter = 'none';
+      filterButton.textContent = 'Filter: None';
+      filterDropdown.classList.add('hidden'); 
+    });
+
+    document.getElementById('filter-ingredient').addEventListener('click', () => {
+      currentFilter = 'ingredient';
+      filterButton.textContent = 'Filter: Ingredient';
+      filterDropdown.classList.add('hidden');
+    });
+
+    document.getElementById('filter-name').addEventListener('click', () => {
+      currentFilter = 'name';
+      filterButton.textContent = 'Filter: Name';
+      filterDropdown.classList.add('hidden');
+    });
+
+    searchForm.addEventListener('submit', (event) => {
+      if (currentFilter === 'none') {
+        searchInput.name = 'none_query';
+      } else if (currentFilter === 'ingredient') {
+        searchInput.name = 'ingredient_query'; 
+      } else {
+        searchInput.name = 'name_query'; 
+      }
+    });
+
+    document.addEventListener('click', () => {
+      filterDropdown.classList.add('hidden');
+    });
   </script>
 </nav>
 
 <style>
-  /* Allow input to be resizable */
   .resize-x {
-    resize: horizontal; /* Allow horizontal resizing */
-    overflow: auto; /* Add overflow for the input */
+    resize: horizontal;
+    overflow: auto; 
   }
 </style>

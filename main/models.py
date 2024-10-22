@@ -12,7 +12,7 @@ class Recipe(models.Model):
     servings = models.CharField(max_length=50)
     image_url = models.URLField(max_length=500)
     ingredients = models.ManyToManyField(Ingredient, related_name="recipes")
-    instructions = models.TextField()  # Simpan instruksi dalam bentuk teks, bukan relasi
+    instructions = models.TextField()
 
     def __str__(self):
         return self.recipe_name

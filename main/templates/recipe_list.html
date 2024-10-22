@@ -6,8 +6,21 @@
             <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" style="width:200px; height:auto;">
             <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
             <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+            
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+                {% for ingredient in recipe.ingredients.all %}
+                    <li>{{ ingredient.name }}</li>
+                {% endfor %}
+            </ul>
+
             <p><strong>Instructions:</strong></p>
-            <p>{{ recipe.instructions }}</p>
-        </li>
+            <ol>
+                {% for instruction in recipe.recipe_instructions.all|dictsort:"step_number" %}
+                    <li>{{ instruction.description }}</li> 
+                {% empty %}
+                    <li>No instructions available.</li> 
+                {% endfor %}
+            </ol>
     {% endfor %}
 </ul>
