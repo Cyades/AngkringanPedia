@@ -20,19 +20,19 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Goreng ikan teri menggunakan minyak hingga matang & garing. Angkat, sisihkan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Goreng bahan sambal menggunakan sisa minyak menggoreng teri hingga layu, lalu uleg."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Goreng kembali sambal, masukkan gula, garam, dan kaldu bubuk. Masak hingga sambal mengeluarkan minyak / kadar airnya berkurang. Koreksi rasa. Matikan api, masukkan ikan teri."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Aduk hingga teri & sambal tercampur rata. Tunggu hingga dingin."
     }
   ]
@@ -57,19 +57,19 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan bahan, cuci bersih. Rendam Teri Jengki sebentar di air hangat untuk mengurangi rasa asinnya. Cuci 1x di air hangat."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Goreng Teri Jengki sampai setengah matang, kemudian sisihkan."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Ulek bumbu sampai halus. Tumis bumbu bersama daun jeruk purut sampai harum."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masukkan gula pasir dan Teri Jengki, tumis sampai air dari bumbu asat. Cicipi, jika kurang asin bisa ditambah garam. Sajikan dengan nasi hangat."
     }
   ]
@@ -94,19 +94,19 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Goreng cabai merah, cabai rawit, bawang merah, bawang putih, dan tomat."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Haluskan bahan-bahan yang sudah digoreng beserta terasi yang sudah dibakar, dan gula merah (sisiran)."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tumis sambal dengan takaran minyak secukupnya. Tambahkan 10 sdm kuah ungkep ayam Kalasan. Tambahkan garam, gula, dan kaldu bubuk."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Aduk rata dan cek rasa."
     }
   ]
@@ -129,15 +129,15 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Haluskan bumbu (cabe, bawang putih, kencur, daun jeruk, terasi, kaldu jamur, dan gula pasir). Koreksi rasa."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Jika sudah pas rasanya, masukkan kelapa parut dan aduk hingga tercampur rata."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Kukus selama kurang lebih 10 - 15 menit, angkat dan sajikan dengan sayuran mentah atau rebus."
     }
   ]
@@ -157,15 +157,15 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Uleg bawang putih, cabai rawit, dan daun jeruk."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Tambahkan micin dan garam, lalu uleg hingga merata."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan ke dalam wadah sambal dan siap dinikmati bersama lauk dan nasi hangat."
     }
   ]
@@ -188,19 +188,19 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Panaskan minyak goreng, lalu goreng cabe, bawang merah, bawang putih, dan terasi hingga layu. Angkat dan tiriskan. Setelah itu, goreng tomat hingga layu."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Siapkan cobek, haluskan semua bahan."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Setelah halus, goreng kembali sambal hingga harum."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Sambal siap disajikan."
     }
   ]
@@ -227,23 +227,23 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Cuci bersih jeroan, kemudian potong kecil-kecil."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Ungkep sebentar, kemudian buang minyak dari lemak yang ada. Campurkan dengan bumbu kalasan. Diamkan selama 10 menit."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Goreng jeroan dengan minyak banyak dan api kecil hingga matang. Jangan terlalu kering agar sambalnya nanti bisa tercampur rata. Angkat dan sisihkan."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Haluskan bumbu sambal, kemudian tumis. Tambahkan banyak tomat, gula, dan garam. Masukkan jeroan. Jika goreng terlalu kering, sambal tidak akan menempel dengan baik."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Sambal jeroan ayam kalasan siap disajikan."
     }
   ]
@@ -263,23 +263,23 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Masukkan cabai rawit, bawang putih, garam, dan kaldu jamur bubuk ke dalam cobek, lalu ulek hingga tercampur rata."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Koreksi rasa, sesuaikan dengan selera."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan ayam tepung ke dalam cobek, geprek bersama ulekan cabai hingga hancur dan tercampur rata."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "(Opsional) Tambahkan tempe goreng tepung, hancurkan dan campur bersama ayam."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Ayam geprek siap disajikan dengan nasi putih hangat."
     }
   ]
@@ -302,15 +302,15 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Blender semua bahan hingga agak sedikit halus dengan sedikit air."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Tumis sambal bersama daun salam dan daun jeruk hingga berbau harum."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tambahkan garam dan bubuk jamur, lalu oseng terus hingga sambel matang sempurna. Hidangkan dengan ayam code. Selamat mencoba!"
     }
   ]
@@ -336,19 +336,19 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Goreng kacang tanah hingga kecoklatan, lalu masukkan cabe dan bawang putih, goreng sebentar, angkat dan dinginkan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Blender kacang yang sudah digoreng dengan ditambah kencur, gula Jawa, dan air hingga halus."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masak kembali kacang yang sudah halus, lalu tambahkan gula, garam, daun jeruk, dan air asam Jawa."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Untuk pengental, larutkan tepung beras dengan sedikit air, lalu tuang ke dalam saus kacang, masak kurang lebih 10 menit. Saus kacang siap disajikan."
     }
   ]
@@ -370,15 +370,15 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Masukkan bawang merah, cabe, dan tomat yang telah diiris-iris lalu goreng setengah matang. Lalu haluskan bersama gula merah (bisa diulek/ diblender/dichooper)."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Goreng terasi dalam penggorengan bekas goreng cabe tadi, kemudian masukkan cabe dkk yang sudah dihaluskan tadi. Aduk-aduk."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Beri sisa bumbu ungkep ayam tadi lalu goreng hingga matang. Sajikan bersama ayam goreng kalasan."
     }
   ]
@@ -401,15 +401,15 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan bahan-bahannya."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Uleg bahan sambel sampai halus. Tambahkan beberapa iris timun agar sambalnya agak encer. Tes rasa."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Sajikan sambel lotis dengan buah-buahan segar seperti: mangga muda, belimbing, jambu air, jambu biji, apel, pir, pepaya muda, timun, dll."
     }
   ]
@@ -438,15 +438,15 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Haluskan duo cabe, duo bawang, kencur & terasi."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Panaskan minyak goreng, masukkan bumbu yang sudah dihaluskan & daun jeruk. Tumis sampai harum, beri air, gula pasir, gula merah, garam & kaldu jamur. Masak sampai kuah mengental, cicipi rasanya."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Jika sudah sesuai dengan selera, masukkan kelapa parut. Aduk sampai bumbu merata, kelapa berubah warna & teksturnya lebih kering (gunakan api sedang, agar tidak gosong). Tunggu agak dingin, siap dicampur dengan sayuran pendamping."
     }
   ]
@@ -472,19 +472,19 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Rendam cabe merah kering dengan air panas selama 20 menit agar ngembang dan lembut, sehingga lebih halus saat diblender."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Setelah 20 menit direndam, blender cabe bersama dengan bahan utama lainnya, kecuali terasi. Gunakan minyak goreng secukupnya saat memb blender bahan utama."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Siapkan teflon. Oseng terasi yang dihaluskan terlebih dahulu hingga harum dan kecoklatan. Kemudian masukkan bahan yang sudah diblender dan dedaunan."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masak menggunakan api kecil dan aduk sampai matang dan warna sambal menggelap (kemerahan). Jika terlalu kering, tambahkan sedikit minyak goreng. Koreksi rasa. Sambal siap disajikan."
     }
   ]
@@ -510,15 +510,15 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Rebus tomat, cabe, dan bawang sampai layu, angkat lalu ulek bersama terasi, garam, dan kaldu bubuk. Ulek sesuai selera, boleh kasar atau halus."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Panaskan wajan, masukkan sambal yang sudah diulek, lalu tambahkan daun jeruk, daun salam, dan gula merah. Masak hingga kental dan kadar airnya hilang."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Jika kadar air sudah hilang, tambahkan minyak goreng dan aduk rata hingga mencapai kematangan yang diinginkan. Koreksi rasa, angkat, dan sajikan."
     }
   ]
@@ -548,35 +548,35 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Rebus Pete atau goreng. Langsung cemplung juga boleh. Karena resep awal mau masak Sambel Terasi pete, jadi pete saya rebus."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Siapkan bahan sambal. Rebus Cabe hingga cukup lunak saja."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Blender bahan sambal. Jika mau, tambahkan terasi yang sudah matang."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Tumis bumbu hingga harum. Tambahkan sedikit air, garam, gula, daun salam, sereh, daun jeruk, dan lengkuas. Selanjutnya tuang santan, daging kreni, dan pete."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Daging kreni: campurkan daging giling, bawang putih halus, lada bubuk, garam, dan telur ayam. Buat bulatan dan rebus."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Setelah mendidih, masukkan krecek. Masak dengan api sedang hingga krecek lunak."
     },
     {
-      "step": 7,
+      "step_number": 7,
       "description": "Meskipun tidak sesuai resep awal (sambel terasi), hasilnya tetap tidak mengecewakan."
     },
     {
-      "step": 8,
+      "step_number": 8,
       "description": "Sambal siap untuk disajikan."
     }
   ]
@@ -609,27 +609,27 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Bentuk bulatan-bulatan kecil dari campuran daging, telur, dan garam."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Panaskan minyak dalam wajan. Tumis bumbu halus, daun salam, lengkuas, dan ebi hingga harum dan tidak langu."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan santan cair, diamkan hingga mendidih."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masukkan bola daging, masak hingga daging matang."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Terakhir, tuangkan santan kental. Masukkan petai, kapri, garam, dan gula jawa."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Masak hingga kuah santan menyusut."
     }
   ]
@@ -651,19 +651,19 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan bahan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Haluskan bumbu. Test rasa yaa supaya mudah nambahin garam bila kurang."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Parut kelapa."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Campur bumbu halus dan kelapa parut. Aduk rata."
     }
   ]
@@ -697,27 +697,27 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Rendam kacang merah semalaman agar empuk, lalu rebus sebentar."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Rebus cabe merah besar, lalu blender bersama kemiri, dan duo bawang."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tumis bumbu blenderan dan terasi serta bumbu lainnya."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Setelah tumisan bumbu setengah matang, masukkan irisan tempe mentah. Aduk hingga matang lalu masukkan gula jawa."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Tambahkan air dan masukkan krecek, kacang merah, cabe rawit merah dan hijau dalam keadaan utuh."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Bumbui garam, lalu asatkan."
     }
   ]
@@ -744,15 +744,15 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan bahannya nah until terinya sudah digoreng lebih dulu yak.. Pastikan saat goreng teri minyak sudah panas lalu saat teri dimasak kecilkan api ke api sedang saja agar teri matangnya tidak gosong."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Panaskan minyak goreng lalu kita tumis dari bawang putih aduk hingga wangi lanjut bawang merah dan cabe, lanjut sereh, daun jeruk, dan tomat hingga agak layu (biji tomatnya tidak saya gunakan) aduk merata kembali."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan teri lanjut kaldu jamur, garam secrit dikiiit ajah... Masukkan kecap manisnya..trus tes rasa sesuaikan selera."
     }
   ]
@@ -784,15 +784,15 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Haluskan bumbu, potong tempe tahu sesuai selera, goreng setengah matang lalu tiriskan"
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Panaskan minyak, tumis bumbu halus dan bumbu cemplung sampai harum, beri air lalu masukkan semua bumbu aduk rata"
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tunggu mendidih lalu test rasa, jika sudah pas lalu masukkan tempe tahu aduk rata dan tunggu air menyusut sampai bumbu meresap"
       }
     ]
@@ -824,11 +824,11 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Panaskan minyak goreng, tumis bumbu halus bersama daun salam, daun jeruk, lengkuas dan sereh, hingga harum. Masukkan air dan semua bumbu perasa, masak hingga gula larut"
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe yang telah digoreng setengah matang, aduk rata. Tambahkan irisan cabe, masak hingga air menyusut dan bumbu meresap, tes rasa, lalu angkat"
       }
     ]
@@ -852,19 +852,19 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Siapkan bahan, lalu potong tipis tempe"
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Haluskan bawang putih, masukkan tepung, bawang putih, merica, ketumbar, dan garam dalam satu wadah."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Aduk rata sambil tuangi air sedikit demi sedikit, aduk rata hingga tidak bergrindil dan adonan kental seperti adonan pisang goreng."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Panaskan wajan dan minyak, goreng tempe dengan api sedang kekecil hingga coklat keemasan."
       }
     ]
@@ -898,35 +898,35 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Potong tempe sesuai selera, misalnya kotak persegi."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Sangrai kemiri dan ketumbar, lalu haluskan bersama cabai setan, bawang merah, dan bawang putih."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Panaskan sedikit minyak goreng, kemudian tumis bumbu halus hingga harum."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Masukkan sereh, lengkuas, dan daun salam, tumis sebentar."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Beri air secukupnya dan tambahkan air asam jawa."
       },
       {
-        "step": 6,
+        "step_number": 6,
         "description": "Masukkan tempe, tambahkan lada, garam, dan totole, aduk rata."
       },
       {
-        "step": 7,
+        "step_number": 7,
         "description": "Masak hingga bumbu meresap ke dalam tempe."
       },
       {
-        "step": 8,
+        "step_number": 8,
         "description": "Tempe bacem siap dihidangkan. Bisa langsung dimakan atau digoreng terlebih dahulu sesuai selera."
       }
     ]
@@ -961,35 +961,35 @@
     ],
     "instructions": [
         {
-        "step": 1,
+        "step_number": 1,
         "description": "Cuci bersih ati ayam dan beri perasan jeruk nipis. Diamkan sebentar, lalu bilas dengan air bersih dan sisihkan."
         },
         {
-        "step": 2,
+        "step_number": 2,
         "description": "Blender bumbu halus dengan air hingga halus."
         },
         {
-        "step": 3,
+        "step_number": 3,
         "description": "Siapkan panci dan susun tahu, tempe, serta ati ayam di dalamnya."
         },
         {
-        "step": 4,
+        "step_number": 4,
         "description": "Tambahkan bumbu aromatik dan bumbu halus yang sudah di-blender bersama air."
         },
         {
-        "step": 5,
+        "step_number": 5,
         "description": "Pastikan tempe, tahu, dan ati ayam terendam. Masak dengan api sedang hingga kecil sampai mendidih."
         },
         {
-        "step": 6,
+        "step_number": 6,
         "description": "Tambahkan seasoning, aduk perlahan agar tidak merusak tekstur tempe, tahu, dan ati ayam."
         },
         {
-        "step": 7,
+        "step_number": 7,
         "description": "Masak hingga bumbu meresap dan air ungkep hampir habis. Matikan api dan biarkan dingin."
         },
         {
-        "step": 8,
+        "step_number": 8,
         "description": "Goreng baceman dengan sedikit minyak menggunakan api sedang, lalu sajikan."
         }
     ]
@@ -1021,23 +1021,23 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Goreng tempe setengah matang, angkat dan tiriskan. Siapkan bahan lain yang digunakan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Panaskan minyak goreng, tumis bawang merah, bawang putih, daun salam, lengkuas, dan daun jeruk sampai harum. Masukkan cabai merah dan hijau, aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Masukkan tempe, bumbui dengan garam, gula pasir, gula merah, kecap manis, kaldu jamur, dan tambahkan air. Aduk rata."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Masak sampai mendidih, bumbu meresap, dan kuah menyusut. Sajikan dan selamat mencoba."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Note: Potongan tempe untuk lauk sego kucing biasanya lebih kecil, dan bisa ditambahkan teri jengki yang digoreng."
       }
     ]
@@ -1064,19 +1064,19 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Goreng tempe hingga matang, tiriskan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Panaskan minyak, tumis bawang merah, bawang putih, cabai merah halus, daun salam, dan lengkuas hingga harum."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Masukkan tempe goreng, tambahkan garam, gula merah, kaldu bubuk, dan air."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Aduk rata dan masak hingga bumbu meresap. Angkat dan sajikan."
       }
     ]
@@ -1101,19 +1101,19 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Campur tepung terigu, tepung beras, bawang putih halus, ketumbar, garam, dan merica bubuk dalam satu wadah."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Tambahkan air sedikit demi sedikit hingga adonan tidak terlalu cair dan bisa melapisi tempe."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Celupkan irisan tempe ke dalam adonan, goreng dalam minyak panas hingga renyah."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Angkat dan sajikan selagi hangat."
       }
     ]
@@ -1138,19 +1138,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Tumis bawang merah, bawang putih, daun salam, dan lengkuas hingga harum."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe dan aduk hingga kecoklatan."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tambahkan kecap manis, garam, gula merah, dan air. Aduk rata."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Masak hingga bumbu meresap dan air menyusut. Sajikan."
       }
     ]
@@ -1171,19 +1171,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Goreng tempe hingga matang, tiriskan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Ulek bawang merah dan bawang putih hingga halus. Tambahkan garam dan gula."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Siram bumbu halus dengan minyak panas, aduk rata."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Penyet tempe goreng di atas bumbu yang sudah diulek. Sajikan."
       }
     ]
@@ -1204,15 +1204,15 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Goreng tempe hingga kecoklatan, tiriskan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Campurkan kecap manis, bawang merah, bawang putih, cabe rawit, garam, dan minyak goreng. Aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Penyet tempe di atas sambal kecap, aduk rata dan sajikan."
       }
     ]
@@ -1232,15 +1232,15 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rendam tempe dalam campuran bawang putih halus, garam, ketumbar, dan air selama 10 menit."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Goreng tempe hingga matang dan kecoklatan."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Penyet tempe yang telah digoreng hingga pipih. Sajikan dengan sambal sesuai selera."
       }
     ]
@@ -1264,15 +1264,15 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rebus tempe bersama air kelapa, daun salam, lengkuas, bawang merah, bawang putih, garam, dan gula merah hingga air menyusut."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Angkat tempe, tiriskan, lalu goreng hingga kecoklatan."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Sajikan tempe bacem goreng sebagai lauk."
       }
     ]
@@ -1295,19 +1295,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Goreng tempe hingga setengah matang, tiriskan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Tumis bawang merah, bawang putih, dan cabe rawit hingga harum."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Masukkan tempe, kecap manis, garam, dan gula merah. Aduk rata dan masak hingga bumbu meresap."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Sajikan tempe tumis pedas manis selagi hangat."
       }
     ]
@@ -1330,15 +1330,15 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rendam tempe dalam campuran bawang putih halus, ketumbar, garam, gula merah, dan air selama 15 menit."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Goreng tempe hingga matang, tiriskan."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tumis kelapa parut hingga kecoklatan, campurkan dengan tempe goreng dan aduk rata. Sajikan."
       }
     ]
@@ -1361,19 +1361,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Tumis bawang merah, bawang putih, dan cabe hijau hingga harum."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe goreng dan ikan teri goreng, aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tambahkan kecap manis, garam, dan gula merah. Aduk rata hingga bumbu meresap."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Sajikan tumis tempe teri selagi hangat."
       }
     ]
@@ -1394,15 +1394,15 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rebus air bersama daun salam, lengkuas, garam, dan gula merah hingga mendidih."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe dan rebus hingga matang dan bumbu meresap."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Sajikan tempe rebus sebagai lauk sehat."
       }
     ]
@@ -1426,19 +1426,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Tumis bawang merah dan bawang putih hingga harum."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe, kacang panjang, dan wortel. Aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tambahkan kecap manis, garam, gula merah, dan air. Masak hingga sayur matang dan bumbu meresap."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Sajikan tumis tempe sayur selagi hangat."
       }
     ]
@@ -1462,19 +1462,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Tumis bawang merah dan bawang putih hingga harum."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe dan kacang panjang, aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tambahkan garam, kecap manis, gula pasir, dan air. Masak hingga bumbu meresap."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Sajikan selagi hangat."
       }
     ]
@@ -1496,19 +1496,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Goreng tempe hingga kecoklatan dan renyah, tiriskan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Campurkan bawang merah, bawang putih, serai, cabai rawit, dan garam. Aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Panaskan minyak kelapa, lalu siramkan ke campuran sambal matah. Aduk rata."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Sajikan tempe goreng dengan sambal matah."
       }
     ]
@@ -1541,15 +1541,15 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Haluskan bumbu, potong tempe tahu sesuai selera, goreng setengah matang lalu tiriskan"
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Panaskan minyak, tumis bumbu halus dan bumbu cemplung sampai harum, beri air lalu masukkan semua bumbu aduk rata"
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tunggu mendidih lalu test rasa, jika sudah pas lalu masukkan tempe tahu aduk rata dan tunggu air menyusut sampai bumbu meresap"
       }
     ]
@@ -1579,11 +1579,11 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Panaskan minyak goreng, tumis bumbu halus bersama daun salam, daun jeruk, lengkuas dan sereh, hingga harum. Masukkan air dan semua bumbu perasa, masak hingga gula larut"
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe yang telah digoreng setengah matang, aduk rata. Tambahkan irisan cabe, masak hingga air menyusut dan bumbu meresap, tes rasa, lalu angkat"
       }
     ]
@@ -1608,19 +1608,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Siapkan bahan, lalu potong tipis tempe"
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Haluskan bawang putih, masukkan tepung, bawang putih, merica, ketumbar, dan garam dalam satu wadah."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Aduk rata sambil tuangi air sedikit demi sedikit, aduk rata hingga tidak bergrindil dan adonan kental seperti adonan pisang goreng."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Panaskan wajan dan minyak, goreng tempe dengan api sedang kekecil hingga coklat keemasan."
       }
     ]
@@ -1654,35 +1654,35 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Potong tempe sesuai selera, misalnya kotak persegi."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Sangrai kemiri dan ketumbar, lalu haluskan bersama cabai setan, bawang merah, dan bawang putih."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Panaskan sedikit minyak goreng, kemudian tumis bumbu halus hingga harum."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Masukkan sereh, lengkuas, dan daun salam, tumis sebentar."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Beri air secukupnya dan tambahkan air asam jawa."
       },
       {
-        "step": 6,
+        "step_number": 6,
         "description": "Masukkan tempe, tambahkan lada, garam, dan totole, aduk rata."
       },
       {
-        "step": 7,
+        "step_number": 7,
         "description": "Masak hingga bumbu meresap ke dalam tempe."
       },
       {
-        "step": 8,
+        "step_number": 8,
         "description": "Tempe bacem siap dihidangkan. Bisa langsung dimakan atau digoreng terlebih dahulu sesuai selera."
       }
     ]
@@ -1717,35 +1717,35 @@
     ],
     "instructions": [
         {
-        "step": 1,
+        "step_number": 1,
         "description": "Cuci bersih ati ayam dan beri perasan jeruk nipis. Diamkan sebentar, lalu bilas dengan air bersih dan sisihkan."
         },
         {
-        "step": 2,
+        "step_number": 2,
         "description": "Blender bumbu halus dengan air hingga halus."
         },
         {
-        "step": 3,
+        "step_number": 3,
         "description": "Siapkan panci dan susun tahu, tempe, serta ati ayam di dalamnya."
         },
         {
-        "step": 4,
+        "step_number": 4,
         "description": "Tambahkan bumbu aromatik dan bumbu halus yang sudah di-blender bersama air."
         },
         {
-        "step": 5,
+        "step_number": 5,
         "description": "Pastikan tempe, tahu, dan ati ayam terendam. Masak dengan api sedang hingga kecil sampai mendidih."
         },
         {
-        "step": 6,
+        "step_number": 6,
         "description": "Tambahkan seasoning, aduk perlahan agar tidak merusak tekstur tempe, tahu, dan ati ayam."
         },
         {
-        "step": 7,
+        "step_number": 7,
         "description": "Masak hingga bumbu meresap dan air ungkep hampir habis. Matikan api dan biarkan dingin."
         },
         {
-        "step": 8,
+        "step_number": 8,
         "description": "Goreng baceman dengan sedikit minyak menggunakan api sedang, lalu sajikan."
         }
     ]
@@ -1777,23 +1777,23 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Goreng tempe setengah matang, angkat dan tiriskan. Siapkan bahan lain yang digunakan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Panaskan minyak goreng, tumis bawang merah, bawang putih, daun salam, lengkuas, dan daun jeruk sampai harum. Masukkan cabai merah dan hijau, aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Masukkan tempe, bumbui dengan garam, gula pasir, gula merah, kecap manis, kaldu jamur, dan tambahkan air. Aduk rata."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Masak sampai mendidih, bumbu meresap, dan kuah menyusut. Sajikan dan selamat mencoba."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Note: Potongan tempe untuk lauk sego kucing biasanya lebih kecil, dan bisa ditambahkan teri jengki yang digoreng."
       }
     ]
@@ -1820,19 +1820,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Goreng tempe hingga matang, tiriskan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Panaskan minyak, tumis bawang merah, bawang putih, cabai merah halus, daun salam, dan lengkuas hingga harum."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Masukkan tempe goreng, tambahkan garam, gula merah, kaldu bubuk, dan air."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Aduk rata dan masak hingga bumbu meresap. Angkat dan sajikan."
       }
     ]
@@ -1855,19 +1855,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Campur tepung terigu, tepung beras, bawang putih halus, ketumbar, garam, dan merica bubuk dalam satu wadah."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Tambahkan air sedikit demi sedikit hingga adonan tidak terlalu cair dan bisa melapisi tempe."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Celupkan irisan tempe ke dalam adonan, goreng dalam minyak panas hingga renyah."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Angkat dan sajikan selagi hangat."
       }
     ]
@@ -1891,19 +1891,19 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Tumis bawang merah, bawang putih, daun salam, dan lengkuas hingga harum."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Masukkan tempe dan aduk hingga kecoklatan."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tambahkan kecap manis, garam, gula merah, dan air. Aduk rata."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masak hingga bumbu meresap dan air menyusut. Sajikan."
     }
   ]
@@ -1923,19 +1923,19 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Goreng tempe hingga matang, tiriskan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Ulek bawang merah dan bawang putih hingga halus. Tambahkan garam dan gula."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Siram bumbu halus dengan minyak panas, aduk rata."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Penyet tempe goreng di atas bumbu yang sudah diulek. Sajikan."
     }
   ]
@@ -1956,15 +1956,15 @@
   ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Goreng tempe hingga kecoklatan, tiriskan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Campurkan kecap manis, bawang merah, bawang putih, cabe rawit, garam, dan minyak goreng. Aduk rata."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Penyet tempe di atas sambal kecap, aduk rata dan sajikan."
     }
   ]
@@ -1984,15 +1984,15 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rendam tempe dalam campuran bawang putih halus, garam, ketumbar, dan air selama 10 menit."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Goreng tempe hingga matang dan kecoklatan."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Penyet tempe yang telah digoreng hingga pipih. Sajikan dengan sambal sesuai selera."
       }
     ]
@@ -2015,15 +2015,15 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rebus tempe bersama air kelapa, daun salam, lengkuas, bawang merah, bawang putih, garam, dan gula merah hingga air menyusut."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Angkat tempe, tiriskan, lalu goreng hingga kecoklatan."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Sajikan tempe bacem goreng sebagai lauk."
       }
     ]
@@ -2046,19 +2046,19 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Goreng tempe hingga setengah matang, tiriskan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Tumis bawang merah, bawang putih, dan cabe rawit hingga harum."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Masukkan tempe, kecap manis, garam, dan gula merah. Aduk rata dan masak hingga bumbu meresap."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Sajikan tempe tumis pedas manis selagi hangat."
       }
     ]
@@ -2080,15 +2080,15 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rendam tempe dalam campuran bawang putih halus, ketumbar, garam, gula merah, dan air selama 15 menit."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Goreng tempe hingga matang, tiriskan."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tumis kelapa parut hingga kecoklatan, campurkan dengan tempe goreng dan aduk rata. Sajikan."
       }
     ]
@@ -2110,19 +2110,19 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Tumis bawang merah, bawang putih, dan cabe hijau hingga harum."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe goreng dan ikan teri goreng, aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tambahkan kecap manis, garam, dan gula merah. Aduk rata hingga bumbu meresap."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Sajikan tumis tempe teri selagi hangat."
       }
     ]
@@ -2142,15 +2142,15 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rebus air bersama daun salam, lengkuas, garam, dan gula merah hingga mendidih."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe dan rebus hingga matang dan bumbu meresap."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Sajikan tempe rebus sebagai lauk sehat."
       }
     ]
@@ -2173,19 +2173,19 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Tumis bawang merah dan bawang putih hingga harum."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe, kacang panjang, dan wortel. Aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tambahkan kecap manis, garam, gula merah, dan air. Masak hingga sayur matang dan bumbu meresap."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Sajikan tumis tempe sayur selagi hangat."
       }
     ]
@@ -2208,19 +2208,19 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Tumis bawang merah dan bawang putih hingga harum."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan tempe dan kacang panjang, aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Tambahkan garam, kecap manis, gula pasir, dan air. Masak hingga bumbu meresap."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Sajikan selagi hangat."
       }
     ]
@@ -2241,27 +2241,27 @@
       ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Goreng tempe hingga kecoklatan dan renyah, tiriskan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Campurkan bawang merah, bawang putih, serai, cabai rawit, dan garam. Aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Panaskan minyak kelapa, lalu siramkan ke campuran sambal matah. Aduk rata."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Sajikan tempe goreng dengan sambal matah."
       }
     ]
   },
   {
     "recipe_name": "Sate Kere Angkringan Jogja",
-    "cooking_time": null,
-    "servings": null,
+    "cooking_time": "1 Jam",
+    "servings": "4 Orang",
     "image_url": "https://img-global.cpcdn.com/recipes/d6f59b502a514779/1360x964cq70/sate-kere-angkringan-jogja-foto-resep-utama.webp",
     "ingredients": [
       {"ingredient": "1/4 kg gajih sapi, rebus, potong-potong kecil"},
@@ -2279,15 +2279,15 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Taruh gajih yang sudah dipotong-potong dalam wajan dan tambahkan bumbu halus, garam & gula merah. Tambahkan sedikit air."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masak sambil aduk-aduk sampai airnya susut & mengering serta bumbu meresap. Tambahkan kecap & micin. Aduk secukupnya sampai mengering lagi. Angkat & dinginkan."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Setelah mendingin, tusuk-tusuk gajih dengan tusuk sate, kemudian panggang dan bolak-balik sampai sate agak gosong. Siap dimakan sambil mengenang damainya Jogjakarta."
       }
     ]
@@ -2295,8 +2295,8 @@
 
 {
     "recipe_name": "Sate Telur Puyuh ala Angkringan Yogyakarta",
-    "cooking_time": null,
-    "servings": null,
+    "cooking_time": "1 Jam",
+    "servings": "4 Orang",
     "image_url": "https://img-global.cpcdn.com/recipes/6b0cc9a4ed35e578/1360x964cq70/sate-telur-puyuh-ala-angkringan-yogyakarta-foto-resep-utama.webp",
     "ingredients": [
       {"ingredient": "20 butir telur puyuh"},
@@ -2320,31 +2320,31 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rebus telur puyuh hingga matang kemudian kupas kulitnya."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Blender bumbu halus, tumis bumbu halus beserta daun salam, serai dan lengkuas hingga harum. Masukkan secukupnya air, gula pasir, gula merah, garam, kaldu bubuk dan kecap manis, aduk rata dan jangan lupa tes rasa."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Setelah mendidih, masukkan telur puyuh, aduk rata dan masak hingga air menyusut."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Tusuk telur puyuh dengan tusukan sate."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Sate Telur Puyuh ala Angkringan Jogja siap disajikan."
       }
     ]
 },
 {
     "recipe_name": "Sate Usus ala Angkringan Jogja",
-    "cooking_time": null,
-    "servings": null,
+    "cooking_time": "1 Jam",
+    "servings": "4 Orang",
     "image_url": "https://img-global.cpcdn.com/recipes/1c59fe917c3e9f20/1360x964cq70/sate-usus-ala-angkringan-jogja-foto-resep-utama.webp",
     "ingredients": [
       {"ingredient": "500 gr usus ayam"},
@@ -2368,27 +2368,27 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Cuci usus ayam hingga bersih. Rebus usus kemudian cuci bersih lagi usus."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Blender bumbu halus, kemudian tumis bumbu halus beserta daun jeruk, daun salam, serai dan lengkuas hingga harum. Tambahkan air sesuai selera, masukkan usus yang sudah direbus tadi, aduk rata."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Kalau sudah mendidih masukkan gula, garam dan kaldu bubuk. Tambahkan juga kecap manis, aduk rata dan rebus hingga air menyusut dan matang. Jangan lupa tes rasa."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Tusuk usus ayam dengan tusukan sate."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Usus Ayam ala Angkringan Jogja siap disajikan."
       },
       {
-        "step": 6,
+        "step_number": 6,
         "description": "Note: Jika ingin dibakar, setelah usus ayam direbus dan ditusuk dengan tusukan sate, bisa langsung dibakar dengan bumbu kecap."
       }
     ]
@@ -2413,23 +2413,23 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rebus kulit ayam yang sudah dibersihkan, buang air bekas rebusan pertama. Cuci bersih."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Tumis bumbu halus sampai harum, masukkan kulit ayam, tambahkan kecap, air, gula merah, gula pasir, dan penyedap."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Aduk-aduk sampai merata, tes rasa. Tutup, masak dengan api kecil sampai air sedikit mengering. Biarkan selama kurang lebih 15-30 menit sampai siap untuk ditusuk sate."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Masukkan ke tusuk sate, sesuaikan banyaknya dan tingkat kepadatan sesuai selera."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Panggang di teflon dengan api kecil. Siap disajikan."
       }
     ]
@@ -2437,8 +2437,8 @@
 
 {
     "recipe_name": "Sate Baceman Paru ala Angkringan",
-    "cooking_time": null,
-    "servings": null,
+    "cooking_time": "1 Jam",
+    "servings": "4 Orang",
     "image_url": "https://img-global.cpcdn.com/recipes/cfc0e2e579fe3b15/1360x964cq70/sate-baceman-paru-ala-angkringan-foto-resep-utama.webp",
     "ingredients": [
       {"ingredient": "1/2 kg paru"},
@@ -2456,35 +2456,35 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Potong tipis-tipis paru, cuci bersih, lalu siapkan panci untuk merebus."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Masukkan daun salam, serai, lengkuas, dan jahe ke dalam panci."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Aduk dan rebus sampai paru empuk."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Haluskan bawang putih dan ketumbar hingga halus."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Masukkan bumbu halus ke dalam panci rebusan paru. Tambahkan kecap manis, aduk rata. Beri garam dan bubuk kaldu jamur. Cicipi dan koreksi rasa. Rebus sampai air menyusut."
       },
       {
-        "step": 6,
+        "step_number": 6,
         "description": "Siapkan minyak di wajan, goreng paru sebentar. Hati-hati karena minyak bisa meletup, goreng dengan tutup agar minyak tidak keluar."
       },
       {
-        "step": 7,
+        "step_number": 7,
         "description": "Setelah digoreng, tusuk paru dengan tusukan sate."
       },
       {
-        "step": 8,
+        "step_number": 8,
         "description": "Sate Baceman Paru ala Angkringan siap disajikan untuk keluarga."
       }
     ]
@@ -2507,27 +2507,27 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Tumis bumbu iris (bawang merah dan bawang putih) hingga harum, kemudian masukkan air dan telur puyuh."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Tambahkan semua bumbu lainnya (gula merah, kecap manis, garam, ketumbar bubuk), biarkan mendidih dan air menyusut."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Setelah air menyusut, bumbu akan meresap ke telur dan telur akan berubah warna."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Setelah matang, angkat dan tiriskan. Biasanya dibuat malam hari, kemudian disimpan dalam wadah kedap udara. Paginya, dihangatkan lagi sampai benar-benar kering dan bumbu meresap. Lalu tusuk dengan tusukan sate dan sajikan."
       }
     ]
 },
 {
     "recipe_name": "75 Sate Usus Ayam ala Angkringan Jogja",
-    "cooking_time": null,
-    "servings": null,
+    "cooking_time": "1 Jam",
+    "servings": "4 Orang",
     "image_url": "https://img-global.cpcdn.com/recipes/cb529f292415ed23/1360x964cq70/75-sate-usus-ayam-ala-angkringan-jogja-foto-resep-utama.webp",
     "ingredients": [
       {"ingredient": "500 gram usus ayam"},
@@ -2551,31 +2551,31 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rebus usus ayam bersama daun jeruk dan daun salam hingga mendidih. Angkat dan tiriskan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Sementara merebus usus, siapkan bumbu bacem. Haluskan bawang merah, bawang putih, ketumbar bubuk, dan jahe. Geprek serai, iris tipis lengkuas."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Panaskan minyak goreng, tumis bumbu halus bacem. Tambahkan serai, daun salam, dan lengkuas. Tumis hingga harum."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Masukkan usus ayam. Tambahkan air, gula jawa, dan kecap manis. Masak hingga mendidih. Setelah mendidih, kecilkan api, lalu tambahkan garam dan gula pasir. Tes rasa dan masak hingga bumbu meresap. Angkat."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Tusuk usus ayam bacem menggunakan tusuk sate. Sate usus siap disajikan."
       }
     ]
 },
 {
     "recipe_name": "66 Sate Ati Ampela ala Angkringan Jogja",
-    "cooking_time": null,
-    "servings": null,
+    "cooking_time": "1 Jam",
+    "servings": "4 Orang",
     "image_url": "https://img-global.cpcdn.com/recipes/064d485f360277dc/1360x964cq70/66-sate-ati-ampela-ala-angkringan-jogja-foto-resep-utama.webp",
     "ingredients": [
       {"ingredient": "500 gram ati ampela"},
@@ -2599,31 +2599,31 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rebus ati ampela bersama daun jeruk dan daun salam hingga mendidih. Angkat dan tiriskan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Haluskan bawang merah, bawang putih, ketumbar bubuk, dan jahe. Geprek serai dan iris tipis lengkuas."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Panaskan minyak goreng. Tumis bumbu halus. Tambahkan serai, lengkuas, dan daun salam. Tumis hingga harum."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Masukkan ati ampela ke dalam tumisan bumbu, aduk rata. Tambahkan air, gula jawa, kecap manis, gula pasir, dan garam. Masak hingga bumbu meresap. Angkat."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Potong-potong ati ampela yang sudah matang, lalu tusuk menggunakan tusuk sate. Sate ati ampela siap disantap."
       }
     ]
 },
 {
     "recipe_name": "Telur Puyuh Bacem ala Angkringan",
-    "cooking_time": null,
-    "servings": null,
+    "cooking_time": "1 Jam",
+    "servings": "4 Orang",
     "image_url": "https://img-global.cpcdn.com/recipes/6269d86e141ec1ab/1360x964cq70/telur-puyuh-bacem-ala-angkringan-foto-resep-utama.webp",
     "ingredients": [
       {"ingredient": "25 butir telur puyuh"},
@@ -2641,26 +2641,26 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rebus telur puyuh sampai matang, sekitar 10 menit."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Setelah matang, masukkan telur ke dalam air dingin lalu kupas kulitnya."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Masak air, masukkan semua bumbu dan tunggu sampai mendidih. Masukkan telur dan masak hingga air menyusut. Tusuk telur dengan lidi atau tusuk sate."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Telur puyuh bacem siap dinikmati."
       }
     ]
 },
 {
     "recipe_name": "Sate Telur Puyuh Bacem ala Angkringan",
-    "cooking_time": null,
+    "cooking_time": "1 Jam",
     "servings": "12 tusuk",
     "image_url": "https://img-global.cpcdn.com/recipes/8fdd40b6f5d15623/1360x964cq70/sate-telur-puyuh-bacem-ala-angkringan-foto-resep-utama.webp",
     "ingredients": [
@@ -2679,43 +2679,43 @@
     ],
     "instructions": [
       {
-        "step": 1,
+        "step_number": 1,
         "description": "Rebus telur puyuh, kupas. Haluskan bumbu, sisihkan."
       },
       {
-        "step": 2,
+        "step_number": 2,
         "description": "Di dalam panci untuk merebus, tuang sedikit minyak, tumis bumbu halus hingga wangi. Tidak perlu terlalu kering."
       },
       {
-        "step": 3,
+        "step_number": 3,
         "description": "Setelah bumbu ditumis wangi, masukkan air, didihkan."
       },
       {
-        "step": 4,
+        "step_number": 4,
         "description": "Masukkan gula merah, kecap manis, kaldu jamur, garam, dan ketumbar bubuk. Didihkan lagi. Koreksi rasa."
       },
       {
-        "step": 5,
+        "step_number": 5,
         "description": "Masukkan telur puyuh rebus sampai 1/3 airnya berkurang. Diamkan minimum 6 jam. Rebus lagi sampai airnya berkurang setengahnya. Diamkan lagi minimum 6 jam. Rebus lagi sampai hampir asat airnya."
       },
       {
-        "step": 6,
+        "step_number": 6,
         "description": "Telur puyuh siap ditusuk."
       },
       {
-        "step": 7,
+        "step_number": 7,
         "description": "Proses merebus selama 3 tahapan ini bertujuan agar bumbunya meresap dan warnanya cenderung gelap. Sebaiknya mulai masak 1 hari sebelumnya untuk hasil yang maksimal."
       },
       {
-        "step": 8,
+        "step_number": 8,
         "description": "Selamat mencoba."
       }
     ]
 },
 {
     "recipe_name": "Sate Telur Puyuh Bacem ala Angkringan",
-    "cooking_time": null,
-    "servings": null,
+    "cooking_time": "1 Jam",
+    "servings": "4 Orang",
     "image_url": "https://img-global.cpcdn.com/recipes/f8d83a17a3c8917c/1360x964cq70/sate-telur-puyuh-bacem-ala-angkringan-foto-resep-utama.webp",
     "ingredients": [
         {"ingredient": "20 butir telur puyuh"},
@@ -2732,26 +2732,26 @@
     ],
     "instructions": [
         {
-            "step": 1,
+            "step_number": 1,
             "description": "Rebus telur puyuh sampai matang, beri 1 sdt garam dalam air rebusan, angkat dan rendam dalam air dingin, supaya mudah saat mengupasnya."
         },
         {
-            "step": 2,
+            "step_number": 2,
             "description": "Kupas semua kulit telur."
         },
         {
-            "step": 3,
+            "step_number": 3,
             "description": "Haluskan bumbu, tuang dalam satu panci bersama gula merah, lengkuas, dan kecap manis, tambahkan air, masak hingga mendidih, masukkan telur, kemudian tutup pancinya."
         },
         {
-            "step": 4,
+            "step_number": 4,
             "description": "Masak sampai bumbu meresap ke telur."
         }
     ]
 },
 {
     "recipe_name": "Sate Telur Puyuh dan Sate Usus Ala Angkringan Jogja",
-    "cooking_time": null,
+    "cooking_time": "1 Jam",
     "servings": "10 Tusuk",
     "image_url": "https://img-global.cpcdn.com/recipes/f07ca14de1767790/1360x964cq70/sate-telur-puyuh-dan-sate-usus-ala-angkringan-jogja-foto-resep-utama.webp",
     "ingredients": [
@@ -2773,35 +2773,35 @@
     ],
     "instructions": [
         {
-            "step": 1,
+            "step_number": 1,
             "description": "Didihkan air secukupnya. Kira-kira sampai telur dan usus terendam semua."
         },
         {
-            "step": 2,
+            "step_number": 2,
             "description": "Masukkan bumbu halus, lengkuas, daun salam, dan serai ke dalam air mendidih. Tambahkan kecap manis, garam, gula pasir, dan gula jawa."
         },
         {
-            "step": 3,
+            "step_number": 3,
             "description": "Masukkan telur rebus kupas. Aduk sesekali dan koreksi rasa."
         },
         {
-            "step": 4,
+            "step_number": 4,
             "description": "Masak hingga air menyusut dan warna telur dan usus kecoklatan."
         },
         {
-            "step": 5,
+            "step_number": 5,
             "description": "Angkat dan biarkan dingin. Lalu tusuk telur dan usus dengan tusuk sate."
         },
         {
-            "step": 6,
+            "step_number": 6,
             "description": "Siap dihidangkan."
         }
     ]
 },
 {
     "recipe_name": "Sate Kerang Angkringan Jogja",
-    "cooking_time": null,
-    "servings": null,
+    "cooking_time": "1 Jam",
+    "servings": "4 Orang",
     "image_url": "https://img-global.cpcdn.com/recipes/43f66f303c53b2bc/1360x964cq70/sate-kerang-angkringan-jogja-foto-resep-utama.webp",
     "ingredients": [
         {"ingredient": "1 kg Kerang Dara Besar"},
@@ -2819,19 +2819,19 @@
     ],
     "instructions": [
         {
-            "step": 1,
+            "step_number": 1,
             "description": "Cuci bersih Kerang Dara, lalu rebus dengan jahe dan daun jeruk. Setelah berbusa, angkat dan buang airnya. Sisihkan."
         },
         {
-            "step": 2,
+            "step_number": 2,
             "description": "Tumis lengkuas geprek dan bawang putih halus. Masukkan kerang yang sudah direbus. Aduk rata. Ungkep 2 menit. Bubuhkan garam, penyedap, dan gula. Aduk rata. Test rasa. Jika sudah pas, angkat dan sisihkan, biarkan dingin."
         },
         {
-            "step": 3,
+            "step_number": 3,
             "description": "Setelah dingin, bisa ditusuk pakai tusukan sate."
         },
         {
-            "step": 4,
+            "step_number": 4,
             "description": "Setelah semua ditusuk, siapkan teflon dan panggang dengan api kecil. Oles dengan bumbu bakaran sesekali. Bisa juga dibakar dengan arang panas. Happy Cooking!"
         }
     ]
@@ -2858,38 +2858,38 @@
     ],
     "instructions": [
         {
-            "step": 1,
+            "step_number": 1,
             "description": "Siapkan bahan."
         },
         {
-            "step": 2,
+            "step_number": 2,
             "description": "Kupas telur puyuh dari cangkangnya. Haluskan bumbu. Sisihkan."
         },
         {
-            "step": 3,
+            "step_number": 3,
             "description": "Siapkan panci, rebus air sampai mendidih (kira-kira sampai telur terendam semua, saya pakai kurang lebih 500 ml air)."
         },
         {
-            "step": 4,
+            "step_number": 4,
             "description": "Masukkan bumbu halus, salam, laos, dan sereh ke dalam rebusan air. Tambahkan kecap manis, gula merah, gula pasir, dan garam."
         },
         {
-            "step": 5,
+            "step_number": 5,
             "description": "Masukkan telur puyuh."
         },
         {
-            "step": 6,
+            "step_number": 6,
             "description": "Masak sampai air menyusut dan warna telur kecoklatan sambil sesekali diaduk agar warna dan bumbunya merata. Angkat dan tiriskan. Biarkan dingin."
         },
         {
-            "step": 7,
+            "step_number": 7,
             "description": "Setelah dingin, tusuk telur dengan tusukan sate. Siap untuk disajikan."
         }
     ]
 },
 {
     "recipe_name": "Bacem Telur Puyuh ala Angkringan",
-    "cooking_time": null,
+    "cooking_time": "1 Jam",
     "servings": "10 porsi",
     "image_url": "https://img-global.cpcdn.com/recipes/e4993fc120ad4e2f/1360x964cq70/bacem-telur-puyuh-ala-angkringan-foto-resep-utama.webp",
     "ingredients": [
@@ -2909,59 +2909,59 @@
     ],
     "instructions": [
         {
-            "step": 1,
+            "step_number": 1,
             "description": "Rebus telur puyuh dan kupas."
         },
         {
-            "step": 2,
+            "step_number": 2,
             "description": "Haluskan bumbu."
         },
         {
-            "step": 3,
+            "step_number": 3,
             "description": "Tumis bumbu hingga matang dan harum."
         },
         {
-            "step": 4,
+            "step_number": 4,
             "description": "Setelah bumbu harum, tambahkan air 500ml."
         },
         {
-            "step": 5,
+            "step_number": 5,
             "description": "Sisir gula merah."
         },
         {
-            "step": 6,
+            "step_number": 6,
             "description": "Masukkan gula merah dan garam ke dalam bumbu."
         },
         {
-            "step": 7,
+            "step_number": 7,
             "description": "Tunggu hingga mendidih kemudian masukkan telur puyuh."
         },
         {
-            "step": 8,
+            "step_number": 8,
             "description": "Aduk rata, tambahkan kecap secukupnya."
         },
         {
-            "step": 9,
+            "step_number": 9,
             "description": "Masak hingga air menyusut."
         },
         {
-            "step": 10,
+            "step_number": 10,
             "description": "Jika sudah menyusut, matikan kompor dan tunggu hingga dingin."
         },
         {
-            "step": 11,
+            "step_number": 11,
             "description": "Tusuk telur dengan tusuk sate."
         },
         {
-            "step": 12,
+            "step_number": 12,
             "description": "Bacem telur puyuh siap disajikan."
         }
     ]
 },
 {
   "recipe_name": "Sate Puyuh ala Angkringan Jogja",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/5044bccc02b30089/680x482cq70/sate-puyuh-ala-angkringan-jogja-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "20 butir Telur Puyuh"},
@@ -2976,38 +2976,38 @@
   ],
   "instructions": [
       {
-          "step": 1,
+          "step_number": 1,
           "description": "Cincang halus bawang merah dan bawang putih, kemudian sisihkan."
       },
       {
-          "step": 2,
+          "step_number": 2,
           "description": "Rebus telur puyuh sampai matang. Kupas telur dan sisihkan."
       },
       {
-          "step": 3,
+          "step_number": 3,
           "description": "Siapkan wajan dengan sedikit minyak goreng. Tumis bawang merah dan bawang putih sampai harum."
       },
       {
-          "step": 4,
+          "step_number": 4,
           "description": "Masukkan sedikit air, kecap Saori, penyedap rasa, garam, dan kecap. Koreksi rasa."
       },
       {
-          "step": 5,
+          "step_number": 5,
           "description": "Masukkan telur puyuh dan masak hingga air menyusut."
       },
       {
-          "step": 6,
+          "step_number": 6,
           "description": "Setelah bumbu meresap, angkat dan tusuk telur puyuh dengan tusuk sate."
       },
       {
-          "step": 7,
+          "step_number": 7,
           "description": "Sate Puyuh ala Angkringan Jogja siap disantap."
       }
   ]
 },
 {
   "recipe_name": "Sate Telur Puyuh Enak ala Angkringan Jogja - FLo",
-  "cooking_time": null,
+  "cooking_time": "1 Jam",
   "servings": "5 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/54bf3b1ee813240f/680x482cq70/sate-telur-puyuh-enak-ala-angkringan-jogja-flo-foto-resep-utama.webp",
   "ingredients": [
@@ -3028,27 +3028,27 @@
   ],
   "instructions": [
       {
-          "step": 1,
+          "step_number": 1,
           "description": "Didihkan air secukupnya (kira-kira telur terendam semua)."
       },
       {
-          "step": 2,
+          "step_number": 2,
           "description": "Masukkan bumbu halus, daun salam, laos, dan serai ke dalam rebusan air. Tambahkan kecap manis, garam, dan gula."
       },
       {
-          "step": 3,
+          "step_number": 3,
           "description": "Masukkan telur puyuh matang yang sudah dikupas ke dalam rebusan air. Sesekali aduk agar warna dan bumbu merata pada telur."
       },
       {
-          "step": 4,
+          "step_number": 4,
           "description": "Masak hingga air menyusut dan warna telur puyuh kecoklatan."
       },
       {
-          "step": 5,
+          "step_number": 5,
           "description": "Angkat dan biarkan telur dingin. Lalu tusuk telur dengan tusuk sate."
       },
       {
-          "step": 6,
+          "step_number": 6,
           "description": "Sajikan dengan nasi hangat dan tempe garit."
       }
   ]
@@ -3076,31 +3076,31 @@
   ],
   "instructions": [
       {
-          "step": 1,
+          "step_number": 1,
           "description": "Didihkan air secukupnya (kira-kira telur terendam semua)."
       },
       {
-          "step": 2,
+          "step_number": 2,
           "description": "Masukkan bumbu halus, salam, laos, dan serai ke dalam rebusan air. Tambahkan kecap manis, garam, gula."
       },
       {
-          "step": 3,
+          "step_number": 3,
           "description": "Masukkan telur puyuh matang yang sudah dikupas ke dalam rebusan air. Sesekali aduk agar warna dan bumbu merata pada telur."
       },
       {
-          "step": 4,
+          "step_number": 4,
           "description": "Masak hingga air sedikit dan warna telur puyuh kecoklatan."
       },
       {
-          "step": 5,
+          "step_number": 5,
           "description": "Angkat dan biarkan telur dingin. Lalu tusuk telur dengan tusuk sate."
       }
   ]
 },
 {
   "recipe_name": "Sate Bacem Telur Puyuh + Paru",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/86b3b102aebd8524/680x482cq70/sate-bacem-telur-puyuh-paru-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "30 butir telur puyuh matang, kupas kulitnya (atau mix dengan paru)"},
@@ -3117,35 +3117,35 @@
   ],
   "instructions": [
       {
-          "step": 1,
+          "step_number": 1,
           "description": "Rebus paru untuk membersihkan kotorannya, buang airnya. Rebus kembali dengan daun salam (dan daun jeruk jika diinginkan) selama 30-60 menit. Potong paru tipis setelah dingin."
       },
       {
-          "step": 2,
+          "step_number": 2,
           "description": "Tumis bumbu halus, lengkuas, dan daun salam hingga harum."
       },
       {
-          "step": 3,
+          "step_number": 3,
           "description": "Didihkan air (cukup untuk merendam telur dan paru), tambahkan bumbu halus, daun salam, lengkuas, kecap manis, gula, garam, dan kaldu bubuk. Tes rasa."
       },
       {
-          "step": 4,
+          "step_number": 4,
           "description": "Masukkan telur puyuh matang dan paru, aduk sesekali agar bumbu merata."
       },
       {
-          "step": 5,
+          "step_number": 5,
           "description": "Masak hingga air menyusut dan warna telur kecoklatan. Angkat, tiriskan, dan dinginkan. Tusuk satu persatu telur dan paru dengan tusuk sate."
       },
       {
-          "step": 6,
+          "step_number": 6,
           "description": "Opsional: untuk paru, setelah ditusuk, goreng dengan campuran tepung terigu dan air (kekentalan sedang)."
       }
   ]
 },
 {
   "recipe_name": "Bacem (Tempe, Tahu, Telur Puyuh, Hati Ampela Ayam)",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/cd0bdc772b737299/680x482cq70/bacem-tempe-tahu-telur-puyuh-hati-ampela-ayam-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "1 papan tempe (+/- 180 gr), potong sesuai selera"},
@@ -3167,31 +3167,31 @@
   ],
   "instructions": [
       {
-          "step": 1,
+          "step_number": 1,
           "description": "Siapkan wajan, masukkan tahu, tempe, dan air. Tambahkan bawang merah, bawang putih, ketumbar, merica, garam, daun salam, asam Jawa, gula merah, dan lengkuas. Aduk rata dan tutup wajan. Ungkep dengan api kecil."
       },
       {
-          "step": 2,
+          "step_number": 2,
           "description": "Setelah air menyusut setengah, tambahkan telur puyuh, hati ampela ayam, dan kecap manis. Aduk rata dan masak hingga air habis. Koreksi rasa dan matikan kompor."
       },
       {
-          "step": 3,
+          "step_number": 3,
           "description": "Setelah dingin, tusuk telur puyuh dan hati ampela ayam dengan tusuk sate. Baceman bisa langsung dimakan atau dibakar/digoreng. Olesi sesekali dengan sisa bumbu ungkep dan minyak bawang untuk aroma yang lebih harum."
       },
       {
-          "step": 4,
+          "step_number": 4,
           "description": "Tata di piring dan siap disajikan."
       },
       {
-          "step": 5,
+          "step_number": 5,
           "description": "Note: Tahu dan tempe bisa digoreng sebentar agar tidak mudah hancur saat diungkep. Setelah air habis, tambahkan sedikit minyak goreng dan masak kembali hingga seperti di-grill kedua sisinya."
       }
   ]
 },
 {
   "recipe_name": "Krengsengan Daging Sapi",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/e5f3747c28614b45/1360x964cq70/816-krengsengan-daging-sapi-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "200 gr Daging Sapi berlemak (buang lemaknya)"},
@@ -3203,19 +3203,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Lakukan proses pengempukan daging terlebih dahulu, saya menggunakan baking soda."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": " Tumis bumbu krengsengan dan daun salam dengan sedikit minyak hingga matang/tanak."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan potongan daging sapi yang sudah dicuci, aduk hingga setengah matang"
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Siap disajikan."
     }
   ]
@@ -3254,19 +3254,19 @@
   ,
 "instructions": [
   {
-    "step": 1,
+    "step_number": 1,
     "description": "Uleg atau blender bumbu halus. Jika suka pedas bisa ditambah cabai."
   },
   {
-    "step": 2,
+    "step_number": 2,
     "description": "Panaskan minyak, tumis bumbu halus, serai, daun jeruk, daun salam hingga harum, tambahkan ati ampela yang telah direbus tadi, aduk rata."
   },
   {
-    "step": 3,
+    "step_number": 3,
     "description": "Tambahkan air, kecap, gula merah, garam, kaldu jamur, aduk rata dan masak hingga air menyusut. Jangan lupa koreksi rasa."
   },
   {
-    "step": 4,
+    "step_number": 4,
     "description": "Sajikan dengan nasi hangat."
   }
 ]
@@ -3293,19 +3293,19 @@
         ],
       "instructions": [
         {
-          "step": 1,
+          "step_number": 1,
           "description": "Cuci berulangkali bekicot lalu rebus selama 30 menit. Buang airnya dan cuci hingga bersih daging bekicotnya."
         },
         {
-          "step": 2,
+          "step_number": 2,
           "description": "Haluskan semua bumbu dengan blender. Panaskan wajan yang sudah berisi minyak, lalu tumis bumbu hingga harum."
         },
         {
-          "step": 3,
+          "step_number": 3,
           "description": "Masukkan daging bekicot, lalu tuangi air. Aduk rata dan masukkan garam dan gula secukupnya. Aduk kembali dan biarkan hingga mengesat."
         },
         {
-          "step" : 4,
+          "step_number" : 4,
           "description" : "Setelah mengesat,aduk kembali dan matikan kompornya. Bekicot siap di nikmati bersama dg nasi hangat"
         }
       ]
@@ -3334,35 +3334,35 @@
         ],
       "instructions": [
         {
-          "step": 1,
+          "step_number": 1,
           "description": "Rebus rempelo hati ayam dengan jahe terlebih dahulu, angkat dan tiriskan. Goreng sebentar, lalu potong sesuai selera."
         },
         {
-          "step": 2,
+          "step_number": 2,
           "description": "Panaskan minyak, lalu tumis irisan daun bawang dan cabe hingga layu."
         },
         {
-          "step": 3,
+          "step_number": 3,
           "description": "Tambahkan bumbu halus, daun jeruk, dan daun salam, tumis hingga wangi."
         },
         {
-          "step": 4,
+          "step_number": 4,
           "description": "Masukkan air dan kecap, aduk rata, lalu masukkan potongan rempelo hati, gula, garam, dan penyedap. Masak hingga bumbu meresap."
         },
         {
-          "step": 5,
+          "step_number": 5,
           "description": "Terakhir, tambahkan kacang polong, aduk rata, masak sebentar, lalu matikan kompor."
         },
         {
-          "step": 6,
+          "step_number": 6,
           "description": "Sajikan krengsengan rempelo hati kacang polong sebagai lauk pendamping nasi hangat."
         }
       ]
     },
 {
   "recipe_name": "Krengsengan Daging Kambing",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/1995f59e10979bef/1360x964cq70/krengseng-kambing-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "1/4 kg daging kambing"},
@@ -3378,19 +3378,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Rebus daging kambing dengan garam dan daun salam selama 10 menit. Rebus 2 kali dengan mengganti airnya untuk menghilangkan bau kambing. Setelah itu, potong-potong daging."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Masukkan bumbu instan, laos, daun salam, dan potongan daging kambing ke dalam panci. Tambahkan air secukupnya."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Rebus hingga air menyusut. Setelah itu, beri gula, garam, dan penyedap rasa. Koreksi rasa dan pastikan bumbu ditambahkan saat air sudah menyusut agar masakan tidak terlalu asin."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Sajikan krengsengan daging kambing hangat."
     }
   ]
@@ -3420,39 +3420,39 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Cuci bersih ampela ati, iris kecil-kecil, dan rebus dengan 2 ruas jahe. Buang buih-buihnya."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Setelah direbus, Anda bisa menggoreng ampela ati terlebih dahulu."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Panaskan minyak, tumis bumbu halus (bawang merah, bawang putih, kemiri, cabe rawit) dan daun salam hingga harum dan matang, namun tidak kecoklatan."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masukkan ampela ati, beri bumbu (garam, kaldu bubuk, gula), aduk rata."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Tambahkan irisan cabe merah dan potongan tomat, aduk rata kembali."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Tambahkan air, rebus hingga mendidih dan kuah mengental. Koreksi rasa, bisa ditambahkan kecap manis jika diinginkan."
     },
     {
-      "step": 7,
+      "step_number": 7,
       "description": "Sajikan krengsengan ampela ati hangat."
     }
   ]
 },
 {
   "recipe_name": "Krengsengan Daging Sapi dan Bakso",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/26a65af2670f79e4/1360x964cq70/krengseng-daging-sapi-dan-bakso-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "250 gram daging sapi yang sudah direbus hingga empuk"},
@@ -3469,19 +3469,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Potong bakso dan daging yang sudah direbus sesuai selera."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Masukkan bawang merah, bawang putih, cabai rawit, dan garam ke dalam cobek, lalu ulek hingga halus. Bisa juga diblender jika tidak mempunyai cobek."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Panaskan minyak, lalu tumis bumbu yang sudah dihaluskan hingga harum. Masukkan potongan daging sapi, aduk hingga rata, dan tambahkan air secukupnya agar daging makin empuk. Masak hingga mendidih."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masukkan bakso, tambahkan gula pasir, kecap, dan penyedap rasa. Aduk kembali dan cek rasa. Jika sudah pas, tunggu hingga mendidih, lalu angkat. Krengsengan siap dinikmati."
     }
   ]
@@ -3509,27 +3509,27 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Rebus iga dan tetelan sapi sampai empuk."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Tumis bumbu halus (bawang merah, bawang putih, jahe, kemiri, lada, pala, cabe) dan cemplungkan hingga bau harum."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan iga dan tetelan sapi ke dalam tumisan."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Tambahkan air secukupnya, dan masukkan kecap secukupnya juga."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Aduk hingga rata, tunggu sampai air menyusut dan tes rasa."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Setelah matang, angkat dan sajikan. Jangan lupa taburi dengan bawang merah goreng. Krengsengan iga dan tetelan sapi siap dihidangkan dengan nasi hangat."
     }
   ]
@@ -3556,27 +3556,27 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan kerongkongan ayam, rebus terlebih dahulu untuk menghilangkan darahnya. Setelah mendidih dan berubah warna, angkat kerongkongan ayam dan tiriskan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Haluskan bumbu. Anda bisa menggunakan ulekan atau blender."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tumis bumbu halus dengan sedikit minyak hingga harum dan matang, masukkan cabe rawit dan tomat."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masukkan kerongkongan ayam. Tumis kembali agar bumbu tercampur rata. Masukkan kecap manis, saus tiram, lalu tuang air. Aduk merata. Biarkan hingga mendidih."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Beri garam, gula kelapa, dan kaldu bubuk, aduk rata kembali. Masukkan sawi putih lalu aduk hingga sayur mengempis. Koreksi rasa. Untuk rasa perpaduan manis, gurih, dan pedas. Jika rasa sudah sesuai, matikan kompor. Jika lebih suka sayurnya masih kriuk-kriuk, jangan terlalu lama memasaknya saat sayur sudah dimasukkan."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Krengsengan sawi putih sudah siap disajikan."
     }
   ]
@@ -3605,19 +3605,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Cuci bersih hati sapi, lalu potong ukuran kepalan tangan. Rebus hati sapi bersama daun salam sekitar 15 menit. Angkat lalu potong dadu."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Tumis bumbu halus (bawang merah, bawang putih, cabe merah keriting, kemiri, terasi, dan jahe) sampai harum. Masukkan daun jeruk, daun salam, dan lengkuas geprek."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Lalu masukkan hati sapi yang sudah dipotong bersama air secukupnya. Kecilkan api dan masukkan kecap, garam, gula, dan cabe rawit utuh."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masak hati sampai empuk dan air menyusut. Kresengan hati sapi siap dihidangkan."
     }
   ]
@@ -3643,19 +3643,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Cuci bersih jeroan kambing, lalu rebus atau presto hingga empuk. Buang airnya kemudian bilas dengan air supaya bau prengusnya hilang. Sisihkan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Siapkan bahan iris. Tumis bawang merah, bawang putih, daun salam, dan lengkuas hingga wangi dan harum, kemudian tuang cabe dan aduk rata."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Setelah tumisan layu, masukkan cabe merah, tomat hijau, dan jeroan yang sudah dipotong-potong. Tambahkan garam dan micin, lalu tambahkan kecap dan aduk merata. Koreksi rasa."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Kemudian angkat. Krengsengan jeroan kambing siap disajikan dengan nasi hangat."
     }
   ]
@@ -3684,23 +3684,23 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan daging yang sudah direbus."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Haluskan bumbu (bawang merah, bawang putih), kunyit, jahe, dan lengkuas. Iris lengkuas dan geprek sereh, kemudian panaskan minyak."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tumis daun salam, daun jeruk, dan sereh. Setelah itu, masukkan bumbu halus."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Setelah bumbu harum, masukkan potongan daging rebus dan tumis."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Beri sedikit air, lalu masukkan garam, kaldu jamur, dan lada bubuk. Aduk-aduk, kemudian tambahkan kecap manis dan kecap asin. Koreksi rasa. Jika sudah pas, aduk dan diamkan sampai air menyusut. Krengsengan daging siap disajikan (boleh ditambah potongan cabe atau cabe utuh)."
     }
   ]
@@ -3731,31 +3731,31 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Haluskan bawang merah, bawang putih, kemiri, cabe merah, dan cabe rawit menggunakan blender."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Sementara itu, daging yang sudah dipotong-potong sesuai selera dimasukkan ke dalam panci presto bersama bumbu-bumbu dan air. Masak selama kurang lebih 30 menit setelah peluit panci presto berbunyi."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Oseng bumbu yang dihaluskan dengan secukupnya minyak goreng. Tambahkan merica bubuk dan pala bubuk. Masak hingga berbau harum dan layu. Lalu tambahkan air dan sebagian air dari presto."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Setelah mendidih, masukkan daging yang sudah dipresto. Masukkan petis yang sudah diuleg, gula merah, garam halus, saos tiram, dan kecap manis. Juga tambahkan irisan cabe merah dan beberapa biji cabe rawit sesuai selera."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Masukkan santan instan segitiga."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Aduk kembali dan biarkan sampai kuahnya menyusut. Lalu angkat dan sajikan dengan taburan bawang goreng di atasnya."
     },
     {
-      "step": 7,
+      "step_number": 7,
       "description": "Sajikan dengan nasi hangat dan kerupuk. Selamat menikmati!"
     }
   ]
@@ -3785,27 +3785,27 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Cuci bersih hati, lalu rebus bersama dengan daun salam, daun jeruk, dan serai selama 30 menit. Angkat lalu potong dadu kecil atau sesuai selera untuk menghilangkan bau sapi."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Cuci bersih kentang, potong dadu, rendam dalam air agar tidak hitam. Kemudian goreng hingga matang, sisihkan."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Haluskan bumbu, kemudian tumis bawang bombay dan cabe merah besar hingga harum. Lalu masukkan bumbu halus, masak hingga matang."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masukkan hati yang sudah direbus, kentang, dan tomat. Tambahkan kecap, garam, dan petis. Tambahkan air dan aduk rata."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Masukkan cabe rawit, masak sebentar hingga air menyusut. Tes rasa dan hidangkan."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Alhamdulillah, siap disajikan! ❤️"
     }
   ]
@@ -3831,19 +3831,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Bersihkan semua bahan, lalu rebus jeroan, kulit, daging, dan tulang kambing dengan presto supaya cepat empuk. Setelah itu, iris-iris dan sisihkan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Iris-iris bumbu, dan geprek jahe. Untuk cabe rawit hijau, tidak perlu diiris. Larutkan petis dengan air panas."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tumis semua bumbu dalam wajan hingga harum, lalu masukkan petis, garam, dan semua bahan kambing. Oseng-oseng sampai bumbu merata dan tercampur."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Tambahkan kecap manis dan penyedap. Koreksi rasa dan tunggu sampai matang. Krengsengan siap disajikan."
     }
   ]
@@ -3877,23 +3877,23 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan bahan terlebih dulu."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Panaskan minyak, masukkan bumbu halus dan tumis sampai harum & matang. Lalu masukkan bumbu cemplung, aduk rata, kemudian masukkan daging dan aduk rata."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tambahkan air, masak sampai daging empuk & kuah menyusut, lalu masukkan kentang, aduk rata."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masak sampai kentang meresap, tes rasa, dan terakhir masukkan cabe, aduk rata."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Krengseng daging kentang siap disajikan."
     }
   ]
@@ -3922,27 +3922,27 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan bahan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Blender bumbu halus: bawang putih, bawang merah, cabe keriting merah, jahe, kemiri, dan air secukupnya."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tumis bumbu halus hingga wangi. Lalu masukkan daun jeruk, cabe rawit merah, sereh, gula merah, garam, kaldu bubuk, dan kecap manis. Aduk rata."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Tambahkan air dan daging sapi. Aduk rata."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Masak sampai airnya menyusut. Jangan lupa koreksi rasanya."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Nikmati hidangan ini dengan nasi hangat."
     }
   ]
@@ -3969,27 +3969,27 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Haluskan semua bahan yang harus dihaluskan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Tumis semua bahan yang sudah dihaluskan sampai wangi."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan air dan bahan-bahan lainnya, aduk-aduk."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Masukkan daging yang sudah dipotong dan tahu. Aduk rata."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Koreksi rasa, tutup wajan, dan tunggu hingga air menyusut."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Jika daging sudah empuk dan rasanya sudah mantap, sajikan dengan penuh cinta untuk semua kesayangan."
     }
   ]
@@ -4024,11 +4024,11 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Tumis bumbu halus sampai matang dan harum. Tambahkan lengkuas, daun salam, dan daun jeruk, aduk rata."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Masukkan daging iga, aduk rata. Tuang air dan didihkan."
     }
   ]
@@ -4055,23 +4055,23 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Ranjang bawang merah, cabe hijau besar, cabe kecil, dan tomat."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Haluskan bawang dan merica."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tumis bumbu halus sampai harum dan matang. Masukkan ceker dan jahe, lalu tambahkan air sesuai selera."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Ungkep hingga bumbu meresap dan matang merata."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Lakukan tes rasa. Matikan kompor jika sudah matang dan rasa sudah sesuai selera."
     }
   ]
@@ -4098,19 +4098,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Cuci bersih lalu presto kepala kambing, setelah empuk dan dingin, potong-potong sesuai selera."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Siapkan bumbu iris, tumis bawang putih dan bawang merah hingga harum."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan bumbu lainnya, aduk merata. Setelah bumbu layu, tuang air lalu masukkan tetelan kepala kambing. Tuang kecap manis, aduk merata."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Setelah mendidih, masukkan bawang daun, aduk merata. Jangan lupa tes rasa dan sajikan."
     }
   ]
@@ -4129,19 +4129,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan bahan-bahan yang diperlukan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Bungkus nasi putih dengan dua lembar daun pisang. Tambahkan daging bandeng presto goreng dan sambal."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Lipat rapat dan sematkan dengan tusuk gigi. Sajikan bersama sate kikil angkringan."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Siap disajikan."
     }
   ]
@@ -4157,15 +4157,15 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan Kering Tempe."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Ambil Daun Pisang yang sudah dibersihkan. Letakkan Nasi Hangat, beri potongan daun utk alas Lauk Kering Tempe. Bungkus rapi."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Selamat menikmati."
     }
   ]
@@ -4198,43 +4198,43 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Goreng Teri sampai garing, tiriskan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Siapkan bahan sambalnya. Tumis semua bahan sambalnya sampai matang."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Ulek kasar bahan sambal yang sudah ditumis bersama gula pasir, kaldu bubuk, dan garam."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Di wajan bekas menumis bawang, dkk., beri sedikit minyak lagi, lalu goreng sambal yang sudah diulek, sampai tanak. Koreksi rasa. Kalau sudah ok, matikan api."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Masukkan teri goreng, aduk-aduk"
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Iris dan potong bahan-bahan orek tempe."
     },
     {
-      "step": 7,
+      "step_number": 7,
       "description": "Tumis bawang merah, bawang putih, lengkuas, dan daun salam sampai wangi. Masukkan cabai merah dan hijau. Goreng terus hingga cabai layu."
     },
     {
-      "step": 8,
+      "step_number": 8,
       "description": "Masukkan gula jawa, garam, kaldu bubuk/MSG. Aduk. Tuangkan air sedikit saja."
     },
     {
-      "step": 9,
+      "step_number": 9,
       "description": "Masukkan tempe goreng. Tuangkan kecap manis. Aduk rata. Koreksi rasa, jika sudah ok, matikan api."
     },
     {
-      "step": 10,
+      "step_number": 10,
       "description": "Karena keterbatasan daun pisang, maka cara penyajian berbeda dengan yang biasa tersedia di angkringan. Saya terlebih dahulu mencetak nasi dengan dialasi daun pisang di atas piring. Kemudian bubuhi sambel teri. Di samping-sampingnya beri secukupnya orek tempe dan pelengkap."
     }
   ]
@@ -4263,23 +4263,23 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan bahan bumbu utuh : daun pandan potong-potong, sereh sayat memanjang, jahe kupas bersih kemudian potong-potong, lengkuas kupas asal saja kemudian potong-potong juga, dan geprek semua bahan, kecuali daun salam dan daun jeruk sisihkan. Cuci beras basmati, kemudian tambahkan air seperti biasa memasak nasi Masukkan semua bumbu utuh."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Seduh fiber creme dengan sedikit air, tambahkan garam, aduk rata. Kemudian tuang pada panci rice cooker. Aduk supaya bumbu tercampur rata."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masak seperti biasa memasak nasi, tekan tombol rice cooker memasak. Sesekali diaduk supaya bumbu meresap rata. Biarkan sampai nasi matang dan tombol naik ke atas."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Setelah nasi matang diamkan sebentar sampai uapnya hilang, tuang diatas daun pisang, daun pisang panggang terlebih dahulu diatas kompor supaya daunnya tidak pecah saat dibuat membungkus. Taburi nasi dengan bawang merah goreng dan telur dadar rawis."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Bungkus memanjang, lipat kebawah kedua sisinya. Sajikan dengan sambal, kerupuk, timun atau sesuaikan dengan selera masing masing. Siap disajikan sebagai takjil atau hantaran lebaran."
     }
   ]
@@ -4318,19 +4318,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Campur semua bahan telur pindang. Masak hingga mendidih kurleb 20 menit. Matikan api dan biarkan hingga dingin atau hingga telur berwarna coklat tua. Angkat dan siap disajikan. Kalo mau lebih lama, bisa direndam semalaman setelah direbus. Paginya didihkan lagi sebentar baru diangkat setelah dingin."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Tumis bawang merah putih hingga harum. Tambahkan cabe, daun salam dan serai. Aduk rata sebentar."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan tempe, kacang panjang dan tomat. Beri air garam, masako, gula pasir."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Sajikan nasi beserta menunya."
     }
   ]
@@ -4356,46 +4356,46 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan bahan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Potong dadu terong dan goreng hingga matang."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tempatkan terong dalam wadah. Sisihkan."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Cuci Teri dan goreng hingga matang. Satukan dalam wadah berisi terong. Sisihkan.."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Potong cabai dan bawang merah, lalu ulek. Kemudian potong tomat, tambahkan di ulekan cabai dan ulek kembali bersama dengan terasi hingga semua tercampur rata."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Tumis bumbu halus hingga harum dan matang, lalu tambahkan garam, aduk rata kemudian koreksi rasa."
     },
     {
-      "step": 7,
+      "step_number": 7,
       "description": "Masukkan terong dan teri lalu aduk rata hingga bumbu meresap. Kemudian angkat dan pindahkan ke mangkuk."
     },
     {
-      "step": 8,
+      "step_number": 8,
       "description": "Siapkan satu centong nasi dan taruh di atas piring saji, lalu taruh sambal terong dan teri di atas nasi. Note : Jika menggunakan daun pisang, maka siapkan daun pisang, lap bersih bagian dalamnya dan taruh setengah centong nasi, padatkan. Taruh 1 sdm sambal terong teri diatasnya."
     },
     {
-      "step": 9,
+      "step_number": 9,
       "description": "Siap disajikan dan selamat menikmati 🙏🏻😊"
     }
   ]
 },
 {
   "recipe_name": "Nasi kucing || bekal sekolah Naraya",
-  "cooking_time": null,
+  "cooking_time": "1 Jam",
   "servings": "1 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/df32860493b60593/1360x964cq70/nasi-kucing-bekal-sekolah-naraya-foto-resep-utama.webp",
   "ingredients": [
@@ -4414,19 +4414,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Campur nasi putik dengan air kunyit tambahkan kaldu jamur sedikit lalu cetak bentuk kucing dan dihias dengan nori"
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Potong cuci dan rebus wortel dan brokoli. Potong wortel menjadi bentuk ikan."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Potong semangka dan cetak dengan cetakan bunga."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Susun sosis membentuk lingkaran dan ceplok telur puyuh di tengahnya dan goreng sampai matang."
     }
   ]
@@ -4457,19 +4457,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Didihkan air kemudian rebus cumi asin sampai mendidih. Matikan kompor dan rendam selama 10 menit. Setelah itu cuci di air mengalir dan tiriskan. Kemudian goreng sebentar."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Panaskan sedikit minyak tumis bawang putih, bawang merah, tumis sampai harum. Tambahkan irisan cabe, tumis hingga cabe tidak bau langu."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan cumi, saos tiram, garam, gula, lengkuas, daun salam dan daun jeruk. Masak hingga harum. Tes rasa. Sesaat sebelum di angkat tambahkan petai dan tomat hijau. Tumis sampai bumbu meresap rata."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Ambil daun pisang, isi sedikit nasi, beri cumi cabe ijo. Bungkus rapi."
     }
   ]
@@ -4493,23 +4493,23 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Rebus air lalu masukkan mie instan, masak hingga mie mengembang, tiriskan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Bersihkan daun bayam, ambil bagian tangkai dan daunnya saja. Lalu tiriskan."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Siapkan bahan bumbu halus, goreng sebentar, lalu uleg hingga halus."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Siapkan wajan, tumis bumbu hingga harum, tambahkan air, masukkan kecap, bumbu instan, garam, lada, dan juga daun bayam."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Jika bayam sudah lunak, tambahkan mie yang sudah ditiriskan tadi, aduk merata. Koreksi rasa, jika sudah sip, silahkan matikan kompor, sajikan."
     }
   ]
@@ -4533,31 +4533,31 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Rebus ikan asin tongkol sebentar, tiriskan lalu Suir dan sisihkan. Begitu juga tempe, potong kecil, goreng lalu sisihkan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Siapkan bumbu, potong potong lalu sisihkan."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tumis dengan sedikit minyak bumbu yang telah dipotong, sampai wangi, lalu masukkan tongkol dan tempe yang telah di goreng sebelumnya."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Tambahkan gula, garam, merica dan kaldu jamur secukupnya, tes rasa, lalu angkat dan siap disajikan."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Ambil satu lembar daun pisang, isi lah dengan nasi hangat satu centong, lalu beri toping isian Suir tongkol secukupnya, dan bungkus."
     }
   ]
 },
 {
   "recipe_name": "Sego Kucing",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/1f00ed349c77fe21/1360x964cq70/sego-kucing-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "Nasi"},
@@ -4572,31 +4572,31 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Cuci bersih tongkol kemudian goreng hingga matang. Sisihkan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Siapkan bahan sambal, kemudian goreng tomat, cabai, bamer dan baput hingga layu matang."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Uleg sambal dengan gula dan garam hingga lembut. Sisihkan."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Siapkan nasi, ambil sekitar 1/2 centong saja. Taruh dalam daun pisang atau kertas minyak. Beri lembaran potongan daun pisang lagi. Tambahkan potongan ikan tongkol (potongan kecil sekitar 2 ruas jari saja). Tambahkan juga sambalnya."
     },
     {
-      "step": 5,
-      "description": "Kemudian bungkus dengan bantuan karet gelang atau steples."
+      "step_number": 5,
+      "description": "Kemudian bungkus dengan bantuan karet gelang atau step_numberles."
     }
   ]
 },
 {
   "recipe_name": "Nasi Kucing Ala Angkringan",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/8ff9bf45fca0585c/1360x964cq70/nasi-kucing-ala-angkringan-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "Nasi putih hangat"},
@@ -4617,23 +4617,23 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Goreng teri sampai kering, sisihkan. Ulek semua bumbu sambal."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Tumis kemudian, tambahkan teri, beri garam, gula merah dan MSG (opsional). Aduk rata, matikan kompor."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Siapkan daun pisang, cetak nasi, lalu taruh diatasnya sambal teri. Sajikan nasi kucing, bisa langsung disantap, atau dibakar dulu, nikmati dengan sate²an dan tempe mendoan bakar (resep menyusul)"
     }
   ]
 },
 {
   "recipe_name": "Sego Kucing ala Angkringan Yogya",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/ab379b16db8e444b/1360x964cq70/364-sego-kucing-ala-angkringan-yogya-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "secukupnya Nasi putih hangat"},
@@ -4663,26 +4663,26 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan bahan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Orek tempe basah."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Goreng bahan sambal kemudian haluskan campur dengan teri yang sudah digoreng."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Penyajian : siapkan daun, ambil satu centong nasi kemudian tambahkan lauk diatasnya lalu bungkus. Sego kucing ala angkringan siap dinikmati."
     }
   ]
 },
 {
   "recipe_name": "Sego Kucing ala Rumahan",
-  "cooking_time": null,
+  "cooking_time": "1 Jam",
   "servings": "20 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/0e2732a1dbc0bfed/1360x964cq70/sego-kucing-ala-rumahan-foto-resep-utama.webp",
   "ingredients": [
@@ -4724,42 +4724,42 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Goreng telur hingga berkulit dan kecoklatan. Sisihkan dulu."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Panaskan 5sdm minyak goreng. Tumis bumbu halus, lengkuas, daun salam dan serai hingga harum. Tuang air, kecap manis lalu beri garam, masako dan gula pasir. Biarkan mendidih dulu sambil koreksi rasa."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Masukkan tempe, teri dan cabe ijo. Aduk hingga rata dan airnya habis. Angkat dan siap disajikan."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Panaskan 3 sdm minyak goreng. Tumis bawang merah putih hingga harum. Masukkan kacang panjang dan cabe ijo. Beri garam, masako dan gula pasir. Aduk rata."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Tambahkan margarin. Tumis lagi hingga semua tercampur rata dan semua bumbu meresap. Koreksi rasa, angkat dan siap disajikan."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Goreng cabe, bawang merah putih dan tomat dengan 100ml minyak goreng hingga harum dan matang. Biarkan dingin dulu lalu blender semua + terasi (blender sedikit kasar)."
     },
     {
-      "step": 7,
+      "step_number": 7,
       "description": "Panaskan 50ml minyak goreng. Tumis bumbu yang telah diblender, garam, masako dan gula pasir hingga tanak dan berminyak dengan api cenderung kecil. Koreksi rasa, angkat dan siap disajikan."
     },
     {
-      "step": 8,
+      "step_number": 8,
       "description": "Sajikan nasi beserta lauk pauknya."
     }
   ]
 },
 {
   "recipe_name": "Sego Kucing Sambel Teri",
-  "cooking_time": null,
+  "cooking_time": "1 Jam",
   "servings": "5 porsi",
   "image_url": "https://img-global.cpcdn.com/recipes/0f9ca5a53a468f57/1360x964cq70/nasi-kucing-sambel-teri-foto-resep-utama.webp",
   "ingredients": [
@@ -4779,19 +4779,19 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Cuci teri kering. Tiriskan. Goreng teri dalam minyak goreng dengan api sedang cenderung kecil hingga teri kering dan berwarna kuning kecokelatan"
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Haluskan semua bahan sambel. Jangan terlalu halus. Mamake haluskan dengan chopper."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Panaskan 3 sdm minyak goreng bekas menggoreng teri. Tumis bumbu sambel hingga harum. Masukkan teri goreng. Aduk rata. Biarkan sampai sambel menyatu dengan teri."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Siapkan daun pisang yang telah dilemaskan dan dilap. Cetak 1,5 centong nasi dalam mangkok kecil. Letakkan nasi di tengah daun. Beri alas daun di atas nasi. Letakkan sambel teri. Bungkus nasi seperti gambar. Nasi kucing siap disajikan dengan pelengkap sate telur puyuh, sate usus dan lainnya. Selamat mencoba 💐"
     }
   ]
@@ -4815,31 +4815,31 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Cuci bersih ikan teri, cabai, tomat, dan bawang. Kemudian tiriskan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Goreng ikan teri, kemudian bawang dan cabai, terakhir goreng tomat."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Uleg sampai halus bersama garam, gula, dan penyedap rasa."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Tuang sambal ke dalam wajan. Tambahkan teri. Aduk rata. Masak dengan api sedang."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Sajikan ala angkringan... 👩‍🍳"
     }
   ]
 },
 {
   "recipe_name": "Nasi Kucing",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/45aedce8dd8b4773/1360x964cq70/nasi-kucing-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "1 cup beras, masak seperti biasa"},
@@ -4858,27 +4858,27 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Cara membuat mie : rebus mie dalam air mendidih hingga setengah matang, angkat, tiriskan. Beri kecap manis, aduk rata. Tumis bumbu halus, masukkan kol, aduk rata. Bumbui dengan garam, merica dan kaldu bubuk. Aduk rata. Masukkan mie, aduk rata. Masak hingga matang."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Telur dadar : kocok lepas telur dengan kaldu bubuk, kemudian dadar hingga matang."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Tata nasi, mie goreng, telur dadar, sambal tomat dan bakwan sayur."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Siap disajikan."
     }
   ]
 },
 {
   "recipe_name": "NASI KUCING ala QU",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/21ee7f4e3a3c2224/1360x964cq70/nasi-kucing-ala-qu-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "3 mangkok nasi"},
@@ -4898,31 +4898,31 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Pertama buat nasi jeruk, tumis bumbu iris smp harum, campurkan nasi beri bumbu garam dan kaldu jamur. Test rasa, sisihkan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Buat orek tempe. Tumis semua bumbu smp harum, masukkan kecap aduk. Kmd campur dengan tempe yg sdh digoreng kering. Terakhir beri garam dan penyedap, test rasa. Sisihkan."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Kocok telur beri garam dan buat dadar. Iris tipis2."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Goreng ikan bilis smp kering. Sisihkan."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Penyajian. Cetak nasi jeruk diatas daun pisang, beri 1 sdm orek tempe, taburi dadar telur, tambahkan 3-4 ikan bilis, terakhir taburkan bw goreng. Bungkus daun pisang spt digambar. Sajikan dgn cinta 😍"
     }
   ]
 },
 {
   "recipe_name": "Sego Kucing ala Angkringan Yogyakarta",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/a79832b97552951f/1360x964cq70/sego-kucing-ala-angkringan-yogyakarta-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "10 centong nasi putih"},
@@ -4946,39 +4946,39 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Potong kotak-kotak kecil tempe kemudian goreng hingga tempe layu, sisihkan."
     },
     {
-      "step": 2,
+      "step_number": 2,
       "description": "Goreng teri hingga matang, sisihkan."
     },
     {
-      "step": 3,
+      "step_number": 3,
       "description": "Blender bumbu halus kemudian tumis bumbu halus dengan sedikit minyak goreng beserta daun salam, serai dan lengkuas, tumis hingga harum. Masukkan air secukupnya, masukkan kecap manis, gula pasir, garam dan kaldu bubuk,. Aduk rata dan tunggu hingga mendidih. Jangan lupa tes rasa."
     },
     {
-      "step": 4,
+      "step_number": 4,
       "description": "Setelah mendidih masukkan tempe dan teri aduk rata dan masak hingga air menyusut."
     },
     {
-      "step": 5,
+      "step_number": 5,
       "description": "Siapkan daun pisang dan potongan koran, cetak nasi dengan mangkuk kecil, tuang nasi ke daun pisang kemudian taruh satu sdm tempe teri yang sudah dimasak tadi. Bungkus kerucut seperti nasi kucing di angkringan Jogja."
     },
     {
-      "step": 6,
+      "step_number": 6,
       "description": "Nasi Kucing ala Angkringan Jogja siap disajikan beserta komponen lainnya seperti sate Telur Puyuh dan sate usus"
     },
     {
-      "step": 7,
+      "step_number": 7,
       "description": "Note. Resep sate usus dan sate telur puyuh lihat di postingan saya sebelumnya 🥰"
     }
   ]
 },
 {
   "recipe_name": "Sego Kucing ala angkringan",
-  "cooking_time": null,
-  "servings": null,
+  "cooking_time": "1 Jam",
+  "servings": "4 Orang",
   "image_url": "https://img-global.cpcdn.com/recipes/40c3d1bc28f832ee/1360x964cq70/sego-kucing-ala-angkringan-foto-resep-utama.webp",
   "ingredients": [
       {"ingredient": "secukupnya siapkan nasi putih"},
@@ -4989,7 +4989,7 @@
     ],
   "instructions": [
     {
-      "step": 1,
+      "step_number": 1,
       "description": "Siapkan kertas minyak lalu alasi daun ambil nasi putih secukupnya lalu disatu sisi beri potongan daun pisang kemudian tuang sambal diatasnya lalu lipat dan rapikan dan siap disajikan."
     }
   ]
