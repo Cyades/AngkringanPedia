@@ -10,11 +10,18 @@ def show_main(request):
     return render(request, "main.html", context)
 
 def search_recipes(request):
-    query = request.GET.get('query', '')  # Ambil query dari user
-    # Ambil filter yang digunakan
-    filter_type = request.GET.get('none_query') or request.GET.get('ingredient_query') or request.GET.get('name_query')
+    queries = request.GET.dict()
 
-    if filter_type == 'none':
+    if not queries:
+        return render(request, 'search_results.html')
+
+    query = queries['none_query'] if queries.get('none_query') else (
+        queries['name_query'] if queries.get('name_query') else(
+            queries.get('ingredient_query')
+        )
+    )
+
+    if queries.get('none_query'):
         print("0")
         recipes = Recipe.objects.filter(
             Q(recipe_name__icontains=query) |
@@ -23,10 +30,10 @@ def search_recipes(request):
             Q(cooking_time__icontains=query) |
             Q(recipe_instructions__description__icontains=query)
         ).distinct()
-    elif filter_type == 'name':
+    elif queries.get('name_query'):
         print("1")
         recipes = Recipe.objects.filter(recipe_name__icontains=query).distinct()
-    elif filter_type == 'ingredient':
+    elif queries.get('ingredient_query'):
         print("2")
         recipes = Recipe.objects.filter(ingredients__name__icontains=query).distinct()
     else:
