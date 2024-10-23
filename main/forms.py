@@ -1,5 +1,5 @@
 from django import forms
-from .models import Recipe
+from .models import Recipe, Ingredient
 
 class AddRecipeForm(forms.ModelForm):
     ingredients_list = forms.CharField(
@@ -27,3 +27,19 @@ class AddRecipeForm(forms.ModelForm):
         ingredients = self.cleaned_data['ingredients_list']
         # Pisahkan ingredients berdasarkan koma, dan buang spasi ekstra
         return [ingredient.strip() for ingredient in ingredients.split(',')]
+
+    def save(self, commit=True):
+        # Simpan objek Recipe terlebih dahulu
+        recipe = super().save(commit=commit)
+
+        # Ambil daftar bahan yang sudah dibersihkan
+        ingredients = self.cleaned_data['ingredients_list']
+        
+        for ingredient_name in ingredients:
+            ingredient, created = Ingredient.objects.get_or_create(name=ingredient_name)
+            recipe.ingredients.add(ingredient)
+
+        if commit:
+            recipe.save()
+
+        return recipe

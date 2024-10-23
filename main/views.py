@@ -51,12 +51,13 @@ def add_recipe(request):
     if request.method == 'POST':
         form = AddRecipeForm(request.POST)
         if form.is_valid():
-            recipe = form.save(commit=False)
-            ingredients_list = form.cleaned_data['ingredients_list']
-            recipe.save()
+            recipe = form.save() 
+            ingredients_list = request.POST.get('ingredients_list', '').split(',')
             for ingredient_name in ingredients_list:
-                ingredient, created = Ingredient.objects.get_or_create(name=ingredient_name)  # Dapatkan atau buat Ingredient baru
-                recipe.ingredients.add(ingredient)
+                ingredient_name = ingredient_name.strip()
+                if ingredient_name: 
+                    ingredient, created = Ingredient.objects.get_or_create(name=ingredient_name)
+                    recipe.ingredients.add(ingredient) 
             messages.success(request, "Recipe added successfully!")
             return HttpResponseRedirect(reverse('main:show_main'))
         else:
