@@ -22,7 +22,6 @@ def search_recipes(request):
     )
 
     if queries.get('none_query'):
-        print("0")
         recipes = Recipe.objects.filter(
             Q(recipe_name__icontains=query) |
             Q(ingredients__name__icontains=query) |
@@ -31,13 +30,10 @@ def search_recipes(request):
             Q(recipe_instructions__description__icontains=query)
         ).distinct()
     elif queries.get('name_query'):
-        print("1")
         recipes = Recipe.objects.filter(recipe_name__icontains=query).distinct()
     elif queries.get('ingredient_query'):
-        print("2")
         recipes = Recipe.objects.filter(ingredients__name__icontains=query).distinct()
     else:
-        print("3")
         recipes = Recipe.objects.filter(
             Q(recipe_name__icontains=query) | 
             Q(ingredients__name__icontains=query) |
