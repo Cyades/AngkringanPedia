@@ -16,12 +16,21 @@
           <input type="text" name="query" id="search-input" placeholder="Search Recipe..." class="bg-[#F0FFF0] text-[#2F4F4F] px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8FBC8F] search-input" style="flex-grow: 1; height: 40px; margin-left: 10px;"> <!-- Added margin-left -->
 
           <!-- Filter Button -->
-          <button type="button" id="filter-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg" style="height: 40px;">
+          <button type="button" id="filter-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg">
             Filter: None
           </button>
 
+          <!-- Dropdown for Filter -->
+          <div id="filter-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden z-10">
+            <div class="py-2">
+              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-none">None</button>
+              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-ingredient">Ingredient</button>
+              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-name">Name</button>
+            </div>
+          </div>
+
           <!-- Search Button -->
-          <button type="submit" id="search-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg search-button" style="height: 40px;">
+          <button type="submit" id="search-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg search-button" style="height: 40px; margin-right: 10px;">
             Search
           </button>          
         </form>
