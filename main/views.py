@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from django.db.models import Q
 from .models import Recipe
 from .forms import AddRecipeForm
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
 
 
 def show_main(request):
@@ -55,7 +58,7 @@ def add_recipe(request):
         form = AddRecipeForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('recipe_list')
+            return HttpResponseRedirect(reverse('main:show_main'))
     else:
         form = AddRecipeForm()
 
