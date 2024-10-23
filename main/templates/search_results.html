@@ -14,7 +14,7 @@
                     {% if recipe.image_url %}
                         <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" class="w-48 h-auto mb-2" />
                     {% else %}
-                        <img src="{% static 'path/to/default/image.png' %}" alt="Default image" class="w-48 h-auto mb-2" />
+                        <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" style="width:200px; height:auto;">
                     {% endif %}
                     <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} minutes</p>
                     <p><strong>Servings:</strong> {{ recipe.servings }}</p>

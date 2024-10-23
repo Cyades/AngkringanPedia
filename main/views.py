@@ -10,7 +10,8 @@ def show_main(request):
     return render(request, "main.html", context)
 
 def search_recipes(request):
-    query = request.GET.get('query', '') 
+    query = request.GET.get('query', '')  # Ambil query dari user
+    # Ambil filter yang digunakan
     filter_type = request.GET.get('none_query') or request.GET.get('ingredient_query') or request.GET.get('name_query')
 
     if filter_type == 'none':
@@ -31,11 +32,12 @@ def search_recipes(request):
             Q(ingredients__name__icontains=query) |
             Q(servings__icontains=query) | 
             Q(cooking_time__icontains=query) | 
-            Q(instructions__icontains=query) 
+            Q(recipe_instructions__description__icontains=query)
         ).distinct()
 
     context = {
         'query': query,
         'recipes': recipes,
     }
-    return render(request, '/search_results.html', context)
+    return render(request, 'search_results.html', context)
+
