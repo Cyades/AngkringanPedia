@@ -4,6 +4,7 @@ from .models import Recipe
 from .forms import AddRecipeForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.contrib import messages
 
 
 
@@ -53,13 +54,26 @@ def search_recipes(request):
     }
     return render(request, 'search_results.html', context)
 
+
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .forms import AddRecipeForm
+from .models import Recipe, Ingredient
+
 def add_recipe(request):
     if request.method == 'POST':
         form = AddRecipeForm(request.POST)
         if form.is_valid():
-            form.save()
+            recipe = form.save(commit=False)
+            ingredients_list = form.cleaned_data['ingredients_list']
+            recipe.save()
+            for ingredient_name in ingredients_list:
+                ingredient, created = Ingredient.objects.get_or_create(name=ingredient_name)  # Dapatkan atau buat Ingredient baru
+                recipe.ingredients.add(ingredient)
+            messages.success(request, "Recipe added successfully!")
             return HttpResponseRedirect(reverse('main:show_main'))
+        else:
+            messages.error(request, "Failed to add recipe. Please try again.")
     else:
         form = AddRecipeForm()
-
     return render(request, 'add_recipe.html', {'form': form})
