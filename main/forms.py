@@ -10,9 +10,13 @@ class AddRecipeForm(forms.ModelForm):
             'cooking_time': forms.TextInput(attrs={'placeholder': 'Enter cooking time (e.g. 30 minutes)'}),
             'servings': forms.TextInput(attrs={'placeholder': 'Enter servings (e.g. 4 servings)'}),
             'image_url': forms.URLInput(attrs={'placeholder': 'Enter image URL'}),
-            'ingredients': forms.CheckboxSelectMultiple(),
+            'ingredients': forms.Textarea(attrs={
+                'placeholder': 'Enter ingredients, separated by commas (e.g. flour, sugar, eggs)',
+                'rows': 4  # Optional: Adjust the number of rows as you like
+            }),
             'instructions': forms.Textarea(attrs={'placeholder': 'Enter cooking instructions', 'rows': 5}),
         }
+
 
     def clean_servings(self):
         servings = self.cleaned_data.get('servings')
