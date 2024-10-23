@@ -11,32 +11,24 @@
       </div>
 
       <!-- Search Bar -->
-      <div class="hidden md:flex flex-grow justify-center relative">
-        <form id="search-form" action="{% url 'main:search_recipes' %}" method="get" class="flex space-x-2">
-          <input type="text" name="query" id="search-input" placeholder="Search Recipe..." class="bg-[#F0FFF0] text-[#2F4F4F] px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8FBC8F]" style="flex-grow: 1; min-width: 300px; max-width: 700px;">
+      <div class="hidden md:flex flex-grow justify-center relative overflow-hidden ml-4">
+        <form id="search-form" action="{% url 'main:search_recipes' %}" method="get" class="flex items-center space-x-2 flex-grow">
+          <input type="text" name="query" id="search-input" placeholder="Search Recipe..." class="bg-[#F0FFF0] text-[#2F4F4F] px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8FBC8F] search-input" style="flex-grow: 1; height: 40px; margin-left: 10px;"> <!-- Added margin-left -->
 
           <!-- Filter Button -->
-          <button type="button" id="filter-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg">
+          <button type="button" id="filter-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg" style="height: 40px;">
             Filter: None
           </button>
 
-          <!-- Dropdown for Filter -->
-          <div id="filter-dropdown" class="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg hidden z-10">
-            <div class="py-2">
-              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-none">None</button>
-              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-ingredient">Ingredient</button>
-              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-name">Name</button>
-            </div>
-          </div>
-
-          <button type="submit" class="bg-gradient-to-r from-[#8FBC8F] to-[#556B2F] text-white px-4 py-2 rounded-lg font-bold hover:from-[#8FBC8F] hover:to-[#6B8E23] transition-all duration-300 shadow-lg">
+          <!-- Search Button -->
+          <button type="submit" id="search-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg search-button" style="height: 40px;">
             Search
-          </button>
+          </button>          
         </form>
       </div>
 
       <!-- Menu Links -->
-      <div class="hidden md:flex items-center">
+      <div class="hidden md:flex items-center ml-4"> <!-- Added margin-left -->
         <ul class="flex space-x-5 text-[#F0FFF0]">
           <li><a href="#" class="hover:text-[#8FBC8F] transition">Favourite</a></li>
           <li><a href="#" class="hover:text-[#8FBC8F] transition">Profile</a></li>

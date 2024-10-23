@@ -1,59 +1,29 @@
-/* Navbar styles */
-nav {
-    background-color: #556B2F; /* Hijau olive */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
+/* Flexbox to prevent elements from wrapping */
+nav .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
-nav .logo h1 {
-    color: #F0FFF0; /* Warna putih pastel */
-    font-family: 'Poppins', sans-serif;
-}
-
-nav a {
-    color: #F0FFF0;
-    text-decoration: none;
-    padding: 15px;
-}
-
-nav a:hover {
-    color: #8FBC8F; /* Warna hijau pastel saat hover */
-    transition: color 0.3s;
-}
-
-/* Styling untuk dropdown filter */
-.filter-button {
-    background-color: #8FBC8F;
-    color: white;
-    border-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
-}
-
-.filter-dropdown {
-    display: none;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.filter-dropdown.show {
-    display: block;
-}
-
-/* Mobile menu styles */
-.mobile-menu-button {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .mobile-menu-button {
-        display: block;
+  /* Hide elements progressively as screen size decreases */
+@media (max-width: 1024px) {
+    nav form, nav ul {
+      display: none; /* Hide search bar and menu links on smaller screens */
     }
+}
 
-    nav .flex {
-        display: none;
+  /* Smaller screens: only show the logo */
+@media (max-width: 600px) {
+    nav h1 {
+      display: none; /* Hide the text logo, only show the image logo */
     }
+}
+
+.search-input {
+    margin-right: 10px; /* Jarak kanan dari input */
+}
+
+.search-button {
+    margin-left: 10px; /* Jarak kiri dari tombol search */
 }
