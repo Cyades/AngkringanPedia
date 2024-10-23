@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.db.models import Q
 from .models import Recipe
+from .forms import AddRecipeForm
+
 
 def show_main(request):
     context = {
@@ -48,3 +50,13 @@ def search_recipes(request):
     }
     return render(request, 'search_results.html', context)
 
+def add_recipe(request):
+    if request.method == 'POST':
+        form = AddRecipeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('recipe_list')
+    else:
+        form = AddRecipeForm()
+
+    return render(request, 'add_recipe.html', {'form': form})
