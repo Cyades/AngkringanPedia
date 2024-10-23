@@ -1,0 +1,77 @@
+/* style.css */
+
+/* Custom Colors for branding */
+:root {
+  --primary-bg-color: #F0FFF0; /* Light green background */
+  --primary-text-color: #2F4F4F; /* Dark Slate Grey */
+  --secondary-bg-color: #556B2F; /* Olive Drab */
+  --secondary-text-color: #8FBC8F; /* Dark Sea Green */
+  --footer-text-color: #F0FFF0; /* Light green text */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+}
+
+/* Customizing the footer */
+footer {
+  background-color: var(--secondary-bg-color);
+  color: var(--secondary-text-color);
+}
+
+footer p {
+  color: var(--footer-text-color);
+  font-size: 14px;
+}
+
+/* Add margin to the main content block */
+main {
+  margin-top: 20px;
+}
+
+/* Custom buttons */
+button {
+  background-color: var(--secondary-bg-color);
+  color: var(--footer-text-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6B8E23; /* Olive green when hovered */
+}
+
+/* Custom input field */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+  background-color: #F5FFFA; /* Mint cream */
+  border: 2px solid var(--secondary-bg-color);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: var(--primary-text-color);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #6B8E23; /* Olive green border on focus */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  footer {
+    padding: 10px;
+  }
+
+  main {
+    padding: 0 15px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
