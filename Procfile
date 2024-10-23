@@ -1,1 +1,1 @@
-release: python manage.py load_recipes
+release: python manage.py migrate && python manage.py load_recipes
