@@ -26,10 +26,13 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white p-4 text-center">
-      {% block footer %} 
-      <p>&copy; 2024 Angkringan Pedia. All rights reserved.</p>
-      {% endblock footer %}
+    {% block footer %}
+    <footer class="bg-[#556B2F] py-6 text-center text-[#8FBC8F] mt-auto w-full">
+      <div class="container mx-auto flex flex-col items-center">
+        <p class="text-sm text-[#F0FFF0]">&copy; 2024 Angkringan Pedia. All rights reserved.</p>
+      </div>
+    </footer>
+    {% endblock footer %}
     </footer>
   </body>
 </html>
