@@ -75,7 +75,7 @@ Berikut aksi yang dapat dilakukan masing-masing _role_:
 | User | Guest | Admin |
 | ---- | ----- | ----- |
 | Melihat daftar makanan | Melihat daftar makanan | Menambahkan/menghapus makanan |
-| Menggunakan fitur pencarian | Menggunakan fitur pencarian	| Mengedit data makanan |
+| Menggunakan fitur pencarian | Menggunakan fitur pencarian	| - |
 | Menggunakan fitur filter | Menggunakan fitur filter | Menggunakan fitur filter |
 
 

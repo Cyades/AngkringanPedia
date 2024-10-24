@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-{% comment %} {% include 'navbar.html' %} {% endcomment %}
+{% include 'navbar.html' %}
 <body>
+    {% include 'add_recipe.html' %}
     {% include 'recipe_list.html' %}
 </body>
 <a href="{% url 'main:logout' %}">
@@ -12,4 +13,5 @@
 {% else %}
     <p>Welcome, Guest! Feel free to explore the recipes below.</p>
 {% endif %}
+{% include 'footer.html' %}
 {% endblock content %}

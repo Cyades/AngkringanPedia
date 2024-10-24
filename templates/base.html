@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% endblock meta %}
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="{% static 'css/global.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
   </head>
 
   <body class="bg-[#F0FFF0] text-[#2F4F4F] min-h-screen flex flex-col">
@@ -24,12 +24,5 @@
     <main class="flex-grow">
       {% block content %} {% endblock content %}
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-[#556B2F] py-6 text-center text-[#8FBC8F] mt-auto">
-      <div class="container mx-auto flex flex-col items-center">
-        <p class="text-sm text-[#F0FFF0]">&copy; 2024 Angkringan Pedia. All rights reserved.</p>
-      </div>
-    </footer>
   </body>
 </html>

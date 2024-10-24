@@ -1,26 +1,40 @@
-<h1>Recipe List</h1>
-<ul>
-    {% for recipe in recipes %}
-        <li>
-            <h2>{{ recipe.recipe_name }}</h2>
-            <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" style="width:200px; height:auto;">
-            <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
-            <p><strong>Servings:</strong> {{ recipe.servings }}</p>
-            
-            <p><strong>Ingredients:</strong></p>
-            <ul>
-                {% for ingredient in recipe.ingredients.all %}
-                    <li>{{ ingredient.name }}</li>
-                {% endfor %}
-            </ul>
+<div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold">Recipe List</h1>
 
-            <p><strong>Instructions:</strong></p>
-            <ol>
-                {% for instruction in recipe.recipe_instructions.all|dictsort:"step_number" %}
-                    <li>{{ instruction.description }}</li> 
-                {% empty %}
-                    <li>No instructions available.</li> 
-                {% endfor %}
-            </ol>
-    {% endfor %}
-</ul>
+    {% if recipes %}
+    <ul class="space-y-4">
+            {% for recipe in recipes %}
+                <li class="border p-4 rounded shadow">
+                    <h2 class="text-xl font-bold">{{ recipe.recipe_name }}</h2>
+                    {% if recipe.image_url %}
+                        <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" class="w-48 h-auto mb-2" />
+                    {% else %}
+                        <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" style="width:200px; height:auto;">
+                    {% endif %}
+                    <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} minutes</p>
+                    <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+                    
+                    <p class="mt-2"><strong>Ingredients:</strong></p>
+                    <ul class="list-disc pl-5">
+                        {% for ingredient in recipe.ingredients.all %}
+                            <li>{{ ingredient.name }}</li>
+                        {% empty %}
+                            <li>No ingredients available.</li>
+                        {% endfor %}
+                    </ul>
+                    
+                    <p class="mt-2"><strong>Instructions:</strong></p>
+                    <ol class="list-decimal pl-5">
+                        {% for instruction in recipe.recipe_instructions.all|dictsort:"step_number" %}
+                            <li>{{ instruction.description }}</li>
+                        {% empty %}
+                            <li>No instructions available.</li>
+                        {% endfor %}
+                    </ol>                    
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-center mt-4 text-gray-500">No recipes available.</p>
+    {% endif %}
+</div>
