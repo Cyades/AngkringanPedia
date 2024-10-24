@@ -124,24 +124,20 @@ def add_recipe(request):
 
 def search_recipes(request):
     queries = request.GET.dict()
-    query = queries.get('query', '').strip()  # Get the query value or set it to an empty string if not provided
-    filter_type = queries.get('filter', 'none')  # Get the filter type
-
-    # If there's no query, display all recipes
+    query = queries.get('query', '').strip()
+    filter_type = queries.get('filter', 'none')
     if not query:
         recipes = Recipe.objects.all()
         context = {
-            'query': '',  # No query provided
+            'query': '',
             'recipes': recipes,
         }
         return render(request, 'search_results.html', context)
-
-    # Build the filtering logic based on the filter type
     if filter_type == 'name':
         recipes = Recipe.objects.filter(recipe_name__icontains=query).distinct()
     elif filter_type == 'ingredient':
         recipes = Recipe.objects.filter(ingredients__name__icontains=query).distinct()
-    else:  # Filter is 'none' or any other value
+    else:
         recipes = Recipe.objects.filter(
             Q(recipe_name__icontains=query) |
             Q(ingredients__name__icontains=query) |
@@ -149,7 +145,6 @@ def search_recipes(request):
             Q(cooking_time__icontains=query) |
             Q(recipe_instructions__description__icontains=query)
         ).distinct()
-
     context = {
         'query': query,
         'recipes': recipes,
