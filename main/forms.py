@@ -48,7 +48,7 @@ class AddRecipeForm(forms.ModelForm):
         fields = ['recipe_name', 'cooking_time', 'servings', 'image_url', 'instructions']
         widgets = {
             'recipe_name': forms.TextInput(attrs={'placeholder': 'Enter recipe name'}),
-            'cooking_time': forms.TextInput(attrs={'placeholder': 'Enter cooking time (e.g. 30 minutes)'}),
+            'cooking_time': forms.TextInput(attrs={'placeholder': 'Enter cooking time (e.g. 30 minutes/1 hour)'}),
             'servings': forms.TextInput(attrs={'placeholder': 'Enter servings (e.g. 4 servings)'}),
             'image_url': forms.URLInput(attrs={'placeholder': 'Enter image URL'}),
             'instructions': forms.Textarea(attrs={'placeholder': 'Enter cooking instructions', 'rows': 5}),
