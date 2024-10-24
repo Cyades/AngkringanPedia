@@ -3,6 +3,7 @@ from main.models import Recipe  # Mengimpor model Recipe dari aplikasi lain
 
 def search_recipe_by_name(request, recipe_name):  # Mengambil parameter dari URL
     # Filter resep berdasarkan nama yang cocok
+    recipe_name = recipe_name.replace('@', '/')
     recipes = Recipe.objects.filter(recipe_name__icontains=recipe_name)
 
     context = {
@@ -16,4 +17,4 @@ def show_main(request):
         'name': 'AngkringanPedia',
         'recipes': Recipe.objects.all()
     }
-    return render(request, "main.html", context)
+    return render(request, "testmain.html", context)
