@@ -4,7 +4,9 @@
 {% include 'navbar.html' %}
 {% include 'add_recipe.html' %}
 <div class="container mx-auto p-4">
+    {% if query %}
     <h1 class="text-2xl font-bold">Search Results for "{{ query }}"</h1>
+    {% endif %}
 
     {% if recipes %}
         <h2 class="text-xl font-semibold mt-4">Recipe List</h2>

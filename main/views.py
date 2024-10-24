@@ -40,39 +40,6 @@ def show_admin(request):
     }
     return render(request, "admin_dashboard.html", context)
 
-def search_recipes(request):
-    queries = request.GET.dict()
-    if not queries:
-        return render(request, 'search_results.html')
-    query = queries['none_query'] if queries.get('none_query') else (
-        queries['name_query'] if queries.get('name_query') else(
-            queries.get('ingredient_query')
-        )
-    )
-    if queries.get('none_query'):
-        recipes = Recipe.objects.filter(
-            Q(recipe_name__icontains=query) |
-            Q(ingredients__name__icontains=query) |
-            Q(servings__icontains=query) |
-            Q(cooking_time__icontains=query) |
-            Q(recipe_instructions__description__icontains=query)).distinct()
-    elif queries.get('name_query'):
-        recipes = Recipe.objects.filter(recipe_name__icontains=query).distinct()
-    elif queries.get('ingredient_query'):
-        recipes = Recipe.objects.filter(ingredients__name__icontains=query).distinct()
-    else:
-        recipes = Recipe.objects.filter(
-            Q(recipe_name__icontains=query) | 
-            Q(ingredients__name__icontains=query) |
-            Q(servings__icontains=query) | 
-            Q(cooking_time__icontains=query) | 
-            Q(recipe_instructions__description__icontains=query)
-        ).distinct()
-    context = {
-        'query': query,
-        'recipes': recipes,
-    }
-    return render(request, 'search_results.html', context)
 
 def register(request):
     if request.method == "POST":
@@ -153,3 +120,40 @@ def add_recipe(request):
     else:
         form = AddRecipeForm()
     return render(request, 'add_recipe.html', {'form': form})
+
+
+def search_recipes(request):
+    queries = request.GET.dict()
+    query = queries.get('query', '').strip()  # Get the query value or set it to an empty string if not provided
+    filter_type = queries.get('filter', 'none')  # Get the filter type
+
+    # If there's no query, display all recipes
+    if not query:
+        recipes = Recipe.objects.all()
+        context = {
+            'query': '',  # No query provided
+            'recipes': recipes,
+        }
+        return render(request, 'search_results.html', context)
+
+    # Build the filtering logic based on the filter type
+    if filter_type == 'name':
+        recipes = Recipe.objects.filter(recipe_name__icontains=query).distinct()
+    elif filter_type == 'ingredient':
+        recipes = Recipe.objects.filter(ingredients__name__icontains=query).distinct()
+    else:  # Filter is 'none' or any other value
+        recipes = Recipe.objects.filter(
+            Q(recipe_name__icontains=query) |
+            Q(ingredients__name__icontains=query) |
+            Q(servings__icontains=query) |
+            Q(cooking_time__icontains=query) |
+            Q(recipe_instructions__description__icontains=query)
+        ).distinct()
+
+    context = {
+        'query': query,
+        'recipes': recipes,
+    }
+    return render(request, 'search_results.html', context)
+
+
