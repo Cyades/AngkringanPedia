@@ -32,6 +32,7 @@ class CustomUserCreationForm(UserCreationForm):
             profile.save()
         return user
 
+
 class AddRecipeForm(forms.ModelForm):
     ingredients_list = forms.CharField(
         widget=forms.Textarea(
@@ -45,13 +46,13 @@ class AddRecipeForm(forms.ModelForm):
     
     class Meta:
         model = Recipe
-        fields = ['recipe_name', 'cooking_time', 'servings', 'image_url', 'instructions']
+        fields = ['recipe_name', 'cooking_time', 'servings', 'ingredients_list', 'instructions', 'image_url']
         widgets = {
             'recipe_name': forms.TextInput(attrs={'placeholder': 'Enter recipe name'}),
             'cooking_time': forms.TextInput(attrs={'placeholder': 'Enter cooking time (e.g. 30 minutes/1 hour)'}),
             'servings': forms.TextInput(attrs={'placeholder': 'Enter servings (e.g. 4 servings)'}),
-            'image_url': forms.URLInput(attrs={'placeholder': 'Enter image URL'}),
             'instructions': forms.Textarea(attrs={'placeholder': 'Enter cooking instructions', 'rows': 5}),
+            'image_url': forms.URLInput(attrs={'placeholder': 'Enter image URL'}),
         }
 
     def clean_ingredients_list(self):

@@ -5,10 +5,41 @@
 {% if user.is_superuser %}
 <form method="POST" action="{% url 'main:add_recipe' %}">
     {% csrf_token %}
-    {{ form.as_p }}
+    
+    <div>
+        <label for="{{ form.recipe_name.id_for_label }}">{{ form.recipe_name.label }}</label>
+        {{ form.recipe_name }}
+    </div>
+    
+    <div>
+        <label for="{{ form.cooking_time.id_for_label }}">{{ form.cooking_time.label }}</label>
+        {{ form.cooking_time }}
+    </div>
+    
+    <div>
+        <label for="{{ form.servings.id_for_label }}">{{ form.servings.label }}</label>
+        {{ form.servings }}
+    </div>
+    
+    <div>
+        <label for="{{ form.ingredients_list.id_for_label }}">{{ form.ingredients_list.label }}</label>
+        {{ form.ingredients_list }}
+    </div>
+    
+    <div>
+        <label for="{{ form.instructions.id_for_label }}">{{ form.instructions.label }}</label>
+        {{ form.instructions }}
+    </div>
+    
+    <div>
+        <label for="{{ form.image_url.id_for_label }}">{{ form.image_url.label }}</label>
+        {{ form.image_url }}
+    </div>
+
     <button type="submit">Add Recipe</button>
 </form>
 {% else %}
+<p>You do not have permission to add recipes.</p>
 {% endif %}
 
 {% endblock %}
