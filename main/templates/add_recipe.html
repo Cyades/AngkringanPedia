@@ -1,5 +1,7 @@
-{% extends 'base.html' %}
+{% extends 'base_no_footer.html' %}
+
 {% block content %}
+{% include 'navbar.html' %}
 <h1>Add New Recipe</h1>
 
 {% if user.is_superuser %}
