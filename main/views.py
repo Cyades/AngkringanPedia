@@ -106,17 +106,24 @@ def add_recipe(request):
     if request.method == 'POST':
         form = AddRecipeForm(request.POST)
         if form.is_valid():
-            recipe = form.save() 
-            ingredients_list = request.POST.get('ingredients_list', '').split(',')
+            recipe = form.save(commit=False) 
+            recipe.save() 
+            ingredients_list = form.cleaned_data['ingredients_list'].split(',')
             for ingredient_name in ingredients_list:
                 ingredient_name = ingredient_name.strip()
                 if ingredient_name: 
                     ingredient, created = Ingredient.objects.get_or_create(name=ingredient_name)
-                    recipe.ingredients.add(ingredient) 
+                    recipe.ingredients.add(ingredient)
+            instructions_list = request.POST.getlist('instructions_list') 
+            for step_number, description in enumerate(instructions_list, start=1):
+                description = description.strip()
+                if description:
+                    Instruction.objects.create(recipe=recipe, step_number=step_number, description=description)
             messages.success(request, "Recipe added successfully!")
-            return HttpResponseRedirect(reverse('main:show_main'))
+            return redirect('main:show_main')
         else:
             messages.error(request, "Failed to add recipe. Please try again.")
+            print(form.errors)
     else:
         form = AddRecipeForm()
     return render(request, 'add_recipe.html', {'form': form})
