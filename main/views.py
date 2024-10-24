@@ -133,6 +133,8 @@ def delete_user(request, id):
     
     # Kembali ke halaman admin setelah menghapus pengguna
     return HttpResponseRedirect(reverse('main:show_admin'))
+
+
 def add_recipe(request):
     if request.method == 'POST':
         form = AddRecipeForm(request.POST)

@@ -1,9 +1,14 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
 <h1>Add New Recipe</h1>
+
+{% if user.is_superuser %}
 <form method="POST" action="{% url 'main:add_recipe' %}">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Add Recipe</button>
 </form>
+{% else %}
+{% endif %}
+
 {% endblock %}
