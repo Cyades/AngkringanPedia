@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    {% load static %}  <!-- Load the static template tag -->
+</head>
+<body>
+
+    <h1>Admin Dashboard</h1>
+    <h2>Daftar Pengguna</h2>
+
+    <!-- Daftar user -->
+    <ul style="list-style: none; padding: 0;">
+        {% for user in users %}
+        <li style="margin-bottom: 20px; display: flex; align-items: center;">
+            <!-- Gambar logo user dari profil jika tersedia -->
+            {% if user.profile.profile_image %}
+                <img src="{{ user.profile.profile_image.url }}" alt="User Logo" style="border-radius: 50%; margin-right: 15px; width: 50px; height: 50px;">
+            {% else %}
+                <img src="{% static 'image/user.png' %}" alt="Default User Logo" style="border-radius: 50%; margin-right: 15px; width: 50px; height: 50px;">
+            {% endif %}
+            
+            <div>
+                <!-- Informasi pengguna -->
+                <p>Username: {{ user.username }}</p>
+                <p>Email: {{ user.email }}</p>
+                <p>Nomor Telepon: {{ user.profile.phone_number }}</p>
+                <p>Gender: 
+                    {% if user.profile.gender == 'M' %}
+                        Male
+                    {% else %}
+                        Female 
+                    {% endif %}
+                </p>                
+                <p>Role: {{ user.is_staff|yesno:"Admin,User" }}</p>
+                <td>
+                    <a href="{% url 'main:delete_user' user.pk %}">
+                        <button>
+                            Delete
+                        </button>
+                    </a>
+                </td>
+            </div>
+        </li>
+        {% empty %}
+        <li>Tidak ada pengguna yang terdaftar.</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Link logout atau kembali -->
+    <p><a href="{% url 'main:register' %}">Add New User</a></p>
+    <p><a href="{% url 'main:logout' %}">Logout</a></p>
+    <h5>Welcome back, {{ user.username }}! Your last login was {{ last_login }}</h5>
+    {% comment %} <p><a href="{% url 'main:show_main' %}">Kembali ke halaman utama</a></p> {% endcomment %}
+
+</body>
+</html>

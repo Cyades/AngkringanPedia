@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
-{% include 'navbar.html' %}
+{% comment %} {% include 'navbar.html' %} {% endcomment %}
 <body>
     {% include 'recipe_list.html' %}
 </body>
+<a href="{% url 'main:logout' %}">
+    <button>Logout</button>
+</a>
+{% if user.is_authenticated %}
+    <p>Welcome back, {{ user.username }}! Your last login was {{ last_login }}</p>
+{% else %}
+    <p>Welcome, Guest! Feel free to explore the recipes below.</p>
+{% endif %}
 {% endblock content %}
