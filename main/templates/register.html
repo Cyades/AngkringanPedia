@@ -1,0 +1,11 @@
+<!-- register.html -->
+<form method="POST" enctype="multipart/form-data"> <!-- Ensure enctype is present -->
+    {% csrf_token %}
+    {{ form.as_p }}  <!-- Renders all the fields including the new ones -->
+
+    <label>
+        <input type="checkbox" name="is_admin"> Register as Admin
+    </label>
+    
+    <button type="submit">Register</button>
+</form>
