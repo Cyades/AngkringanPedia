@@ -45,7 +45,7 @@ class AddRecipeForm(forms.ModelForm):
     
     class Meta:
         model = Recipe
-        fields = ['recipe_name', 'cooking_time', 'servings', 'image_url', 'instructions']  # Exclude 'ingredients' from here
+        fields = ['recipe_name', 'cooking_time', 'servings', 'image_url', 'instructions']
         widgets = {
             'recipe_name': forms.TextInput(attrs={'placeholder': 'Enter recipe name'}),
             'cooking_time': forms.TextInput(attrs={'placeholder': 'Enter cooking time (e.g. 30 minutes)'}),
@@ -56,21 +56,14 @@ class AddRecipeForm(forms.ModelForm):
 
     def clean_ingredients_list(self):
         ingredients = self.cleaned_data['ingredients_list']
-        # Pisahkan ingredients berdasarkan koma, dan buang spasi ekstra
         return [ingredient.strip() for ingredient in ingredients.split(',')]
 
     def save(self, commit=True):
-        # Simpan objek Recipe terlebih dahulu
         recipe = super().save(commit=commit)
-
-        # Ambil daftar bahan yang sudah dibersihkan
         ingredients = self.cleaned_data['ingredients_list']
-        
         for ingredient_name in ingredients:
             ingredient, created = Ingredient.objects.get_or_create(name=ingredient_name)
             recipe.ingredients.add(ingredient)
-
         if commit:
             recipe.save()
-
         return recipe
