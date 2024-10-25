@@ -175,7 +175,7 @@ input[type="submit"]:hover {
   padding: 20px; /* Spacing yang lebih besar */
   border-radius: 12px; /* Sudut yang melengkung */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow lembut */
-  max-width: 520px; /* Batasan lebar */
+  max-width: 530px; /* Batasan lebar */
   margin: 20px auto; /* Pusatkan form */
   text-align: center; /* Tengah text */
 }
@@ -184,7 +184,7 @@ input[type="submit"]:hover {
   font-family: 'Caveat', cursive;
   font-weight: bold;
   color: #8B4513; /* Warna sama dengan login */
-  font-size: 45px;
+  font-size: 55px !important;
 }
 
 /* Gaya Tombol Register agar konsisten dengan login */
@@ -203,6 +203,24 @@ input[type="submit"]:hover {
 
 .register button:hover {
   background-color: #6B8E23; /* Warna saat di-hover */
+}
+
+/* Gaya untuk tombol Cancel */
+.register .cancel-button {
+  background-color: #B22222;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto; /* Jarak sedikit dari tombol Register */
+}
+
+.register .cancel-button:hover {
+  background-color: #8B0000; /* Warna saat di-hover */
 }
 
 /* Adjust the display of input fields and labels */
@@ -374,4 +392,89 @@ input[type="submit"]:hover {
 
 .add-user-link:hover {
   color: #6B8E23; /* Warna saat di-hover */
+}
+
+/* Container styling */
+.edit-admin {
+  background-color: rgba(240, 255, 240, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 370px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Title styling */
+.edit-admin h1 {
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  color: #8B4513;
+  font-size: 55px !important;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.submit-button {
+  background-color: #6B8E23;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+.submit-button:hover {
+  background-color: #556B2F;
+}
+
+/* Cancel button styling */
+.cancel-button {
+  background-color: #B22222;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  width: max-content;
+  margin: 15px auto 0;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #8B0000;
+}
+
+/* Label and input styling */
+.edit-admin label {
+  color: #333;
+  font-size: 16px;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.edit-admin input[type="text"],
+.edit-admin input[type="email"],
+.edit-admin input[type="file"] {
+  background-color: rgba(240, 255, 240, 0.9);
+  border: 2px solid #6B8E23;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.edit-admin input:focus {
+  outline: none;
+  border-color: #556B2F;
 }

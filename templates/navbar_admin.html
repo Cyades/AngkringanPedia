@@ -15,10 +15,15 @@
         <a href="{% url 'main:logout' %}" class="text-[#F0FFF0] hover:bg-[#6B8E23] px-3 py-1 rounded transition duration-200">Logout</a>
         
         {% if user.profile.profile_image %}
-          <img src="{{ user.profile.profile_image.url }}" alt="User Photo" class="h-10 w-10 rounded-full">
+        <a href="{% url 'main:edit_admin' user.pk %}">
+            <img src="{{ user.profile.profile_image.url }}" alt="User Photo" class="h-10 w-10 rounded-full">
+        </a>
         {% else %}
-          <img src="{% static 'image/user.png' %}" alt="Default User Photo" class="h-10 w-10 rounded-full">
+        <a href="{% url 'main:edit_admin' user.pk %}">
+            <img src="{% static 'image/user.png' %}" alt="Default User Photo" class="h-10 w-10 rounded-full">
+        </a>
         {% endif %}
+
       </div>
     </div>
   </div>
