@@ -49,7 +49,12 @@
         <label for="{{ form.image_url.id_for_label }}">{{ form.image_url.label }}</label>
         {{ form.image_url }}
     </div>
-    <button class="button">Add Recipe</button>
+    
+    <!-- Button Section -->
+    <div class="button-group">
+        <button type="submit" class="button">Add Recipe</button>
+        <button type="button" class="button cancel-button" onclick="window.history.back()">Cancel</button>
+    </div>
 </form>
 {% else %}
 <p>You do not have permission to add recipes.</p>
