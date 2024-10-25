@@ -129,6 +129,7 @@ def add_recipe(request):
     return render(request, 'add_recipe.html', {'form': form})
 
 
+
 def search_recipes(request):
     queries = request.GET.dict()
     query = queries.get('query', '').strip()
