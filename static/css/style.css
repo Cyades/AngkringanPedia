@@ -392,6 +392,7 @@ input[type="submit"]:hover {
 
 .add-user-link:hover {
   background-color: #6B8E23; /* Warna saat di-hover */
+  border-radius: 12px;
 }
 
 /* Container styling */
