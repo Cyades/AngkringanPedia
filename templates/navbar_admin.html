@@ -12,7 +12,9 @@
 
       <!-- User Profile Section -->
       <div class="flex items-center space-x-4">
-        <a href="{% url 'main:logout' %}" class="text-[#F0FFF0] hover:bg-[#6B8E23] px-3 py-1 rounded transition duration-200">Logout</a>
+        <span class="text-[#F0FFF0]">Welcome {{ user.username }}!</span>  <!-- Menambahkan teks selamat datang -->
+        
+        <a href="{% url 'main:logout' %}" class="bg-[#6B8E23] text-[#F0FFF0] px-3 py-1 rounded transition duration-200 transform hover:scale-105">Logout</a>
         
         {% if user.profile.profile_image %}
             <a href="{% url 'main:edit_admin' user.pk %}">
@@ -23,7 +25,6 @@
                 <img src="{% static 'image/user.png' %}" alt="Default User Photo" class="h-10 w-10 rounded-full profile-image">
             </a>
         {% endif %}
-
       </div>
     </div>
   </div>

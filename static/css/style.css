@@ -391,7 +391,7 @@ input[type="submit"]:hover {
 }
 
 .add-user-link:hover {
-  color: #6B8E23; /* Warna saat di-hover */
+  background-color: #6B8E23; /* Warna saat di-hover */
 }
 
 /* Container styling */
