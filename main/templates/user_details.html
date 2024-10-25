@@ -1,0 +1,5 @@
+<p><strong>Username:</strong> {{ user.username }}</p>
+<p><strong>Email:</strong> {{ user.email }}</p>
+<p><strong>Nomor Telepon:</strong> {{ user.profile.phone_number }}</p>
+<p><strong>Gender:</strong> {{ user.profile.gender|yesno:"Male,Female" }}</p>
+<p><strong>Role:</strong> {{ user.is_staff|yesno:"Admin,User" }}</p>

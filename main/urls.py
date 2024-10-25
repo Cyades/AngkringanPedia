@@ -13,7 +13,8 @@ urlpatterns = [
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
     path('adminku/', show_admin, name='show_admin'),
-    path('adminkudelete/<int:id>', delete_user, name='delete_user')
+    path('adminkudelete/<int:id>', delete_user, name='delete_user'),
+    path('get_user_details/<int:user_id>/', get_user_details, name='get_user_details'),
 ]
 
 if settings.DEBUG:
