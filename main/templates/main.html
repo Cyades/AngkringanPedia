@@ -6,17 +6,12 @@
     <!-- Recipe List -->
     <div class="content">
         {% include 'recipe_list.html' %}
+        {% if user.is_superuser %}
+            <button onclick="window.location.href='{% url 'main:add_recipe' %}'">Add Recipe</button>
+        {% else %}
+            <p>You do not have permission to add recipes.</p>
+        {% endif %}
     </div>
-
-
-        <!-- Add New Recipe Button and Form -->
-        <div class="content">
-            <button id="add-recipe-btn" onclick="toggleRecipeForm()">Add New Recipe</button>
-            
-            <div id="add-recipe-form" style="display:none;">
-                {% include 'add_recipe.html' %}
-            </div>
-        </div>
 
     <!-- Logout Button -->
     <a href="{% url 'main:logout' %}">
