@@ -3,27 +3,26 @@
 
 {% block content %}
 {% include 'navbar.html' %}
-<div class="container mx-auto p-4">
-    <h2 class="text-2xl font-bold">Rate and Review {{ recipe.recipe_name }}</h2>
+<div class="container mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-6">Rate and Review {{ recipe.recipe_name }}</h2>
 
-    <form method="POST">
+    <form method="POST" class="bg-white p-6 rounded-lg shadow-md">
         {% csrf_token %}
-        <table>
-          <tr>
-            <td>{{ form.score.label }}:</td>
-            <td>{{ form.score }}</td>
-          </tr>
-          <tr>
-            <td>{{ form.content.label }}:</td>
-            <td>{{ form.content }}</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>
-              <input type="submit" value="Add Rating" />
-            </td>
-          </tr>
-        </table>
+        
+        <div class="mb-4">
+            <label for="{{ form.score.id_for_label }}" class="block text-lg font-medium">{{ form.score.label }}</label>
+            {{ form.score }}  <!-- Render score without as_widget -->
+        </div>
+
+        <div class="mb-4">
+            <label for="{{ form.content.id_for_label }}" class="block text-lg font-medium">Feedback</label>
+            {{ form.content }}  <!-- Render content without as_widget -->
+        </div>
+
+        <div class="flex justify-between">
+            <button type="submit" class="w-full bg-[#556B2F] text-white py-2 rounded-lg hover:bg-[#6B8E23] transition mr-2">Add Rating</button>
+            <a href="{{ request.META.HTTP_REFERER }}" class="bg-gray-300 text-gray-800 py-2 px-4 rounded-lg hover:bg-gray-400 transition ">Back</a>
+        </div>
     </form>
 </div>
 {% endblock %}
