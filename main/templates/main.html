@@ -1,17 +1,44 @@
 {% extends 'base.html' %}
 {% block content %}
-{% include 'navbar.html' %}
-<body>
-    {% include 'add_recipe.html' %}
-    {% include 'recipe_list.html' %}
-</body>
-<a href="{% url 'main:logout' %}">
-    <button>Logout</button>
-</a>
-{% if user.is_authenticated %}
-    <p>Welcome back, {{ user.username }}! Your last login was {{ last_login }}</p>
-{% else %}
-    <p>Welcome, Guest! Feel free to explore the recipes below.</p>
-{% endif %}
-{% include 'footer.html' %}
+    <!-- Navbar is included and will stay fixed at the top -->
+    {% include 'navbar.html' %}
+
+    <!-- Recipe List -->
+    <div class="content">
+        {% include 'recipe_list.html' %}
+    </div>
+
+
+        <!-- Add New Recipe Button and Form -->
+        <div class="content">
+            <button id="add-recipe-btn" onclick="toggleRecipeForm()">Add New Recipe</button>
+            
+            <div id="add-recipe-form" style="display:none;">
+                {% include 'add_recipe.html' %}
+            </div>
+        </div>
+
+    <!-- Logout Button -->
+    <a href="{% url 'main:logout' %}">
+        <button>Logout</button>
+    </a>
+
+    <!-- Authentication Check for Welcome Message -->
+    {% if user.is_authenticated %}
+        <p>Welcome back, {{ user.username }}! Your last login was {{ last_login }}</p>
+    {% else %}
+        <p>Welcome, Guest! Feel free to explore the recipes below.</p>
+    {% endif %}
+
+    <!-- Script to Toggle Add Recipe Form Visibility -->
+    <script>
+        function toggleRecipeForm() {
+            const form = document.getElementById('add-recipe-form');
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>
 {% endblock content %}

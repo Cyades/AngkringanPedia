@@ -1,5 +1,3 @@
-/* style.css */
-
 /* Custom Colors for branding */
 :root {
   --primary-bg-color: #F0FFF0; /* Light green background */
@@ -13,6 +11,39 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
+  
+  /* Background image settings */
+  background-image: url('/static/image/bg.jpeg'); /* Path to your background image */
+  background-size: cover; /* Make sure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  margin: 0; /* Remove default margin */
+  padding-top: 60px; /* Padding to avoid navbar overlap */
+}
+
+/* Customizing the navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--secondary-bg-color);
+  padding: 10px;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--footer-text-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: var(--footer-text-color);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
 }
 
 /* Customizing the footer */
@@ -47,7 +78,7 @@ button:hover {
 
 /* Custom input field */
 input[type="text"], input[type="email"], input[type="password"], textarea {
-  background-color: #F5FFFA; /* Mint cream */
+  background-color: rgba(240, 255, 240, 0.9); /* Slightly transparent light green */
   border: 2px solid var(--secondary-bg-color);
   border-radius: 8px;
   padding: 10px;
@@ -74,4 +105,19 @@ input:focus, textarea:focus {
     padding: 8px 16px;
     font-size: 14px;
   }
+}
+
+/* Style for the login container */
+.login {
+  background-color: rgba(143, 188, 143, 0.8); /* Semi-transparent Medium Sea Green */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 400px; /* Limit the width of the login form */
+  margin: 50px auto; /* Center the form */
+  text-align: center; /* Center the text */
+}
+
+h1 {
+  color: #556B2F; /* Dark Olive Green for the heading */
 }

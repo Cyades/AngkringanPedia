@@ -10,34 +10,45 @@
         </a>
       </div>
 
-      <!-- Search Bar -->
-      <div class="hidden md:flex flex-grow justify-center relative overflow-hidden ml-4">
-        <form id="search-form" action="{% url 'main:search_recipes' %}" method="get" class="flex items-center flex-grow">
-          <!-- Filter Button -->
-          <button type="button" id="filter-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg">
-            Filter: None
-          </button>
-          
-          <input type="text" name="query" id="search-input" placeholder="Search Recipe..." class="mx-4 bg-[#F0FFF0] text-[#2F4F4F] px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8FBC8F] search-input" style="flex-grow: 1; height: 40px;">
+        <!-- Search Bar -->
+        <div class="hidden md:flex flex-grow justify-center relative overflow-hidden ml-4">
+          <form id="search-form" action="{% url 'main:search_recipes' %}" method="get" class="flex items-center flex-grow">
+            <!-- Filter Button -->
+            <button type="button" id="filter-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg">
+              Filter:
+              {% if request.GET.filter == 'ingredient' %}
+                Ingredient
+              {% elif request.GET.filter == 'name' %}
+                Name
+              {% else %}
+                None
+              {% endif %}
+            </button>
 
-          <!-- Dropdown for Filter -->
-          <div id="filter-dropdown" class="fixed top-[50px] mt-2 w-48 bg-white rounded-md shadow-lg hidden z-10">
-            <div class="py-2">
-              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-none">None</button>
-              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-ingredient">Ingredient</button>
-              <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-name">Name</button>
+            <!-- Hidden input to store filter value -->
+            <input type="hidden" name="filter" id="filter-hidden-input" value="{{ request.GET.filter|default:'none' }}">
+
+            <!-- Search Input -->
+            <input type="text" name="query" id="search-input" placeholder="Search Recipe..." class="mx-4 bg-[#F0FFF0] text-[#2F4F4F] px-5 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8FBC8F] search-input" style="flex-grow: 1; height: 40px;" value="{{ request.GET.query|default:'' }}">
+
+            <!-- Dropdown for Filter -->
+            <div id="filter-dropdown" class="fixed top-[50px] mt-2 w-48 bg-white rounded-md shadow-lg hidden z-10">
+              <div class="py-2">
+                <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-none">None</button>
+                <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-ingredient">Ingredient</button>
+                <button type="button" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 w-full text-left" id="filter-name">Name</button>
+              </div>
             </div>
-          </div>
 
-          <!-- Search Button -->
-          <button type="submit" id="search-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg search-button" style="height: 40px; margin-right: 10px;">
-            Search
-          </button>          
-        </form>
-      </div>
+            <!-- Search Button -->
+            <button type="submit" id="search-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg search-button" style="height: 40px; margin-right: 10px;">
+              Search
+            </button>
+          </form>
+        </div>
 
       <!-- Menu Links -->
-      <div class="hidden md:flex items-center ml-4"> <!-- Added margin-left -->
+      <div class="hidden md:flex items-center ml-4">
         <ul class="flex space-x-5 text-[#F0FFF0]">
           <li><a href="#" class="hover:text-[#8FBC8F] transition">Favourite</a></li>
           <li><a href="#" class="hover:text-[#8FBC8F] transition">Profile</a></li>
@@ -78,7 +89,8 @@
     const filterDropdown = document.getElementById('filter-dropdown');
     const searchForm = document.getElementById('search-form');
     const searchInput = document.getElementById('search-input');
-    let currentFilter = 'none'; // Default filter
+    const hiddenFilterInput = document.getElementById('filter-hidden-input');
+    let currentFilter = hiddenFilterInput.value;  // Initialize filter with the value from hidden input
 
     filterButton.addEventListener('click', (event) => {
       event.stopPropagation(); 
@@ -88,28 +100,28 @@
     document.getElementById('filter-none').addEventListener('click', () => {
       currentFilter = 'none';
       filterButton.textContent = 'Filter: None';
-      filterDropdown.classList.add('hidden'); 
+      hiddenFilterInput.value = 'none';  // Update hidden input
+      filterDropdown.classList.add('hidden');
     });
 
     document.getElementById('filter-ingredient').addEventListener('click', () => {
       currentFilter = 'ingredient';
       filterButton.textContent = 'Filter: Ingredient';
+      hiddenFilterInput.value = 'ingredient';  // Update hidden input
       filterDropdown.classList.add('hidden');
     });
 
     document.getElementById('filter-name').addEventListener('click', () => {
       currentFilter = 'name';
       filterButton.textContent = 'Filter: Name';
+      hiddenFilterInput.value = 'name';  // Update hidden input
       filterDropdown.classList.add('hidden');
     });
 
     searchForm.addEventListener('submit', (event) => {
-      if (currentFilter === 'none') {
-        searchInput.name = 'none_query';
-      } else if (currentFilter === 'ingredient') {
-        searchInput.name = 'ingredient_query'; 
-      } else {
-        searchInput.name = 'name_query'; 
+      // Ensure input is not empty or None
+      if (!searchInput.value.trim()) {
+        searchInput.value = '';  // Default to empty string
       }
     });
 

@@ -30,14 +30,6 @@
 
   <p>Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a></p>
   <p>Try Guest Mode? <a href="{% url 'main:show_main' %}">Guest Mode</a></p>
-
-  <!-- Indikator admin mode -->
-  {% comment %} {% if request.user.is_authenticated and request.user.is_staff %}
-  <div>
-    <p><strong>Welcome Admin!</strong></p>
-    <p><a href="{% url 'main:admin_dashboard' %}">Go to Admin Dashboard</a></p>
-  </div>
-  {% endif %} {% endcomment %}
 </div>
 
 {% endblock content %}
