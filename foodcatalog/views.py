@@ -18,6 +18,31 @@ def create_rating_review(request, recipe_id):
     context = {'form': form, 'recipe': recipe}
     return render(request, "create_rating_review.html", context)
 
+def edit_rating_review(request, review_id):
+    review = get_object_or_404(RatingReview, id=review_id)
+    form = RatingReviewForm(request.POST or None, instance=review)
+
+    if form.is_valid() and request.method == "POST":
+        form.save()
+        # Get the 'next' parameter from the query string
+        next_url = request.GET.get('next', '/')
+        return HttpResponseRedirect(next_url)
+
+    context = {'form': form, 'review': review}
+    return render(request, "edit_rating_review.html", context)
+
+def delete_rating_review(request, review_id):
+    review = get_object_or_404(RatingReview, id=review_id)
+
+    if request.method == "POST":
+        review.delete()
+        # Get the 'next' parameter from the query string
+        next_url = request.GET.get('next', '/')
+        return HttpResponseRedirect(next_url)
+
+    context = {'review': review}
+    return render(request, "delete_rating_review.html", context)
+
 
 def search_recipe_by_name(request, recipe_name):
     # Filter recipes by name

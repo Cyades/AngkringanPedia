@@ -44,13 +44,16 @@
                                     <em>{{ review.content }}</em>
                                     <br>
                                     <small>Reviewed on {{ review.created_at }}</small>
+                                    <br>
+                                    <a href="{% url 'edit_rating_review' review.id %}?next={{ request.path }}">Edit</a> | 
+                                    <a href="{% url 'delete_rating_review' review.id %}?next={{ request.path }}">Delete</a>
                                 </li>
                             {% endfor %}
                         {% else %}
                             <li>No reviews yet.</li>
                         {% endif %}
                     </ul>
-                    
+
                     <a href="{% url 'create_rating_review' recipe.id %}?next={{ request.path }}">
                         <button>Add New Rating</button>
                     </a>
