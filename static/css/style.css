@@ -486,3 +486,12 @@ input[type="submit"]:hover {
 .profile-image:hover {
   transform: scale(1.2); /* Membesarkan gambar saat hover */
 }
+
+.user-card {
+  transition: transform 0.3s ease; /* Transisi halus saat hover */
+}
+
+.user-card:hover {
+  transform: scale(1.05); /* Membesarkan card saat hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk efek kedalaman */
+}
