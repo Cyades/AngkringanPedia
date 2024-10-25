@@ -9,11 +9,12 @@
                     {% if recipe.image_url %}
                         <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" class="w-48 h-auto mb-2" />
                     {% else %}
-                        <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" style="width:200px; height:auto;">
+                        <p>No image available.</p>
                     {% endif %}
-                    <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }} minutes</p>
+
+                    <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
                     <p><strong>Servings:</strong> {{ recipe.servings }}</p>
-                    
+
                     <p class="mt-2"><strong>Ingredients:</strong></p>
                     <ul class="list-disc pl-5">
                         {% for ingredient in recipe.ingredients.all %}
@@ -22,7 +23,7 @@
                             <li>No ingredients available.</li>
                         {% endfor %}
                     </ul>
-                    
+
                     <p class="mt-2"><strong>Instructions:</strong></p>
                     <ol class="list-decimal pl-5">
                         {% for instruction in recipe.recipe_instructions.all|dictsort:"step_number" %}
@@ -31,10 +32,31 @@
                             <li>No instructions available.</li>
                         {% endfor %}
                     </ol>
-                </li>
+
+                    <p class="mt-2"><strong>Average Rating:</strong> <span class="average-rating-{{ recipe.id }}">{{ recipe.average_rating|default:"No ratings yet." }}</span></p>
+
+                    <h3 class="mt-4 text-lg font-semibold">Ratings and Reviews:</h3>
+                    <ul class="list-disc pl-5">
+                        {% if recipe.ratings_list.exists %}
+                            {% for review in recipe.ratings_list %}
+                                <li>
+                                    <strong>Rating:</strong> {{ review.score }} - 
+                                    <em>{{ review.content }}</em>
+                                    <br>
+                                    <small>Reviewed on {{ review.created_at }}</small>
+                                </li>
+                            {% endfor %}
+                        {% else %}
+                            <li>No reviews yet.</li>
+                        {% endif %}
+                    </ul>
+                    
+                    <a href="{% url 'create_rating_review' recipe.id %}?next={{ request.path }}">
+                        <button>Add New Rating</button>
+                    </a>
             {% endfor %}
         </ul>
     {% else %}
-        <p class="text-center mt-4 text-gray-500">No recipes available matching "{{ recipe_name }}".</p>
+        <p class="text-center mt-4 text-gray-500">No recipes available matching "{{ recipe_id }}".</p>
     {% endif %}
 </div>

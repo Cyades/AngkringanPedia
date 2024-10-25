@@ -1,0 +1,28 @@
+<!-- create_rating_review.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mx-auto p-4">
+    <h2 class="text-2xl font-bold">Rate and Review {{ recipe.recipe_name }}</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+          <tr>
+            <td>{{ form.score.label }}:</td>
+            <td>{{ form.score }}</td>
+          </tr>
+          <tr>
+            <td>{{ form.content.label }}:</td>
+            <td>{{ form.content }}</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="Add Rating" />
+            </td>
+          </tr>
+        </table>
+    </form>
+</div>
+{% endblock %}
