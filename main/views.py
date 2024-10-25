@@ -15,7 +15,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from main.models import *
 from .models import Recipe, Ingredient
-from .forms import AddRecipeForm
+from .forms import AddRecipeForm, CustomUserEditForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import messages
@@ -101,6 +101,18 @@ def delete_user(request, id):
     # Kembali ke halaman admin setelah menghapus pengguna
     return HttpResponseRedirect(reverse('main:show_admin'))
 
+def edit_admin(request, id):
+    admin = get_object_or_404(User, pk=id)
+
+    # Tambahkan request.FILES untuk menangani gambar
+    form = CustomUserEditForm(request.POST or None, request.FILES or None, instance=admin)
+
+    if request.method == "POST" and form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('main:show_admin'))
+
+    context = {'form': form}
+    return render(request, "edit_admin.html", context)
 
 def add_recipe(request):
     if request.method == 'POST':
