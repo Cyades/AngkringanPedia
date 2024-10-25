@@ -1,11 +1,23 @@
-<!-- register.html -->
-<form method="POST" enctype="multipart/form-data"> <!-- Ensure enctype is present -->
-    {% csrf_token %}
-    {{ form.as_p }}  <!-- Renders all the fields including the new ones -->
+{% extends 'base.html' %}
 
-    <label>
+{% block meta %}
+<title>Register</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+{% endblock meta %}
+
+{% block content %}
+    <div class="register">
+    <h1>Register</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <label>
         <input type="checkbox" name="is_admin"> Register as Admin
-    </label>
-    
-    <button type="submit">Register</button>
-</form>
+        </label>
+        
+        <button type="submit">Register</button>
+    </form>
+    </div>
+{% endblock content %}
