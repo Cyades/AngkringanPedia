@@ -46,22 +46,21 @@
                         <span class="average-rating-{{ recipe.id }}">{{ recipe.average_rating|default:"No ratings yet." }}</span>
                     </p>                    
 
-                    <div class="mt-4">
-                        <h3 class="text-lg font-semibold">Ratings and Reviews:</h3>
-                        <ul class="list-disc pl-5 review-list-{{ recipe.id }}">
-                            {% if recipe.ratings_list.all %}
-                                {% for review in recipe.ratings_list.all %}
-                                    <li class="mt-2">
-                                        <strong>Rating:</strong> {{ review.score }} - 
-                                        <em>{{ review.content }}</em>
-                                        <br>
-                                        <small class="text-gray-500">Reviewed on {{ review.created_at }}</small>
-                                        <br>
-                                    </li>
-                                {% endfor %}
-                            {% endif %}
-                        </ul>
-                    </div>
+                    <ul class="list-disc pl-5 review-list-{{ recipe.id }}">
+                        {% if recipe.ratings_list.all %}
+                            {% for review in recipe.ratings_list.all %}
+                                <li class="mt-2 review-item-{{ review.id }}">
+                                    <strong>Rating:</strong> {{ review.score }} - 
+                                    <em class="review-content-{{ review.id }}">{{ review.content }}</em>
+                                    <br>
+                                    <small class="text-gray-500">Reviewed on {{ review.created_at }}</small>
+                                    <br>
+                                    <a href="{% url 'edit_rating_review' review.id %}?next={{ request.path }}" class="edit-review-button">Edit</a>
+                                    <a href="{% url 'delete_rating_review' review.id %}?next={{ request.path }}" class="delete-review-button">Delete</a>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>                    
 
                     <div class="mt-4">
                         <form id="rating-form-{{ recipe.id }}" class="rating-form">
@@ -69,7 +68,7 @@
                             <label for="score">Rating (1-5):</label>
                             <input type="number" name="score" min="1" max="5" class="border p-2 rounded w-16" required>
                             <label for="content">Review:</label>
-                            <textarea name="content" rows="2" class="border p-2 rounded w-full"></textarea>  <!-- Removed required attribute -->
+                            <textarea name="content" rows="2" class="border p-2 rounded w-full"></textarea>
                             <button type="submit" class="bg-[#556B2F] text-white py-2 px-4 rounded hover:bg-[#6B8E23] transition">Submit Review</button>
                         </form>
                     </div>
@@ -114,13 +113,15 @@
                 if (data.success) {
                     const reviewsList = document.querySelector('.review-list-' + recipeId);
 
-                    // Append new review; handle empty content
-                    reviewsList.innerHTML += `<li class="mt-2">
+                    // Append new review
+                    reviewsList.innerHTML += `<li class="mt-2 review-item-${data.review.id}">
                         <strong>Rating:</strong> ${data.review.score} - 
-                        <em>${data.review.content || ''}</em>  <!-- Display if content is empty -->
+                        <em class="review-content-${data.review.id}">${data.review.content || ''}</em>  
                         <br>
                         <small class="text-gray-500">Reviewed on ${data.review.created_at}</small>
                         <br>
+                        <a href="/catalog/edit-rating-review/${data.review.id}/?next={{ request.path }}" class="edit-review-button">Edit</a>
+                        <a href="/catalog/delete-rating-review/${data.review.id}/?next={{ request.path }}" class="delete-review-button">Delete</a>
                     </li>`;
 
                     form.reset();

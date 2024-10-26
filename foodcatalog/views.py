@@ -2,10 +2,12 @@ from django.shortcuts import render, redirect, HttpResponseRedirect, get_object_
 from .models import Recipe, RatingReview
 from .forms import RatingReviewForm
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 
 from django.http import JsonResponse
 from django.db.models import Avg
 
+from django.urls import reverse
 
 def show_recipe(request):
     recipes = Recipe.objects.all()  # Replace with filter logic if searching
@@ -37,6 +39,7 @@ def create_rating_review(request):
         response_data = {
             'success': True,
             'review': {
+                'id': review.id,
                 'score': review.score,
                 'content': review.content,
                 'created_at': review.created_at.strftime('%Y-%m-%d %H:%M:%S'),
@@ -47,32 +50,37 @@ def create_rating_review(request):
 
     return JsonResponse({'success': False, 'error': 'Invalid request.'})
 
-
 def edit_rating_review(request, review_id):
-    review = get_object_or_404(RatingReview, id=review_id)
+    # Get the review entry based on ID
+    review = get_object_or_404(RatingReview, pk=review_id)
+
+    # Set review as an instance of the form
     form = RatingReviewForm(request.POST or None, instance=review)
 
-    if form.is_valid() and request.method == "POST":
-        form.save()
-        # Get the 'next' parameter from the query string
-        next_url = request.GET.get('next', '/')
-        return HttpResponseRedirect(next_url)
+    next_url = request.GET.get('next', reverse('main:show_main'))
+
+    if request.method == "POST":
+        if form.is_valid():
+            # Save the form and redirect to the main page
+            form.save()
+            return HttpResponseRedirect(next_url)
 
     context = {'form': form, 'review': review}
     return render(request, "edit_rating_review.html", context)
 
 def delete_rating_review(request, review_id):
-    review = get_object_or_404(RatingReview, id=review_id)
+    # Get the review based on ID
+    review = get_object_or_404(RatingReview, pk=review_id)
+    next_url = request.GET.get('next', reverse('main:show_main'))
 
     if request.method == "POST":
+        # Delete the review
         review.delete()
-        # Get the 'next' parameter from the query string
-        next_url = request.GET.get('next', '/')
+        # Redirect to the main page
         return HttpResponseRedirect(next_url)
 
     context = {'review': review}
     return render(request, "delete_rating_review.html", context)
-
 
 def search_recipe_by_name(request, recipe_name):
     # Filter recipes by name
