@@ -42,37 +42,39 @@
                         </ol>
                     </div>
 
-                    <div class="mt-4">
-                        <p><strong>Average Rating:</strong> 
-                            <span class="average-rating-{{ recipe.id }}">{{ recipe.average_rating|default:"No ratings yet." }}</span>
-                        </p>
-                    </div>
+                    <p><strong>Average Rating:</strong> 
+                        <span class="average-rating-{{ recipe.id }}">{{ recipe.average_rating|default:"No ratings yet." }}</span>
+                    </p>                    
 
                     <div class="mt-4">
                         <h3 class="text-lg font-semibold">Ratings and Reviews:</h3>
-                        <ul class="list-disc pl-5">
-                            {% if recipe.ratings_list.exists %}
-                                {% for review in recipe.ratings_list %}
+                        <ul class="list-disc pl-5 review-list-{{ recipe.id }}">
+                            {% if recipe.ratings_list.all %}
+                                {% for review in recipe.ratings_list.all %}
                                     <li class="mt-2">
                                         <strong>Rating:</strong> {{ review.score }} - 
                                         <em>{{ review.content }}</em>
                                         <br>
                                         <small class="text-gray-500">Reviewed on {{ review.created_at }}</small>
                                         <br>
-                                        <a href="{% url 'edit_rating_review' review.id %}?next={{ request.path }}" class="text-blue-600 hover:underline">Edit</a> | 
-                                        <a href="{% url 'delete_rating_review' review.id %}?next={{ request.path }}" class="text-red-600 hover:underline">Delete</a>
                                     </li>
                                 {% endfor %}
-                            {% else %}
-                                <li>No reviews yet.</li>
                             {% endif %}
                         </ul>
                     </div>
 
                     <div class="mt-4">
-                        <a href="{% url 'create_rating_review' recipe.id %}?next={{ request.path }}">
-                            <button class="bg-[#556B2F] text-white py-2 px-4 rounded hover:bg-[#6B8E23] transition">Add New Rating</button>
-                        </a>
+                        <form id="rating-form-{{ recipe.id }}" class="rating-form">
+                            <input type="hidden" name="recipe_id" value="{{ recipe.id }}">
+                            <label for="score">Rating (1-5):</label>
+                            <input type="number" name="score" min="1" max="5" class="border p-2 rounded w-16" required>
+                            <label for="content">Review:</label>
+                            <textarea name="content" rows="2" class="border p-2 rounded w-full"></textarea>  <!-- Removed required attribute -->
+                            <button type="submit" class="bg-[#556B2F] text-white py-2 px-4 rounded hover:bg-[#6B8E23] transition">Submit Review</button>
+                        </form>
+                    </div>
+
+                    <div class="mt-4">
                         <a href="{% url 'main:show_main' %}" class="ml-2">
                             <button class="bg-gray-300 text-gray-800 py-2 px-4 rounded hover:bg-gray-400 transition">Back</button>
                         </a>
@@ -84,3 +86,59 @@
         <p class="text-center mt-4 text-gray-500">No recipes available matching "{{ recipe_id }}".</p>
     {% endif %}
 </div>
+
+<script>
+    document.querySelectorAll('.rating-form').forEach(form => {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const recipeId = this.querySelector('input[name="recipe_id"]').value;
+
+            // Validate that the score is provided
+            const score = formData.get('score');
+            if (!score) {
+                alert("Rating is required.");
+                return;
+            }
+
+            fetch("{% url 'create_rating_review' %}", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest",
+                    "X-CSRFToken": "{{ csrf_token }}",
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const reviewsList = document.querySelector('.review-list-' + recipeId);
+
+                    // Append new review; handle empty content
+                    reviewsList.innerHTML += `<li class="mt-2">
+                        <strong>Rating:</strong> ${data.review.score} - 
+                        <em>${data.review.content || ''}</em>  <!-- Display if content is empty -->
+                        <br>
+                        <small class="text-gray-500">Reviewed on ${data.review.created_at}</small>
+                        <br>
+                    </li>`;
+
+                    form.reset();
+
+                    // Update the average rating display
+                    const averageRatingElement = form.closest('li').querySelector('.average-rating-' + recipeId);
+                    averageRatingElement.textContent = data.average_rating;
+
+                    // Remove "No reviews yet." if it was present
+                    const noReviewsMessage = reviewsList.querySelector('li:contains("No reviews yet.")');
+                    if (noReviewsMessage) {
+                        noReviewsMessage.remove();
+                    }
+                } else {
+                    alert("Error submitting review: " + data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    });
+</script>
