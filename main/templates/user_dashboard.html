@@ -20,8 +20,9 @@
         {% if user.profile.profile_image %}
             <img src="{{ user.profile.profile_image.url }}" alt="Profile Image" class="profile-image">
         {% else %}
-            <img src="{% static 'image/default_user.jpg' %}" alt="Default Profile Image" class="profile-image">
+            <img src="/media/profile_images/default-user.jpg" alt="Default Profile Image" class="profile-image">
         {% endif %}
+
     </div>
 
     <div class="actions">
