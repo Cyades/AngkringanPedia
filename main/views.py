@@ -123,7 +123,7 @@ def add_recipe(request):
             ingredients_list = form.cleaned_data['ingredients_list'].split(',')
             for ingredient_name in ingredients_list:
                 ingredient_name = ingredient_name.strip()
-                if ingredient_name: 
+                if ingredient_name:
                     ingredient, created = Ingredient.objects.get_or_create(name=ingredient_name)
                     recipe.ingredients.add(ingredient)
             instructions_list = request.POST.getlist('instructions_list') 
@@ -173,3 +173,8 @@ def search_recipes(request):
 def get_user_details(request, user_id):
     user = get_object_or_404(User, id=user_id)
     return render(request, 'user_details.html', {'user': user})
+
+def delete_product(request, id):
+    if(not request.user.is_superuser): return
+    Recipe.objects.get(pk=id).delete()
+    return HttpResponseRedirect(reverse('main:show_main'))

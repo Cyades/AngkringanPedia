@@ -9,6 +9,7 @@ urlpatterns = [
     path('', show_main, name='show_main'),
     path('search/', search_recipes, name='search_recipes'),
     path('add-recipe/', add_recipe, name='add_recipe'),
+    path('delete/<int:id>', delete_product, name='delete_product'),
     path('register/', register, name='register'),
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
