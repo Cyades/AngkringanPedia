@@ -173,3 +173,36 @@ def search_recipes(request):
 def get_user_details(request, user_id):
     user = get_object_or_404(User, id=user_id)
     return render(request, 'user_details.html', {'user': user})
+
+@login_required(login_url='/login')
+def edit_profile(request):
+    # Ambil data user saat ini
+    user = request.user
+
+    # Gunakan form untuk mengedit data profil
+    form = CustomUserEditForm(request.POST or None, request.FILES or None, instance=user)
+
+    if request.method == "POST" and form.is_valid():
+        form.save()
+        messages.success(request, 'Profile updated successfully!')
+        return redirect('main:get_user_details', user_id=user.id)
+
+    context = {'form': form}
+    return render(request, "edit_profile.html", context)
+
+@login_required(login_url='/login')
+def redirect_dashboard(request):
+    # Cek apakah pengguna adalah admin
+    if request.user.is_staff or request.user.is_superuser:
+        return redirect('main:show_admin')  # Arahkan ke admin dashboard
+    else:
+        return redirect('main:user_dashboard')  # Arahkan ke user dashboard
+
+@login_required(login_url='/login')
+def user_dashboard(request):
+    # Dapatkan data pengguna untuk ditampilkan di dashboard pengguna biasa
+    context = {
+        'user': request.user,
+        'last_login': request.COOKIES.get('last_login', 'Guest User'),
+    }
+    return render(request, 'user_dashboard.html', context)

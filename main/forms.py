@@ -9,7 +9,7 @@ class CustomUserCreationForm(UserCreationForm):
     phone_number = forms.CharField(max_length=15, required=True)
     GENDER_CHOICES = [
         ('M', 'Male'),
-        ('F', 'Female'),
+        ('F', 'Female')
     ]
     gender = forms.ChoiceField(choices=GENDER_CHOICES, required=True)
     profile_image = forms.ImageField(required=False)

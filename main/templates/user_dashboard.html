@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="user-dashboard">
+    <h1>Dashboard Pengguna</h1>
+
+    <div class="profile-info">
+        <h2>Informasi Pribadi</h2>
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Nomor Telepon:</strong> {{ user.profile.phone_number }}</p>
+        <p><strong>Gender:</strong> 
+            {% if user.profile.gender == 'M' %}
+                Laki-laki
+            {% else %}
+                Perempuan
+            {% endif %}
+        </p>
+        
+        {% if user.profile.profile_image %}
+            <img src="{{ user.profile.profile_image.url }}" alt="Profile Image" class="profile-image">
+        {% else %}
+            <img src="{% static 'image/default_user.jpg' %}" alt="Default Profile Image" class="profile-image">
+        {% endif %}
+    </div>
+
+    <div class="actions">
+        <!-- Tombol untuk mengedit profil -->
+        <a href="{% url 'main:edit_profile' %}" class="btn edit-profile-btn">Edit Profil</a>
+    </div>
+</div>
+
+<style>
+    .user-dashboard {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+    }
+    .profile-info {
+        margin-bottom: 20px;
+    }
+    .profile-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #6B8E23;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+        background-color: #556B2F;
+    }
+</style>
+{% endblock content %}
