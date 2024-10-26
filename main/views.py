@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.db.models import Q
 from django.contrib import messages
-from django.http import JsonResponse, HttpResponseRedirect
+from django.http import JsonResponse, HttpResponseRedirect, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -9,7 +9,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import Recipe, Ingredient, Profile, Instruction
-from .forms import CustomUserCreationForm, UserEditForm, ProfileEditForm, AddRecipeForm
+from .forms import CustomUserCreationForm, UserEditForm, ProfileEditForm, AddRecipeForm, CustomUserEditForm
 import datetime
 
 def show_main(request):
@@ -23,13 +23,14 @@ def show_main(request):
 
 @login_required(login_url='/login')
 def show_admin(request):
+    # Mendapatkan semua pengguna kecuali admin yang sedang login
+    users = User.objects.exclude(id=request.user.id)
     context = {
         'name': 'AngkringanPedia',
-        'users': User.objects.all(),
+        'users': users,
         'last_login': request.COOKIES.get('last_login', 'Guest User'),
     }
     return render(request, "admin_dashboard.html", context)
-
 def register(request):
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST, request.FILES)
@@ -172,3 +173,26 @@ def user_dashboard(request):
         'last_login': request.COOKIES.get('last_login', 'Guest User'),
     }
     return render(request, 'user_dashboard.html', context)
+
+@login_required(login_url='/login')
+def edit_user(request, id):
+    user_to_edit = get_object_or_404(User, pk=id)
+    user_form = UserEditForm(request.POST or None, instance=user_to_edit)
+    profile_form = ProfileEditForm(request.POST or None, request.FILES or None, instance=user_to_edit.profile)
+
+    if request.method == "POST" and user_form.is_valid() and profile_form.is_valid():
+        user_form.save()
+        profile = profile_form.save(commit=False)
+        if 'hapus_foto' in request.POST:
+            profile.profile_image = None  # Remove profile picture if the option is selected
+        profile.save()
+        
+        messages.success(request, f'User {user_to_edit.username} updated successfully!')
+        return redirect('main:show_admin')
+
+    context = {
+        'user_form': user_form,
+        'profile_form': profile_form,
+        'user_to_edit': user_to_edit,
+    }
+    return render(request, "edit_user.html", context)

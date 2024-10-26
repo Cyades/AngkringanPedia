@@ -2,6 +2,7 @@ from django.urls import path
 from main.views import *
 from django.conf import settings
 from django.conf.urls.static import static
+from main.views import edit_user
 
 app_name = 'main'
 
@@ -18,8 +19,8 @@ urlpatterns = [
     path('edit-admin/<int:id>', edit_admin, name='edit_admin'),
     path('edit-profile/', edit_profile, name='edit_profile'),
     path('dashboard/', redirect_dashboard, name='redirect_dashboard'),
-    path('user-dashboard/', user_dashboard, name='user_dashboard')  # Buat route user_dashboard jika belum ada
-
+    path('user-dashboard/', user_dashboard, name='user_dashboard'),  # Buat route user_dashboard jika belum ada
+    path('edit-user/<int:id>/', edit_user, name='edit_user')
 ]
 
 if settings.DEBUG:

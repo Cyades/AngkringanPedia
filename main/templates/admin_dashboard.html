@@ -26,6 +26,9 @@
             <a href="{% url 'main:delete_user' user.pk %}">
                 <button class="btn delete-btn">Delete</button> <!-- Tombol Delete -->
             </a>
+            <a href="{% url 'main:edit_user' user.pk %}">
+                <button class="btn edit-btn">Edit</button>
+            </a>
         </div>         
         {% empty %}
             <p>Tidak ada pengguna yang terdaftar.</p>
