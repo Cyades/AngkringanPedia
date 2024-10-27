@@ -23,6 +23,7 @@
             {% endif %}
             <p><strong>{{ user.username }}</strong></p>
             <div class="button-group">
+                <button class="btn edit-favorite" data-user-id="{{ user.id }}">Edit Favorite</button>
                 <button class="btn view-details">View Details</button>
                 <button class="btn delete-btn" data-user-id="{{ user.id }}">Delete</button>
             </div>
@@ -102,6 +103,18 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(error => console.error('Error deleting user:', error));
         });
     });
+    document.querySelectorAll('.edit-favorite').forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        const userId = this.getAttribute('data-user-id'); // Get user ID from data attribute
+        if (userId) {
+            window.location.href = `/favorites/admin/${userId}/`; // Redirects to the new URL
+        } else {
+            console.error("User ID is not defined");
+        }
+    });
+    });
+
 
 });
 </script>

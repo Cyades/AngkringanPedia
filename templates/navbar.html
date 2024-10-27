@@ -50,7 +50,9 @@
       <!-- Menu Links -->
       <div class="hidden md:flex items-center ml-4">
         <ul class="flex space-x-5 text-[#F0FFF0]">
+          {% if user.is_authenticated %}
           <li><a href="{% url 'main:favorites' user.id %}" class="hover:text-[#8FBC8F] transition">Favourite</a></li>
+        {% endif %}
           <li><a href="#" class="hover:text-[#8FBC8F] transition">Profile</a></li>
         </ul>
       </div>
@@ -70,7 +72,9 @@
   <div class="mobile-menu hidden md:hidden px-4 w-full bg-[#F0FFF0]">
     <div class="pt-2 pb-3 space-y-1 mx-auto">
       <ul class="text-[#2F4F4F]">
+        {% if user.is_authenticated %}
         <li><a href="{% url 'main:favorites' user.id %}" class="block hover:text-[#556B2F] transition">Favourite</a></li>
+        {% endif %}
         <li><a href="#" class="block hover:text-[#556B2F] transition">Profile</a></li>
       </ul>
     </div>

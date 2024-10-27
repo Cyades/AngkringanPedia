@@ -95,3 +95,19 @@ def cek_favorit(request, id_user, id_makanan):
                 'status': 'success',
                 'message': 'Favorite deleted succesfully'
             })
+@login_required(login_url='/login')
+def get_makanan_favorite_admin(request,id_user):
+    try:
+        user = User.objects.get(pk=id_user)
+        favorites = Favorite.objects.filter(user=user)
+        context = {
+        'favoritelist': favorites,
+        'user' : user
+        }
+        return render(request, "favorite_admin.html", context) 
+
+    except Exception as e:
+        return JsonResponse ({
+            'status': 'error',
+            'message': f'An error occurred: {str(e)}'
+        })

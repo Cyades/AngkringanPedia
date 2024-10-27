@@ -2,7 +2,7 @@ from django.urls import path
 from main.views import *
 from django.conf import settings
 from django.conf.urls.static import static
-from favorites.views import get_makanan_favorite, create_favorite, delete_favorite, cek_favorit
+from favorites.views import get_makanan_favorite, create_favorite, delete_favorite, cek_favorit,get_makanan_favorite_admin
 
 app_name = 'main'
 
@@ -21,7 +21,9 @@ urlpatterns = [
     path('favorites/<int:id_user>/', get_makanan_favorite, name = 'favorites'),
     path('favorites/delete/<int:id_user>/<int:id_makanan>/',delete_favorite, name = 'delete_favorites'),
     path('favorites/create/<int:id_user>/<int:id_makanan>/', create_favorite, name = 'create_favorites'),
-    path('favorites/cek_favorit/<int:id_user>/<int:id_makanan>/', cek_favorit, name = 'cek_favorit')
+    path('favorites/cek_favorit/<int:id_user>/<int:id_makanan>/', cek_favorit, name = 'cek_favorit'),
+    path('favorites/admin/<int:id_user>/', get_makanan_favorite_admin, name = 'favorites_admin'),
+
 ]
 
 if settings.DEBUG:
