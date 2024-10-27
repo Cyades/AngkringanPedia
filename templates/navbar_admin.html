@@ -2,7 +2,6 @@
 <nav class="bg-[#556B2F] shadow-lg fixed top-0 left-0 z-40 w-screen">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <!-- Logo Section -->
       <div class="flex items-center space-x-2">
         <a href="{% url 'main:show_main' %}" class="flex items-center">
           <img src="{% static 'image/logo2.png' %}" alt="Angkringan Pedia Logo" class="h-10 w-10">
@@ -10,21 +9,83 @@
         </a>
       </div>
 
-      <!-- User Profile Section -->
       <div class="flex items-center space-x-4">
-        <span class="text-[#F0FFF0]">Welcome {{ user.username }}!</span>  <!-- Menambahkan teks selamat datang -->
+        <span class="text-[#F0FFF0]">Welcome {{ user.username }}!</span>
         
         <a href="{% url 'main:logout' %}" class="bg-[#6B8E23] text-[#F0FFF0] px-3 py-1 rounded transition duration-200 transform hover:scale-105">Logout</a>
         
         {% if user.profile.profile_image %}
-            <a href="{% url 'main:edit_admin' user.pk %}">
-                <img src="{{ user.profile.profile_image.url }}" alt="User Photo" class="h-10 w-10 rounded-full profile-image">
-            </a>
+          <img src="{{ user.profile.profile_image.url }}" alt="User Photo" class="h-10 w-10 rounded-full profile-image" id="navbarProfileImage">
         {% else %}
-            <a href="{% url 'main:edit_admin' user.pk %}">
-                <img src="{% static 'image/user.png' %}" alt="Default User Photo" class="h-10 w-10 rounded-full profile-image">
-            </a>
+            <img src="{% static 'image/user.png' %}" alt="Default User Photo" class="h-10 w-10 rounded-full profile-image" id="navbarProfileImage">
         {% endif %}
+
+        <!-- Modal untuk Edit Admin -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <form id="editAdminForm" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="{{ form.username.id_for_label }}">Username: </label>
+                        {{ form.username }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.email.id_for_label }}">Email: </label>
+                        {{ form.email }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.phone_number.id_for_label }}">Phone Number: </label>
+                        {{ form.phone_number }}
+                    </div>
+                    <div class="form-group">
+                        <label for="{{ form.profile_image.id_for_label }}">Profile Image</label>
+                        {{ form.profile_image }}
+                    </div>
+                    <button type="submit" class="submit-button">Save Changes</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- JavaScript Modal & AJAX -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Menampilkan modal saat gambar profil di navbar diklik
+                $("#navbarProfileImage").click(function() {
+                    $("#editModal").show();
+                });
+
+                // Menutup modal saat tombol close diklik
+                $(".close-button").click(function() {
+                    $("#editModal").hide();
+                });
+
+                // Mengirim data form dengan AJAX saat disubmit
+                $("#editAdminForm").on("submit", function(e) {
+                    e.preventDefault();
+
+                    var formData = new FormData(this);
+                    $.ajax({
+                        url: "{% url 'main:edit_admin' user.pk %}",
+                        type: "POST",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            if (response.success) {
+                                $("#editModal").hide();
+                            } else {
+                                alert("Failed to update admin.");
+                            }
+                        },
+                        error: function() {
+                            alert("An error occurred. Please try again.");
+                        }
+                    });
+                });
+            });
+        </script>
       </div>
     </div>
   </div>

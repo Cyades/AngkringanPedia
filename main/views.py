@@ -34,7 +34,9 @@ def show_main(request):
 
 @login_required(login_url='/login')
 def show_admin(request):
+    form = CustomUserEditForm(instance=request.user)
     context = {
+        'form' : form,
         'name': 'AngkringanPedia',
         'users' : User.objects.all(),
         'last_login': request.COOKIES['last_login'],
@@ -107,13 +109,17 @@ def delete_user(request, id):
 
 def edit_admin(request, id):
     admin = get_object_or_404(User, pk=id)
-
-    # Tambahkan request.FILES untuk menangani gambar
     form = CustomUserEditForm(request.POST or None, request.FILES or None, instance=admin)
 
+    # Cek jika request adalah POST dan form valid
     if request.method == "POST" and form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('main:show_admin'))
+        
+        # Cek apakah request ini AJAX
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            return JsonResponse({'success': True})  # Kirim respon JSON jika permintaan adalah AJAX
+        else:
+            return HttpResponseRedirect(reverse('main:show_admin'))
 
     context = {'form': form}
     return render(request, "edit_admin.html", context)
