@@ -14,6 +14,7 @@ class Recipe(models.Model):
     image_url = models.URLField(max_length=500)
     ingredients = models.ManyToManyField(Ingredient, related_name="recipes")
     instructions = models.TextField()
+    
 
     def __str__(self):
         return self.recipe_name
