@@ -1,0 +1,24 @@
+{% load static %}
+<nav class="bg-[#556B2F] shadow-lg fixed top-0 left-0 z-40 w-screen">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo Section -->
+      <div class="flex items-center space-x-2">
+        <a href="{% url 'main:show_main' %}" class="flex items-center">
+          <img src="{% static 'image/logo2.png' %}" alt="Angkringan Pedia Logo" class="h-10 w-10">
+          <h1 class="text-2xl font-bold text-[#F0FFF0] ml-3">Angkringan Pedia</h1>
+        </a>
+      </div>
+
+      <!-- Button to go back to main page -->
+      <div>
+        <a href="{% url 'main:show_main' %}" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300">
+          Home
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<style>
+</style>

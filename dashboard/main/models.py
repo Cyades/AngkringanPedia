@@ -14,17 +14,9 @@ class Recipe(models.Model):
     image_url = models.URLField(max_length=500)
     ingredients = models.ManyToManyField(Ingredient, related_name="recipes")
     instructions = models.TextField()
-    
 
     def __str__(self):
         return self.recipe_name
-    
-    @property
-    def average_rating(self):
-        ratings = self.ratings.all()
-        if ratings.exists():
-            return round(sum(rating.score for rating in ratings) / ratings.count(), 2)
-        return None  # Jika belum ada rating
 
 class Instruction(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="recipe_instructions")  # Gunakan related_name yang berbeda
