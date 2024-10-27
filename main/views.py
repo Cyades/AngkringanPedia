@@ -19,6 +19,7 @@ from .forms import AddRecipeForm, CustomUserEditForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import messages
+from django.views.decorators.http import require_http_methods
 
 def show_main(request):
     # Jika pengguna tidak login, atur 'last_login' ke None atau pesan default
@@ -92,14 +93,17 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
+@login_required
+@require_http_methods(["DELETE"])
 def delete_user(request, id):
     user = get_object_or_404(User, pk=id)
-    
-    # Hapus pengguna
-    user.delete()
-    
-    # Kembali ke halaman admin setelah menghapus pengguna
-    return HttpResponseRedirect(reverse('main:show_admin'))
+
+    if request.user == user:
+        user.delete()
+        return JsonResponse({'message': 'Admin berhasil dihapus.', 'refresh': True}, status=200)
+    else:
+        user.delete()
+        return JsonResponse({'message': 'Pengguna berhasil dihapus.', 'refresh': False}, status=200)
 
 def edit_admin(request, id):
     admin = get_object_or_404(User, pk=id)
