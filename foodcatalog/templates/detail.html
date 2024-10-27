@@ -74,8 +74,6 @@
                                         <a href="{% url 'delete_rating_review' review.id %}?next={{ request.path }}" class="ml-2 text-red-500 hover:underline">Delete</a>
                                     </li>
                                 {% endfor %}
-                            {% else %}
-                                <li class="italic">No reviews available.</li>
                             {% endif %}
                         </ul>
                     </div>
@@ -176,8 +174,19 @@
                     document.querySelector('.review-form-container-' + recipeId).classList.add('hidden');
                     document.getElementById('write-review-btn-' + recipeId).style.display = 'block';
 
-                    // Update the average rating with two decimal places
-                    const averageRating = parseFloat(data.average_rating).toFixed(2);
+                    // Function to format the average rating to a maximum of two decimal places
+                    function formatAverageRating(rating) {
+                        const num = parseFloat(rating);
+
+                        // Round the number to two decimal places
+                        const rounded = Math.round(num * 100) / 100;
+
+                        // Convert to string and remove trailing zeros
+                        return parseFloat(rounded).toString();
+                    }
+
+                    // Update the average rating display
+                    const averageRating = formatAverageRating(data.average_rating);
                     document.querySelector('.average-rating-' + recipeId).textContent = averageRating;
                 } else {
                     alert("Error submitting review: " + data.error);
