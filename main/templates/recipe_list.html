@@ -1,12 +1,13 @@
 <div class="container mx-auto p-4">
-    <h1 class="text-2xl font-bold">Recipe List</h1>
+    <h1 class="text-2xl font-bold mb-8 text-[#F0FFF0]">Recipe List</h1>
 
     {% if recipes %}
-    <ul class="space-y-4">
+        <ul class="space-y-4">
         {% for recipe in recipes %}
-            <li class="border p-4 rounded shadow">
+            <li class="border p-4 rounded shadow bg-white">
                 <div class="flex items-center justify-between">
-                    <h2 class="text-xl font-bold">{{ recipe.recipe_name }}</h2>
+                    <div class="flex w-full justify-between">
+                        <h2 class="text-xl font-bold mb-2">{{ recipe.recipe_name }}</h2>
                     <button
                         id="star-{{ recipe.id }}"
                         class= "star-btn text-gray-400"
@@ -16,6 +17,12 @@
                     </button>
                 </div>
 
+                        {% if user.is_superuser %}
+                            <div class="space-x-2">
+                                <button onclick="deleteProduct('{{ recipe.pk }}');" class="bg-red-500 text-white px-3 hover:bg-red-600 rounded-[8px] p-1 hover:scale-110">Delete</a>
+                            </div>
+                        {% endif %}
+                    </div>
                 {% if recipe.image_url %}
                     <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" class="w-48 h-auto mb-2" />
                 {% else %}
@@ -144,3 +151,112 @@ function create_makanan_favorit(id_makanan, id_user, starButton) {
     color: #9ca3af;
 }
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+{% for recipe in recipes %}
+FavoritDefault({{ recipe.id }}, {{ request.user.id }});
+{% endfor %}
+});
+// Function to toggle favorite
+function toggleFavorite(id_makanan, id_user) {
+    const starButton = document.getElementById(`star-${id_makanan}`);
+    const isFavorite = starButton.classList.contains("text-yellow-400");
+
+    if (isFavorite) {
+        delete_makanan_favorit(id_makanan, id_user, starButton);
+    } else {
+        create_makanan_favorit(id_makanan, id_user, starButton);
+    }
+}
+
+function FavoritDefault(id_makanan, id_user) {
+    const starButton = document.getElementById(`star-${id_makanan}`);
+   fetch(`/favorites/cek_favorit/${id_user}/${id_makanan}/`,{
+   method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+        },
+})
+   .then(response => response.json())
+   .then(data =>{
+    if(data.status === "success")
+            starButton.classList.remove("text-gray-400");
+            starButton.classList.add("text-yellow-400");
+
+   }
+)
+}
+// AJAX function to remove recipe from favorites
+function delete_makanan_favorit(id_makanan, id_user, starButton) {
+    fetch(`/favorites/delete/${id_user}/${id_makanan}/`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            starButton.classList.remove("text-yellow-400");
+            starButton.classList.add("text-gray-400");
+            console.log("Favorite successfully deleted.");
+        } else {
+            console.error("Error removing from favorites:", data.message);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+}
+
+// AJAX function to add recipe back to favorites
+function create_makanan_favorit(id_makanan, id_user, starButton) {
+    fetch(`/favorites/create/${id_user}/${id_makanan}/`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            starButton.classList.remove("text-gray-400");
+            starButton.classList.add("text-yellow-400");
+            console.log("Favorite successfully added.");
+        } else {
+            console.error("Error adding to favorites:", data.message);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+}
+</script>
+
+<style>
+.star-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.star-btn.text-yellow-400 {
+    color: #fbbf24;
+}
+.star-btn.text-gray-400 {
+    color: #9ca3af;
+}
+</style>
+
+<script>
+    async function deleteProduct(id){
+        await fetch(`/delete/${id}`, {method: "DELETE"}).then(
+            (response) => {
+                if(response.status === 204) {
+                    window.location.href = "/";
+                }
+            }
+        ).catch(
+            (err) => alert("Error:" + err)
+        )
+    }
+</script>

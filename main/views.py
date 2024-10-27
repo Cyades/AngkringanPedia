@@ -3,7 +3,7 @@ from django.db.models import Q
 from .models import Recipe
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib import messages
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -19,6 +19,7 @@ from .forms import AddRecipeForm, CustomUserEditForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import messages
+from django.views.decorators.http import require_http_methods
 
 def show_main(request):
     # Jika pengguna tidak login, atur 'last_login' ke None atau pesan default
@@ -33,7 +34,9 @@ def show_main(request):
 
 @login_required(login_url='/login')
 def show_admin(request):
+    form = CustomUserEditForm(instance=request.user)
     context = {
+        'form' : form,
         'name': 'AngkringanPedia',
         'users' : User.objects.all(),
         'last_login': request.COOKIES['last_login'],
@@ -92,24 +95,31 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
+@login_required
+@require_http_methods(["DELETE"])
 def delete_user(request, id):
     user = get_object_or_404(User, pk=id)
-    
-    # Hapus pengguna
-    user.delete()
-    
-    # Kembali ke halaman admin setelah menghapus pengguna
-    return HttpResponseRedirect(reverse('main:show_admin'))
+
+    if request.user == user:
+        user.delete()
+        return JsonResponse({'message': 'Admin berhasil dihapus.', 'refresh': True}, status=200)
+    else:
+        user.delete()
+        return JsonResponse({'message': 'Pengguna berhasil dihapus.', 'refresh': False}, status=200)
 
 def edit_admin(request, id):
     admin = get_object_or_404(User, pk=id)
-
-    # Tambahkan request.FILES untuk menangani gambar
     form = CustomUserEditForm(request.POST or None, request.FILES or None, instance=admin)
 
+    # Cek jika request adalah POST dan form valid
     if request.method == "POST" and form.is_valid():
         form.save()
-        return HttpResponseRedirect(reverse('main:show_admin'))
+        
+        # Cek apakah request ini AJAX
+        if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+            return JsonResponse({'success': True})  # Kirim respon JSON jika permintaan adalah AJAX
+        else:
+            return HttpResponseRedirect(reverse('main:show_admin'))
 
     context = {'form': form}
     return render(request, "edit_admin.html", context)
@@ -123,7 +133,7 @@ def add_recipe(request):
             ingredients_list = form.cleaned_data['ingredients_list'].split(',')
             for ingredient_name in ingredients_list:
                 ingredient_name = ingredient_name.strip()
-                if ingredient_name: 
+                if ingredient_name:
                     ingredient, created = Ingredient.objects.get_or_create(name=ingredient_name)
                     recipe.ingredients.add(ingredient)
             instructions_list = request.POST.getlist('instructions_list') 
@@ -173,3 +183,9 @@ def search_recipes(request):
 def get_user_details(request, user_id):
     user = get_object_or_404(User, id=user_id)
     return render(request, 'user_details.html', {'user': user})
+
+@csrf_exempt    
+def delete_product(request, id):
+    if(not request.user.is_superuser): return
+    Recipe.objects.get(pk=id).delete()
+    return HttpResponse(b"Success", status=204)

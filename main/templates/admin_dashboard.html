@@ -22,11 +22,11 @@
                 <img src="{% static 'image/user.png' %}" alt="Default User Logo">
             {% endif %}
             <p><strong>{{ user.username }}</strong></p>
-            <button class="btn view-details">View Details</button>
-            <a href="{% url 'main:delete_user' user.pk %}">
-                <button class="btn delete-btn">Delete</button> <!-- Tombol Delete -->
-            </a>
-        </div>         
+            <div class="button-group">
+                <button class="btn view-details">View Details</button>
+                <button class="btn delete-btn" data-user-id="{{ user.id }}">Delete</button>
+            </div>
+        </div> 
         {% empty %}
             <p>Tidak ada pengguna yang terdaftar.</p>
         {% endfor %}
@@ -43,7 +43,7 @@
 
     <!-- Link untuk menambah pengguna baru -->
     <p><a href="{% url 'main:register' %}" class="add-user-link">Add New User</a></p>
-    <p>Welcome back, {{ user.username }}! Your last login was {{ last_login }}</p>
+    <p>Welcome back, {{ request.user.username }}! Your last login was {{ last_login }}</p>
 </main>
 
 <script>
@@ -59,15 +59,13 @@ document.addEventListener("DOMContentLoaded", function() {
     // Close the popup
     const closeBtn = document.getElementsByClassName("close")[0];
     closeBtn.onclick = function() {
-        const popup = document.getElementById("user-popup");
-        popup.style.display = "none";
+        document.getElementById("user-popup").style.display = "none";
     }
 
     // Close the popup when clicking outside of it
     window.onclick = function(event) {
-        const popup = document.getElementById("user-popup");
-        if (event.target === popup) {
-            popup.style.display = "none";
+        if (event.target === document.getElementById("user-popup")) {
+            document.getElementById("user-popup").style.display = "none";
         }
     }
 
@@ -81,6 +79,30 @@ document.addEventListener("DOMContentLoaded", function() {
                 .catch(error => console.error('Error fetching user details:', error));
         });
     });
+
+    // Delete user via AJAX
+    document.querySelectorAll('.delete-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            const userId = this.dataset.userId;
+            
+            fetch(`/adminkudelete/${userId}`, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.refresh) {
+                    window.location.reload();
+                } else {
+                    document.querySelector(`.user-card[data-user-id="${userId}"]`).remove();
+                }
+            })
+            .catch(error => console.error('Error deleting user:', error));
+        });
+    });
+
 });
 </script>
 {% endblock content %}
