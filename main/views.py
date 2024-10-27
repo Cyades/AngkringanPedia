@@ -3,7 +3,7 @@ from django.db.models import Q
 from .models import Recipe
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib import messages
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -174,7 +174,8 @@ def get_user_details(request, user_id):
     user = get_object_or_404(User, id=user_id)
     return render(request, 'user_details.html', {'user': user})
 
+@csrf_exempt    
 def delete_product(request, id):
     if(not request.user.is_superuser): return
     Recipe.objects.get(pk=id).delete()
-    return HttpResponseRedirect(reverse('main:show_main'))
+    return HttpResponse(b"Success", status=204)

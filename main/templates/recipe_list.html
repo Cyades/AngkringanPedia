@@ -7,9 +7,11 @@
                 <li class="border p-4 rounded shadow">
                     <div class="flex w-full justify-between">
                         <h2 class="text-xl font-bold mb-2">{{ recipe.recipe_name }}</h2>
-                        <div class="space-x-2">
-                            <a href="{% url 'main:delete_product' recipe.pk %}" class="bg-red-500 hover:bg-red-600 rounded-[8px] p-1 hover:scale-110">Delete</a>
-                        </div>
+                        {% if user.is_superuser %}
+                            <div class="space-x-2">
+                                <button onclick="deleteProduct('{{ recipe.pk }}');" class="bg-red-500 hover:bg-red-600 rounded-[8px] p-1 hover:scale-110">Delete</a>
+                            </div>
+                        {% endif %}
                     </div>
                     {% if recipe.image_url %}
                         <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" class="w-48 h-auto mb-2" />
@@ -43,3 +45,17 @@
         <p class="text-center mt-4 text-gray-500">No recipes available.</p>
     {% endif %}
 </div>
+
+<script>
+    async function deleteProduct(id){
+        await fetch(`/delete/${id}`, {method: "DELETE"}).then(
+            (response) => {
+                if(response.status === 204) {
+                    window.location.href = "/";
+                }
+            }
+        ).catch(
+            (err) => alert("Error:" + err)
+        )
+    }
+</script>
