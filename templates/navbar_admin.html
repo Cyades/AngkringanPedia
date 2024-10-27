@@ -75,6 +75,8 @@
                         success: function(response) {
                             if (response.success) {
                                 $("#editModal").hide();
+                                // Refresh halaman setelah modal ditutup
+                                location.reload();
                             } else {
                                 alert("Failed to update admin.");
                             }
