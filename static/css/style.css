@@ -369,6 +369,7 @@ input[type="submit"]:hover {
 .user-card {
   display: flex;
   align-items: center;
+  justify-content: space-between; 
   margin-bottom: 20px;
   border: 1px solid var(--secondary-bg-color);
   border-radius: 8px;
@@ -382,12 +383,16 @@ input[type="submit"]:hover {
   height: 75px; /* Increased size */
 }
 
-.user-card button {
-  margin-left: auto;
+/* Button container within user-card for alignment */
+.user-card .button-group {
+  display: flex;
+  gap: 10px; /* Spacing between buttons */
 }
 
+/* Optional button spacing adjustment */
 .user-card .btn {
-  margin-right: 10px; /* Menambahkan jarak antara tombol View Details dan Delete */
+  padding: 10px 15px; /* Consistent padding for buttons */
+  border-radius: 5px;
 }
 
 .add-user-link:hover {
