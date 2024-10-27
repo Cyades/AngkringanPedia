@@ -109,15 +109,390 @@ input:focus, textarea:focus {
 
 /* Style for the login container */
 .login {
-  background-color: rgba(143, 188, 143, 0.8); /* Semi-transparent Medium Sea Green */
-  padding: 20px; /* Add padding for spacing */
+  background-color: rgba(240, 255, 240, 0.9); /* Semi-transparent Medium Sea Green */
+  padding: 10px; /* Add padding for spacing */
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   max-width: 400px; /* Limit the width of the login form */
-  margin: 50px auto; /* Center the form */
+  margin: 20px auto; /* Center the form */
   text-align: center; /* Center the text */
 }
 
 h1 {
-  color: #556B2F; /* Dark Olive Green for the heading */
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  color: #8B4513; /* Dark Olive Green for the heading */
+  font-size: 45px !important;
+}
+
+/* Gaya Default Tombol Login */
+input[type="submit"] {
+  color: blue; /* Teks biru */
+  background-color: transparent; /* Background transparan */
+  border: none; /* Hapus border */
+  font-size: 16px; /* Sesuaikan ukuran font */
+  cursor: pointer; /* Tampilkan kursor pointer saat dihover */
+}
+
+/* Gaya Tombol Saat Ditekan */
+input[type="submit"]:active,
+input[type="submit"]:focus,
+input[type="submit"]:hover {
+  text-decoration: underline; /* Garis bawah saat ditekan */
+}
+
+/* Gaya Link Register Now dan Guest Mode */
+.login a {
+  color: blue; /* Teks biru */
+  text-decoration: none; /* Hapus garis bawah default */
+}
+
+/* Garis bawah pada link saat dihover, ditekan, atau difokuskan */
+.login a:hover,
+.login a:active,
+.login a:focus {
+  text-decoration: underline; /* Garis bawah saat dihover, ditekan, atau difokuskan */
+}
+
+.login table {
+  margin: 0 auto; /* Pusatkan tabel di dalam form */
+}
+
+.login table td {
+  text-align: center; /* Pusatkan teks di dalam setiap sel */
+  padding: 5px; /* Beri jarak antar sel */
+}
+
+.login table input[type="text"],
+.login table input[type="password"] {
+  width: 100%; /* Agar input mengikuti lebar kolom tabel */
+  max-width: 300px; /* Atur lebar maksimum agar tetap rapi */
+}
+
+/* Style for the register container (similar to .login) */
+.register {
+  background-color: rgba(240, 255, 240, 0.9); /* Sama dengan login */
+  padding: 20px; /* Spacing yang lebih besar */
+  border-radius: 12px; /* Sudut yang melengkung */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow lembut */
+  max-width: 530px; /* Batasan lebar */
+  margin: 20px auto; /* Pusatkan form */
+  text-align: center; /* Tengah text */
+}
+
+.register h1 {
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  color: #8B4513; /* Warna sama dengan login */
+  font-size: 55px !important;
+}
+
+/* Gaya Tombol Register agar konsisten dengan login */
+.register button {
+  background-color: var(--secondary-bg-color);
+  color: var(--footer-text-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: block; /* Ensure the button is a block element */
+  margin: 20px auto; /* Center the button */
+}
+
+.register button:hover {
+  background-color: #6B8E23; /* Warna saat di-hover */
+}
+
+/* Gaya untuk tombol Cancel */
+.register .cancel-button {
+  background-color: #B22222;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto; /* Jarak sedikit dari tombol Register */
+}
+
+.register .cancel-button:hover {
+  background-color: #8B0000; /* Warna saat di-hover */
+}
+
+/* Adjust the display of input fields and labels */
+.register label {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  display: block; /* Make labels block elements */
+  margin-top: 15px;
+  text-align: center; /* Center text in labels */
+}
+
+.register input[type="text"], 
+.register input[type="email"], 
+.register input[type="password"] {
+  background-color: rgba(240, 255, 240, 0.9); /* Sama dengan login */
+  border: 2px solid var(--secondary-bg-color);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: var(--primary-text-color);
+  width: 100%;
+  max-width: 300px; /* Set a maximum width for input fields */
+  margin: 0 auto; /* Center input fields */
+  display: block; /* Ensure they behave like block elements */
+}
+
+.register input:focus {
+  outline: none;
+  border-color: #6B8E23;
+}
+
+/* Error message styles */
+.register .error-message {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #b91c1c; /* Error color */
+}
+
+/* Success message styles */
+.register .success-message {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #4ade80; /* Success color */
+}
+
+/* Style for the admin dashboard */
+.admin-dashboard {
+  max-width: 800px; /* Max width for the dashboard */
+  margin: 20px auto; /* Center the dashboard */
+  background-color: rgba(240, 255, 240, 0.9); /* Same as login/register */
+  padding: 20px; /* Padding for content */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-align: center; /* Align text to the left */
+}
+
+.admin-dashboard h2 {
+  font-family: 'Caveat', cursive;
+  color: #8B4513; /* Dark Olive Green for the heading */
+  font-size: 36px; /* Font size for the heading */
+  margin-bottom: 20px; /* Space below heading */
+}
+
+.admin-dashboard table {
+  width: 100%; /* Full width table */
+  border-collapse: collapse; /* Collapse borders */
+  margin-top: 20px; /* Margin above table */
+}
+
+.admin-dashboard table th,
+.admin-dashboard table td {
+  padding: 10px; /* Padding for table cells */
+  border: 1px solid var(--secondary-bg-color); /* Border color */
+  text-align: left; /* Left align text */
+}
+
+.admin-dashboard table th {
+  background-color: var(--secondary-bg-color); /* Background color for header */
+  color: var(--footer-text-color); /* Text color for header */
+}
+
+.admin-dashboard table tr:nth-child(even) {
+  background-color: rgba(220, 240, 220, 0.3); /* Light green for even rows */
+}
+
+.admin-dashboard table tr:hover {
+  background-color: rgba(173, 216, 230, 0.6); /* Light blue when hovering over rows */
+}
+
+.admin-dashboard .btn {
+  background-color: var(--secondary-bg-color); /* Button background */
+  color: var(--footer-text-color); /* Button text color */
+  padding: 10px 15px; /* Padding for buttons */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 10px; /* Margin above button */
+  display: inline-block; /* Inline block for spacing */
+  transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.admin-dashboard .btn:hover {
+  background-color: #6B8E23; /* Darken color on hover */
+}
+
+/* Pop-up styles */
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Pop-up content */
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px; /* Maximum width */
+  border-radius: 8px;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid var(--secondary-bg-color);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.user-card img {
+  border-radius: 50%;
+  margin-right: 15px;
+  width: 75px; /* Increased size */
+  height: 75px; /* Increased size */
+}
+
+.user-card button {
+  margin-left: auto;
+}
+
+.user-card .btn {
+  margin-right: 10px; /* Menambahkan jarak antara tombol View Details dan Delete */
+}
+
+.add-user-link:hover {
+  background-color: #6B8E23; /* Warna saat di-hover */
+  border-radius: 12px;
+}
+
+/* Container styling */
+.edit-admin {
+  background-color: rgba(240, 255, 240, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 370px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Title styling */
+.edit-admin h1 {
+  font-family: 'Caveat', cursive;
+  font-weight: bold;
+  color: #8B4513;
+  font-size: 55px !important;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.submit-button {
+  background-color: #6B8E23;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+.submit-button:hover {
+  background-color: #556B2F;
+}
+
+/* Cancel button styling */
+.cancel-button {
+  background-color: #B22222;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  width: max-content;
+  margin: 15px auto 0;
+  transition: background-color 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #8B0000;
+}
+
+/* Label and input styling */
+.edit-admin label {
+  color: #333;
+  font-size: 16px;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.edit-admin input[type="text"],
+.edit-admin input[type="email"],
+.edit-admin input[type="file"] {
+  background-color: rgba(240, 255, 240, 0.9);
+  border: 2px solid #6B8E23;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.edit-admin input:focus {
+  outline: none;
+  border-color: #556B2F;
+}
+
+.profile-image {
+  transition: transform 0.3s ease; /* Transisi halus saat hover */
+}
+
+.profile-image:hover {
+  transform: scale(1.2); /* Membesarkan gambar saat hover */
+}
+
+.user-card {
+  transition: transform 0.3s ease; /* Transisi halus saat hover */
+}
+
+.user-card:hover {
+  transform: scale(1.05); /* Membesarkan card saat hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk efek kedalaman */
 }

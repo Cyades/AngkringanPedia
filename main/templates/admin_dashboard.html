@@ -1,59 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    {% load static %}  <!-- Load the static template tag -->
-</head>
-<body>
+{% extends 'base.html' %}
 
+{% block meta %}
+<title>Admin Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+{% endblock meta %}
+
+{% block content %}
+{% include 'navbar_admin.html'%}
+{% load static %}
+
+<main class="admin-dashboard">
     <h1>Admin Dashboard</h1>
     <h2>Daftar Pengguna</h2>
 
-    <!-- Daftar user -->
-    <ul style="list-style: none; padding: 0;">
+    <div class="user-list">
         {% for user in users %}
-        <li style="margin-bottom: 20px; display: flex; align-items: center;">
-            <!-- Gambar logo user dari profil jika tersedia -->
+        <div class="user-card" data-user-id="{{ user.id }}">
             {% if user.profile.profile_image %}
-                <img src="{{ user.profile.profile_image.url }}" alt="User Logo" style="border-radius: 50%; margin-right: 15px; width: 50px; height: 50px;">
+                <img src="{{ user.profile.profile_image.url }}" alt="User Logo">
             {% else %}
-                <img src="{% static 'image/user.png' %}" alt="Default User Logo" style="border-radius: 50%; margin-right: 15px; width: 50px; height: 50px;">
+                <img src="{% static 'image/user.png' %}" alt="Default User Logo">
             {% endif %}
-            
-            <div>
-                <!-- Informasi pengguna -->
-                <p>Username: {{ user.username }}</p>
-                <p>Email: {{ user.email }}</p>
-                <p>Nomor Telepon: {{ user.profile.phone_number }}</p>
-                <p>Gender: 
-                    {% if user.profile.gender == 'M' %}
-                        Male
-                    {% else %}
-                        Female 
-                    {% endif %}
-                </p>                
-                <p>Role: {{ user.is_staff|yesno:"Admin,User" }}</p>
-                <td>
-                    <a href="{% url 'main:delete_user' user.pk %}">
-                        <button>
-                            Delete
-                        </button>
-                    </a>
-                </td>
-            </div>
-        </li>
+            <p><strong>{{ user.username }}</strong></p>
+            <button class="btn view-details">View Details</button>
+            <a href="{% url 'main:delete_user' user.pk %}">
+                <button class="btn delete-btn">Delete</button> <!-- Tombol Delete -->
+            </a>
+        </div>         
         {% empty %}
-        <li>Tidak ada pengguna yang terdaftar.</li>
+            <p>Tidak ada pengguna yang terdaftar.</p>
         {% endfor %}
-    </ul>
+    </div>
 
-    <!-- Link logout atau kembali -->
-    <p><a href="{% url 'main:register' %}">Add New User</a></p>
-    <p><a href="{% url 'main:logout' %}">Logout</a></p>
-    <h5>Welcome back, {{ user.username }}! Your last login was {{ last_login }}</h5>
-    {% comment %} <p><a href="{% url 'main:show_main' %}">Kembali ke halaman utama</a></p> {% endcomment %}
+    <!-- Pop-up for user details -->
+    <div id="user-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>User Details</h2>
+            <div id="user-details"></div>
+        </div>
+    </div>
 
-</body>
-</html>
+    <!-- Link untuk menambah pengguna baru -->
+    <p><a href="{% url 'main:register' %}" class="add-user-link">Add New User</a></p>
+    <p>Welcome back, {{ user.username }}! Your last login was {{ last_login }}</p>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to open popup
+    function openPopup(userDetails) {
+        const popup = document.getElementById("user-popup");
+        const userDetailsContainer = document.getElementById("user-details");
+        userDetailsContainer.innerHTML = userDetails;
+        popup.style.display = "block";
+    }
+
+    // Close the popup
+    const closeBtn = document.getElementsByClassName("close")[0];
+    closeBtn.onclick = function() {
+        const popup = document.getElementById("user-popup");
+        popup.style.display = "none";
+    }
+
+    // Close the popup when clicking outside of it
+    window.onclick = function(event) {
+        const popup = document.getElementById("user-popup");
+        if (event.target === popup) {
+            popup.style.display = "none";
+        }
+    }
+
+    // Fetch user details via AJAX
+    document.querySelectorAll('.view-details').forEach(button => {
+        button.addEventListener('click', function() {
+            const userId = this.closest('.user-card').dataset.userId;
+            fetch(`/get_user_details/${userId}/`)
+                .then(response => response.text())
+                .then(data => openPopup(data))
+                .catch(error => console.error('Error fetching user details:', error));
+        });
+    });
+});
+</script>
+{% endblock content %}

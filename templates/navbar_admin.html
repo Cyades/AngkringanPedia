@@ -1,0 +1,31 @@
+{% load static %}
+<nav class="bg-[#556B2F] shadow-lg fixed top-0 left-0 z-40 w-screen">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo Section -->
+      <div class="flex items-center space-x-2">
+        <a href="{% url 'main:show_main' %}" class="flex items-center">
+          <img src="{% static 'image/logo2.png' %}" alt="Angkringan Pedia Logo" class="h-10 w-10">
+          <h1 class="text-2xl font-bold text-[#F0FFF0] ml-3">Angkringan Pedia</h1>
+        </a>
+      </div>
+
+      <!-- User Profile Section -->
+      <div class="flex items-center space-x-4">
+        <span class="text-[#F0FFF0]">Welcome {{ user.username }}!</span>  <!-- Menambahkan teks selamat datang -->
+        
+        <a href="{% url 'main:logout' %}" class="bg-[#6B8E23] text-[#F0FFF0] px-3 py-1 rounded transition duration-200 transform hover:scale-105">Logout</a>
+        
+        {% if user.profile.profile_image %}
+            <a href="{% url 'main:edit_admin' user.pk %}">
+                <img src="{{ user.profile.profile_image.url }}" alt="User Photo" class="h-10 w-10 rounded-full profile-image">
+            </a>
+        {% else %}
+            <a href="{% url 'main:edit_admin' user.pk %}">
+                <img src="{% static 'image/user.png' %}" alt="Default User Photo" class="h-10 w-10 rounded-full profile-image">
+            </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</nav>
