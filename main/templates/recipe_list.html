@@ -4,12 +4,12 @@
     {% if recipes %}
         <ul class="space-y-4">
             {% for recipe in recipes %}
-                <li class="border p-4 rounded shadow">
+                <li class="border p-4 rounded shadow bg-white">
                     <div class="flex w-full justify-between">
                         <h2 class="text-xl font-bold mb-2">{{ recipe.recipe_name }}</h2>
                         {% if user.is_superuser %}
                             <div class="space-x-2">
-                                <button onclick="deleteProduct('{{ recipe.pk }}');" class="bg-red-500 hover:bg-red-600 rounded-[8px] p-1 hover:scale-110">Delete</a>
+                                <button onclick="deleteProduct('{{ recipe.pk }}');" class="bg-red-500 text-white px-3 hover:bg-red-600 rounded-[8px] p-1 hover:scale-110">Delete</a>
                             </div>
                         {% endif %}
                     </div>
