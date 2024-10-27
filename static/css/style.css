@@ -485,6 +485,87 @@ input[type="submit"]:hover {
   border-color: #556B2F;
 }
 
+/* Modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form styling inside modal */
+.edit-admin label {
+  color: #333;
+  font-size: 16px;
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.edit-admin input[type="text"],
+.edit-admin input[type="email"],
+.edit-admin input[type="file"] {
+  background-color: rgba(240, 255, 240, 0.9);
+  border: 2px solid #6B8E23;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.edit-admin input:focus {
+  outline: none;
+  border-color: #556B2F;
+}
+
+.submit-button {
+  background-color: #6B8E23;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #556B2F;
+}
+
 .profile-image {
   transition: transform 0.3s ease; /* Transisi halus saat hover */
 }
