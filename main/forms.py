@@ -21,7 +21,6 @@ class CustomUserCreationForm(UserCreationForm):
     def save(self, commit=True):
         user = super().save(commit=False)
         user.email = self.cleaned_data['email']
-        print("Gender:", self.cleaned_data['gender'])  # Tambahkan ini untuk debugging
         if commit:
             user.save()
             profile = Profile.objects.create(
