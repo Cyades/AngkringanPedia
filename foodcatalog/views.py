@@ -9,11 +9,6 @@ from django.db.models import Avg
 
 from django.urls import reverse
 
-def show_recipe(request):
-    recipes = Recipe.objects.all()  # Replace with filter logic if searching
-    context = {'recipes': recipes}
-    return render(request, 'show_recipe.html', context)
-
 @csrf_exempt
 def create_rating_review(request):
     if request.method == 'POST':
