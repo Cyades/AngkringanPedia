@@ -2,26 +2,31 @@
 
 {% block content %}
 {% include 'navbar.html' %}
-<div class="container mx-auto p-6">
-    <h2 class="text-2xl font-bold mb-4">Edit Review for {{ review.recipe.recipe_name }}</h2>
+<div class="container mx-auto p-6 max-w-2xl bg-gray-50 rounded-lg shadow-md">
+    <h2 class="text-3xl font-semibold mb-6 text-center text-[#556B2F]">Edit Review for {{ review.recipe.recipe_name }}</h2>
 
-    <form method="POST" class="bg-white p-6 rounded-lg shadow-md">
+    <form method="POST" class="bg-white p-8 rounded-lg shadow-md">
         {% csrf_token %}
-        
-        <div class="mb-4">
-            <label class="block text-lg font-medium">Score:</label>
+
+        <!-- Score Field -->
+        <div class="mb-6">
+            <label class="block text-lg p font-medium text-gray-700 mb-2">Score:</label>
             <div class="flex space-x-4">
-                {{ form.score }}  <!-- Render score radio buttons -->
+                {{ form.score }}
             </div>
         </div>
 
-        <div class="mb-4">
-            <label for="{{ form.content.id_for_label }}" class="block text-lg font-medium">Feedback</label>
-            {{ form.content }}  <!-- Render content field -->
+        <!-- Content Field -->
+        <div class="mb-6">
+            <label for="{{ form.content.id_for_label }}" class="block text-lg font-medium text-gray-700 mb-2">Feedback</label>
+            {{ form.content }}
         </div>
 
+        <!-- Submit Button -->
         <div>
-            <button type="submit" class="w-full bg-[#556B2F] text-white py-2 rounded-lg hover:bg-[#6B8E23] transition">Update Review</button>
+            <button type="submit" class="w-full bg-[#556B2F] text-white font-bold py-3 rounded-lg shadow hover:bg-[#6B8E23] transition duration-300">
+                Update Review
+            </button>
         </div>
     </form>
 </div>

@@ -15,8 +15,10 @@ class RatingReviewForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['score'].widget.attrs.update({
-            'class': 'mt-1 border rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-[#6B8E23] w-full'
+            'class': 'mt-1 border rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-[#6B8E23] w-full',
+            'style': 'font-size: 1.10rem; padding: 0.5rem;'
         })
         self.fields['content'].widget.attrs.update({
-            'class': 'mt-1 border rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-[#6B8E23] w-full' 
+            'class': 'mt-1 border rounded-lg shadow-sm focus:outline-none focus:ring focus:ring-[#6B8E23] w-full',
+            'style': 'font-size: 1.10rem; padding: 0.5rem;'
         })
