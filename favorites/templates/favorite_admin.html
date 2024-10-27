@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load custom_filters %}
 {% block content %}
 {% include 'navbar_admin.html' %}
 <div class="container mx-auto p-4">
@@ -11,6 +11,7 @@
             <li class="border p-4 rounded shadow bg-white">
                 <div class="flex w-full justify-between">
                     <h2 class="text-xl font-bold mb-2">{{ favorite.recipe.recipe_name }}</h2>
+                    <a href="{% url 'search_recipe_by_name' favorite.recipe.recipe_name|urlencode%}" class="block"></a>
                     <button
                         id="star-{{ favorite.recipe.id }}"
                         class="star-btn text-yellow-400"
