@@ -15,21 +15,27 @@
 
     <div class="user-list">
         {% for user in users %}
-        <div class="user-card" data-user-id="{{ user.id }}">
-            {% if user.profile.profile_image %}
-                <img src="{{ user.profile.profile_image.url }}" alt="User Logo">
-            {% else %}
-                <img src="{% static 'image/user.png' %}" alt="Default User Logo">
+            {% if user != request.user %} <!-- Periksa apakah user bukan user yang sedang login -->
+                <div class="user-card" data-user-id="{{ user.id }}">
+                    {% if user.profile.profile_image %}
+                        <img src="{{ user.profile.profile_image.url }}" alt="User Logo">
+                    {% else %}
+                        <img src="{% static 'image/user.png' %}" alt="Default User Logo">
+                    {% endif %}
+                    <p><strong>{{ user.username }}</strong></p>
+                    <div class="button-group">
+                        <a href="{% url 'authentication:edit_user' user.pk %}">
+                            <button class="btn edit-btn">Edit</button>
+                        </a>
+                        <button class="btn view-details">View Details</button>
+                        <button class="btn delete-btn" data-user-id="{{ user.id }}">Delete</button>
+                    </div>
+                </div>
             {% endif %}
-            <p><strong>{{ user.username }}</strong></p>
-            <div class="button-group">
-                <button class="btn view-details">View Details</button>
-                <button class="btn delete-btn" data-user-id="{{ user.id }}">Delete</button>
-            </div>
-        </div> 
         {% empty %}
             <p>Tidak ada pengguna yang terdaftar.</p>
-        {% endfor %}
+{% endfor %}
+
     </div>
 
     <!-- Pop-up for user details -->
@@ -42,7 +48,7 @@
     </div>
 
     <!-- Link untuk menambah pengguna baru -->
-    <p><a href="{% url 'main:register' %}" class="add-user-link">Add New User</a></p>
+    <p><a href="{% url 'authentication:register' %}" class="add-user-link">Add New User</a></p>
     <p>Welcome back, {{ request.user.username }}! Your last login was {{ last_login }}</p>
 </main>
 
@@ -73,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.view-details').forEach(button => {
         button.addEventListener('click', function() {
             const userId = this.closest('.user-card').dataset.userId;
-            fetch(`/get_user_details/${userId}/`)
+            fetch(`/authentication/get_user_details/${userId}/`)
                 .then(response => response.text())
                 .then(data => openPopup(data))
                 .catch(error => console.error('Error fetching user details:', error));
@@ -85,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener('click', function() {
             const userId = this.dataset.userId;
             
-            fetch(`/adminkudelete/${userId}`, {
+            fetch(`/authentication/adminkudelete/${userId}`, {
                 method: 'DELETE',
                 headers: {
                     'X-CSRFToken': '{{ csrf_token }}'

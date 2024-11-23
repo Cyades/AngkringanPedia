@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'authentication',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +54,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'AngkringanPedia.urls'
+LOGIN_URL = '/authentication/login/'
 
 TEMPLATES = [
     {
