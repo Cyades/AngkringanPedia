@@ -1,15 +1,12 @@
 from django.urls import path
-from main.views import *
-from django.conf import settings
-from django.conf.urls.static import static
+from AngkringanPedia import settings
+from homepage.views import *
+from main.views import show_main
 
 app_name = 'main'
 
 urlpatterns = [
     path('', show_main, name='show_main'),
-    path('search/', search_recipes, name='search_recipes'),
-    path('add-recipe/', add_recipe, name='add_recipe'),
-    path('delete/<int:id>', delete_product, name='delete_product'),
 ]
 
 if settings.DEBUG:
