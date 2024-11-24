@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('recipes/', include(('main.urls', 'main'), namespace='main')), 
-    path('authentication/', include('authentication.urls'))
+    path('authentication/', include('authentication.urls')),
+    path('catalog/', include('foodcatalog.urls')),
 ]
 
 if settings.DEBUG:

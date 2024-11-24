@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'main',
     'authentication',
     'django_extensions',
+    'foodcatalog',
 ]
 
 MIDDLEWARE = [
