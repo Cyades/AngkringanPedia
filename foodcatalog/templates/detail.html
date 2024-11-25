@@ -71,7 +71,7 @@
                                     <br>
                                     <small class="text-gray-400">Reviewed on {{ review.created_at }}</small>
                                     <br>
-                                    {% if user == review.user %}
+                                    {% if user == review.user or user.is_staff or user.is_superuser%}
                                         <a href="{% url 'edit_rating_review' review.id %}?next={{ request.path }}" class="text-[#556B2F] hover:underline">Edit</a>
                                         <a href="{% url 'delete_rating_review' review.id %}?next={{ request.path }}" class="ml-2 text-red-500 hover:underline">Delete</a>
                                     {% endif %}
@@ -81,7 +81,7 @@
                     </ul>
                 </div>
                 
-                {% if user.is_authenticated %}
+                {% if user.is_authenticated and not user.is_staff and not user.is_superuser %}
                     {% if not has_reviewed %}
                     <!-- Hidden Review Form -->
                     <div class="mt-6 text-left">
