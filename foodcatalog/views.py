@@ -1,3 +1,4 @@
+import json
 from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
 from .models import Recipe, RatingReview
 from .forms import RatingReviewForm
@@ -167,3 +168,45 @@ def show_recipe_xml(request, recipe_id):
         </ratings>
     </recipe>"""
     return HttpResponse(xml_data, content_type="application/xml")
+
+@csrf_exempt
+def create_rating_review_flutter(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        review = RatingReview.objects.create(
+            user=request.user,
+            recipe_id=data["recipe_id"],
+            score=int(data["score"]),
+            content=data.get("content", "")
+        )
+        review.save()
+        return JsonResponse({"status": "success", "review_id": review.id}, status=200)
+    return JsonResponse({"status": "error"}, status=401)
+
+@csrf_exempt
+def edit_rating_review_flutter(request, review_id):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        review = get_object_or_404(RatingReview, pk=review_id)
+
+        if review.user != request.user and not request.user.is_superuser and not request.user.is_staff:
+            return JsonResponse({"status": "error", "message": "Unauthorized"}, status=403)
+
+        review.score = int(data.get("score", review.score))
+        review.content = data.get("content", review.content)
+        review.save()
+
+        return JsonResponse({"status": "success"}, status=200)
+    return JsonResponse({"status": "error"}, status=401)
+
+@csrf_exempt
+def delete_rating_review_flutter(request, review_id):
+    if request.method == 'POST':
+        review = get_object_or_404(RatingReview, pk=review_id)
+
+        if review.user != request.user and not request.user.is_superuser and not request.user.is_staff:
+            return JsonResponse({"status": "error", "message": "Unauthorized"}, status=403)
+
+        review.delete()
+        return JsonResponse({"status": "success"}, status=200)
+    return JsonResponse({"status": "error"}, status=401)
