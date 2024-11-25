@@ -62,7 +62,7 @@ def edit_rating_review(request, review_id):
     review = get_object_or_404(RatingReview, pk=review_id)
 
     # Check if the user is the owner of the review or an admin
-    if review.user != request.user and not request.user.is_superuser:
+    if review.user != request.user and not request.user.is_superuser and not request.user.is_staff:
         return JsonResponse({'success': False, 'error': 'You are not authorized to edit this review.'})
 
     # Set review as an instance of the form
@@ -86,7 +86,7 @@ def delete_rating_review(request, review_id):
     review = get_object_or_404(RatingReview, pk=review_id)
 
     # Check if the user is the owner of the review or an admin
-    if review.user != request.user and not request.user.is_superuser:
+    if review.user != request.user and not request.user.is_superuser and not request.user.is_staff:
         return JsonResponse({'success': False, 'error': 'You are not authorized to delete this review.'})
 
     next_url = request.GET.get('next', reverse('main:show_main'))
