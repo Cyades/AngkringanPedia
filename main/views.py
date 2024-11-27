@@ -89,6 +89,6 @@ def search_recipes(request):
 
 @csrf_exempt    
 def delete_product(request, id):
-    if(not request.user.is_superuser): return
+    if(not request.user.is_superuser and not request.user.is_staff): return
     Recipe.objects.get(pk=id).delete()
     return HttpResponse(b"Success", status=204)

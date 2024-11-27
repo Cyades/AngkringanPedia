@@ -4,7 +4,7 @@
 {% block content %}
 {% include 'navbar.html' %}
 <div class="content">
-    {% if user.is_superuser %}
+    {% if user.is_superuser or user.is_staff %}
         <button type="submit" id="search-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg search-button" style="height: 40px; margin-right: 10px;"
             onclick="window.location.href='{% url 'main:add_recipe' %}'">
             Add Recipe
@@ -30,7 +30,7 @@
                         </div>
                     </a>
                     <div class="flex w-full justify-between mt-2">
-                        {% if user.is_superuser %}
+                        {% if user.is_superuser or user.is_staff %}
                             <div class="space-x-2">
                                 <button onclick="deleteProduct('{{ recipe.pk }}');" class="bg-red-500 text-white px-3 hover:bg-red-600 rounded-[8px] p-1 hover:scale-110">Delete</button>
                             </div>
