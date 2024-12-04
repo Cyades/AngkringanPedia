@@ -5,3 +5,5 @@ psycopg2-binary
 requests
 urllib3
 Pillow
+django-extensions
+django-cors-headers

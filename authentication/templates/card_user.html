@@ -21,7 +21,7 @@
             {% endif %}
         </p>                
         <p><strong>Role:</strong> {{ user.is_staff|yesno:"Admin,User" }}</p>
-        <a href="{% url 'main:delete_user' user.pk %}">
+        <a href="{% url 'authentication:delete_user' user.pk %}">
             <button class="btn">Delete</button>
         </a>
     </div>

@@ -1,34 +1,162 @@
-{% extends 'base.html' %}
-
+{% extends 'main.html' %}
 {% load custom_filters %}
 
 {% block content %}
 {% include 'navbar.html' %}
-{% include 'add_recipe.html' %}
-<div class="container mx-auto p-4">
-    {% if query %}
-    <h1 class="text-2xl font-bold">Search Results for "{{ query }}"</h1>
+<div class="content">
+    {% if user.is_superuser or user.is_staff %}
+        <button type="submit" id="search-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg search-button" style="height: 40px; margin-right: 10px;"
+            onclick="window.location.href='{% url 'main:add_recipe' %}'">
+            Add Recipe
+        </button>
+    {% else %}
+        <p>You do not have permission to add recipes.</p>
     {% endif %}
+</div>
+<div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Recipe Catalog</h1>
 
     {% if recipes %}
         <ul class="space-y-4">
             {% for recipe in recipes %}
-                <li class="border p-4 rounded shadow">
-                    <a href="{% url 'search_recipe_by_name' recipe.recipe_name|safe_recipe_name %}" class="block">
+                <li class="border p-4 rounded shadow bg-white">
+                    <a href="{% url 'show_recipe_by_id' recipe.id %}" class="block">
                         <div class="flex flex-col">
                             <h2 class="text-xl font-bold text-gray-800">{{ recipe.recipe_name }}</h2>
                             {% if recipe.image_url %}
                                 <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" class="w-48 h-auto mb-2" />
                             {% else %}
-                                <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" style="width:200px; height:auto;">
                             {% endif %}
                         </div>
                     </a>
+                    <div class="flex w-full justify-between mt-2">
+                        {% if user.is_superuser or user.is_staff %}
+                            <div class="space-x-2">
+                                <button onclick="deleteProduct('{{ recipe.pk }}');" class="bg-red-500 text-white px-3 hover:bg-red-600 rounded-[8px] p-1 hover:scale-110">Delete</button>
+                            </div>
+                        {% endif %}
+                        <button
+                            id="star-{{ recipe.id }}"
+                            class="star-btn text-gray-400"
+                            onclick="toggleFavorite({{ recipe.id }}, {% if user.is_authenticated %}{{ user.id }}{% else %}null{% endif %})"
+                        >
+                            ★
+                        </button>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
     {% else %}
-        <p class="text-center mt-4 py-10 text-gray-500">No recipes found for your search.</p>
+        <p class="text-center mt-4 text-gray-500">No recipes available.</p>
     {% endif %}
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    {% for recipe in recipes %}
+        FavoritDefault({{ recipe.id }}, {{ request.user.id }});
+    {% endfor %}
+});
+
+// Function to toggle favorite
+function toggleFavorite(id_makanan, id_user) {
+    const starButton = document.getElementById(`star-${id_makanan}`);
+    const isFavorite = starButton.classList.contains("text-yellow-400");
+    
+    if (!id_user) {
+        alert("You must be logged in to favorite a recipe.");
+        return;
+    } else {
+        if (isFavorite) {
+            delete_makanan_favorit(id_makanan, id_user, starButton);
+        } else {
+            create_makanan_favorit(id_makanan, id_user, starButton);
+        }
+    }
+}
+
+function FavoritDefault(id_makanan, id_user) {
+    const starButton = document.getElementById(`star-${id_makanan}`);
+    fetch(`/favorites/cek_favorit/${id_user}/${id_makanan}/`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            starButton.classList.remove("text-gray-400");
+            starButton.classList.add("text-yellow-400");
+        }
+    });
+}
+
+// AJAX function to remove recipe from favorites
+function delete_makanan_favorit(id_makanan, id_user, starButton) {
+    fetch(`/favorites/delete/${id_user}/${id_makanan}/`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            starButton.classList.remove("text-yellow-400");
+            starButton.classList.add("text-gray-400");
+            console.log("Favorite successfully deleted.");
+        } else {
+            console.error("Error removing from favorites:", data.message);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+}
+
+// AJAX function to add recipe back to favorites
+function create_makanan_favorit(id_makanan, id_user, starButton) {
+    fetch(`/favorites/create/${id_user}/${id_makanan}/`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            starButton.classList.remove("text-gray-400");
+            starButton.classList.add("text-yellow-400");
+            console.log("Favorite successfully added.");
+        } else {
+            console.error("Error adding to favorites:", data.message);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+}
+
+async function deleteProduct(id) {
+    await fetch(`/delete/${id}`, {method: "DELETE"}).then(response => {
+        if (response.status === 204) {
+            window.location.href = "/";
+        }
+    }).catch(err => alert("Error:" + err));
+}
+</script>
+
+<style>
+.star-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.star-btn.text-yellow-400 {
+    color: #fbbf24;
+}
+.star-btn.text-gray-400 {
+    color: #9ca3af;
+}
+</style>
 {% endblock %}

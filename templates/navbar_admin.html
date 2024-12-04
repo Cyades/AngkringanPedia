@@ -12,7 +12,7 @@
       <div class="flex items-center space-x-4">
         <span class="text-[#F0FFF0]">Welcome {{ user.username }}!</span>
         
-        <a href="{% url 'main:logout' %}" class="bg-[#6B8E23] text-[#F0FFF0] px-3 py-1 rounded transition duration-200 transform hover:scale-105">Logout</a>
+        <a href="{% url 'authentication:logout' %}" class="bg-[#6B8E23] text-[#F0FFF0] px-3 py-1 rounded transition duration-200 transform hover:scale-105">Logout</a>
         
         {% if user.profile.profile_image %}
           <img src="{{ user.profile.profile_image.url }}" alt="User Photo" class="h-10 w-10 rounded-full profile-image" id="navbarProfileImage">
@@ -67,7 +67,7 @@
 
                     var formData = new FormData(this);
                     $.ajax({
-                        url: "{% url 'main:edit_admin' user.pk %}",
+                        url: "{% url 'authentication:edit_admin' user.pk %}",
                         type: "POST",
                         data: formData,
                         processData: false,

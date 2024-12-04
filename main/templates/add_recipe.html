@@ -4,7 +4,7 @@
 <div id="form_container">
     <h1 class="form-title">Add New Recipe</h1>
 
-    {% if user.is_superuser %}
+    {% if user.is_superuser or user.is_staff %}
     <form id="add_recipe_form" method="POST" action="{% url 'main:add_recipe' %}">
         {% csrf_token %}
         

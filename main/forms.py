@@ -1,67 +1,6 @@
+from .models import Recipe, Ingredient
 from django import forms
-from django.contrib.auth.models import User
-from .models import Profile, Recipe, Ingredient
-from django.contrib.auth.forms import UserCreationForm
 
-
-# Form untuk membuat akun baru, termasuk informasi di model User dan Profile
-class CustomUserCreationForm(forms.ModelForm):
-    email = forms.EmailField(required=True)
-    phone_number = forms.CharField(max_length=15, required=True)
-    GENDER_CHOICES = [
-        ('M', 'Male'),
-        ('F', 'Female')
-    ]
-    gender = forms.ChoiceField(choices=GENDER_CHOICES, required=True)
-    profile_image = forms.ImageField(required=False)
-
-    class Meta:
-        model = User
-        fields = ['username', 'email', 'password']
-
-    def save(self, commit=True):
-        user = super().save(commit=False)
-        user.email = self.cleaned_data['email']
-        user.set_password(self.cleaned_data['password'])  # Untuk menyimpan password
-        if commit:
-            user.save()
-            profile = Profile.objects.create(
-                user=user,
-                phone_number=self.cleaned_data['phone_number'],
-                gender=self.cleaned_data['gender'],
-                profile_image=self.cleaned_data['profile_image']
-            )
-            profile.save()
-        return user
-
-
-# Form untuk mengedit informasi User (username dan email)
-class UserEditForm(forms.ModelForm):
-    email = forms.EmailField(required=True)
-
-    class Meta:
-        model = User
-        fields = ['username', 'email']
-
-
-# Form untuk mengedit informasi Profile (nomor telepon dan gambar profil)
-class ProfileEditForm(forms.ModelForm):
-    phone_number = forms.CharField(max_length=15, required=False)
-    profile_image = forms.ImageField(required=False, widget=forms.FileInput)  # Menghapus ClearableFileInput
-
-    class Meta:
-        model = Profile
-        fields = ['phone_number', 'profile_image']
-
-    def clean_profile_image(self):
-        profile_image = self.cleaned_data.get('profile_image', None)
-        clear = self.data.get('profile_image-clear', False)
-        if clear:
-            profile_image = None
-        return profile_image
-
-
-# Form untuk menambah resep dengan list bahan dan instruksi
 class AddRecipeForm(forms.ModelForm):
     ingredients_list = forms.CharField(
         widget=forms.Textarea(attrs={'placeholder': 'Enter ingredients separated by commas (e.g. flour, sugar, eggs)', 'rows': 4}),

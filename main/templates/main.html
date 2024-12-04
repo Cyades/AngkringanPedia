@@ -6,7 +6,7 @@
     <!-- Recipe List -->
     <div class="content">
         {% include 'recipe_list.html' %}
-        {% if user.is_superuser %}
+        {% if user.is_superuser or user.is_staff %}
         <button type="submit" id="search-button" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 shadow-lg search-button" style="height: 40px; margin-right: 10px;"
             onclick="window.location.href='{% url 'main:add_recipe' %}'">
             Add Recipe
@@ -17,7 +17,7 @@
     </div>
 
     <!-- Logout Button -->
-    <a href="{% url 'main:logout' %}">
+    <a href="{% url 'authentication:logout' %}">
         <button>Logout</button>
     </a>
 
