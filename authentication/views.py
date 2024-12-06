@@ -11,6 +11,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+from django.core import serializers
+from authentication.models import Profile
 from .forms import CustomUserCreationForm
 import datetime
 from django.http import HttpResponseRedirect
@@ -21,7 +24,9 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import messages
 from django.views.decorators.http import require_http_methods
-
+from django.contrib.auth import authenticate, login as auth_login
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 def register(request):
@@ -68,6 +73,34 @@ def login_user(request):
 
     context = {'form': form}
     return render(request, 'login.html', context)
+
+@csrf_exempt
+def login_flutter(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        if user.is_active:
+            auth_login(request, user)
+            # Status login sukses.
+            return JsonResponse({
+                "username": user.username,
+                "status": True,
+                "message": "Login sukses!",
+                 "is_admin": user.is_staff or user.is_superuser,
+                # Tambahkan data lainnya jika ingin mengirim data ke Flutter.
+            }, status=200)
+        else:
+            return JsonResponse({
+                "status": False,
+                "message": "Login gagal, akun dinonaktifkan."
+            }, status=401)
+
+    else:
+        return JsonResponse({
+            "status": False,
+            "message": "Login gagal, periksa kembali email atau kata sandi."
+        }, status=401)
 
 def logout_user(request):
     logout(request)
@@ -138,3 +171,11 @@ def show_admin(request):
         'last_login': request.COOKIES['last_login'],
     }
     return render(request, "admin_dashboard.html", context)
+
+def show_xml(request):
+    data = Profile.objects.all()
+    return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
+
+def show_json(request):
+    data = Profile.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
