@@ -3,6 +3,34 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from .models import Profile
 
+# class CustomUserCreationForm(UserCreationForm):
+#     email = forms.EmailField(required=True)
+#     phone_number = forms.CharField(max_length=15, required=True)
+#     GENDER_CHOICES = [
+#         ('M', 'Male'),
+#         ('F', 'Female'),
+#     ]
+#     gender = forms.ChoiceField(choices=GENDER_CHOICES, required=True)
+#     profile_image = forms.ImageField(required=False)
+
+#     class Meta:
+#         model = User
+#         fields = ['username', 'email', 'password1', 'password2']
+
+#     def save(self, commit=True):
+#         user = super().save(commit=False)
+#         user.email = self.cleaned_data['email']
+#         if commit:
+#             user.save()
+#             profile = Profile.objects.create(
+#                 user=user,
+#                 phone_number=self.cleaned_data['phone_number'],
+#                 gender=self.cleaned_data['gender'],
+#                 profile_image=self.cleaned_data['profile_image']
+#             )
+#             profile.save()
+#         return user
+
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(required=True)
     phone_number = forms.CharField(max_length=15, required=True)
@@ -11,22 +39,23 @@ class CustomUserCreationForm(UserCreationForm):
         ('F', 'Female'),
     ]
     gender = forms.ChoiceField(choices=GENDER_CHOICES, required=True)
-    profile_image = forms.ImageField(required=False)
+    profile_image = forms.ImageField(required=False)  # Tidak wajib
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password1', 'password2']
+        fields = ['username', 'email', 'password1', 'password2', 'phone_number', 'gender', 'profile_image']  # Tambahkan semua field
 
     def save(self, commit=True):
         user = super().save(commit=False)
-        user.email = self.cleaned_data['email']
+        user.email = self.cleaned_data['email']  # Simpan email ke model User
         if commit:
             user.save()
+            # Pastikan field tambahan diproses ke Profile
             profile = Profile.objects.create(
                 user=user,
-                phone_number=self.cleaned_data['phone_number'],
-                gender=self.cleaned_data['gender'],
-                profile_image=self.cleaned_data['profile_image']
+                phone_number=self.cleaned_data.get('phone_number'),
+                gender=self.cleaned_data.get('gender'),
+                profile_image=self.cleaned_data.get('profile_image', None)  # Handle gambar kosong
             )
             profile.save()
         return user
