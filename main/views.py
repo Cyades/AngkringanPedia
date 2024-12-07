@@ -92,3 +92,61 @@ def delete_product(request, id):
     if(not request.user.is_superuser and not request.user.is_staff): return
     Recipe.objects.get(pk=id).delete()
     return HttpResponse(b"Success", status=204)
+
+
+# views.py in Django main app
+from django.http import JsonResponse
+from .models import Recipe, Ingredient, Instruction
+from django.views.decorators.csrf import csrf_exempt
+import json
+
+def get_recipes(request):
+    recipes = Recipe.objects.all()
+    data = []
+    for recipe in recipes:
+        recipe_data = {
+            'id': recipe.id,
+            'recipe_name': recipe.recipe_name,
+            'cooking_time': recipe.cooking_time,
+            'servings': recipe.servings,
+            'image_url': recipe.image_url,
+            'ingredients': [{'name': ingredient.name} for ingredient in recipe.ingredients.all()],
+            'instructions': recipe.instructions
+        }
+        data.append(recipe_data)
+    return JsonResponse({'recipes': data})
+
+@csrf_exempt
+def search_recipes_api(request):
+    query = request.GET.get('query', '').strip()
+    filter_type = request.GET.get('filter', 'none')
+    
+    if not query:
+        recipes = Recipe.objects.all()
+    elif filter_type == 'name':
+        recipes = Recipe.objects.filter(recipe_name__icontains=query).distinct()
+    elif filter_type == 'ingredient':
+        recipes = Recipe.objects.filter(ingredients__name__icontains=query).distinct()
+    else:
+        recipes = Recipe.objects.filter(
+            Q(recipe_name__icontains=query) |
+            Q(ingredients__name__icontains=query) |
+            Q(servings__icontains=query) |
+            Q(cooking_time__icontains=query) |
+            Q(recipe_instructions__description__icontains=query)
+        ).distinct()
+    
+    data = []
+    for recipe in recipes:
+        recipe_data = {
+            'id': recipe.id,
+            'recipe_name': recipe.recipe_name,
+            'cooking_time': recipe.cooking_time,
+            'servings': recipe.servings,
+            'image_url': recipe.image_url,
+            'ingredients': [{'name': ingredient.name} for ingredient in recipe.ingredients.all()],
+            'instructions': recipe.instructions
+        }
+        data.append(recipe_data)
+    return JsonResponse({'recipes': data})
+
