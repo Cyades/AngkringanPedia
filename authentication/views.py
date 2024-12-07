@@ -1,9 +1,11 @@
+import json
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -101,6 +103,51 @@ def login_flutter(request):
             "status": False,
             "message": "Login gagal, periksa kembali email atau kata sandi."
         }, status=401)
+        
+@csrf_exempt
+def register_flutter(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        username = data.get('username')
+        password1 = data.get('password1')
+        password2 = data.get('password2')
+        email = data.get('email')
+        phone_number = data.get('phone_number')
+        gender = data.get('gender')
+        profile_image = data.get('profile_image')  # Handle file upload
+
+        # Validasi password
+        if password1 != password2:
+            return JsonResponse({"status": False, "message": "Passwords do not match."}, status=400)
+
+        # Cek apakah username sudah ada
+        if User.objects.filter(username=username).exists():
+            return JsonResponse({"status": False, "message": "Username already exists."}, status=400)
+
+        # Simpan user menggunakan form
+        form_data = {
+            'username': username,
+            'email': email,
+            'password1': password1,
+            'password2': password2,
+        }
+
+        form = CustomUserCreationForm(form_data)
+        if form.is_valid():
+            user = form.save()
+            # Simpan profile tambahan (phone, gender, image)
+            profile = user.profile
+            profile.phone_number = phone_number
+            profile.gender = gender
+            if profile_image:
+                # Convert profile image if needed
+                profile.profile_image = profile_image  # Convert to InMemoryUploadedFile if necessary
+            profile.save()
+            return JsonResponse({"status": "success", "message": "User created successfully!"}, status=200)
+
+        return JsonResponse({"status": False, "message": "Form validation failed.", "errors": form.errors}, status=400)
+
+    return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
 
 def logout_user(request):
     logout(request)
@@ -108,6 +155,23 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
+@csrf_exempt
+def logout_flutter(request):
+    username = request.user.username
+
+    try:
+        auth_logout(request)
+        return JsonResponse({
+            "username": username,
+            "status": True,
+            "message": "Logout berhasil!"
+        }, status=200)
+    except:
+        return JsonResponse({
+        "status": False,
+        "message": "Logout gagal."
+        }, status=401)
+        
 @login_required(login_url='/authentication/login/')
 @require_http_methods(["DELETE"])
 def delete_user(request, id):
@@ -177,5 +241,22 @@ def show_xml(request):
     return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
 
 def show_json(request):
-    data = Profile.objects.all()
-    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+    data = Profile.objects.select_related('user').all()  # Optimized query to include related user data
+    profiles = []
+
+    for profile in data:
+        profiles.append({
+            "model": "authentication.profile",
+            "pk": profile.pk,
+            "fields": {
+                "user": profile.user.id,
+                "username": profile.user.username,
+                "email": profile.user.email,
+                "phone_number": profile.phone_number,
+                "gender": profile.gender,
+                "is_admin": "Admin" if profile.user.is_staff else "User",
+                "profile_image": profile.profile_image.url if profile.profile_image else None,
+            }
+        })
+
+    return JsonResponse(profiles, safe=False)
