@@ -65,6 +65,43 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SAMESITE = 'None'
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:52061",  # Port Flutter web
+    "http://localhost:3000",
+    "http://127.0.0.1:52061",
+    "http://127.0.0.1:3000",
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
+# Nonaktifkan CSRF untuk API endpoints
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:52061",
+    "http://localhost:3000",
+    "http://127.0.0.1:52061",
+    "http://127.0.0.1:3000",
+]
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

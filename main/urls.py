@@ -12,6 +12,8 @@ urlpatterns = [
     path('delete/<int:id>', delete_product, name='delete_product'),
     path('api/recipes/', get_recipes, name='get_recipes'),
     path('api/search/', search_recipes_api, name='search_recipes_api'),
+    path('api/add-recipe/', add_recipe_api, name='add_recipe_api'),
+    path('api/csrf/', get_csrf_token, name='get_csrf_token'),
 ]
 
 if settings.DEBUG:

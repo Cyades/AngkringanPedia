@@ -150,3 +150,133 @@ def search_recipes_api(request):
         data.append(recipe_data)
     return JsonResponse({'recipes': data})
 
+def add_recipe_api(request):
+    try:
+        data = json.loads(request.body)
+        
+        # Create recipe
+        recipe = Recipe.objects.create(
+            recipe_name=data['recipe_name'],
+            cooking_time=data['cooking_time'],
+            servings=data['servings'],
+            image_url=data['image_url'],
+            instructions=''  # Will be updated with combined instructions
+        )
+        
+        # Add ingredients
+        ingredients_list = data['ingredients_list'].split(',')
+        for ingredient_name in ingredients_list:
+            ingredient_name = ingredient_name.strip()
+            if ingredient_name:
+                ingredient, _ = Ingredient.objects.get_or_create(name=ingredient_name)
+                recipe.ingredients.add(ingredient)
+
+        # Add instructions
+        instructions_list = data['instructions_list']
+        instruction_text = []
+        for step_number, description in enumerate(instructions_list, start=1):
+            if description.strip():
+                Instruction.objects.create(
+                    recipe=recipe,
+                    step_number=step_number,
+                    description=description.strip()
+                )
+                instruction_text.append(f"{step_number}. {description.strip()}")
+
+        # Update recipe with combined instructions
+        recipe.instructions = "\n".join(instruction_text)
+        recipe.save()
+        
+        return JsonResponse({
+            'success': True,
+            'message': 'Recipe added successfully',
+            'recipe_id': recipe.id
+        })
+    except json.JSONDecodeError:
+        return JsonResponse({
+            'success': False,
+            'message': 'Invalid JSON data'
+        }, status=400)
+    except KeyError as e:
+        return JsonResponse({
+            'success': False,
+            'message': f'Missing required field: {str(e)}'
+        }, status=400)
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'message': str(e)
+        }, status=500)
+    
+
+
+    from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_http_methods
+from django.middleware.csrf import get_token
+import json
+from .models import Recipe, Ingredient, Instruction
+
+# Add this new view to get CSRF token
+def get_csrf_token(request):
+    return JsonResponse({'csrfToken': get_token(request)})
+
+@csrf_exempt  # For development only
+@require_http_methods(["POST"])
+def add_recipe_api(request):
+    try:
+        data = json.loads(request.body)
+        
+        # Create recipe
+        recipe = Recipe.objects.create(
+            recipe_name=data['recipe_name'],
+            cooking_time=data['cooking_time'],
+            servings=data['servings'],
+            image_url=data['image_url'],
+            instructions=''
+        )
+        
+        # Add ingredients
+        ingredients_list = data['ingredients_list'].split(',')
+        for ingredient_name in ingredients_list:
+            ingredient_name = ingredient_name.strip()
+            if ingredient_name:
+                ingredient, _ = Ingredient.objects.get_or_create(name=ingredient_name)
+                recipe.ingredients.add(ingredient)
+
+        # Add instructions
+        instructions_list = data['instructions_list']
+        instruction_text = []
+        for step_number, description in enumerate(instructions_list, start=1):
+            if description.strip():
+                Instruction.objects.create(
+                    recipe=recipe,
+                    step_number=step_number,
+                    description=description.strip()
+                )
+                instruction_text.append(f"{step_number}. {description.strip()}")
+
+        # Update recipe with combined instructions
+        recipe.instructions = "\n".join(instruction_text)
+        recipe.save()
+        
+        return JsonResponse({
+            'success': True,
+            'message': 'Recipe added successfully',
+            'recipe_id': recipe.id
+        })
+    except json.JSONDecodeError:
+        return JsonResponse({
+            'success': False,
+            'message': 'Invalid JSON data'
+        }, status=400)
+    except KeyError as e:
+        return JsonResponse({
+            'success': False,
+            'message': f'Missing required field: {str(e)}'
+        }, status=400)
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'message': str(e)
+        }, status=500)
