@@ -12,6 +12,7 @@ urlpatterns = [
     path('logout/', logout_user, name='logout'),
     path('adminku/', show_admin, name='show_admin'),
     path('adminkudelete/<int:id>', delete_user, name='delete_user'),
+    path('adminkudeleteflutter/<int:id>', delete_flutter, name='delete_flutter'),
     path('get_user_details/<int:user_id>/', get_user_details, name='get_user_details'),
     path('edit-admin/<int:id>', edit_admin, name='edit_admin'),
     path('edit-user/<int:id>/', edit_user, name='edit_user'),

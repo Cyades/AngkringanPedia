@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-67%kmr&p78m4+b!6#p95hzfuf_lkw)jt5$xguhfp6g_9%342h!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id", "localhost:60304", "localhost:61708"]
 
 
 # Application definition
@@ -60,10 +60,15 @@ ROOT_URLCONF = 'AngkringanPedia.urls'
 LOGIN_URL = '/authentication/login/'
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
-CSRF_COOKIE_SECURE = True
-SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
 CSRF_COOKIE_SAMESITE = 'None'
 SESSION_COOKIE_SAMESITE = 'None'
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:61708',  # Origin dari aplikasi Flutter
+    'http://127.0.0.1:8000',   # Jika menggunakan port default untuk Django
+]
 
 TEMPLATES = [
     {
