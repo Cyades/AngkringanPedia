@@ -1,8 +1,8 @@
 # artikel/views.py
 
-from django.shortcuts import render, get_object_or_404
-from .models import Artikel  # Asumsi ada model Artikel
-from .forms import ArtikelForm  # Asumsi ada form untuk artikel
+from django.shortcuts import render, get_object_or_404, redirect
+from .models import Artikel  # Pastikan model Artikel sesuai
+from .forms import ArtikelForm  # Pastikan form ArtikelForm sudah dibuat
 
 # Menampilkan daftar artikel
 def show_article_list(request):
@@ -20,7 +20,7 @@ def create_article(request):
         form = ArtikelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('main:show_article_list')  # Redirect ke daftar artikel
+            return redirect('artikel:show_article_list')  # Redirect ke daftar artikel
     else:
         form = ArtikelForm()
     return render(request, 'artikel/create_article.html', {'form': form})

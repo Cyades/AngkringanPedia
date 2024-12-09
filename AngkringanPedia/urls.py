@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+    path('artikel/', include('artikel.urls')),  # Menambahkan rute artikel
     path('recipes/', include(('main.urls', 'main'), namespace='main')), 
 ]
