@@ -1,25 +1,33 @@
-<!-- artikel/templates/artikel/article_list.html -->
-{% extends 'base.html' %}
+<!-- artikel/templates/article_list.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artikel - Angkringan Pedia</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-[#F0FFF0] text-[#2F4F4F]">
 
-{% block title %}Daftar Artikel - Angkringan Pedia{% endblock %}
+  <!-- Include Navbar Artikel -->
+  {% include 'artikel/navbar_artikel.html' %}
 
-{% block content %}
-  <div class="container mx-auto py-8">
-    <h1 class="text-3xl font-bold mb-4">Daftar Artikel</h1>
-
-    {% if artikel_list %}
-      <ul class="space-y-4">
-        {% for artikel in artikel_list %}
-          <li class="border-b border-gray-300 pb-4">
-            <h2 class="text-2xl font-semibold">
-              <a href="{% url 'artikel:show_article_detail' artikel.id %}" class="text-blue-600 hover:underline">{{ artikel.judul }}</a>
-            </h2>
-            <p class="text-gray-600">{{ artikel.isi|slice:":100" }}...</p>
-          </li>
-        {% endfor %}
-      </ul>
-    {% else %}
-      <p class="text-gray-600">Tidak ada artikel yang tersedia.</p>
-    {% endif %}
+  <!-- Konten Artikel -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+    <h2 class="text-3xl font-bold mb-6">Daftar Artikel</h2>
+    <ul>
+      {% for artikel in artikel_list %}
+        <li class="mb-4">
+          <a href="{% url 'artikel:show_article_detail' artikel.id %}" class="text-xl font-semibold text-[#2F4F4F] hover:text-[#556B2F]">
+            {{ artikel.judul }}
+          </a>
+        </li>
+      {% empty %}
+        <li>Tidak ada artikel untuk ditampilkan.</li>
+      {% endfor %}
+    </ul>
   </div>
-{% endblock %}
+
+</body>
+</html>
