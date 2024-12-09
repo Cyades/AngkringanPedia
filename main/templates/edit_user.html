@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Edit User: {{ user_to_edit.username }}</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+{% endblock meta %}
+
+{% block content %}
+<div class="profile-container">
+    <h1>Edit User: {{ user_to_edit.username }}</h1>
+    
+    <div class="profile-card">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ user_form.username.id_for_label }}">Username</label>
+                {{ user_form.username }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ user_form.email.id_for_label }}">Email</label>
+                {{ user_form.email }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ profile_form.phone_number.id_for_label }}">Nomor Telepon</label>
+                {{ profile_form.phone_number }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ profile_form.profile_image.id_for_label }}">Foto Profil</label>
+                {{ profile_form.profile_image }}
+                
+                {% if user_to_edit.profile.profile_image %}
+                    <div>
+                        <img src="{{ user_to_edit.profile.profile_image.url }}" alt="Profile Image" class="profile-image-preview">
+                        <label>
+                            <input type="checkbox" name="hapus_foto"> Hapus Foto
+                        </label>
+                    </div>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="btn save-btn">Simpan Perubahan</button>
+            <a href="{% url 'main:show_admin' %}" class="btn cancel-btn">Batal</a>
+        </form>
+    </div>
+</div>
+
+<style>
+    .profile-container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        text-align: center;
+    }
+
+    .profile-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="email"], input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .profile-image-preview {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-top: 10px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 15px;
+        background-color: #6B8E23;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #556B2F;
+    }
+
+    .cancel-btn {
+        background-color: #ccc;
+        color: #333;
+        margin-left: 10px;
+    }
+</style>
+{% endblock content %}
