@@ -10,6 +10,10 @@ urlpatterns = [
     path('search/', search_recipes, name='search_recipes'),
     path('add-recipe/', add_recipe, name='add_recipe'),
     path('delete/<int:id>', delete_product, name='delete_product'),
+    path('api/recipes/', get_recipes, name='get_recipes'),
+    path('api/search/', search_recipes_api, name='search_recipes_api'),
+    path('api/add-recipe/', add_recipe_api, name='add_recipe_api'),
+    path('api/csrf/', get_csrf_token, name='get_csrf_token'),
 ]
 
 if settings.DEBUG:
