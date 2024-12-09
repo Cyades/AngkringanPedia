@@ -1,9 +1,11 @@
+import json
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
@@ -11,6 +13,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+from django.core import serializers
+from authentication.models import Profile
 from .forms import CustomUserCreationForm
 import datetime
 from django.http import HttpResponseRedirect
@@ -21,7 +26,9 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import messages
 from django.views.decorators.http import require_http_methods
-
+from django.contrib.auth import authenticate, login as auth_login
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 def register(request):
@@ -69,12 +76,171 @@ def login_user(request):
     context = {'form': form}
     return render(request, 'login.html', context)
 
+@csrf_exempt
+def login_flutter(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(username=username, password=password)
+    if user is not None:
+        if user.is_active:
+            auth_login(request, user)
+            # Status login sukses.
+            return JsonResponse({
+                "username": user.username,
+                "status": True,
+                "message": "Login sukses!",
+                 "is_admin": user.is_staff or user.is_superuser,
+                # Tambahkan data lainnya jika ingin mengirim data ke Flutter.
+            }, status=200)
+        else:
+            return JsonResponse({
+                "status": False,
+                "message": "Login gagal, akun dinonaktifkan."
+            }, status=401)
+
+    else:
+        return JsonResponse({
+            "status": False,
+            "message": "Login gagal, periksa kembali email atau kata sandi."
+        }, status=401)
+        
+# @csrf_exempt
+# def register_flutter(request):
+#     if request.method == 'POST':
+#         data = json.loads(request.body)
+        
+#         print(f"Received data: {data}")  # Debug log untuk melihat input
+        
+#         username = data.get('username')
+#         password1 = data.get('password1')
+#         password2 = data.get('password2')
+#         email = data.get('email')
+#         phone_number = data.get('phone_number')
+#         gender = data.get('gender')
+#         profile_image = data.get('profile_image')  # Handle file upload
+
+#         # Validasi password
+#         if password1 != password2:
+#             return JsonResponse({"status": False, "message": "Passwords do not match."}, status=400)
+
+#         # Cek apakah username sudah ada
+#         if User.objects.filter(username=username).exists():
+#             return JsonResponse({"status": False, "message": "Username already exists."}, status=400)
+
+#         # Simpan user menggunakan form
+#         form_data = {
+#             'username': username,
+#             'email': email,
+#             'password1': password1,
+#             'password2': password2,
+#         }
+
+#         form = CustomUserCreationForm(form_data)
+#         if form.is_valid():
+#             user = form.save()
+#             # Simpan profile tambahan (phone, gender, image)
+#             profile = user.profile
+#             profile.phone_number = phone_number
+#             profile.gender = gender
+#             if profile_image:
+#                 # Convert profile image if needed
+#                 profile.profile_image = profile_image  # Convert to InMemoryUploadedFile if necessary
+#             profile.save()
+#             return JsonResponse({"status": "success", "message": "User created successfully!"}, status=200)
+
+#         return JsonResponse({"status": False, "message": "Form validation failed.", "errors": form.errors}, status=400)
+
+#     return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
+
+@csrf_exempt
+def register_flutter(request):
+    if request.method == 'POST':
+        try:
+            data = json.loads(request.body)
+            print(f"Received data: {data}")  # Debug log untuk melihat input
+
+            # Ambil data dari request
+            username = data.get('username')
+            password1 = data.get('password1')
+            password2 = data.get('password2')
+            email = data.get('email')
+            phone_number = data.get('phone_number')
+            gender = data.get('gender')
+            profile_image = data.get('profile_image')  # Handle file upload
+            is_admin = data.get('is_admin', False)
+
+            # Validasi password
+            if password1 != password2:
+                return JsonResponse({"status": False, "message": "Passwords do not match."}, status=400)
+
+            # Cek apakah username sudah ada
+            if User.objects.filter(username=username).exists():
+                return JsonResponse({"status": False, "message": "Username already exists."}, status=400)
+
+            # Konversi profile_image jika berbentuk base64
+            if profile_image:
+                from django.core.files.base import ContentFile
+                import base64
+                format, imgstr = profile_image.split(';base64,')
+                ext = format.split('/')[-1]
+                profile_image = ContentFile(base64.b64decode(imgstr), name=f"{username}.{ext}")
+
+            # Simpan user menggunakan form
+            form_data = {
+                'username': username,
+                'email': email,
+                'password1': password1,
+                'password2': password2,
+                'phone_number': phone_number,
+                'gender': gender,
+                'profile_image': profile_image,
+            }
+
+            form = CustomUserCreationForm(form_data)
+            if form.is_valid():
+                user = form.save()
+
+                # Atur status admin jika diperlukan
+                if is_admin:
+                    user.is_staff = True
+                    user.save()
+
+                return JsonResponse({"status": "success", "message": "User created successfully!"}, status=200)
+            else:
+                print("Form Errors:", form.errors)  # Debug untuk mengetahui error detail
+
+            return JsonResponse({"status": False, "message": "Form validation failed.", "errors": form.errors}, status=400)
+
+        except Exception as e:
+            print(f"Error: {str(e)}")  # Log error
+            return JsonResponse({"status": False, "message": "An error occurred.", "error": str(e)}, status=500)
+
+    return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
+
+
 def logout_user(request):
     logout(request)
     response = HttpResponseRedirect(reverse('authentication:login'))
     response.delete_cookie('last_login')
     return response
 
+@csrf_exempt
+def logout_flutter(request):
+    username = request.user.username
+
+    try:
+        auth_logout(request)
+        return JsonResponse({
+            "username": username,
+            "status": True,
+            "message": "Logout berhasil!"
+        }, status=200)
+    except:
+        return JsonResponse({
+        "status": False,
+        "message": "Logout gagal."
+        }, status=401)
+        
 @login_required(login_url='/authentication/login/')
 @require_http_methods(["DELETE"])
 def delete_user(request, id):
@@ -138,3 +304,28 @@ def show_admin(request):
         'last_login': request.COOKIES['last_login'],
     }
     return render(request, "admin_dashboard.html", context)
+
+def show_xml(request):
+    data = Profile.objects.all()
+    return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
+
+def show_json(request):
+    data = Profile.objects.select_related('user').all()  # Optimized query to include related user data
+    profiles = []
+
+    for profile in data:
+        profiles.append({
+            "model": "authentication.profile",
+            "pk": profile.pk,
+            "fields": {
+                "user": profile.user.id,
+                "username": profile.user.username,
+                "email": profile.user.email,
+                "phone_number": profile.phone_number,
+                "gender": profile.gender,
+                "is_admin": "Admin" if profile.user.is_staff else "User",
+                "profile_image": profile.profile_image.url if profile.profile_image else "/media/profile_images/user.png",
+            }
+        })
+
+    return JsonResponse(profiles, safe=False)
