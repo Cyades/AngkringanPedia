@@ -3,17 +3,15 @@ from django.shortcuts import render, HttpResponseRedirect, get_object_or_404
 from .models import Recipe, RatingReview
 from .forms import RatingReviewForm
 from django.views.decorators.csrf import csrf_exempt
-
 from django.http import HttpResponse, JsonResponse
 from django.db.models import Avg
-
 from django.urls import reverse
-
 from foodcatalog.models import RatingReview
 from django.contrib.auth.decorators import login_required
-
 from django.http import JsonResponse
 from .models import RatingReview, Recipe
+from xml.etree.ElementTree import Element, SubElement, tostring
+from django.utils.encoding import smart_str
 
 @csrf_exempt
 def create_rating_review(request):
@@ -123,13 +121,26 @@ def show_recipe_by_id(request, recipe_id):
 def show_recipe_json(request, recipe_id):
     # Dapatkan resep berdasarkan ID
     recipe = get_object_or_404(Recipe, id=recipe_id)
-    
-    # Serialize recipe dan ratings terkait
+
+    # Cek apakah pengguna telah memberikan ulasan
+    has_reviewed = (
+        RatingReview.objects.filter(recipe=recipe, user=request.user).exists()
+        if request.user.is_authenticated
+        else False
+    )
+
+    # Serialize recipe, ratings, ingredients, and instructions
     data = {
         "id": recipe.id,
         "name": recipe.recipe_name,
+        "image_url": recipe.image_url,
         "cooking_time": recipe.cooking_time,
         "servings": recipe.servings,
+        "ingredients": [{"id": ing.id, "name": ing.name} for ing in recipe.ingredients.all()],
+        "instructions": [
+            {"id": ins.id, "step_number": ins.step_number, "description": ins.description}
+            for ins in recipe.recipe_instructions.all().order_by("step_number")
+        ],
         "ratings": [
             {
                 "id": rating.id,
@@ -139,7 +150,9 @@ def show_recipe_json(request, recipe_id):
                 "created_at": rating.created_at.strftime('%Y-%m-%d %H:%M:%S'),
             }
             for rating in recipe.ratings.all()
-        ]
+        ],
+        "average_rating": RatingReview.objects.filter(recipe_id=recipe_id).aggregate(Avg('score'))['score__avg'],
+        "has_reviewed": has_reviewed,
     }
     return JsonResponse(data, safe=False)
 
@@ -147,26 +160,50 @@ def show_recipe_xml(request, recipe_id):
     # Dapatkan resep berdasarkan ID
     recipe = get_object_or_404(Recipe, id=recipe_id)
 
-    # Serialize recipe dan ratings terkait ke XML
-    xml_data = f"""<?xml version="1.0" encoding="UTF-8"?>
-    <recipe>
-        <id>{recipe.id}</id>
-        <name>{recipe.recipe_name}</name>
-        <cooking_time>{recipe.cooking_time}</cooking_time>
-        <servings>{recipe.servings}</servings>
-        <ratings>"""
+    # Cek apakah pengguna telah memberikan ulasan
+    has_reviewed = (
+        RatingReview.objects.filter(recipe=recipe, user=request.user).exists()
+        if request.user.is_authenticated
+        else False
+    )
+
+    # Membuat root XML
+    root = Element("recipe")
+    SubElement(root, "id").text = str(recipe.id)
+    SubElement(root, "name").text = recipe.recipe_name
+    SubElement(root, "image_url").text = recipe.image_url or "N/A"
+    SubElement(root, "cooking_time").text = str(recipe.cooking_time)
+    SubElement(root, "servings").text = str(recipe.servings)
+    SubElement(root, "average_rating").text = str(RatingReview.objects.filter(recipe_id=recipe_id).aggregate(Avg('score'))['score__avg'])
+    SubElement(root, "has_reviewed").text = str(has_reviewed)
+
+    # Menambahkan ingredients
+    ingredients = SubElement(root, "ingredients")
+    for ing in recipe.ingredients.all():
+        ingredient = SubElement(ingredients, "ingredient")
+        SubElement(ingredient, "id").text = str(ing.id)
+        SubElement(ingredient, "name").text = ing.name
+
+    # Menambahkan instructions
+    instructions = SubElement(root, "instructions")
+    for ins in recipe.recipe_instructions.all().order_by("step_number"):
+        instruction = SubElement(instructions, "instruction")
+        SubElement(instruction, "id").text = str(ins.id)
+        SubElement(instruction, "step_number").text = str(ins.step_number)
+        SubElement(instruction, "description").text = ins.description
+
+    # Menambahkan ratings
+    ratings = SubElement(root, "ratings")
     for rating in recipe.ratings.all():
-        xml_data += f"""
-            <rating>
-                <id>{rating.id}</id>
-                <user>{rating.user.username}<user>
-                <score>{rating.score}</score>
-                <content>{rating.content}</content>
-                <created_at>{rating.created_at}</created_at>
-            </rating>"""
-    xml_data += """
-        </ratings>
-    </recipe>"""
+        rating_elem = SubElement(ratings, "rating")
+        SubElement(rating_elem, "id").text = str(rating.id)
+        SubElement(rating_elem, "username").text = rating.user.username
+        SubElement(rating_elem, "score").text = str(rating.score)
+        SubElement(rating_elem, "content").text = smart_str(rating.content)
+        SubElement(rating_elem, "created_at").text = rating.created_at.strftime('%Y-%m-%d %H:%M:%S')
+
+    # Serialisasi XML ke string
+    xml_data = tostring(root, encoding="utf-8", method="xml")
     return HttpResponse(xml_data, content_type="application/xml")
 
 @csrf_exempt
