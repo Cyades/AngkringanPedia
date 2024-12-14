@@ -253,6 +253,19 @@ def delete_user(request, id):
     else:
         user.delete()
         return JsonResponse({'message': 'Pengguna berhasil dihapus.', 'refresh': False}, status=200)
+    
+@csrf_exempt
+@require_http_methods(["DELETE"])
+def delete_flutter(request, id):
+    user = get_object_or_404(User, pk=id)
+
+    if request.user == user:
+        logout(request)
+        user.delete()
+        return JsonResponse({'message': 'Admin berhasil dihapus.', 'refresh': True}, status=200)
+    else:
+        user.delete()
+        return JsonResponse({'message': 'Pengguna berhasil dihapus.', 'refresh': True}, status=200)
 
 def edit_admin(request, id):
     admin = get_object_or_404(User, pk=id)
