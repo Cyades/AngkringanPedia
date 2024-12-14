@@ -12,6 +12,7 @@ from django.http import JsonResponse
 from .models import RatingReview, Recipe
 from xml.etree.ElementTree import Element, SubElement, tostring
 from django.utils.encoding import smart_str
+from django.contrib.auth.models import User
 
 @csrf_exempt
 def create_rating_review(request):
@@ -55,7 +56,7 @@ def create_rating_review(request):
 
     return JsonResponse({'success': False, 'error': 'Invalid request.'})
 
-@login_required(login_url='/login')
+@login_required(login_url='authentication/login')
 def edit_rating_review(request, review_id):
     # Get the review entry based on ID
     review = get_object_or_404(RatingReview, pk=review_id)
@@ -79,7 +80,7 @@ def edit_rating_review(request, review_id):
     return render(request, "edit_rating_review.html", context)
 
 
-@login_required(login_url='/login')
+@login_required(login_url='authentication/login')
 def delete_rating_review(request, review_id):
     # Get the review based on ID
     review = get_object_or_404(RatingReview, pk=review_id)
@@ -210,8 +211,9 @@ def show_recipe_xml(request, recipe_id):
 def create_rating_review_flutter(request):
     if request.method == 'POST':
         data = json.loads(request.body)
+        user = User.objects.get(id=data['user_id'])
         review = RatingReview.objects.create(
-            user=request.user,
+            user=user,
             recipe_id=data["recipe_id"],
             score=int(data["score"]),
             content=data.get("content", "")
