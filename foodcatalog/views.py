@@ -223,29 +223,45 @@ def create_rating_review_flutter(request):
     return JsonResponse({"status": "error"}, status=401)
 
 @csrf_exempt
-def edit_rating_review_flutter(request, review_id):
+def edit_rating_review_flutter(request):
     if request.method == 'POST':
         data = json.loads(request.body)
-        review = get_object_or_404(RatingReview, pk=review_id)
+        try:
+            # Cari user berdasarkan user_id
+            user = User.objects.get(id=data['user_id'])
+            
+            # Cari review berdasarkan user dan recipe_id
+            review = RatingReview.objects.get(user=user, recipe_id=data['recipe_id'])
+            
+            # Update fields review
+            review.score = int(data.get("score", review.score))
+            review.content = data.get("content", review.content)
+            review.save()
 
-        if review.user != request.user and not request.user.is_superuser and not request.user.is_staff:
-            return JsonResponse({"status": "error", "message": "Unauthorized"}, status=403)
-
-        review.score = int(data.get("score", review.score))
-        review.content = data.get("content", review.content)
-        review.save()
-
-        return JsonResponse({"status": "success"}, status=200)
+            return JsonResponse({"status": "success"}, status=200)
+        except User.DoesNotExist:
+            return JsonResponse({"status": "error", "message": "User not found"}, status=404)
+        except RatingReview.DoesNotExist:
+            return JsonResponse({"status": "error", "message": "Review not found"}, status=404)
     return JsonResponse({"status": "error"}, status=401)
 
+
 @csrf_exempt
-def delete_rating_review_flutter(request, review_id):
+def delete_rating_review_flutter(request):
     if request.method == 'POST':
-        review = get_object_or_404(RatingReview, pk=review_id)
-
-        if review.user != request.user and not request.user.is_superuser and not request.user.is_staff:
-            return JsonResponse({"status": "error", "message": "Unauthorized"}, status=403)
-
-        review.delete()
-        return JsonResponse({"status": "success"}, status=200)
+        data = json.loads(request.body)
+        try:
+            # Cari user berdasarkan user_id
+            user = User.objects.get(id=data['user_id'])
+            
+            # Cari review berdasarkan user dan recipe_id
+            review = RatingReview.objects.get(user=user, recipe_id=data['recipe_id'])
+            
+            # Hapus review
+            review.delete()
+            return JsonResponse({"status": "success"}, status=200)
+        except User.DoesNotExist:
+            return JsonResponse({"status": "error", "message": "User not found"}, status=404)
+        except RatingReview.DoesNotExist:
+            return JsonResponse({"status": "error", "message": "Review not found"}, status=404)
     return JsonResponse({"status": "error"}, status=401)
