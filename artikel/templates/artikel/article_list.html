@@ -25,6 +25,10 @@
         </a>
       </div>
     {% endif %}
+
+    {% if artikel.image %}
+      <img src="{{ artikel.image.url }}" alt="{{ artikel.judul }}" class="w-full h-auto rounded-lg mt-4">
+    {% endif %}
   
     <!-- Daftar Artikel -->
     <ul>
