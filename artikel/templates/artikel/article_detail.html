@@ -15,10 +15,38 @@
 
   <!-- Konten Artikel -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
-    <h2 class="text-3xl font-bold mb-6">{{ artikel.judul }}</h2>
-    <p class="text-lg">{{ artikel.isi }}</p>
-    <p class="text-sm text-gray-500 mt-4">Dibuat pada: {{ artikel.tanggal_dibuat }}</p>
+    <!-- Judul Artikel -->
+    <h2 class="text-4xl font-bold mb-4">{{ artikel.judul }}</h2>
+  
+    <!-- Isi Artikel -->
+    <p class="text-lg leading-relaxed">{{ artikel.isi }}</p>
+  
+    <!-- Tanggal Pembuatan -->
+    <p class="text-sm text-gray-500 mt-4">
+      Dibuat pada: {{ artikel.tanggal_dibuat|date:"d M Y, H:i" }}
+    </p>
+  
+    <!-- Tombol Edit Artikel (Hanya Admin) -->
+    {% if user.is_authenticated %}
+      <div class="mt-6">
+        <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Edit Artikel
+        </a>
+      </div>
+    {% endif %}
+  
+    <!-- {% if artikel.image %}
+      <img src="{{ artikel.image.url }}" alt="{{ artikel.judul }}" class="w-full h-auto mb-4 rounded-lg">
+    {% endif %} -->
+
+    <!-- Tombol Kembali ke Daftar Artikel -->
+    <div class="mt-6">
+      <a href="{% url 'artikel:show_article_list' %}" class="text-[#6B8E23] hover:underline">
+        &larr; Kembali ke Daftar Artikel
+      </a>
+    </div>
   </div>
+  
 
 </body>
 </html>

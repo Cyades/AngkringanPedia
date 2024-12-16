@@ -10,18 +10,31 @@
         </a>
       </div>
 
-      <!-- Button to go back to main page -->
-      <div>
-        <a href="{% url 'main:show_main' %}" class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300">
+      <!-- Navbar Menu -->
+      <div class="flex items-center space-x-4">
+        <a href="{% url 'main:show_main' %}" 
+           class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 {% if request.resolver_match.url_name == 'show_main' %}underline{% endif %}">
           Home
         </a>
+        {% if user.is_authenticated %}
+          <a href="{% url 'artikel:create_article' %}" 
+             class="bg-[#556B2F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300">
+            Tambah Artikel
+          </a>
+        {% endif %}
+      </div>
+
+      <!-- Responsive Menu Placeholder -->
+      <div class="sm:hidden">
+        <!-- Optional: Tambahkan Hamburger Menu untuk Mobile -->
       </div>
     </div>
   </div>
 </nav>
+
+<!-- Custom CSS (Optional) -->
 <style>
-    nav {
-      background-color: #556B2F !important;
-    }
-  </style>
-  
+  nav {
+    background-color: #556B2F !important;
+  }
+</style>
