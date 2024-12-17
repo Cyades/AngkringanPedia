@@ -101,7 +101,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:3000",
     'http://localhost:61708',  # Origin dari aplikasi Flutter
     'http://127.0.0.1:8000',   # Jika menggunakan port default untuk Django
-    'https://pbp.cs.ui.ac.id/malvin.scafi/angkringanpedia' # for pws
+    'https://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id' # for pws
+    'http://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id' # for pws
 ]
 
 
