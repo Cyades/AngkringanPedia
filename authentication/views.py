@@ -153,22 +153,86 @@ def login_flutter(request):
 
 #     return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
 
+# @csrf_exempt
+# def register_flutter(request):
+#     if request.method == 'POST':
+#         try:
+#             data = json.loads(request.body)
+#             print(f"Received data: {data}")  # Debug log untuk melihat input
+
+#             # Ambil data dari request
+#             username = data.get('username')
+#             password1 = data.get('password1')
+#             password2 = data.get('password2')
+#             email = data.get('email')
+#             phone_number = data.get('phone_number')
+#             gender = data.get('gender')
+#             profile_image = data.get('profile_image')  # Handle file upload
+#             is_admin = data.get('is_admin', False)
+
+#             # Validasi password
+#             if password1 != password2:
+#                 return JsonResponse({"status": False, "message": "Passwords do not match."}, status=400)
+
+#             # Cek apakah username sudah ada
+#             if User.objects.filter(username=username).exists():
+#                 return JsonResponse({"status": False, "message": "Username already exists."}, status=400)
+
+#             # Konversi profile_image jika berbentuk base64
+#             if profile_image:
+#                 from django.core.files.base import ContentFile
+#                 import base64
+#                 format, imgstr = profile_image.split(';base64,')
+#                 ext = format.split('/')[-1]
+#                 profile_image = ContentFile(base64.b64decode(imgstr), name=f"{username}.{ext}")
+
+#             # Simpan user menggunakan form
+#             form_data = {
+#                 'username': username,
+#                 'email': email,
+#                 'password1': password1,
+#                 'password2': password2,
+#                 'phone_number': phone_number,
+#                 'gender': gender,
+#                 'profile_image': profile_image,
+#             }
+
+#             form = CustomUserCreationForm(form_data)
+#             if form.is_valid():
+#                 user = form.save()
+
+#                 # Atur status admin jika diperlukan
+#                 if is_admin:
+#                     user.is_staff = True
+#                     user.save()
+
+#                 return JsonResponse({"status": "success", "message": "User created successfully!"}, status=200)
+#             else:
+#                 print("Form Errors:", form.errors)  # Debug untuk mengetahui error detail
+
+#             return JsonResponse({"status": False, "message": "Form validation failed.", "errors": form.errors}, status=400)
+
+#         except Exception as e:
+#             print(f"Error: {str(e)}")  # Log error
+#             return JsonResponse({"status": False, "message": "An error occurred.", "error": str(e)}, status=500)
+
+#     return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
+
 @csrf_exempt
 def register_flutter(request):
     if request.method == 'POST':
         try:
-            data = json.loads(request.body)
-            print(f"Received data: {data}")  # Debug log untuk melihat input
+            # Ambil data dari request.POST
+            username = request.POST.get('username')
+            password1 = request.POST.get('password1')
+            password2 = request.POST.get('password2')
+            email = request.POST.get('email')
+            phone_number = request.POST.get('phone_number')
+            gender = request.POST.get('gender')
+            is_admin = request.POST.get('is_admin', False) == 'true'  # Konversi ke boolean
 
-            # Ambil data dari request
-            username = data.get('username')
-            password1 = data.get('password1')
-            password2 = data.get('password2')
-            email = data.get('email')
-            phone_number = data.get('phone_number')
-            gender = data.get('gender')
-            profile_image = data.get('profile_image')  # Handle file upload
-            is_admin = data.get('is_admin', False)
+            # Ambil file dari request.FILES
+            profile_image = request.FILES.get('profile_image')
 
             # Validasi password
             if password1 != password2:
@@ -178,15 +242,7 @@ def register_flutter(request):
             if User.objects.filter(username=username).exists():
                 return JsonResponse({"status": False, "message": "Username already exists."}, status=400)
 
-            # Konversi profile_image jika berbentuk base64
-            if profile_image:
-                from django.core.files.base import ContentFile
-                import base64
-                format, imgstr = profile_image.split(';base64,')
-                ext = format.split('/')[-1]
-                profile_image = ContentFile(base64.b64decode(imgstr), name=f"{username}.{ext}")
-
-            # Simpan user menggunakan form
+            # Siapkan form data untuk CustomUserCreationForm
             form_data = {
                 'username': username,
                 'email': email,
@@ -194,10 +250,11 @@ def register_flutter(request):
                 'password2': password2,
                 'phone_number': phone_number,
                 'gender': gender,
-                'profile_image': profile_image,
+                'profile_image': profile_image,  # Ini akan otomatis di-handle oleh Django
             }
 
-            form = CustomUserCreationForm(form_data)
+            # Gunakan CustomUserCreationForm untuk menyimpan user
+            form = CustomUserCreationForm(form_data, files=request.FILES)
             if form.is_valid():
                 user = form.save()
 
@@ -209,15 +266,13 @@ def register_flutter(request):
                 return JsonResponse({"status": "success", "message": "User created successfully!"}, status=200)
             else:
                 print("Form Errors:", form.errors)  # Debug untuk mengetahui error detail
-
-            return JsonResponse({"status": False, "message": "Form validation failed.", "errors": form.errors}, status=400)
+                return JsonResponse({"status": False, "message": "Form validation failed.", "errors": form.errors}, status=400)
 
         except Exception as e:
             print(f"Error: {str(e)}")  # Log error
             return JsonResponse({"status": False, "message": "An error occurred.", "error": str(e)}, status=500)
 
     return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
-
 
 def logout_user(request):
     logout(request)
