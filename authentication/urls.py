@@ -16,11 +16,13 @@ urlpatterns = [
     path('get_user_details/<int:user_id>/', get_user_details, name='get_user_details'),
     path('edit-admin/<int:id>', edit_admin, name='edit_admin'),
     path('edit-user/<int:id>/', edit_user, name='edit_user'),
+    path('edit-user-flutter/<int:id>/', edit_user_flutter, name='edit_user_flutter'),
     path('login-flutter/', login_flutter, name='login_flutter'),
     path('logout-flutter/', logout_flutter, name='logout_flutter'),
     path('xml/', show_xml, name='show_xml'),
     path('json/', show_json, name='show_json'),
     path('register-flutter/', register_flutter, name='register_flutter'),
+    path('user-detail/<int:id>/', user_detail, name='user_detail'),
 ]
 
 if settings.DEBUG:

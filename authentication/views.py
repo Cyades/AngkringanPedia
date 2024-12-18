@@ -363,6 +363,64 @@ def edit_user(request, id):
     }
     return render(request, "edit_user.html", context)
 
+@csrf_exempt
+def edit_user_flutter(request, id):
+    try:
+        user = get_object_or_404(User, pk=id)  # Ambil user berdasarkan ID
+
+        if request.method == "POST":
+            # Ambil data dari request.POST
+            username = request.POST.get('username', user.username)  # Default ke username user
+            email = request.POST.get('email', user.email)          # Default ke email user
+            phone_number = request.POST.get('phone_number', user.profile.phone_number)
+            gender = request.POST.get('gender', user.profile.gender)
+            profile_image = request.FILES.get('profile_image')  # Ambil file jika ada
+
+            # Perbarui User fields
+            user.username = username
+            user.email = email
+            user.save()
+
+            # Perbarui Profile fields
+            user.profile.phone_number = phone_number
+            user.profile.gender = gender
+
+            if profile_image:
+                user.profile.profile_image = profile_image  # Update profile image jika diberikan
+                
+            if not profile_image:
+                user.profile.profile_image = "/media/profile_images/user.png"
+
+            user.profile.save()  # Simpan perubahan Profile
+
+            # Return JSON success response
+            return JsonResponse({"status": "success", "message": "Profile updated successfully!"}, status=200)
+
+        return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
+
+    except Exception as e:
+        # print(f"Error: {str(e)}")  # Log error untuk debug
+        return JsonResponse({"status": False, "message": "An error occurred.", "error": str(e)}, status=500)
+    
+# @csrf_exempt
+# def edit_user_flutter(request, id):
+#     user = get_object_or_404(User, pk=id)  # Ambil user berdasarkan ID
+#     form = CustomUserEditForm(request.POST or None, request.FILES or None, instance=user)  # Inisialisasi form
+
+#     # Jika form valid, simpan perubahan
+#     if request.method == "POST" and form.is_valid():
+#         form.save()
+#         if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+#             return JsonResponse({'success': True})
+#         return HttpResponseRedirect(reverse('authentication:show_admin'))
+
+#     # Kirim form dan user ke template
+#     context = {
+#         'form': form,
+#         'user_to_edit': user,
+#     }
+#     return render(request, "edit_user.html", context)
+
 @login_required(login_url='/authentication/login/')
 def show_admin(request):
     form = CustomUserEditForm(instance=request.user)
@@ -398,3 +456,21 @@ def show_json(request):
         })
 
     return JsonResponse(profiles, safe=False)
+
+@csrf_exempt
+def user_detail(request, id):
+    try:
+        # print(f"Request method: {request.method}, ID: {id}")
+        user = get_object_or_404(Profile, user_id=id)
+        data = {
+            "username": user.user.username,
+            "email": user.user.email,
+            "phone_number": user.phone_number,
+            "gender": user.gender,
+            "profile_image": user.profile_image.url if user.profile_image else None,
+        }
+        # print("Data sent:", data)
+        return JsonResponse(data, safe=False)
+    except Exception as e:
+        # print("Error in user_detail:", str(e))
+        return JsonResponse({"error": str(e)}, status=500)
