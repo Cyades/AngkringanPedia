@@ -373,8 +373,9 @@ def edit_user_flutter(request, id):
             username = request.POST.get('username', user.username)  # Default ke username user
             email = request.POST.get('email', user.email)          # Default ke email user
             phone_number = request.POST.get('phone_number', user.profile.phone_number)
-            gender = request.POST.get('gender', user.profile.gender)
+            # gender = request.POST.get('gender', user.profile.gender)
             profile_image = request.FILES.get('profile_image')  # Ambil file jika ada
+            delete_profile_image = request.POST.get('delete_profile_image', 'false').lower() == 'true'
 
             # Perbarui User fields
             user.username = username
@@ -383,9 +384,13 @@ def edit_user_flutter(request, id):
 
             # Perbarui Profile fields
             user.profile.phone_number = phone_number
-            user.profile.gender = gender
+            # user.profile.gender = gender
 
-            if profile_image:
+            if delete_profile_image:
+                # Jika user memilih untuk menghapus gambar profil
+                user.profile.profile_image = "/profile_images/user.png"
+                
+            elif profile_image:
                 user.profile.profile_image = profile_image  # Update profile image jika diberikan
                 
             # if not profile_image:
