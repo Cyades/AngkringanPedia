@@ -1,7 +1,6 @@
 from django.test import TestCase, Client
 from django.contrib.auth.models import User
 from main.models import Profile
-
 class mainTest(TestCase):
     def test_main_url_is_exist(self):
         response = Client().get('')
@@ -26,4 +25,3 @@ class DashboardModuleTest(TestCase):
         Profile.objects.create(user=self.admin, phone_number="08987654321", gender="M")
 
         self.client = Client()
-

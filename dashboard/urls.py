@@ -3,7 +3,6 @@ from main.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 from main.views import edit_user
-from artikel.views import show_article_list, show_article_detail, create_article  # Import view untuk artikel
 
 app_name = 'main'
 
@@ -20,19 +19,9 @@ urlpatterns = [
     path('edit-admin/<int:id>', edit_admin, name='edit_admin'),
     path('edit-profile/', edit_profile, name='edit_profile'),
     path('dashboard/', redirect_dashboard, name='redirect_dashboard'),
-    path('user-dashboard/', user_dashboard, name='user_dashboard'),
-    path('edit-user/<int:id>/', edit_user, name='edit_user'),
-
-    # URL untuk aplikasi artikel
-    path('artikel/', show_article_list, name='show_article_list'),  # Menampilkan daftar artikel
-    path('artikel/<int:id>/', show_article_detail, name='show_article_detail'),  # Menampilkan detail artikel berdasarkan ID
-    path('artikel/tambah/', create_article, name='create_article'),  # Menambah artikel baru
+    path('user-dashboard/', user_dashboard, name='user_dashboard'),  # Buat route user_dashboard jika belum ada
+    path('edit-user/<int:id>/', edit_user, name='edit_user')
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    path('delete/<int:id>', delete_product, name='delete_product'),
-    path('api/recipes/', get_recipes, name='get_recipes'),
-    path('api/search/', search_recipes_api, name='search_recipes_api'),
-    path('api/add-recipe/', add_recipe_api, name='add_recipe_api'),
-    path('api/csrf/', get_csrf_token, name='get_csrf_token'),

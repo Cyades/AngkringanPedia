@@ -9,6 +9,30 @@
         </a>
       </div>
 
+      <!-- Admin Menu Section -->
+      {% if user.is_staff or user.is_superuser %}
+      <div class="flex items-center space-x-4">
+        <a href="{% url 'artikel:create_article' %}" class="text-[#F0FFF0] hover:text-gray-200">
+          Add Artikel
+        </a>        
+      </div>
+      {% endif %}
+
+      <!-- User Profile Section -->
+      <div class="flex items-center space-x-4">
+        <span class="text-[#F0FFF0]">Welcome {{ user.username }}!</span>  <!-- Menambahkan teks selamat datang -->
+        
+        <a href="{% url 'main:logout' %}" class="bg-[#6B8E23] text-[#F0FFF0] px-3 py-1 rounded transition duration-200 transform hover:scale-105">Logout</a>
+        
+        {% if user.profile.profile_image %}
+            <a href="{% url 'main:edit_admin' user.pk %}">
+                <img src="{{ user.profile.profile_image.url }}" alt="User Photo" class="h-10 w-10 rounded-full profile-image">
+            </a>
+        {% else %}
+            <a href="{% url 'main:edit_admin' user.pk %}">
+                <img src="{% static 'image/user.png' %}" alt="Default User Photo" class="h-10 w-10 rounded-full profile-image">
+            </a>
+        {% endif %}
       <div class="flex items-center space-x-4">
         <span class="text-[#F0FFF0]">Welcome {{ user.username }}!</span>
         

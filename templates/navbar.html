@@ -10,6 +10,14 @@
         </a>
       </div>
 
+      <div class="flex items-center space-x-6">
+        <!-- Link ke Halaman Utama -->
+        <a href="{% url 'main:show_main' %}" class="text-white hover:text-[#8FBC8F]">Home</a>
+        
+        <!-- Link ke Artikel -->
+        <a href="{% url 'main:show_article_list' %}" class="text-white hover:text-[#8FBC8F]">Artikel</a>
+        
+
         <!-- Search Bar -->
         <div class="hidden md:flex flex-grow justify-center relative overflow-hidden ml-4">
           <form id="search-form" action="{% url 'main:search_recipes' %}" method="get" class="flex items-center flex-grow">
@@ -51,7 +59,8 @@
       <div class="hidden md:flex items-center ml-4">
         <ul class="flex space-x-5 text-[#F0FFF0]">
           <li><a href="#" class="hover:text-[#8FBC8F] transition">Favourite</a></li>
-          <li><a href="#" class="hover:text-[#8FBC8F] transition">Profile</a></li>
+          <li><a href="{% url 'main:redirect_dashboard' %}" class="hover:text-[#8FBC8F] transition">Profile</a></li>
+
         </ul>
       </div>
 
@@ -110,6 +119,7 @@
       hiddenFilterInput.value = 'ingredient';  // Update hidden input
       filterDropdown.classList.add('hidden');
     });
+    
 
     document.getElementById('filter-name').addEventListener('click', () => {
       currentFilter = 'name';

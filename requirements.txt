@@ -4,6 +4,10 @@ whitenoise
 psycopg2-binary
 requests
 urllib3
+<<<<<<< HEAD
+Pillow
+=======
 Pillow
 django-extensions
 django-cors-headers
+>>>>>>> 71175b8eb7fbc8ef5928364bc43583c36dfc8898
