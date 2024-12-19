@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-67%kmr&p78m4+b!6#p95hzfuf_lkw)jt5$xguhfp6g_9%342h!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", "malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id", "localhost:60304", "localhost:61708"]
 
 
 # Application definition
@@ -43,6 +43,14 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'authentication',
+    'django_extensions',
+    'foodcatalog',
+    'corsheaders'
+]
+
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -53,6 +61,58 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'AngkringanPedia.urls'
+<<<<<<< HEAD
+=======
+LOGIN_URL = '/authentication/login/'
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
+
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:52061",  # Port Flutter web
+#     "http://localhost:3000",
+#     "http://127.0.0.1:52061",
+#     "http://127.0.0.1:3000",
+# ]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'Content-Type',
+]
+
+# Nonaktifkan CSRF untuk API endpoints
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:52061",
+    "http://localhost:3000",
+    "http://127.0.0.1:52061",
+    "http://127.0.0.1:3000",
+    'http://localhost:61708',  # Origin dari aplikasi Flutter
+    'http://127.0.0.1:8000',   # Jika menggunakan port default untuk Django
+    'https://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id' # for pws
+    'http://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id' # for pws
+]
+
+>>>>>>> 71175b8eb7fbc8ef5928364bc43583c36dfc8898
 
 TEMPLATES = [
     {

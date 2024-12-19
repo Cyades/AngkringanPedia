@@ -2,7 +2,8 @@ from django import forms
 from django.contrib.auth.models import User
 from .models import Profile, Recipe, Ingredient
 from django.contrib.auth.forms import UserCreationForm
-
+from .models import Recipe, Ingredient
+from django import forms
 
 # Form untuk membuat akun baru, termasuk informasi di model User dan Profile
 class CustomUserCreationForm(forms.ModelForm):
@@ -64,12 +65,22 @@ class ProfileEditForm(forms.ModelForm):
 # Form untuk menambah resep dengan list bahan dan instruksi
 class AddRecipeForm(forms.ModelForm):
     ingredients_list = forms.CharField(
-        widget=forms.Textarea(attrs={'placeholder': 'Enter ingredients separated by commas (e.g. flour, sugar, eggs)', 'rows': 4}),
+        widget=forms.Textarea(
+            attrs={
+                'placeholder': 'Enter ingredients separated by commas (e.g. flour, sugar, eggs)',
+                'rows': 4
+            }
+        ),
         label='Ingredients',
         required=True  
     )
     instructions = forms.CharField(
-        widget=forms.Textarea(attrs={'placeholder': 'Enter cooking instructions', 'rows': 5}),
+        widget=forms.Textarea(
+            attrs={
+                'placeholder': 'Enter cooking instructions',
+                'rows': 5
+            }
+        ),
         label='Instructions',
         required=False
     )
@@ -96,6 +107,7 @@ class AddRecipeForm(forms.ModelForm):
                     recipe.ingredients.add(ingredient)
             recipe.save()
         return recipe
+<<<<<<< HEAD
 
 class CustomUserEditForm(forms.ModelForm):
     email = forms.EmailField(required=True)
@@ -121,3 +133,5 @@ class CustomUserEditForm(forms.ModelForm):
             profile.profile_image = self.cleaned_data['profile_image']
             profile.save()
         return user
+=======
+>>>>>>> 71175b8eb7fbc8ef5928364bc43583c36dfc8898

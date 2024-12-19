@@ -1,6 +1,7 @@
 {% extends 'base_no_footer.html' %}
 
 {% block content %}
+<<<<<<< HEAD
 <h1>Add New Recipe</h1>
 
 {% if user.is_superuser %}
@@ -60,4 +61,160 @@
 <p>You do not have permission to add recipes.</p>
 {% endif %}
 
+=======
+<div id="form_container">
+    <h1 class="form-title">Add New Recipe</h1>
+
+    {% if user.is_superuser or user.is_staff %}
+    <form id="add_recipe_form" method="POST" action="{% url 'main:add_recipe' %}">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="{{ form.recipe_name.id_for_label }}" class="form-label">Recipe name</label>
+            {{ form.recipe_name }}
+            <small class="form-hint">Enter recipe name</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="{{ form.cooking_time.id_for_label }}" class="form-label">Cooking time</label>
+            {{ form.cooking_time }}
+            <small class="form-hint">Enter cooking time (e.g., 30 minutes/1 hour)</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="{{ form.servings.id_for_label }}" class="form-label">Servings</label>
+            {{ form.servings }}
+            <small class="form-hint">Enter servings (e.g., 4 servings)</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="{{ form.ingredients_list.id_for_label }}" class="form-label">Ingredients</label>
+            {{ form.ingredients_list }}
+            <small class="form-hint">Enter ingredients separated by commas (e.g., flour, sugar, eggs)</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="instructions" class="form-label">Instructions:</label>
+            <div id="instructions_container">
+                <input type="text" name="instructions_list" placeholder="Step 1" required class="form-input">
+            </div>
+            <button type="button" class="button add-step-button" onclick="addInstruction()">Add Another Step</button>
+        </div>
+
+        <script>
+        function addInstruction() {
+            const container = document.getElementById('instructions_container');
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.name = 'instructions_list';
+            input.placeholder = `Step ${container.children.length + 1}`;
+            input.classList.add('form-input');
+            container.appendChild(input);
+        }
+        </script>
+        
+        <div class="form-group">
+            <label for="{{ form.image_url.id_for_label }}" class="form-label">Image URL</label>
+            {{ form.image_url }}
+        </div>
+        
+        <div class="button-group">
+            <button type="submit" class="button action-button">Add Recipe</button>
+            <button type="button" class="button action-button cancel-button" onclick="window.history.back()">Cancel</button>
+        </div>
+    </form>
+    {% else %}
+    <p class="no-permission-message">You do not have permission to add recipes.</p>
+    {% endif %}
+</div>
+
+<style>
+    #form_container {
+        max-width: 600px;
+        margin: auto;
+        padding: 1.5em;
+        background-color: #F0FFF0;
+        border: 1px solid #8FBC8F;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .form-title {
+        font-size: 1.8em;
+        margin-bottom: 1em;
+        color: #2F4F4F;
+    }
+    
+    #add_recipe_form {
+        padding: 0;
+    }
+    
+    .form-group {
+        margin-bottom: 1.2em;
+        text-align: left;
+    }
+    
+    .form-label {
+        display: block;
+        font-weight: bold;
+        color: #556B2F;
+        margin-bottom: 0.3em;
+    }
+
+    .form-input, input[type="text"] {
+        width: 100%;
+        padding: 0.5em;
+        border: 1px solid #8FBC8F;
+        border-radius: 4px;
+        font-size: 1em;
+    }
+
+    .form-hint {
+        font-size: 0.9em;
+        color: #8FBC8F;
+        margin-top: 0.3em;
+        display: block;
+    }
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5em;
+    }
+    
+    .button {
+        width: 48%; /* Ensures both buttons are the same width */
+        padding: 0.7em 1.5em;
+        border-radius: 4px;
+        border: none;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    
+    .action-button {
+        background-color: #556B2F;
+        color: #F0FFF0;
+    }
+
+    .cancel-button {
+        background-color: #FFA07A;
+    }
+
+    .add-step-button {
+        background-color: #8FBC8F;
+        color: #2F4F4F;
+        margin-top: 0.5em;
+    }
+
+    .button:hover {
+        opacity: 0.9;
+    }
+
+    .no-permission-message {
+        color: #2F4F4F;
+        font-size: 1.2em;
+        margin-top: 2em;
+    }
+</style>
+>>>>>>> 71175b8eb7fbc8ef5928364bc43583c36dfc8898
 {% endblock %}

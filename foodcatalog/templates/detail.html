@@ -1,0 +1,204 @@
+<div class="container mx-auto p-6 max-w-3xl bg-gray-50 shadow-md rounded-lg">
+    <h1 class="text-3xl font-bold text-left mb-6 text-[#556B2F]">Recipe Details</h1>
+
+    {% if recipe %}
+        <ul class="space-y-8">
+            <li class="border border-gray-200 rounded-lg shadow-lg p-6 bg-white hover:shadow-xl transition duration-300">
+                <h2 class="text-2xl font-semibold text-left text-gray-800">{{ recipe.recipe_name }}</h2>
+
+                <div class="mt-4 flex justify-left">
+                    {% if recipe.image_url %}
+                        <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" class="w-64 h-auto rounded-md shadow-sm" />
+                    {% else %}
+                        <p class="text-gray-500 italic">No image available.</p>
+                    {% endif %}
+                </div>
+
+                <div class="mt-6 text-gray-700 text-left">
+                    <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
+                    <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+                </div>
+
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold text-gray-700">Ingredients:</h3>
+                    <ul class="list-disc pl-6 text-gray-600 space-y-1">
+                        {% for ingredient in recipe.ingredients.all %}
+                            <li>{{ ingredient.name }}</li>
+                        {% empty %}
+                            <li class="italic">No ingredients available.</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold text-gray-700">Instructions:</h3>
+                    <ol class="list-decimal pl-6 text-gray-600 space-y-2">
+                        {% for instruction in recipe.recipe_instructions.all|dictsort:"step_number" %}
+                            <li>{{ instruction.description }}</li>
+                        {% empty %}
+                            <li class="italic">No instructions available.</li>
+                        {% endfor %}
+                    </ol>
+                </div>
+
+                <div class="mt-6 text-gray-700 text-left">
+                    <p><strong>Average Rating:</strong> 
+                        <span class="average-rating-{{ recipe.id }}">{{ recipe.average_rating|default:"No ratings yet." }}</span>
+                    </p>                    
+                </div>
+
+                <!-- Filter for Reviews -->
+                <div class="mt-4">
+                    <select id="rating-filter-{{ recipe.id }}" class="border p-2 rounded w-40" onchange="filterReviews({{ recipe.id }})">
+                        <option value="all">All Ratings</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                </div>
+
+                <div class="mt-6">
+                    <ul class="review-list-{{ recipe.id }} space-y-4 text-gray-600">
+                        {% if recipe.ratings_list.all %}
+                            {% for review in recipe.ratings_list.all %}
+                                <li class="review-item-{{ review.id }} p-4 bg-gray-100 rounded-md border rating-{{ review.score }}">
+                                    <strong class="text-black-500 text-xl">{{ review.user.username }}</strong> 
+                                    <br>
+                                    <medium>Rating:</medium> {{ review.score }} - 
+                                    <em class="review-content-{{ review.id }}">{{ review.content }}</em>
+                                    <br>
+                                    <small class="text-gray-400">Reviewed on {{ review.created_at }}</small>
+                                    <br>
+                                    {% if user == review.user or user.is_staff or user.is_superuser%}
+                                        <a href="{% url 'edit_rating_review' review.id %}?next={{ request.path }}" class="text-[#556B2F] hover:underline">Edit</a>
+                                        <a href="{% url 'delete_rating_review' review.id %}?next={{ request.path }}" class="ml-2 text-red-500 hover:underline">Delete</a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    </ul>
+                </div>
+                
+                {% if user.is_authenticated and not user.is_staff and not user.is_superuser %}
+                    {% if not has_reviewed %}
+                    <!-- Hidden Review Form -->
+                    <div class="mt-6 text-left">
+                        <button id="write-review-btn-{{ recipe.id }}" onclick="toggleReviewForm({{ recipe.id }})" class="bg-[#556B2F] text-white py-2 px-4 rounded hover:bg-[#6B8E23] transition">Write a Review</button>
+                    </div>
+                    {% endif %}
+                {% endif %}
+                
+                <div class="mt-4 hidden review-form-container-{{ recipe.id }}">
+                    <form id="rating-form-{{ recipe.id }}" class="rating-form mt-4">
+                        <input type="hidden" name="recipe_id" value="{{ recipe.id }}">
+                        <label for="score" class="block text-gray-700">Rating (1-5):</label>
+                        <input type="number" name="score" min="1" max="5" class="border p-2 rounded w-20 mb-4" required>
+                        <label for="content" class="block text-gray-700">Review:</label>
+                        <textarea name="content" rows="2" class="border p-2 rounded w-full mb-4"></textarea>
+                        <button type="submit" class="bg-[#556B2F] text-white py-2 px-6 rounded hover:bg-[#6B8E23] transition">Submit Review</button>
+                    </form>
+                </div>
+
+                <div class="mt-6">
+                    <a href="{% url 'main:show_main' %}" class="block text-left">
+                        <button class="bg-gray-300 text-gray-800 py-2 px-6 rounded hover:bg-gray-400 transition">Back</button>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    {% else %}
+        <p class="text-center mt-6 text-gray-500">No recipes available matching "{{ recipe_id }}".</p>
+    {% endif %}
+</div>
+
+<script>
+    // Function to filter reviews based on selected rating
+    function filterReviews(recipeId) {
+        const filterValue = document.getElementById('rating-filter-' + recipeId).value;
+        console.log('Filtering reviews for recipe ID:', recipeId, 'with filter value:', filterValue);
+        const reviews = document.querySelectorAll('.review-list-' + recipeId + ' li');
+
+        reviews.forEach(review => {
+            if (filterValue === 'all' || review.classList.contains('rating-' + filterValue)) {
+                review.style.display = 'block'; // Show the review
+            } else {
+                review.style.display = 'none'; // Hide the review
+            }
+        });
+    }
+    
+    // Toggle the review form visibility and hide the Write Review button
+    function toggleReviewForm(recipeId) {
+        const formContainer = document.querySelector('.review-form-container-' + recipeId);
+        const writeReviewButton = document.getElementById('write-review-btn-' + recipeId);
+
+        // Toggle form visibility
+        formContainer.classList.toggle('hidden');
+
+        // Hide the Write Review button if the form is visible
+        if (!formContainer.classList.contains('hidden')) {
+            writeReviewButton.style.display = 'none';
+        }
+    }
+
+    document.querySelectorAll('.rating-form').forEach(form => {
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const recipeId = this.querySelector('input[name="recipe_id"]').value;
+
+            fetch("{% url 'create_rating_review' %}", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest",
+                    "X-CSRFToken": "{{ csrf_token }}",
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    const reviewsList = document.querySelector('.review-list-' + recipeId);
+
+                    // Append new review with the correct class for filtering
+                    reviewsList.innerHTML += `<li class="p-4 bg-gray-100 rounded-md border review-item-${data.review.id} rating-${data.review.score}">
+                        <strong class="text-black-500 text-xl">${data.username}</strong>  
+                        <br>
+                        <strong>Rating:</strong> ${data.review.score} - 
+                        <em class="review-content-${data.review.id}">${data.review.content || ''}</em> 
+                        <br>
+                        <small class="text-gray-400">Reviewed on ${data.review.created_at}</small>
+                        <br>
+                        <a href="/catalog/edit-rating-review/${data.review.id}/?next={{ request.path }}" class="text-[#556B2F] hover:underline">Edit</a>
+                        <a href="/catalog/delete-rating-review/${data.review.id}/?next={{ request.path }}" class="ml-2 text-red-500 hover:underline">Delete</a>
+                    </li>`;
+
+                    form.reset();
+
+                    // Hide the form and show the Write Review button again
+                    document.querySelector('.review-form-container-' + recipeId).classList.add('hidden');
+
+                    // Function to format the average rating to a maximum of two decimal places
+                    function formatAverageRating(rating) {
+                        const num = parseFloat(rating);
+
+                        // Round the number to two decimal places
+                        const rounded = Math.round(num * 100) / 100;
+
+                        // Convert to string and remove trailing zeros
+                        return parseFloat(rounded).toString();
+                    }
+
+                    // Update the average rating display
+                    const averageRating = formatAverageRating(data.average_rating);
+                    document.querySelector('.average-rating-' + recipeId).textContent = averageRating;
+                } else {
+                    alert("Error submitting review: " + data.error);
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    });
+</script>

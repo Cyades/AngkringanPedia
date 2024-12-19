@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% include 'navbar.html' %}
+<div class="container mx-auto my-auto p-6 bg-white rounded-lg shadow-md max-w-2xl">
+    <h2 class="text-2xl font-bold mb-6 text-red-600">Delete Review</h2> <!-- Changed color for emphasis -->
+    <p class="mb-4 text-gray-700">Are you sure you want to delete the review for <strong>{{ review.recipe.recipe_name }}</strong>?</p>
+    
+    <div class="mb-6 p-4 border-l-4 border-red-500 bg-red-50"> <!-- Added a colored border for emphasis -->
+        <h3 class="text-lg font-semibold">Review Details:</h3>
+        <p class="mt-2"><strong>Rating:</strong> {{ review.score }}</p>
+        <p><strong>Feedback:</strong> {{ review.content }}</p>
+        <p class="text-gray-500"><small>Reviewed on {{ review.created_at }}</small></p>
+    </div>
+    
+    <form method="POST" class="flex mb-4 items-center justify-between"> <!-- Adjusted to space out buttons -->
+        {% csrf_token %}
+        <button type="submit" class="bg-red-600 text-white py-2 px-8 rounded-lg hover:bg-red-700 transition duration-200">Confirm Delete</button>
+        <a href="{{ request.META.HTTP_REFERER }}" class="bg-gray-300 text-gray-800 py-2 px-8 rounded-lg hover:bg-gray-400 transition duration-200">Cancel</a>
+    </form>
+</div>
+{% endblock %}
