@@ -90,8 +90,8 @@ def login_flutter(request):
                 "username": user.username,
                 "status": True,
                 "message": "Login sukses!",
-                 "is_admin": user.is_staff or user.is_superuser,
-                # Tambahkan data lainnya jika ingin mengirim data ke Flutter.
+                "is_admin": user.is_staff or user.is_superuser,
+            
             }, status=200)
         else:
             return JsonResponse({
@@ -258,18 +258,18 @@ def register_flutter(request):
             if form.is_valid():
                 user = form.save()
 
-                # Atur status admin jika diperlukan
+                # Atur status admin
                 if is_admin:
                     user.is_staff = True
                     user.save()
 
                 return JsonResponse({"status": "success", "message": "User created successfully!"}, status=200)
             else:
-                print("Form Errors:", form.errors)  # Debug untuk mengetahui error detail
+                # print("Form Errors:", form.errors)  # Debug untuk mengetahui error detail
                 return JsonResponse({"status": False, "message": "Form validation failed.", "errors": form.errors}, status=400)
 
         except Exception as e:
-            print(f"Error: {str(e)}")  # Log error
+            # print(f"Error: {str(e)}")  # Log error
             return JsonResponse({"status": False, "message": "An error occurred.", "error": str(e)}, status=500)
 
     return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
