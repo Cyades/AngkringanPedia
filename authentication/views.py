@@ -388,8 +388,8 @@ def edit_user_flutter(request, id):
             if profile_image:
                 user.profile.profile_image = profile_image  # Update profile image jika diberikan
                 
-            if not profile_image:
-                user.profile.profile_image = "/profile_images/user.png"
+            # if not profile_image:
+            #     user.profile.profile_image = "/profile_images/user.png"
 
             user.profile.save()  # Simpan perubahan Profile
 
@@ -457,20 +457,45 @@ def show_json(request):
 
     return JsonResponse(profiles, safe=False)
 
+# @csrf_exempt
+# def user_detail(request, id):
+#     try:
+#         # print(f"Request method: {request.method}, ID: {id}")
+#         user = get_object_or_404(Profile, user_id=id)
+#         data = {
+#             "username": user.user.username,
+#             "email": user.user.email,
+#             "phone_number": user.phone_number,
+#             "gender": user.gender,
+#             "profile_image": user.profile_image.url if user.profile_image else None,
+#         }
+#         # print("Data sent:", data)
+#         return JsonResponse(data, safe=False)
+#     except Exception as e:
+#         # print("Error in user_detail:", str(e))
+#         return JsonResponse({"error": str(e)}, status=500)
+
 @csrf_exempt
 def user_detail(request, id):
     try:
-        # print(f"Request method: {request.method}, ID: {id}")
-        user = get_object_or_404(Profile, user_id=id)
+        # Mengambil data profil berdasarkan user_id
+        user_profile = get_object_or_404(Profile.objects.select_related('user'), user_id=id)
+        
+        # Menyesuaikan format data seperti pada `show_json`
         data = {
-            "username": user.user.username,
-            "email": user.user.email,
-            "phone_number": user.phone_number,
-            "gender": user.gender,
-            "profile_image": user.profile_image.url if user.profile_image else None,
+            "model": "authentication.profile",
+            "pk": user_profile.pk,
+            "fields": {
+                "user": user_profile.user.id,
+                "username": user_profile.user.username,
+                "email": user_profile.user.email,
+                "phone_number": user_profile.phone_number,
+                "gender": user_profile.gender,
+                "is_admin": "Admin" if user_profile.user.is_staff else "User",
+                "profile_image": user_profile.profile_image.url if user_profile.profile_image else "/media/profile_images/user.png",
+            }
         }
-        # print("Data sent:", data)
+        
         return JsonResponse(data, safe=False)
     except Exception as e:
-        # print("Error in user_detail:", str(e))
         return JsonResponse({"error": str(e)}, status=500)
