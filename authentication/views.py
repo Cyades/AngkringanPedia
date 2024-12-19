@@ -389,7 +389,7 @@ def edit_user_flutter(request, id):
                 user.profile.profile_image = profile_image  # Update profile image jika diberikan
                 
             if not profile_image:
-                user.profile.profile_image = "/media/profile_images/user.png"
+                user.profile.profile_image = "/profile_images/user.png"
 
             user.profile.save()  # Simpan perubahan Profile
 
