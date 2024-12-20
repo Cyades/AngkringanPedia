@@ -1,6 +1,5 @@
 from django.urls import path
 from foodcatalog import views
-
 urlpatterns = [
     path('<int:recipe_id>/', views.show_recipe_by_id, name='show_recipe_by_id'),
     path('create-rating-review', views.create_rating_review, name='create_rating_review'), # Create rating

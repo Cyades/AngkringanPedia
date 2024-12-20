@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'authentication',
     'django_extensions',
     'foodcatalog',
-    'corsheaders'
+    'corsheaders',
+    'favorites',
 ]
 
 MIDDLEWARE = [
