@@ -29,13 +29,6 @@ jobs:
       env:
         PWS_URL: ${{ secrets.PWS_URL }}
       run: |
-<<<<<<< HEAD
-          echo "Creating temporary branch"
-          git checkout -b tmp
-
-          # Push to master branch and capture the output
-          push_output=$(git push $PWS_URL tmp:master 2>&1)
-=======
           # Check if master branch exists locally
           if ! git show-ref --verify --quiet refs/heads/master; then
             echo "Creating master branch"
@@ -47,7 +40,6 @@ jobs:
 
           # Push to master branch and capture the output
           push_output=$(git push $PWS_URL authentication-flutter:master 2>&1)
->>>>>>> 71175b8eb7fbc8ef5928364bc43583c36dfc8898
           if [[ $? -ne 0 ]]; then
             echo "Push failed with output: $push_output"
             echo "Error: Unable to push changes. Please check the error message above and resolve any conflicts manually."
