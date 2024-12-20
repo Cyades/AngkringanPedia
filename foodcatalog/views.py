@@ -226,12 +226,9 @@ def create_rating_review_flutter(request):
 def edit_rating_review_flutter(request):
     if request.method == 'POST':
         data = json.loads(request.body)
-        try:
-            # Cari user berdasarkan user_id
-            user = User.objects.get(id=data['user_id'])
-            
-            # Cari review berdasarkan user dan recipe_id
-            review = RatingReview.objects.get(user=user, recipe_id=data['recipe_id'])
+        try:  
+            # Cari review berdasarkan review_id
+            review = get_object_or_404(RatingReview, pk=data['review_id'])
             
             # Update fields review
             review.score = int(data.get("score", review.score))
@@ -251,11 +248,8 @@ def delete_rating_review_flutter(request):
     if request.method == 'POST':
         data = json.loads(request.body)
         try:
-            # Cari user berdasarkan user_id
-            user = User.objects.get(id=data['user_id'])
-            
-            # Cari review berdasarkan user dan recipe_id
-            review = RatingReview.objects.get(user=user, recipe_id=data['recipe_id'])
+            # Cari review berdasarkan review_id
+            review = get_object_or_404(RatingReview, pk=data['review_id'])
             
             # Hapus review
             review.delete()
