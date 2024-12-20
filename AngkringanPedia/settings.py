@@ -61,8 +61,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'AngkringanPedia.urls'
-<<<<<<< HEAD
-=======
 LOGIN_URL = '/authentication/login/'
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
@@ -112,7 +110,6 @@ CSRF_TRUSTED_ORIGINS = [
     'http://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id' # for pws
 ]
 
->>>>>>> 71175b8eb7fbc8ef5928364bc43583c36dfc8898
 
 TEMPLATES = [
     {
