@@ -50,7 +50,9 @@
       <!-- Menu Links -->
       <div class="hidden md:flex items-center ml-4">
         <ul class="flex space-x-5 text-[#F0FFF0]">
-          <li><a href="#" class="hover:text-[#8FBC8F] transition">Favourite</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'favorites:favorites' user.id %}" class="hover:text-[#8FBC8F] transition">Favourite</a></li>
+          {% endif %}
           <li><a href="#" class="hover:text-[#8FBC8F] transition">Profile</a></li>
         </ul>
       </div>

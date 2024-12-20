@@ -24,6 +24,9 @@
                     {% endif %}
                     <p><strong>{{ user.username }}</strong></p>
                     <div class="button-group">
+                        <a href="{% url 'favorites:favorites_admin' user.pk %}">
+                        <button class="btn edit-favorite" data-user-id="{{ user.id }}">Edit Favorite</button>\
+                    </a>
                         <a href="{% url 'authentication:edit_user' user.pk %}">
                             <button class="btn edit-btn">Edit</button>
                         </a>

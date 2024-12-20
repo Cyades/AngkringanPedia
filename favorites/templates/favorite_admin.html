@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+{% block content %}
+{% include 'navbar_admin.html' %}
+<div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold text-center mb-4">{{ user.username }}'s  Favorite Recipes</h1>
+
+    {% if favoritelist %}
+    <ul class="space-y-4">
+        {% for favorite in favoritelist %}
+            <li class="border p-4 rounded shadow bg-white">
+                <div class="flex w-full justify-between">
+                    <h2 class="text-xl font-bold mb-2">{{ favorite.recipe.recipe_name }}</h2>
+                    <a href="{% url 'search_recipe_by_name' favorite.recipe.recipe_name|urlencode%}" class="block"></a>
+                    <button
+                        id="star-{{ favorite.recipe.id }}"
+                        class="star-btn text-yellow-400"
+                        onclick="toggleFavorite({{ favorite.recipe.id }}, {{ request.user.id }})"
+                    >
+                        ★
+                    </button>
+                </div>
+
+                {% if favorite.recipe.image_url %}
+                    <img src="{{ favorite.recipe.image_url }}" alt="{{ favorite.recipe.recipe_name }}" class="w-48 h-auto mb-2" />
+                {% else %}
+                    <img src="/static/default_image.jpg" alt="No image available" class="w-48 h-auto mb-2" />
+                {% endif %}
+
+                <p><strong>Cooking Time:</strong> {{ favorite.recipe.cooking_time }} minutes</p>
+                <p><strong>Servings:</strong> {{ favorite.recipe.servings }}</p>
+
+                <p class="mt-2"><strong>Ingredients:</strong></p>
+                <ul class="list-disc pl-5">
+                    {% for ingredient in favorite.recipe.ingredients.all %}
+                        <li>{{ ingredient.name }}</li>
+                    {% empty %}
+                        <li>No ingredients available.</li>
+                    {% endfor %}
+                </ul>
+
+                <p class="mt-2"><strong>Instructions:</strong></p>
+                <ol class="list-decimal pl-5">
+                    {% for instruction in favorite.recipe.recipe_instructions.all|dictsort:"step_number" %}
+                        <li>{{ instruction.description }}</li>
+                    {% empty %}
+                        <li>No instructions available.</li>
+                    {% endfor %}
+                </ol>
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p class="text-center mt-4 text-gray-500">You haven't added any favorite recipes yet!</p>
+    {% endif %}
+</div>
+
+<script>
+function toggleFavorite(id_makanan, id_user) {
+    const starButton = document.getElementById(`star-${id_makanan}`);
+    const isFavorite = starButton.classList.contains("text-yellow-400");
+
+    if (isFavorite) {
+        delete_makanan_favorit(id_makanan, id_user, starButton);
+    } else {
+        create_makanan_favorit(id_makanan, id_user, starButton);
+    }
+}
+
+// AJAX function to remove recipe from favorites
+function delete_makanan_favorit(id_makanan, id_user, starButton) {
+    fetch(`/favorites/delete/${id_user}/${id_makanan}/`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+
+        if (data.status === "success") {
+            starButton.classList.remove("text-yellow-400");
+            starButton.classList.add("text-gray-400");
+            console.log("Favorite successfully deleted.");
+        } else {
+            console.error("Error removing from favorites:", data.message);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+}
+
+// AJAX function to add recipe back to favorites
+function create_makanan_favorit(id_makanan, id_user, starButton) {
+    fetch(`/favorites/create/${id_user}/${id_makanan}/`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-CSRFToken": "{{ csrf_token }}",
+        },
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === "success") {
+            starButton.classList.remove("text-gray-400");
+            starButton.classList.add("text-yellow-400");
+            console.log("Favorite successfully added.");
+        } else {
+            console.error("Error adding to favorites:", data.message);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+}
+</script>
+
+<style>
+.star-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.star-btn.text-yellow-400 {
+    color: #fbbf24;
+}
+.star-btn.text-gray-400 {
+    color: #9ca3af;
+}
+</style>
+{% endblock %}
