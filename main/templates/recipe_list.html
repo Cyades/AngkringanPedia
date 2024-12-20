@@ -26,8 +26,7 @@
                             id="star-{{ recipe.id }}"
                             class="star-btn text-gray-400"
                             onclick="toggleFavorite({{ recipe.id }}, {% if user.is_authenticated %}{{ user.id }}{% else %}null{% endif %})"
-                        >
-                            ★
+                        > ★
                         </button>
                     </div>
             {% endfor %}

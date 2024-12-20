@@ -1,0 +1,29 @@
+<!-- _recipe_card.html -->
+<div class="border p-4 rounded shadow">
+    <h2 class="text-xl font-bold">{{ recipe.recipe_name }}</h2>
+    {% if recipe.image_url %}
+        <img src="{{ recipe.image_url }}" alt="{{ recipe.recipe_name }}" class="w-48 h-auto mb-2" />
+    {% else %}
+        <p>No image available</p>
+    {% endif %}
+    <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
+    <p><strong>Servings:</strong> {{ recipe.servings }}</p>
+
+    <p class="mt-2"><strong>Ingredients:</strong></p>
+    <ul class="list-disc pl-5">
+        {% for ingredient in recipe.ingredients.all %}
+            <li>{{ ingredient.name }}</li>
+        {% empty %}
+            <li>No ingredients available.</li>
+        {% endfor %}
+    </ul>
+
+    <p class="mt-2"><strong>Instructions:</strong></p>
+    <ol class="list-decimal pl-5">
+        {% for instruction in recipe.recipe_instructions.all|dictsort:"step_number" %}
+            <li>{{ instruction.description }}</li>
+        {% empty %}
+            <li>No instructions available.</li>
+        {% endfor %}
+    </ol>
+</div>

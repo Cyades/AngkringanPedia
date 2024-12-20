@@ -25,6 +25,7 @@ urlpatterns = [
     path('recipes/', include(('main.urls', 'main'), namespace='main')), 
     path('authentication/', include('authentication.urls')),
     path('catalog/', include('foodcatalog.urls')),
+    path('favorites/', include('favorites.urls'))
 ]
 
 if settings.DEBUG:
