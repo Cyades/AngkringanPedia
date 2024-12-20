@@ -28,9 +28,10 @@ from django.contrib import messages
 from django.views.decorators.http import require_http_methods
 from django.contrib.auth import authenticate, login as auth_login
 from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import csrf_exempt, csrf_protect
 
 # Create your views here.
+@csrf_protect
 def register(request):
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST, request.FILES)
@@ -49,7 +50,7 @@ def register(request):
     context = {'form': form}
     return render(request, 'register.html', context)
 
-
+@csrf_protect
 def login_user(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
