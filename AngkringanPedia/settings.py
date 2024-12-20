@@ -43,13 +43,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'authentication',
-    'django_extensions',
-    'foodcatalog',
-    'corsheaders'
-]
-
-MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -58,6 +51,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'authentication',
+    'django_extensions',
+    'foodcatalog',
+    'corsheaders',
 ]
 
 ROOT_URLCONF = 'AngkringanPedia.urls'
@@ -106,8 +103,8 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:3000",
     'http://localhost:61708',  # Origin dari aplikasi Flutter
     'http://127.0.0.1:8000',   # Jika menggunakan port default untuk Django
-    'https://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id' # for pws
-    'http://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id' # for pws
+    'https://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id', # for pws
+    'http://malvin-scafi-angkringanpedia.pbp.cs.ui.ac.id'   # for pws
 ]
 
 
