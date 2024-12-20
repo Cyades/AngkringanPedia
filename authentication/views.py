@@ -479,6 +479,7 @@ def show_json(request):
 #     except Exception as e:
 #         # print("Error in user_detail:", str(e))
 #         return JsonResponse({"error": str(e)}, status=500)
+#####
 
 @csrf_exempt
 def user_detail(request, id):
