@@ -63,7 +63,6 @@ def login_user(request):
                 response = HttpResponseRedirect(reverse("authentication:show_admin"))
                 response.set_cookie('last_login', str(datetime.datetime.now()))
                 return response
-                # Ganti dengan URL halaman admin
 
             # Jika bukan admin, arahkan ke halaman utama
             response = HttpResponseRedirect(reverse("main:show_main"))
@@ -104,119 +103,6 @@ def login_flutter(request):
             "status": False,
             "message": "Login gagal, periksa kembali email atau kata sandi."
         }, status=401)
-        
-# @csrf_exempt
-# def register_flutter(request):
-#     if request.method == 'POST':
-#         data = json.loads(request.body)
-        
-#         print(f"Received data: {data}")  # Debug log untuk melihat input
-        
-#         username = data.get('username')
-#         password1 = data.get('password1')
-#         password2 = data.get('password2')
-#         email = data.get('email')
-#         phone_number = data.get('phone_number')
-#         gender = data.get('gender')
-#         profile_image = data.get('profile_image')  # Handle file upload
-
-#         # Validasi password
-#         if password1 != password2:
-#             return JsonResponse({"status": False, "message": "Passwords do not match."}, status=400)
-
-#         # Cek apakah username sudah ada
-#         if User.objects.filter(username=username).exists():
-#             return JsonResponse({"status": False, "message": "Username already exists."}, status=400)
-
-#         # Simpan user menggunakan form
-#         form_data = {
-#             'username': username,
-#             'email': email,
-#             'password1': password1,
-#             'password2': password2,
-#         }
-
-#         form = CustomUserCreationForm(form_data)
-#         if form.is_valid():
-#             user = form.save()
-#             # Simpan profile tambahan (phone, gender, image)
-#             profile = user.profile
-#             profile.phone_number = phone_number
-#             profile.gender = gender
-#             if profile_image:
-#                 # Convert profile image if needed
-#                 profile.profile_image = profile_image  # Convert to InMemoryUploadedFile if necessary
-#             profile.save()
-#             return JsonResponse({"status": "success", "message": "User created successfully!"}, status=200)
-
-#         return JsonResponse({"status": False, "message": "Form validation failed.", "errors": form.errors}, status=400)
-
-#     return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
-
-# @csrf_exempt
-# def register_flutter(request):
-#     if request.method == 'POST':
-#         try:
-#             data = json.loads(request.body)
-#             print(f"Received data: {data}")  # Debug log untuk melihat input
-
-#             # Ambil data dari request
-#             username = data.get('username')
-#             password1 = data.get('password1')
-#             password2 = data.get('password2')
-#             email = data.get('email')
-#             phone_number = data.get('phone_number')
-#             gender = data.get('gender')
-#             profile_image = data.get('profile_image')  # Handle file upload
-#             is_admin = data.get('is_admin', False)
-
-#             # Validasi password
-#             if password1 != password2:
-#                 return JsonResponse({"status": False, "message": "Passwords do not match."}, status=400)
-
-#             # Cek apakah username sudah ada
-#             if User.objects.filter(username=username).exists():
-#                 return JsonResponse({"status": False, "message": "Username already exists."}, status=400)
-
-#             # Konversi profile_image jika berbentuk base64
-#             if profile_image:
-#                 from django.core.files.base import ContentFile
-#                 import base64
-#                 format, imgstr = profile_image.split(';base64,')
-#                 ext = format.split('/')[-1]
-#                 profile_image = ContentFile(base64.b64decode(imgstr), name=f"{username}.{ext}")
-
-#             # Simpan user menggunakan form
-#             form_data = {
-#                 'username': username,
-#                 'email': email,
-#                 'password1': password1,
-#                 'password2': password2,
-#                 'phone_number': phone_number,
-#                 'gender': gender,
-#                 'profile_image': profile_image,
-#             }
-
-#             form = CustomUserCreationForm(form_data)
-#             if form.is_valid():
-#                 user = form.save()
-
-#                 # Atur status admin jika diperlukan
-#                 if is_admin:
-#                     user.is_staff = True
-#                     user.save()
-
-#                 return JsonResponse({"status": "success", "message": "User created successfully!"}, status=200)
-#             else:
-#                 print("Form Errors:", form.errors)  # Debug untuk mengetahui error detail
-
-#             return JsonResponse({"status": False, "message": "Form validation failed.", "errors": form.errors}, status=400)
-
-#         except Exception as e:
-#             print(f"Error: {str(e)}")  # Log error
-#             return JsonResponse({"status": False, "message": "An error occurred.", "error": str(e)}, status=500)
-
-#     return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
 
 @csrf_exempt
 def register_flutter(request):
@@ -242,7 +128,6 @@ def register_flutter(request):
             if User.objects.filter(username=username).exists():
                 return JsonResponse({"status": False, "message": "Username already exists."}, status=400)
 
-            # Siapkan form data untuk CustomUserCreationForm
             form_data = {
                 'username': username,
                 'email': email,
@@ -250,10 +135,9 @@ def register_flutter(request):
                 'password2': password2,
                 'phone_number': phone_number,
                 'gender': gender,
-                'profile_image': profile_image,  # Ini akan otomatis di-handle oleh Django
+                'profile_image': profile_image,
             }
 
-            # Gunakan CustomUserCreationForm untuk menyimpan user
             form = CustomUserCreationForm(form_data, files=request.FILES)
             if form.is_valid():
                 user = form.save()
@@ -265,11 +149,11 @@ def register_flutter(request):
 
                 return JsonResponse({"status": "success", "message": "User created successfully!"}, status=200)
             else:
-                # print("Form Errors:", form.errors)  # Debug untuk mengetahui error detail
+                # print("Form Errors:", form.errors)
                 return JsonResponse({"status": False, "message": "Form validation failed.", "errors": form.errors}, status=400)
 
         except Exception as e:
-            # print(f"Error: {str(e)}")  # Log error
+            # print(f"Error: {str(e)}")
             return JsonResponse({"status": False, "message": "An error occurred.", "error": str(e)}, status=500)
 
     return JsonResponse({"status": False, "message": "Invalid request method."}, status=400)
@@ -327,13 +211,11 @@ def edit_admin(request, id):
     admin = get_object_or_404(User, pk=id)
     form = CustomUserEditForm(request.POST or None, request.FILES or None, instance=admin)
 
-    # Cek jika request adalah POST dan form valid
     if request.method == "POST" and form.is_valid():
         form.save()
         
-        # Cek apakah request ini AJAX
         if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-            return JsonResponse({'success': True})  # Kirim respon JSON jika permintaan adalah AJAX
+            return JsonResponse({'success': True})
         else:
             return HttpResponseRedirect(reverse('authentication:show_admin'))
 
@@ -370,11 +252,10 @@ def edit_user_flutter(request, id):
 
         if request.method == "POST":
             # Ambil data dari request.POST
-            username = request.POST.get('username', user.username)  # Default ke username user
-            email = request.POST.get('email', user.email)          # Default ke email user
+            username = request.POST.get('username', user.username)
+            email = request.POST.get('email', user.email)
             phone_number = request.POST.get('phone_number', user.profile.phone_number)
-            # gender = request.POST.get('gender', user.profile.gender)
-            profile_image = request.FILES.get('profile_image')  # Ambil file jika ada
+            profile_image = request.FILES.get('profile_image')
             delete_profile_image = request.POST.get('delete_profile_image', 'false').lower() == 'true'
 
             # Perbarui User fields
@@ -384,7 +265,6 @@ def edit_user_flutter(request, id):
 
             # Perbarui Profile fields
             user.profile.phone_number = phone_number
-            # user.profile.gender = gender
 
             if delete_profile_image:
                 # Jika user memilih untuk menghapus gambar profil
@@ -406,25 +286,6 @@ def edit_user_flutter(request, id):
     except Exception as e:
         # print(f"Error: {str(e)}")  # Log error untuk debug
         return JsonResponse({"status": False, "message": "An error occurred.", "error": str(e)}, status=500)
-    
-# @csrf_exempt
-# def edit_user_flutter(request, id):
-#     user = get_object_or_404(User, pk=id)  # Ambil user berdasarkan ID
-#     form = CustomUserEditForm(request.POST or None, request.FILES or None, instance=user)  # Inisialisasi form
-
-#     # Jika form valid, simpan perubahan
-#     if request.method == "POST" and form.is_valid():
-#         form.save()
-#         if request.headers.get('x-requested-with') == 'XMLHttpRequest':
-#             return JsonResponse({'success': True})
-#         return HttpResponseRedirect(reverse('authentication:show_admin'))
-
-#     # Kirim form dan user ke template
-#     context = {
-#         'form': form,
-#         'user_to_edit': user,
-#     }
-#     return render(request, "edit_user.html", context)
 
 @login_required(login_url='/authentication/login/')
 def show_admin(request):
@@ -442,7 +303,7 @@ def show_xml(request):
     return HttpResponse(serializers.serialize("xml", data), content_type="application/xml")
 
 def show_json(request):
-    data = Profile.objects.select_related('user').all()  # Optimized query to include related user data
+    data = Profile.objects.select_related('user').all()
     profiles = []
 
     for profile in data:
@@ -462,32 +323,12 @@ def show_json(request):
 
     return JsonResponse(profiles, safe=False)
 
-# @csrf_exempt
-# def user_detail(request, id):
-#     try:
-#         # print(f"Request method: {request.method}, ID: {id}")
-#         user = get_object_or_404(Profile, user_id=id)
-#         data = {
-#             "username": user.user.username,
-#             "email": user.user.email,
-#             "phone_number": user.phone_number,
-#             "gender": user.gender,
-#             "profile_image": user.profile_image.url if user.profile_image else None,
-#         }
-#         # print("Data sent:", data)
-#         return JsonResponse(data, safe=False)
-#     except Exception as e:
-#         # print("Error in user_detail:", str(e))
-#         return JsonResponse({"error": str(e)}, status=500)
-### build lagi
-
 @csrf_exempt
 def user_detail(request, id):
     try:
         # Mengambil data profil berdasarkan user_id
         user_profile = get_object_or_404(Profile.objects.select_related('user'), user_id=id)
         
-        # Menyesuaikan format data seperti pada `show_json`
         data = {
             "model": "authentication.profile",
             "pk": user_profile.pk,
