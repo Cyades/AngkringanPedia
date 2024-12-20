@@ -242,7 +242,6 @@ def edit_rating_review_flutter(request):
             return JsonResponse({"status": "error", "message": "Review not found"}, status=404)
     return JsonResponse({"status": "error"}, status=401)
 
-
 @csrf_exempt
 def delete_rating_review_flutter(request):
     if request.method == 'POST':
