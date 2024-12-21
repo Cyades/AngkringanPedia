@@ -211,7 +211,7 @@ def show_recipe_xml(request, recipe_id):
 def create_rating_review_flutter(request):
     if request.method == 'POST':
         data = json.loads(request.body)
-        user = User.objects.get(id=data['user_id'])
+        user = request.user
         review = RatingReview.objects.create(
             user=user,
             recipe_id=data["recipe_id"],
