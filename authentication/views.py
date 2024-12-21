@@ -346,3 +346,5 @@ def user_detail(request, id):
         return JsonResponse(data, safe=False)
     except Exception as e:
         return JsonResponse({"error": str(e)}, status=500)
+    
+    ##
