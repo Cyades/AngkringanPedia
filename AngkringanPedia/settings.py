@@ -42,12 +42,12 @@ INSTALLED_APPS = [
     'authentication',
     'django_extensions',
     'foodcatalog',
-    'corsheaders',
     'favorites',
+    'artikel',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -111,8 +111,8 @@ CSRF_TRUSTED_ORIGINS = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates'],  # Folder global template
+        'APP_DIRS': True,  # Memastikan Django memuat template dari folder templates di dalam setiap aplikasi
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -123,6 +123,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'AngkringanPedia.wsgi.application'
 

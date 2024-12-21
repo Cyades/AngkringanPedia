@@ -53,7 +53,9 @@
           {% if user.is_authenticated %}
           <li><a href="{% url 'favorites:favorites' user.id %}" class="hover:text-[#8FBC8F] transition">Favourite</a></li>
           {% endif %}
-          <li><a href="#" class="hover:text-[#8FBC8F] transition">Profile</a></li>
+          <li><a href="{% url 'artikel:show_article_list' %}" class="hover:text-[#8FBC8F] transition">Artikel</a></li>
+          <li><a href="{% url 'dashboard:user_dashboard' %}" class="hover:text-[#8FBC8F] transition">Profile</a></li>
+
         </ul>
       </div>
 
@@ -73,8 +75,9 @@
     <div class="pt-2 pb-3 space-y-1 mx-auto">
       <ul class="text-[#2F4F4F]">
         <li><a href="#" class="block hover:text-[#556B2F] transition">Favourite</a></li>
+        <li><a href="{% url 'artikel:show_article_list' %}" class="block hover:text-[#556B2F] transition">Artikel</a></li>
         <li><a href="#" class="block hover:text-[#556B2F] transition">Profile</a></li>
-      </ul>
+      </ul>      
     </div>
   </div>
 

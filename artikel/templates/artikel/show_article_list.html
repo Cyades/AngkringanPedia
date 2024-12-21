@@ -1,0 +1,17 @@
+<!-- artikel/templates/artikel/show_article_list.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Daftar Artikel</h1>
+  <ul>
+    {% for artikel in artikels %}
+      <li>
+        <a href="{% url 'main:show_article_detail' artikel.id %}">{{ artikel.judul }}</a>
+      </li>
+    {% empty %}
+      <li>Tidak ada artikel.</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'main:create_article' %}">Buat Artikel Baru</a>
+{% endblock %}

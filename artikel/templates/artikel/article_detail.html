@@ -1,0 +1,63 @@
+<!-- artikel/templates/article_detail.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ artikel.judul }} - Angkringan Pedia</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-[#F0FFF0] text-[#2F4F4F]">
+
+  <!-- Include Navbar Artikel -->
+  {% include 'artikel/navbar_artikel.html' %}
+
+  <!-- Konten Artikel -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+    <!-- Judul Artikel -->
+    <h2 class="text-4xl font-bold mb-4">{{ artikel.judul }}</h2>
+  
+    <!-- Isi Artikel -->
+
+    {% if artikel.image %}
+      <img src="{{ artikel.image.url }}" alt="{{ artikel.judul }}" class="w-1/4 h-auto rounded-lg mt-4">
+    {% endif %}
+
+    <p class="text-lg leading-relaxed">{{ artikel.isi }}</p>
+  
+    <!-- Tanggal Pembuatan -->
+    <p class="text-sm text-gray-500 mt-4">
+      Dibuat pada: {{ artikel.tanggal_dibuat|date:"d M Y, H:i" }}
+    </p>
+  
+    <!-- Tombol Edit dan Delete Artikel (Hanya untuk Admin) -->
+{% if user.is_staff or user.is_superuser %}
+<div class="mt-4 space-x-2">
+  <!-- Tombol Edit Artikel -->
+  <a href="{% url 'artikel:edit_article' artikel.id %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+    Edit Artikel
+  </a>
+
+  <!-- Tombol Delete Artikel -->
+  <form method="POST" action="{% url 'artikel:delete_article' artikel.id %}" style="display: inline;">
+    {% csrf_token %}
+    <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" onclick="return confirm('Apakah Anda yakin ingin menghapus artikel ini?')">
+      Delete Artikel
+    </button>
+  </form>
+</div>
+{% endif %}
+
+
+    <!-- Tombol Kembali ke Daftar Artikel -->
+    <div class="mt-6">
+      <a href="{% url 'artikel:show_article_list' %}" class="text-[#6B8E23] hover:underline">
+        &larr; Kembali ke Daftar Artikel
+      </a>
+    </div>
+  </div>
+  
+
+</body>
+</html>
