@@ -1,10 +1,13 @@
 from django.urls import path
-from .views import user_dashboard, edit_profile, redirect_dashboard
+from . import views
 
 app_name = 'dashboard'
 
 urlpatterns = [
-    path('user-dashboard/', user_dashboard, name='user_dashboard'),  # URL untuk dashboard pengguna
-    path('edit-profile/', edit_profile, name='edit_profile'),        # URL untuk edit profil
-    path('redirect/', redirect_dashboard, name='redirect_dashboard'),  # URL untuk redirect dashboard
+    path('admin/', views.show_admin, name='show_admin'),
+    path('edit-profile/', views.edit_profile, name='edit_profile'),
+    path('redirect/', views.redirect_dashboard, name='redirect_dashboard'),
+    path('user-dashboard/', views.user_dashboard, name='user_dashboard'),
+    path('edit-user/<int:id>/', views.edit_user, name='edit_user'),
+    path('delete-user/<int:id>/', views.delete_user, name='delete_user'),
 ]

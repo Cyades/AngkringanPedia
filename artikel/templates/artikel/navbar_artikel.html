@@ -16,7 +16,7 @@
            class="bg-[#8FBC8F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300 {% if request.resolver_match.url_name == 'show_main' %}underline{% endif %}">
           Home
         </a>
-        {% if user.is_authenticated %}
+        {% if user.is_staff or user.is_superuser %}
           <a href="{% url 'artikel:create_article' %}" 
              class="bg-[#556B2F] text-white px-4 py-2 rounded-lg font-bold hover:bg-[#6B8E23] transition-all duration-300">
             Tambah Artikel

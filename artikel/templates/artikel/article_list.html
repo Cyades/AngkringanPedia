@@ -43,18 +43,23 @@
     {% endif %}
 
     <!-- Tombol Edit dan Delete (Hanya untuk Admin yang Login) -->
-    {% if user.is_authenticated %}
-      <div class="mt-4">
-        <a href="{% url 'artikel:edit_article' artikel.id %}" 
-           class="bg-blue-500 text-white px-3 py-2 rounded hover:bg-blue-600 mr-2">
-          Edit
-        </a>
-        <a href="{% url 'artikel:delete_article' artikel.id %}" 
-           class="bg-red-500 text-white px-3 py-2 rounded hover:bg-red-600">
+    <!-- Tombol Edit dan Delete (Hanya untuk Admin yang Login) -->
+    {% if user.is_staff or user.is_superuser %}
+    <div class="mt-4">
+      <a href="{% url 'artikel:edit_article' artikel.id %}" 
+        class="bg-blue-500 text-white px-3 py-2 rounded hover:bg-blue-600 mr-2">
+        Edit
+      </a>
+      <form method="POST" action="{% url 'artikel:delete_article' artikel.id %}" style="display: inline;">
+        {% csrf_token %}
+        <button type="submit" class="bg-red-500 text-white px-3 py-2 rounded hover:bg-red-600" 
+                onclick="return confirm('Apakah Anda yakin ingin menghapus artikel ini?')">
           Delete
-        </a>
-      </div>
+        </button>
+      </form>
+    </div>
     {% endif %}
+
   </li>
 {% empty %}
   <li class="text-gray-600">Tidak ada artikel untuk ditampilkan.</li>
