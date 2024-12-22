@@ -25,7 +25,9 @@ urlpatterns = [
     path('recipes/', include(('main.urls', 'main'), namespace='main')), 
     path('authentication/', include('authentication.urls')),
     path('catalog/', include('foodcatalog.urls')),
-    path('favorites/', include('favorites.urls'))
+    path('favorites/', include('favorites.urls')),
+    path('artikel/', include('artikel.urls', namespace='artikel')),
+    path('dashboard/', include(('dashboard.urls', 'dashboard'), namespace='dashboard')),
 ]
 
 if settings.DEBUG:

@@ -1,0 +1,10 @@
+<!-- templates/artikel/show_article_detail.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ artikel.judul }}</h1>
+  <p>{{ artikel.isi }}</p>
+  <p><strong>Ditulis pada:</strong> {{ artikel.tanggal_dibuat }}</p>
+
+  <a href="{% url 'main:show_article_list' %}">Kembali ke Daftar Artikel</a>
+{% endblock %}
